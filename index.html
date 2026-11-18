@@ -1757,7 +1757,7 @@ body.v14-dark #pn-buy-section .pn-buy-photo{background:linear-gradient(125deg,#3
           <div id="pending"></div>
           <div class="small" style="margin-top:8px">Galite įrašyti kelis iš karto, atskirdami kableliais.</div>
           <section class="pn-buy-section" id="pn-buy-section">
-<div class="pn-buy-intro"><div><span class="pn-buy-kicker">PAPILDOMA ĮRANGA NAMAMS</span><h3>🛒 Įsigyti jutiklių ir valdiklių</h3><p>Pasirinkite naujų įrenginių, jei norite išplėsti savo išmaniuosius namus. Čia pateikiamos orientacinės įrangos kainos, be prijungimo darbų.</p></div><span class="pn-buy-chip">70+ pasirinkimų</span></div>
+<div class="pn-buy-intro"><div><span class="pn-buy-kicker">PAPILDOMA ĮRANGA NAMAMS</span><h3>🛒 Įsigyti jutiklių ir valdiklių</h3><p>Pasirinkite naujų įrenginių, jei norite išplėsti savo išmaniuosius namus. Čia pateikiamos orientacinės įrangos kainos, be prijungimo darbų.</p></div><span class="pn-buy-chip">67 modeliai</span></div>
 <div class="pn-buy-search"><label for="pn-buy-search">Ieškoti modelio ar prietaiso</label><input id="pn-buy-search" type="search" class="field" placeholder="Pvz., temperatūra, CO2, Sonoff, Zigbee, užuolaidos…"></div>
 <div class="pn-buy-group-list" id="pn-buy-groups" aria-label="Įsigyjamos įrangos grupės"></div>
 <div class="pn-buy-products" id="pn-buy-products" aria-live="polite"></div>
@@ -2462,7 +2462,7 @@ const pnBuyArea=document.getElementById('pn-buy-section');
 if(pnBuyArea){
  pnBuyArea.addEventListener('click',e=>{
   const group=e.target.closest('[data-pn-buy-group]');
-  if(group){pnBuyGroup=group.dataset.pnBuyGroup;pnBuyRender();return}
+  if(group){pnBuyGroup=group.dataset.pnBuyGroup;pnBuyQuery='';const search=document.getElementById('pn-buy-search');if(search)search.value='';pnBuyRender();return}
   const add=e.target.closest('[data-pn-buy-add]'),dec=e.target.closest('[data-pn-buy-dec]');
   const id=add?.dataset.pnBuyAdd||dec?.dataset.pnBuyDec;
   if(!id||!PN_BUY_ITEMS.some(x=>x.id===id))return;
@@ -3033,9 +3033,9 @@ function accSum(P){
 initDemo();
 let sumVis=false;try{accSum(pricing())}catch(_){}
 try{new IntersectionObserver(es=>{sumVis=es[0].isIntersecting;updTot()},{threshold:0.15}).observe($('#summary'))}catch(_){}
-function updTot(){const on=location.hash.slice(1)==='skaiciuotuvas'&&!sumVis;document.body.classList.toggle('tb-on',on)}
+function updTot(){const on=['skaiciuotuvas','iranga'].includes(location.hash.slice(1))&&!sumVis;document.body.classList.toggle('tb-on',on)}
 addEventListener('hashchange',updTot);updTot();
-$('#tbGo').onclick=()=>{if(location.hash!=='#skaiciuotuvas'){location.hash='skaiciuotuvas';setTimeout(()=>$('#summary')?.scrollIntoView({behavior:'smooth',block:'start'}),80)}else $('#summary')?.scrollIntoView({behavior:'smooth',block:'start'})};
+$('#tbGo').onclick=()=>{if(!['#skaiciuotuvas','#iranga'].includes(location.hash)){location.hash='skaiciuotuvas';setTimeout(()=>$('#summary')?.scrollIntoView({behavior:'smooth',block:'start'}),80)}else $('#summary')?.scrollIntoView({behavior:'smooth',block:'start'})};
 </script>
 <script>
 /* v1.4 showcase: isolated from existing calculator and dashboards */
