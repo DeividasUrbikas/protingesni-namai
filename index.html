@@ -1941,7 +1941,7 @@ function renderCgrid(){
   let h='';
   DEVICE_GROUPS.forEach(group=>{
     const needle=deviceCategoryQuery.trim().toLocaleLowerCase('lt-LT');
-    const list=group.cats.map(id=>CATS.find(c=>c.id===id)).filter(Boolean).filter(c=>!needle||[c.name,...(c.sub||[]),...(c.kw||[])].join(' ').toLocaleLowerCase('lt-LT').includes(needle));
+    const list=group.cats.map(id=>CATS.find(c=>c.id===id)).filter(Boolean).filter(c=>!needle||[c.name,...(c.sub||[]),...(c.kw||[]),...Object.keys(c.brands||{})].join(' ').toLocaleLowerCase('lt-LT').includes(needle));
     if(!list.length)return;
     const expanded=!!needle||openDeviceGroup===group.id;
     h+=`<div class="device-family ${expanded?'expanded':''}"><button type="button" class="device-family-toggle" data-device-group="${group.id}" aria-expanded="${expanded?'true':'false'}">
