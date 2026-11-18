@@ -2202,8 +2202,8 @@ const $=id=>document.getElementById(id);
 function renderButtons(){const host=$('h3-lights');host.replaceChildren();rooms.forEach(([name],i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',String(roomState[i]));b.innerHTML=(roomState[i]?'💡 ':'◯ ')+name+'<span>'+(roomState[i]?'Įjungta':'Išjungta')+'</span>';b.onclick=()=>{roomState[i]=!roomState[i];if(roomLights[i]){roomLights[i].intensity=roomState[i]?2.6:0;roomLights[i].visible=roomState[i]}renderButtons()};host.append(b)});$('h3-all').textContent=roomState.some(Boolean)?'Išjungti visas':'Įjungti visas'}
 renderButtons();
 async function init(){if(initialized)return;initialized=true;try{
-const THREE=await import('https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js');
-const {OrbitControls}=await import('https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/controls/OrbitControls.js');
+const THREE=await import('https://esm.sh/three@0.160.1');
+const {OrbitControls}=await import('https://esm.sh/three@0.160.1/examples/jsm/controls/OrbitControls.js');
 scene=new THREE.Scene();scene.background=new THREE.Color('#c4dbe7');
 camera=new THREE.PerspectiveCamera(42,1,.1,100);camera.position.set(12,10,14);
 renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;stage.append(renderer.domElement);
