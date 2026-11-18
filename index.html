@@ -1659,7 +1659,7 @@ function route(){
   const h=location.hash.slice(1);const p=(h==='skydeliai')?'paslaugos':(h==='v14-showcase'||h==='demo')?'pradzia':PAGES.includes(h)?h:'pradzia';
   document.querySelectorAll('.page').forEach(s=>s.classList.toggle('on',s.id==='p-'+p));
   document.querySelectorAll('.links a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+p));
-  if(typeof pvOpen!=='undefined'&&pvOpen&&p!=='skaiciuotuvas')closePreview();$('#links').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false');if(h='skydeliai')setTimeout(()=>$('#demo')?.scrollIntoView(),30);else if(h==='v14-showcase'||h==='demo')setTimeout(()=>document.getElementById('v14-showcase')?.scrollIntoView({behavior:'smooth',block:'start'}),30);else window.scrollTo(0,0);
+  if(typeof pvOpen!=='undefined'&&pvOpen&&p!=='skaiciuotuvas')closePreview();$('#links').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false');if(h==='skydeliai')setTimeout(()=>$('#demo')?.scrollIntoView(),30);else if(h==='v14-showcase'||h==='demo')setTimeout(()=>document.getElementById('v14-showcase')?.scrollIntoView({behavior:'smooth',block:'start'}),30);else window.scrollTo(0,0);
   if(p==='platforma')showPlatform();
 }
 addEventListener('hashchange',route);
