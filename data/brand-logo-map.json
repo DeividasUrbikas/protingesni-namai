@@ -4,7 +4,7 @@
     "source": "index.html v4.14",
     "catalogue_brands": 543,
     "last_checked": "2026-11-19",
-    "description": "Sąrašas visiems 543 svetainės prietaisų katalogo pavadinimams. verified_official_domain_favicon reiškia patvirtintą oficialų domeną, bet ne patvirtintą konkretaus favicon kokybę. suggested_domain_favicon reikia papildomai patikrinti. fallback reiškia, kad tikro logotipo šaltinis dar nenurodytas. Nekeičia veikiančios svetainės.",
+    "description": "543 gamintojų logotipų sąrašas. Pylontech simbolis įrašytas kaip vietinis logotipo iškarpos failas, todėl nebepriklauso nuo bendros domeno favicon. Kiti šaltiniai saugomi pagal katalogo duomenis.",
     "stats": {
       "simple_icons": 75,
       "official_domain": 4,
@@ -3838,13 +3838,14 @@
       ]
     },
     "Pylontech": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "pylontech.com.cn",
-      "url": "https://www.google.com/s2/favicons?domain=pylontech.com.cn&sz=128",
-      "initials": "P",
+      "url": "assets/brands/pylontech-symbol.svg",
+      "initials": "PY",
       "categories": [
         "bat"
-      ]
+      ],
+      "image_source": "https://github.com/Enapter/marketplace/blob/main/.marketplace/vendors/icons/pylontech.png"
     },
     "Pioneer": {
       "type": "fallback",

@@ -1890,6 +1890,84 @@ body.v14-dark #p-skaiciuotuvas #o-tab .opt-im .opt-img{background:linear-gradien
   #p-skaiciuotuvas #o-tab .opt-im{grid-template-rows:162px auto}
   #p-skaiciuotuvas #o-tab .opt-im .opt-img{height:162px}
 }
+
+/* v4.17 – viršutinė juosta atkartoja pasirinktą svetainės gradientą.
+   Tas pats --pn-canvas-bg / --pn-style-field, tad veikia ir Dizaino studijos pasirinkimai.
+   Puslapio fono pozicija nekeičiama ir nenutrūksta perjungiant temas. */
+body[data-pn-design]:not(.v14-dark) header{
+  background-color:rgba(27,56,102,.70)!important;
+  background-image:
+    linear-gradient(180deg,rgba(22,49,92,.66),rgba(22,49,92,.48)),
+    var(--pn-style-field,linear-gradient(transparent,transparent)),
+    var(--pn-canvas-bg,linear-gradient(135deg,#4779ba,#e9c1a8))!important;
+  background-size:100% 100%,100vw 100dvh,100vw 100dvh!important;
+  background-position:center,center top,center top!important;
+  background-repeat:no-repeat!important;
+  border-bottom:1px solid rgba(255,255,255,.14)!important;
+  box-shadow:0 5px 14px rgba(27,55,96,.07)!important;
+  backdrop-filter:blur(12px) saturate(1.12);
+}
+body[data-pn-design].v14-dark header{
+  background-color:rgba(11,28,51,.72)!important;
+  background-image:
+    linear-gradient(180deg,rgba(12,29,54,.44),rgba(12,29,54,.28)),
+    var(--pn-style-field,linear-gradient(transparent,transparent)),
+    var(--pn-canvas-bg,linear-gradient(135deg,#162f52,#493837))!important;
+  background-size:100% 100%,100vw 100dvh,100vw 100dvh!important;
+  background-position:center,center top,center top!important;
+  background-repeat:no-repeat!important;
+  border-bottom:1px solid rgba(185,207,232,.13)!important;
+  box-shadow:0 5px 14px rgba(8,18,36,.12)!important;
+}
+header .nav{background:transparent!important}
+/* Gamintojų ikonėlės – pilnas suapvalintas kvadratas ir vienodas dydis.
+   Logotipai neperpiešiami, išlaikomas jų kraštinių santykis. */
+#p-skaiciuotuvas .brandmark .pn-brand-art{
+  position:relative;
+  background:#fff!important;
+  border:1px solid rgba(61,97,136,.16)!important;
+  border-radius:10px!important;
+  overflow:hidden;
+  isolation:isolate;
+}
+#p-skaiciuotuvas .brandmark .pn-brand-art>img,
+#p-skaiciuotuvas .brand-choice-alt .brandmark .pn-brand-art>img,
+#p-skaiciuotuvas .item-name .brandmark .pn-brand-art>img,
+#p-skaiciuotuvas .bm-h .brandmark .pn-brand-art>img{
+  position:static!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  min-width:100%!important;
+  min-height:100%!important;
+  max-width:none!important;
+  max-height:none!important;
+  padding:0!important;
+  margin:0!important;
+  border:0!important;
+  border-radius:9px!important;
+  background:#fff!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:scale(1.10);
+  transform-origin:center;
+}
+#p-skaiciuotuvas .brandmark .pn-brand-art[data-brand="Dyness"]>img{
+  transform:scale(1.30);
+}
+#p-skaiciuotuvas .brandmark .pn-brand-art[data-brand="Pylontech"]>img{
+  transform:scale(1.015);
+}
+#p-skaiciuotuvas .brandmark .pn-brand-art>.brand-initial{
+  border-radius:9px!important;
+  width:100%!important;height:100%!important;min-width:0!important;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+#p-skaiciuotuvas .brandmark .pn-brand-art>.brand-initial[hidden]{display:none!important}
+body.v14-dark #p-skaiciuotuvas .brandmark .pn-brand-art{background:#fff!important}
+@media(max-width:580px){
+  #p-skaiciuotuvas .brand-choice .brandmark .pn-brand-art{flex-shrink:0}
+}
 </style>
 </head>
 <body>
@@ -1897,7 +1975,7 @@ body.v14-dark #p-skaiciuotuvas #o-tab .opt-im .opt-img{background:linear-gradien
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.16</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.17</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links" id="links" aria-label="Visi svetainės skyriai">
 <a href="#pradzia">Pradžia</a>
 <a href="#privalumai">Kodėl verta</a>
@@ -2833,6 +2911,8 @@ function brandLogo(name){
 }
 function safeBrandIconUrl(info){
   if(!info||typeof info.url!=='string')return '';
+  // Vietiniai originalių logotipų failai: saugus, aiškiai apribotas kelias.
+  if(info.type==='local_asset'&&/^assets\/brands\/[a-z0-9._-]+\.(?:svg|png|webp)$/.test(info.url))return info.url;
   try{
     const u=new URL(info.url);
     if(u.protocol!=='https:')return '';
@@ -2857,7 +2937,7 @@ function applyBrandIcons(root=document){
   });
 }
 function loadBrandIconMap(){
-  fetch('data/brand-logo-map.json?v=4.15',{cache:'no-cache'})
+  fetch('data/brand-logo-map.json?v=4.17',{cache:'no-cache'})
     .then(response=>{if(!response.ok)throw Error('HTTP '+response.status);return response.json()})
     .then(data=>{
       if(!data||!data.brands||typeof data.brands!=='object')throw Error('Netinkamas logotipų formatas');
