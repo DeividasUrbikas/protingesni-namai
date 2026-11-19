@@ -1968,6 +1968,96 @@ body.v14-dark #p-skaiciuotuvas .brandmark .pn-brand-art{background:#fff!importan
 @media(max-width:580px){
   #p-skaiciuotuvas .brand-choice .brandmark .pn-brand-art{flex-shrink:0}
 }
+
+/* v4.18 – pagrindinio puslapio vertės ir saugumo pristatymas. */
+#p-pradzia .pn-benefits-2026{margin:14px 0 36px}
+#p-pradzia .pn-bstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:12px 0 21px}
+#p-pradzia .pn-bstat{background:var(--card);border:1px solid var(--line2);border-radius:18px;padding:20px 20px 18px;min-width:0;display:flex;flex-direction:column;gap:4px}
+#p-pradzia .pn-bstat>strong{font-size:clamp(31px,3.5vw,45px);line-height:1.12;font-weight:900;letter-spacing:-.06em;color:var(--tx);font-variant-numeric:tabular-nums}
+#p-pradzia .pn-bstat>strong span{color:var(--teal);font-size:.66em}
+#p-pradzia .pn-bstat>span{color:var(--tx);font-weight:850;font-size:13px}
+#p-pradzia .pn-bstat>small{font-size:11px;line-height:1.5;color:var(--tx2)}
+#p-pradzia .pn-safety-showcase{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.95fr);gap:24px;align-items:center;padding:clamp(22px,3.5vw,35px);border:1px solid var(--line2);border-radius:25px;background:linear-gradient(135deg,color-mix(in srgb,var(--card) 90%,var(--pn-accent-soft,#dceaff)),var(--card2));box-shadow:0 14px 42px rgba(25,66,108,.08)}
+#p-pradzia .pn-b-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.055em;color:var(--tx2);font-weight:900}
+#p-pradzia .pn-b-dot{display:inline-block;width:9px;height:9px;flex:none;border-radius:50%;background:#15b79a;box-shadow:0 0 0 4px rgba(21,183,154,.14)}
+#p-pradzia .pn-safety-copy h2{font-size:clamp(25px,3vw,39px);line-height:1.16;letter-spacing:-.042em;margin:15px 0 12px}
+#p-pradzia .pn-safety-copy>p{font-size:14px;line-height:1.75;color:var(--tx2)}
+#p-pradzia .pn-safety-copy>p strong{color:var(--tx)}
+#p-pradzia .pn-safety-checks{list-style:none;display:flex;flex-direction:column;gap:12px;margin:20px 0}
+#p-pradzia .pn-safety-checks li{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.6;color:var(--tx2)}
+#p-pradzia .pn-safety-checks li>span:first-child{display:inline-flex;align-items:center;justify-content:center;flex:0 0 22px;width:22px;height:22px;background:rgba(21,169,137,.12);border-radius:50%;color:#108d70;font-weight:900}
+#p-pradzia .pn-safety-checks strong{color:var(--tx)}
+#p-pradzia .pn-safety-link{display:inline-flex;gap:8px;align-items:center;color:var(--tx);font-size:12px;font-weight:850;text-decoration:underline;text-underline-offset:4px}
+#p-pradzia .pn-safety-link:hover{color:var(--teal)}
+#p-pradzia .pn-safety-diagram{border-radius:21px;padding:22px 18px;background:linear-gradient(160deg,rgba(226,241,252,.90),rgba(255,255,255,.94));border:1px solid rgba(92,138,174,.21);box-shadow:0 12px 26px rgba(23,55,90,.08);color:#1b3652;min-width:0}
+#p-pradzia .pn-sdiag-top{display:flex;align-items:center;gap:7px;font-size:10px;font-weight:850;letter-spacing:.04em;color:#446681}
+#p-pradzia .pn-sdiag-top strong{margin-left:auto;color:#15826a;font-size:9px}
+#p-pradzia .pn-sdiag-led{width:9px;height:9px;background:#16b893;border-radius:50%;box-shadow:0 0 0 4px rgba(22,184,147,.12)}
+#p-pradzia .pn-sdiag-devices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:22px 0 2px}
+#p-pradzia .pn-sdiag-devices span{display:grid;place-items:center;text-align:center;font-size:10px;line-height:1.4;font-weight:800;padding:14px 3px;background:white;border:1px solid #d4e1ef;border-radius:12px;min-height:60px}
+#p-pradzia .pn-sdiag-connect{display:flex;align-items:center;justify-content:center;flex-direction:column;height:43px}
+#p-pradzia .pn-sdiag-connect span{height:10px;width:2px;background:#96aec5}
+#p-pradzia .pn-sdiag-connect i{font-style:normal;font-size:15px;line-height:1;color:#2b749d;font-weight:900}
+#p-pradzia .pn-sdiag-hub{display:flex;align-items:center;gap:12px;padding:16px 13px;border-radius:14px;background:#254d7b;color:#fff;box-shadow:0 8px 18px rgba(28,65,103,.14)}
+#p-pradzia .pn-sdiag-hub-icon{display:grid;place-items:center;flex:0 0 37px;width:37px;height:37px;font-size:31px;border-radius:10px;background:rgba(255,255,255,.16);line-height:1}
+#p-pradzia .pn-sdiag-hub div{display:flex;flex-direction:column;min-width:0}
+#p-pradzia .pn-sdiag-hub strong{font-size:14px;color:#fff}
+#p-pradzia .pn-sdiag-hub small{font-size:11px;color:#dcecf9}
+#p-pradzia .pn-sdiag-ok{margin-left:auto;color:#8ff4c1;font-size:20px}
+#p-pradzia .pn-sdiag-internet{display:flex;align-items:center;gap:10px;border:1px dashed #b1c8d9;border-radius:12px;margin-top:15px;padding:12px;background:rgba(255,255,255,.7)}
+#p-pradzia .pn-sdiag-internet>span{font-size:24px;color:#5d7891;line-height:1}
+#p-pradzia .pn-sdiag-internet div{display:flex;flex-direction:column;gap:2px}
+#p-pradzia .pn-sdiag-internet strong{font-size:11px;color:#254763;line-height:1.45}
+#p-pradzia .pn-sdiag-internet small{font-size:10px;color:#6b8297;line-height:1.45}
+#p-pradzia .pn-sdiag-foot{font-size:10px;color:#7b8ea1;text-align:center;margin-top:12px}
+#p-pradzia .pn-bhead{text-align:center;margin:36px auto 19px}
+#p-pradzia .pn-bhead h2{font-size:clamp(24px,3.2vw,35px);line-height:1.2;letter-spacing:-.035em;margin:8px 0 7px}
+#p-pradzia .pn-bhead p{font-size:13px;color:var(--tx2)}
+#p-pradzia .pn-bgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#p-pradzia .pn-bcard{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0;background:var(--card);border:1px solid var(--line2);border-radius:17px;padding:20px 18px;transition:transform .2s ease,border-color .2s ease}
+#p-pradzia .pn-bcard:hover{transform:translateY(-3px);border-color:var(--teal)}
+#p-pradzia .pn-bicon{display:grid;place-items:center;width:43px;height:43px;flex:none;border-radius:13px;background:var(--card2);font-size:24px}
+#p-pradzia .pn-bcard h3{color:var(--tx);font-size:15px;line-height:1.35}
+#p-pradzia .pn-bcard p{color:var(--tx2);font-size:12px;line-height:1.65}
+#p-pradzia .pn-bclarity{font-size:11px;line-height:1.7;color:var(--tx2);margin:18px auto 0;padding:13px 16px;max-width:100%;border-left:3px solid var(--line2);background:color-mix(in srgb,var(--card) 75%,transparent);border-radius:0 11px 11px 0}
+#p-pradzia .pn-bclarity strong{color:var(--tx)}
+#p-pradzia .pn-bclarity a{font-weight:850;color:var(--tx);text-decoration:underline;text-underline-offset:3px;margin-right:9px;white-space:normal}
+body.v14-dark #p-pradzia .pn-safety-diagram{background:linear-gradient(160deg,#243d60,#1b2e49);border-color:#4d6787;color:#eef6ff}
+body.v14-dark #p-pradzia .pn-sdiag-top{color:#bad0e6}
+body.v14-dark #p-pradzia .pn-sdiag-devices span{background:#2d4667;border-color:#466287;color:#edf6ff}
+body.v14-dark #p-pradzia .pn-sdiag-hub{background:#142a46}
+body.v14-dark #p-pradzia .pn-sdiag-internet{background:rgba(22,42,67,.7);border-color:#526c8a}
+body.v14-dark #p-pradzia .pn-sdiag-internet strong{color:#e0ecf9}
+body.v14-dark #p-pradzia .pn-sdiag-internet small{color:#a9c3de}
+@media(max-width:850px){
+  #p-pradzia .pn-safety-showcase{grid-template-columns:1fr;gap:18px}
+  #p-pradzia .pn-safety-diagram{max-width:520px;width:100%;margin:auto}
+}
+@media(max-width:650px){
+  #p-pradzia .pn-bstats{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:5px 0 15px}
+  #p-pradzia .pn-bstat{padding:12px 8px;border-radius:13px}
+  #p-pradzia .pn-bstat>strong{font-size:27px;letter-spacing:-.045em}
+  #p-pradzia .pn-bstat>span{font-size:10px;line-height:1.35}
+  #p-pradzia .pn-bstat>small{font-size:9px;line-height:1.5}
+  #p-pradzia .pn-safety-showcase{padding:18px 15px;border-radius:18px}
+  #p-pradzia .pn-safety-copy h2{font-size:27px}
+  #p-pradzia .pn-safety-copy>p{font-size:13px}
+  #p-pradzia .pn-safety-checks li{font-size:12px}
+  #p-pradzia .pn-safety-diagram{padding:17px 13px}
+  #p-pradzia .pn-bgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  #p-pradzia .pn-bcard{padding:15px 12px;border-radius:14px}
+  #p-pradzia .pn-bcard h3{font-size:13px}
+  #p-pradzia .pn-bcard p{font-size:11px}
+  #p-pradzia .pn-bicon{width:37px;height:37px;font-size:21px}
+  #p-pradzia .pn-bhead{margin-top:28px}
+}
+@media(max-width:360px){
+  #p-pradzia .pn-bstats{grid-template-columns:1fr}
+  #p-pradzia .pn-bstat{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 12px}
+  #p-pradzia .pn-bstat>small{flex-basis:100%}
+  #p-pradzia .pn-bgrid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){#p-pradzia .pn-bcard{transition:none}#p-pradzia .pn-bcard:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -1975,7 +2065,7 @@ body.v14-dark #p-skaiciuotuvas .brandmark .pn-brand-art{background:#fff!importan
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.17</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.18</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links" id="links" aria-label="Visi svetainės skyriai">
 <a href="#pradzia">Pradžia</a>
 <a href="#privalumai">Kodėl verta</a>
@@ -2005,11 +2095,11 @@ body.v14-dark #p-skaiciuotuvas .brandmark .pn-brand-art{background:#fff!importan
 
 <div class="v17-hero">
  <div class="v17-hero-copy">
-  <span class="v17-kicker"><span class="v17-dot"></span> VIETINIS VALDYMAS · PRIVATUMAS · ENERGIJOS TAUPYMAS</span>
+  <span class="v17-kicker"><span class="v17-dot"></span> SAUGUMAS · VIETINIS VALDYMAS · TAUPYMAS</span>
   <h1>Jūsų namai.<br><span class="grad-tx">Jūsų kontrolė.</span></h1>
-  <p>Sujungiame įrenginius į vieną sistemą, teikiame pirmenybę vietiniam valdymui ir mažiname priklausomybę nuo gamintojų debesų. Namai veikia jums – ne atvirkščiai.</p>
+  <p>Vienas valdymas visiems namams. Sujungiame skirtingų gamintojų įrenginius, teikiame pirmenybę vietiniam ryšiui ir pasirūpiname automatizacijomis. Tinkamai parinkta įranga gali veikti net be interneto.</p>
   <div class="v17-actions"><a href="#skaiciuotuvas" class="btn btn-p">Apskaičiuoti kainą <span aria-hidden="true">↗</span></a><a href="#privalumai" class="btn btn-g">Kodėl verta?</a></div>
-  <div class="v17-trust"><span>✓ Duomenys jūsų namuose</span><span>✓ Mažesnė priklausomybė nuo debesų</span><span>✓ Taupymas ir automatizacijos</span></div>
+  <div class="v17-trust"><span>✓ Galima riboti interneto prieigą</span><span>✓ Mažiau gamintojų programėlių</span><span>✓ Išmanesnis energijos naudojimas</span></div>
  </div>
  <div class="v17-preview" data-pn-scene="day" aria-label="Išmanių namų valdymo skydelio demonstracija">
   <div class="v17-preview-head"><span><span class="v17-dot"></span> Namų energija</span><span class="v17-demo-badge">DEMO</span></div>
@@ -2058,11 +2148,66 @@ body.v14-dark #p-skaiciuotuvas .brandmark .pn-brand-art{background:#fff!importan
  </div>
 </div>
 
-<div class="pn-simple-intro"><div class="pn-intro-top"><span class="eyebrow">KĄ TAI DUODA JUMS?</span><h2>Mažiau rūpesčių. Daugiau kontrolės.</h2><p>Nereikia domėtis technologijomis, kad namai veiktų paprasčiau.</p></div><div class="pn-simple-cards">
-<a href="#privalumai" class="pn-simple-card"><span class="pn-card-emoji">🛡️</span><b>Namai jūsų rankose</b><p>Duomenys ir valdymas gali likti namuose, o ne vien gamintojų serveriuose.</p><span class="pn-card-link">Kodėl tai svarbu →</span></a>
-<a href="#kaip-veikia" class="pn-simple-card"><span class="pn-card-emoji">☀️</span><b>Energija be spėliojimų</b><p>Šildymas, baterija ir automobilis gali derintis prie saulės, tarifo bei poreikių.</p><span class="pn-card-link">Pamatyti pavyzdį →</span></a>
-<a href="#skaiciuotuvas" class="pn-simple-card"><span class="pn-card-emoji">📱</span><b>Viskas vienoje vietoje</b><p>Vienas ekranas vietoj atskirų programėlių, aiškesni pranešimai ir automatizacijos.</p><span class="pn-card-link">Įvertinti kainą →</span></a>
-</div></div>
+
+<section class="pn-benefits-2026" aria-labelledby="pn-benefits-title">
+  <div class="pn-bstats" aria-label="Home Assistant galimybės ir mūsų katalogas">
+    <div class="pn-bstat">
+      <strong>1 500<span>+</span></strong>
+      <span>Home Assistant integracijų</span>
+      <small>Skirtingi įrenginiai ir paslaugos vienoje platformoje</small>
+    </div>
+    <div class="pn-bstat">
+      <strong>543</strong>
+      <span>gamintojai mūsų kataloge</span>
+      <small>Suderinamumą tikriname pagal konkretų modelį</small>
+    </div>
+    <div class="pn-bstat">
+      <strong>1</strong>
+      <span>namų valdymo vieta</span>
+      <small>Šildymas, energija, apsauga ir daugiau</small>
+    </div>
+  </div>
+
+  <div class="pn-safety-showcase">
+    <div class="pn-safety-copy">
+      <span class="pn-b-eyebrow"><span class="pn-b-dot"></span> SVARBIAUSIA – SAUGUMAS IR PRIVATUMAS</span>
+      <h2 id="pn-benefits-title">Jūsų namai. <span class="grad-tx">Be nereikalingos priklausomybės nuo interneto.</span></h2>
+      <p>Įprastose sistemose komanda dažnai keliauja per gamintojo serverį. Su <strong>Home Assistant</strong> įrenginiai, palaikantys vietinį ryšį, gali būti valdomi tiesiog namų tinkle – be kelionės į debesiją.</p>
+      <ul class="pn-safety-checks">
+        <li><span aria-hidden="true">✓</span><span><strong>Interneto prieigą galima apriboti.</strong> Suderinamus įrenginius galima izoliuoti nuo išorinių serverių.</span></li>
+        <li><span aria-hidden="true">✓</span><span><strong>Vietinis valdymas veikia ir dingus internetui.</strong> Jei lieka elektra ir veikia namų tinklas.</span></li>
+        <li><span aria-hidden="true">✓</span><span><strong>Daugiau duomenų lieka namuose.</strong> Galite pasirinkti, ką ir su kokiomis paslaugomis dalintis.</span></li>
+      </ul>
+      <a class="pn-safety-link" href="#privalumai">Plačiau apie saugumą ir vietinį veikimą <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="pn-safety-diagram" role="img" aria-label="Vietinio valdymo principas: įrenginiai jungiasi per namų tinklą prie Home Assistant. Išorinį interneto ryšį galima apriboti.">
+      <div class="pn-sdiag-top"><span class="pn-sdiag-led"></span> NAMŲ TINKLAS <strong>VEIKIA VIETOJE</strong></div>
+      <div class="pn-sdiag-devices">
+        <span>💡 Apšvietimas</span><span>🌡️ Šildymas</span><span>📷 Kameros</span>
+      </div>
+      <div class="pn-sdiag-connect" aria-hidden="true"><span></span><i>↕</i><span></span></div>
+      <div class="pn-sdiag-hub"><span class="pn-sdiag-hub-icon" aria-hidden="true">⌂</span><div><strong>Home Assistant</strong><small>Valdymas jūsų namuose</small></div><b class="pn-sdiag-ok">✓</b></div>
+      <div class="pn-sdiag-internet"><span aria-hidden="true">⊘</span><div><strong>Internetas neprivalomas vietiniam valdymui</strong><small>Internetą naudojančioms funkcijoms jis vis dar reikalingas</small></div></div>
+      <div class="pn-sdiag-foot">Pavyzdinė vietinio ryšio schema</div>
+    </div>
+  </div>
+
+  <div class="pn-bhead">
+    <span class="eyebrow">KODĖL VERTA?</span>
+    <h2>Ne tik valdyti. <span class="grad-tx">Gyventi patogiau.</span></h2>
+    <p>Paprastais žodžiais – ką iš šios sistemos gauna jūsų šeima.</p>
+  </div>
+  <div class="pn-bgrid">
+    <article class="pn-bcard"><span class="pn-bicon" aria-hidden="true">🛡️</span><h3>Privatumas ir saugumas</h3><p>Galite riboti įrenginių prieigą prie interneto ir patys spręsti, kur saugomi namų duomenys.</p></article>
+    <article class="pn-bcard"><span class="pn-bicon" aria-hidden="true">🔗</span><h3>Skirtingi gamintojai kartu</h3><p>Vienoje sistemoje galima sujungti skirtingų prekės ženklų šildymą, saulės elektrinę, jutiklius, apsaugą ir daugiau.</p></article>
+    <article class="pn-bcard"><span class="pn-bicon" aria-hidden="true">⚡</span><h3>Mažesnės energijos sąnaudos</h3><p>Automatizacijos gali išnaudoti saulės perteklių, palankesnius tarifus ir išmaniau valdyti šildymą bei įkrovimą.</p></article>
+    <article class="pn-bcard"><span class="pn-bicon" aria-hidden="true">🏠</span><h3>Namai dirba už jus</h3><p>Šviesa, temperatūra, vėdinimas ir apsauga prisitaiko prie paros laiko, buvimo namuose ar jūsų įpročių.</p></article>
+    <article class="pn-bcard"><span class="pn-bicon" aria-hidden="true">📱</span><h3>Vienas patogus ekranas</h3><p>Mažiau programėlių telefone. Svarbiausi namų įrenginiai, rodmenys ir pranešimai – vienoje vietoje.</p></article>
+    <article class="pn-bcard"><span class="pn-bicon" aria-hidden="true">🌱</span><h3>Laisvė plėsti sistemą</h3><p>Pradėkite nuo kelių įrenginių. Ateityje pridėkite naujus, neapsiribodami vienu gamintoju.</p></article>
+  </div>
+  <p class="pn-bclarity"><strong>Svarbu žinoti:</strong> 543 – tai mūsų prietaisų kataloge esantys gamintojų pavadinimai, o ne garantuotai veikiančių modelių skaičius. „Home Assistant“ turi daugiau kaip 1 500 oficialių integracijų. Ar konkretus įrenginys veiks be interneto, priklauso nuo jo modelio ir integracijos. Debesijos funkcijoms, atnaujinimams ar nuotolinei prieigai interneto gali reikėti. <a href="https://www.home-assistant.io/integrations/" target="_blank" rel="noopener noreferrer">Integracijų katalogas ↗</a> <a href="https://www.home-assistant.io/faq/works-without-internet/" target="_blank" rel="noopener noreferrer">Veikimas be interneto ↗</a></p>
+</section>
+
 <div class="pn-home-services-heading"><h2>Ką galime sujungti?</h2><p>Pradedame nuo to, ką jau turite.</p></div>
 
 <div class="v17-services" aria-label="Mūsų sprendimai">
