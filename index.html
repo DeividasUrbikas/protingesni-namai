@@ -1684,9 +1684,7 @@ body:not(.v14-dark) #pn-design-toggle{
   border-color:#9abce0!important;
 }
 
-@media(max-width:760px){
-  body[data-pn-design]:not(.v14-dark){background-attachment:scroll!important}
-}
+/* v4.11: mobiliame ekrane nenaudoti pagal dokumento ilgį skaičiuojamo fono. */
 
 /* v4.9 – iš originalaus failo iškirptas skaidrus užrašas: be mėlynos kortelės, ikonos ir šūkio. */
 header .nav>a.logo,
@@ -1728,6 +1726,28 @@ body.v14-dark .footer-logo img.pn-logo-wordmark{filter:none}
   }
   header .nav>a.logo img.pn-logo-wordmark{max-width:100%!important}
 }
+
+/* v4.11 – šviesios temos gradientas priklauso ekrano, o ne puslapio aukščiui.
+   Fiksuotas sluoksnis patikimas ir Android naršyklėse, kurios nepaiso
+   background-attachment:fixed ant body. Naudojamos gyvos Dizaino studijos spalvos. */
+body[data-pn-design]:not(.v14-dark){
+  isolation:isolate;
+  background:transparent!important;
+}
+body[data-pn-design]:not(.v14-dark)::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100vh;
+  height:100dvh;
+  z-index:-1;
+  pointer-events:none;
+  background-image:var(--pn-style-field),var(--pn-canvas-bg);
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
 </style>
 </head>
 <body>
@@ -1735,7 +1755,7 @@ body.v14-dark .footer-logo img.pn-logo-wordmark{filter:none}
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.10</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.11</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links" id="links" aria-label="Visi svetainės skyriai">
 <a href="#pradzia">Pradžia</a>
 <a href="#privalumai">Kodėl verta</a>
