@@ -1375,59 +1375,6 @@ body[data-pn-design=aurora-pearl] .page .card,body[data-pn-design=aurora-pearl] 
 body[data-pn-design=aurora-minimal] .page .card,body[data-pn-design=aurora-minimal] .page .pn-simple-card{background:var(--pn-surface-fill)!important}
 @media(max-width:680px){body[data-pn-design] .page .card,body[data-pn-design] .page .pn-simple-card,body[data-pn-design] .page .pn-ds-panel{backdrop-filter:blur(min(16px,var(--pn-surface-blur))) saturate(1.07)}}
 
-/* v4.1 optional equipment catalogue -- grouped sensor and automation hardware */
-#pn-buy-section{margin:17px 0 26px;padding:20px;border-radius:22px;border:1px solid var(--line);background:var(--card);color:var(--tx)}
-.pn-buy-intro{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin:0 0 15px}
-.pn-buy-intro h3{color:var(--tx)!important;font-size:23px!important;margin:6px 0}
-.pn-buy-kicker{font-size:10px;letter-spacing:.08em;color:var(--teal);font-weight:900}
-.pn-buy-intro p{color:var(--tx2);font-size:12px;line-height:1.65}
-.pn-buy-chip{white-space:nowrap;border-radius:30px;background:var(--card2);border:1px solid var(--line);font-size:10px;font-weight:850;color:var(--teal);padding:8px}
-.pn-buy-search{display:flex;flex-direction:column;gap:6px}.pn-buy-search label{font-size:11px;color:var(--tx2);font-weight:800}
-.pn-buy-search input{width:100%;font-size:14px}
-.pn-buy-group-list{display:flex;overflow-x:auto;gap:7px;padding:12px 0;margin:6px 0 8px;scroll-snap-type:x proximity;scrollbar-width:thin}
-.pn-buy-group{display:flex;flex-shrink:0;align-items:center;gap:7px;padding:10px 12px;min-height:44px;border-radius:12px;border:1px solid var(--line2);background:var(--card2);color:var(--tx);font-size:11px;cursor:pointer;scroll-snap-align:start}
-.pn-buy-group>span{font-size:16px}.pn-buy-group strong{font-size:11px;white-space:nowrap}.pn-buy-group small{border-radius:8px;background:var(--card);padding:3px 6px;color:var(--tx2);font-size:10px}
-.pn-buy-group.active{border-color:var(--pn-accent,#177f9c);background:color-mix(in srgb,var(--pn-accent-soft,#e5f8f6) 55%,var(--card2));box-shadow:inset 0 0 0 1px var(--pn-accent,#168e87)}
-.pn-buy-products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.pn-buy-card{border:1px solid var(--line);border-radius:17px;overflow:hidden;background:var(--card2);display:flex;flex-direction:column;min-width:0}
-.pn-buy-photo{position:relative;display:flex;align-items:center;justify-content:center;height:145px;background:linear-gradient(140deg,#edf6fb,#dcecf5);overflow:hidden}
-.pn-buy-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:8px;background:linear-gradient(140deg,#f8fafc,#eaf1f6)}
-.pn-buy-fallback{display:flex;justify-content:center;align-items:center}
-.pn-buy-fallback .pn-device-svg{width:116px!important;height:116px!important}
-.pn-buy-info{padding:13px 14px 8px;flex:1;display:flex;flex-direction:column;gap:5px}
-.pn-buy-brand .brandmark{display:inline-flex;align-items:center;gap:7px}
-.pn-buy-brand .brandmark img{width:18px;height:18px;object-fit:contain}
-.pn-buy-brand .brandmark .brand-name{color:var(--tx);font-size:12px;font-weight:900}
-.pn-buy-card h4{color:var(--tx);font-size:14px;font-weight:850;margin:2px 0 3px;overflow-wrap:anywhere}
-.pn-buy-info p{color:var(--tx2);font-size:11px;line-height:1.55;flex:1}
-.pn-buy-meta{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;margin-top:6px}
-.pn-buy-meta>span{color:#1c6281;background:#dcecf6;border-radius:7px;padding:5px 7px;font-size:10px;font-weight:850}
-.pn-buy-meta>small{color:var(--tx3);font-size:9px}
-.pn-buy-bottom{border-top:1px solid var(--line);display:flex;gap:9px;align-items:center;justify-content:space-between;padding:12px 13px}
-.pn-buy-bottom>div:first-child{display:flex;flex-direction:column;gap:2px}
-.pn-buy-bottom>div:first-child span{color:var(--tx3);font-size:9px}
-.pn-buy-bottom>div:first-child strong{color:var(--tx);font-size:21px;font-weight:900;font-variant-numeric:tabular-nums}
-.pn-buy-qty{display:flex;align-items:center;gap:5px}.pn-buy-qty button{cursor:pointer;border:1px solid var(--pn-accent,#178c90);border-radius:9px;padding:9px 11px;min-width:35px;background:var(--pn-accent,#137b8c);color:white;font-size:12px;font-weight:850}
-.pn-buy-qty button:first-child:not(:last-child){background:var(--card);color:var(--tx);border-color:var(--line2)}
-.pn-buy-qty b{font-size:12px;min-width:14px;text-align:center;color:var(--tx)}
-.pn-buy-tally{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:16px 0 0;background:color-mix(in srgb,var(--pn-accent-soft,#dceff1) 60%,var(--card));border:1px solid var(--line);border-radius:13px;padding:15px;color:var(--tx);font-size:13px}
-.pn-buy-tally>strong{font-weight:900;font-size:23px}
-.pn-buy-disclaimer{font-size:10px;line-height:1.7;color:var(--tx3);margin-top:12px}
-.pn-buy-existing-title{margin:30px 0 14px;padding-top:23px;border-top:1px solid var(--line);font-size:16px;font-weight:850;color:var(--tx)}
-.pn-buy-noresults{grid-column:1/-1;padding:25px 10px;font-size:12px;color:var(--tx2);text-align:center}
-.pn-buy-sum-title{border-top:1px solid var(--line);padding:14px 0 6px;color:var(--tx);font-size:12px;font-weight:900}
-.pn-buy-summary-line{gap:8px}.pn-buy-summary-line span{font-size:12px;overflow-wrap:anywhere}.pn-buy-summary-line b{white-space:nowrap}
-.pn-buy-summary-total{font-weight:850;color:var(--tx)!important}
-body:not(.v14-dark) #pn-buy-section{background:#fff;color:#19354a;border-color:#d3e0e9}
-body:not(.v14-dark) #pn-buy-section .pn-buy-card{background:#f8fbfd;border-color:#d9e5eb}
-body:not(.v14-dark) #pn-buy-section .pn-buy-group{background:#edf4f8;color:#1f4054;border-color:#cee0e8}
-body:not(.v14-dark) #pn-buy-section .pn-buy-group.active{background:#e1eefc;color:#1b3c60}
-body:not(.v14-dark) #pn-buy-section .pn-buy-brand .brand-name{color:#19354a!important}
-body.v14-dark #pn-buy-section .pn-buy-meta>span{background:#31576f;color:#d0ecf5}
-body.v14-dark #pn-buy-section .pn-buy-photo{background:linear-gradient(125deg,#314b66,#425875)}
-@media(max-width:780px){.pn-buy-products{grid-template-columns:1fr 1fr}.pn-buy-photo{height:135px}}
-@media(max-width:560px){#pn-buy-section{padding:13px;margin:12px 0}.pn-buy-intro h3{font-size:19px!important}.pn-buy-intro{flex-wrap:wrap;gap:7px}.pn-buy-products{grid-template-columns:1fr}.pn-buy-card{display:grid;grid-template-columns:116px minmax(0,1fr);grid-template-areas:"photo info" "bottom bottom"}.pn-buy-photo{grid-area:photo;height:134px}.pn-buy-info{grid-area:info;padding:9px}.pn-buy-bottom{grid-area:bottom;padding:10px}.pn-buy-card h4{font-size:13px}.pn-buy-meta>small{display:none}.pn-buy-photo .pn-device-svg{width:96px!important;height:96px!important}}
-
 /* v4.2 verified visual fallback for brands without a supported official icon */
 .brandmark .pn-brand-art{position:relative;display:inline-flex;width:20px;height:20px;flex:0 0 20px;align-items:center;justify-content:center;border-radius:6px}
 .brandmark .pn-brand-art>svg,.brandmark .pn-brand-art>img{width:20px;height:20px;object-fit:contain;display:block}
@@ -1452,7 +1399,6 @@ body.v14-dark #pn-buy-section .pn-buy-photo{background:linear-gradient(125deg,#3
 <a href="#apie">Apie mus</a>
 <a href="#kontaktai">Kontaktai</a>
 <a href="#dizainas">🎨 Dizaino studija</a>
-<a href="#iranga">🛒 Įsigyti prietaisų</a>
 </nav>
     <a href="#skaiciuotuvas" class="btn btn-p btn-sm btn-cta">Apskaičiuoti kainą</a>
     <button type="button" class="menu-btn" id="menuBtn" aria-label="Meniu" aria-controls="links" aria-expanded="false"><svg class="i" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
@@ -1764,15 +1710,7 @@ body.v14-dark #pn-buy-section .pn-buy-photo{background:linear-gradient(125deg,#3
           </form>
           <div id="pending"></div>
           <div class="small" style="margin-top:8px">Galite įrašyti kelis iš karto, atskirdami kableliais.</div>
-          <section class="pn-buy-section" id="pn-buy-section">
-<div class="pn-buy-intro"><div><span class="pn-buy-kicker">PAPILDOMA ĮRANGA NAMAMS</span><h3>🛒 Įsigyti jutiklių ir valdiklių</h3><p>Pasirinkite naujų įrenginių, jei norite išplėsti savo išmaniuosius namus. Čia pateikiamos orientacinės įrangos kainos, be prijungimo darbų.</p></div><span class="pn-buy-chip">67 modeliai</span></div>
-<div class="pn-buy-search"><label for="pn-buy-search">Ieškoti modelio ar prietaiso</label><input id="pn-buy-search" type="search" class="field" placeholder="Pvz., temperatūra, CO2, Sonoff, Zigbee, užuolaidos…"></div>
-<div class="pn-buy-group-list" id="pn-buy-groups" aria-label="Įsigyjamos įrangos grupės"></div>
-<div class="pn-buy-products" id="pn-buy-products" aria-live="polite"></div>
-<div class="pn-buy-tally" id="pn-buy-tally" aria-live="polite"><span>Pasirinktos įrangos suma</span><strong>0 €</strong></div>
-<p class="pn-buy-disclaimer">Modelių kaina – apytikslė rinkos orientacinė suma, ne oficialus statistinis visų parduotuvių vidurkis ir ne galutinis pardavimo pasiūlymas. Dūmų, anglies monoksido ir dujų jutikliai turi atitikti taikomus saugos reikalavimus; išmaniųjų namų pranešimai nėra sertifikuotos priešgaisrinės apsaugos pakaitalas. Techninį suderinamumą ir galutinę įrangos kainą patvirtinsime prieš užsakymą. Šiame kataloge neįtraukti robotai ar buitinė technika. Nuotraukos naudojamos kaip modelių iliustracijos; daliai pateikiamas mūsų SVG piešinys.</p>
-</section>
-<div class="pn-buy-existing-title">Jau turimi prietaisai – prijungimas prie sistemos</div>
+          </section>
 <div class="pick-h">Pasirinkite prietaiso grupę ir gamintoją</div>
           <div class="device-quicklinks" aria-label="Dažniau ieškomi prietaisai"><button type="button" data-dev-quick="vehicle">🚗 Automobiliai</button><button type="button" data-dev-quick="irrigation">💧 Laistymas</button><button type="button" data-dev-quick="mow">🌿 Vejapjovės</button><button type="button" data-dev-quick="garden">🌱 Šiltnamis / baseinas</button></div><div class="device-search-wrap"><label for="deviceCategorySearch">Rasti prietaiso tipą</label><input id="deviceCategorySearch" class="field" type="search" autocomplete="off" placeholder="Pvz., šilumos siurblys, Solis, kamera..." aria-label="Ieškoti prietaiso kategorijos"></div><div class="cgrid" id="cgrid"></div>
 
@@ -2179,15 +2117,6 @@ function parts(it){const c=CATS.find(x=>x.id===it.cat);const sp=it.sub&&SUBP[it.
   if(!sp)return {dev:0,inst:0,int:c.p1,int2:c.p2,hasDev:false,sup:false};
   const hasDev=sp[0]!=null,sup=hasDev&&it.sup!==false;return {dev:sup?sp[0]:0,inst:sup?sp[1]:0,int:sp[2],int2:sp[3],hasDev,sup}}
 
-/* v4.1 curated optional equipment catalogue. Prices approximate, quantity changes the quote, NOT payment. */
-const PN_BUY_GROUPS=[["temp","🌡️","Temperatūra ir drėgmė","Kambario mikroklimato stebėjimas"],["co2","🌬️","CO₂ ir oro kokybė","Vėdinimo poreikis, CO₂ matuokliai"],["presence","🚶","Judesys ir buvimas","Šviesos automatizavimas pagal judėjimą"],["entry","🚪","Durys ir mygtukai","Atidarymo jutikliai ir scenarijų mygtukai"],["leak","💧","Vanduo ir nuotėkiai","Pranešimai apie vandens nuotėkį"],["safety","🛡️","Dūmai, CO ir dujos","Papildomi saugos pranešimai"],["covers","🪟","Užuolaidos ir žaliuzės","Variklių ir roletų valdymas"],["relay","💡","Relės ir šviesos","Valdymo moduliai už jungiklių"],["sockets","🔌","Išmaniosios rozetės","Nuotolinis įjungimas ir galios matavimas"],["energy","⚡","Elektros matavimas","Elektros suvartojimo stebėjimas"],["heating","♨️","Šildymo priedai","Radiatorių termostatai ir temperatūros valdikliai"],["garden","🌱","Sodo jutikliai ir laistymas","Dirvožemis ir laistymo zonos"],["network","📶","Wi-Fi, 4G ir Zigbee tinklas","Namų ryšys, modemas ir koordinatoriai"],["infrared","📺","IR ir pagalbiniai valdikliai","TV ir senų prietaisų valdymas"]];
-const PN_BUY_ITEMS=[{"id":"t1","group":"temp","brand":"Sonoff","model":"SNZB-02P","price":13,"connection":"Zigbee","desc":"Temperatūra ir drėgmė be ekrano","photo":"t2p"},{"id":"t2","group":"temp","brand":"Sonoff","model":"SNZB-02D","price":17,"connection":"Zigbee","desc":"Temperatūra ir drėgmė su LCD ekranu","photo":"t2d"},{"id":"t3","group":"temp","brand":"Sonoff","model":"SNZB-02DR2","price":17,"connection":"Zigbee","desc":"Didesnis LCD ekranas kasdieniam stebėjimui","photo":""},{"id":"t4","group":"temp","brand":"Sonoff","model":"SNZB-02M","price":18,"connection":"Zigbee","desc":"Temperatūra, drėgmė ir oro slėgis","photo":""},{"id":"t5","group":"temp","brand":"Aqara","model":"W100 TH-S04D","price":35,"connection":"Zigbee / Thread","desc":"Temperatūra ir drėgmė su ekranu","photo":""},{"id":"t6","group":"temp","brand":"Moes","model":"Zigbee LCD TH","price":20,"connection":"Zigbee","desc":"Mikroklimato jutiklis su ekranu","photo":""},{"id":"t7","group":"temp","brand":"Nous","model":"E5","price":19,"connection":"Zigbee","desc":"Kompaktiškas patalpų jutiklis","photo":""},{"id":"c1","group":"co2","brand":"Sonoff","model":"AirGuard CO2 SAWF-08P","price":52,"connection":"Wi-Fi / Matter","desc":"Tikras NDIR CO₂, temperatūra ir drėgmė","photo":"co2"},{"id":"c2","group":"co2","brand":"SwitchBot","model":"Meter Pro CO2","price":61,"connection":"Bluetooth","desc":"CO₂, temperatūra, drėgmė ir LCD ekranas","photo":""},{"id":"c3","group":"co2","brand":"Nedis","model":"SmartLife CO₂ NDIR","price":89,"connection":"Wi-Fi","desc":"Oro kokybės matavimas su ekranu","photo":""},{"id":"p1","group":"presence","brand":"Sonoff","model":"SNZB-03P","price":15,"connection":"Zigbee","desc":"PIR judesio aptikimas","photo":"pir"},{"id":"p2","group":"presence","brand":"Sonoff","model":"SNZB-06P","price":15,"connection":"Zigbee","desc":"Buvimo aptikimas mmWave radaru","photo":"presence"},{"id":"p3","group":"presence","brand":"Sonoff","model":"SNZB-06P24","price":27,"connection":"Zigbee","desc":"24 GHz buvimo jutiklis","photo":""},{"id":"p4","group":"presence","brand":"Aqara","model":"Motion Sensor P1","price":23,"connection":"Zigbee","desc":"PIR judesio automatizacija","photo":""},{"id":"p5","group":"presence","brand":"Aqara","model":"Presence Sensor FP2","price":79,"connection":"Wi-Fi","desc":"Kelių zonų buvimo aptikimas","photo":"fp2"},{"id":"p6","group":"presence","brand":"Tuya","model":"MMW01","price":50,"connection":"Zigbee","desc":"Judesio ir buvimo aptikimas","photo":""},{"id":"d1","group":"entry","brand":"Sonoff","model":"SNZB-04P","price":13,"connection":"Zigbee","desc":"Durų ir langų atidarymo jutiklis","photo":""},{"id":"d2","group":"entry","brand":"Sonoff","model":"SNZB-04PR2","price":16,"connection":"Zigbee","desc":"Antros kartos durų kontaktas","photo":""},{"id":"d3","group":"entry","brand":"Aqara","model":"Door and Window Sensor P2","price":30,"connection":"Thread / Matter","desc":"Durų ir langų būsena","photo":""},{"id":"d4","group":"entry","brand":"Sonoff","model":"SNZB-01P","price":11,"connection":"Zigbee","desc":"Belaidis scenarijų mygtukas","photo":""},{"id":"d5","group":"entry","brand":"Aqara","model":"Wireless Mini Switch T1","price":20,"connection":"Zigbee","desc":"Namų scenarijų mygtukas","photo":""},{"id":"w1","group":"leak","brand":"Sonoff","model":"SNZB-05P","price":16,"connection":"Zigbee","desc":"Vandens nuotėkis po kriaukle ar skalbykle","photo":"leak"},{"id":"w2","group":"leak","brand":"Shelly","model":"Flood Gen4","price":33,"connection":"Wi-Fi / Zigbee","desc":"Nuotėkio jutiklis su kabeliu","photo":"shellyflood"},{"id":"w3","group":"leak","brand":"Aqara","model":"Water Leak Sensor T1","price":23,"connection":"Zigbee","desc":"Vandens nuotėkio pranešimai","photo":""},{"id":"w4","group":"leak","brand":"Shelly","model":"Flood S Gen4","price":36,"connection":"Wi-Fi / Zigbee","desc":"Kompaktiškas vandens jutiklis","photo":""},{"id":"s1","group":"safety","brand":"Shelly","model":"Plus Smoke","price":45,"connection":"Wi-Fi","desc":"Dūmų detektorius su pranešimais","photo":""},{"id":"s2","group":"safety","brand":"Nous","model":"E18 CO","price":28,"connection":"Wi-Fi","desc":"Anglies monoksido (CO) detektorius","photo":""},{"id":"s3","group":"safety","brand":"Nous","model":"E9 Gas","price":30,"connection":"Zigbee","desc":"Dujų nuotėkio aptikimas","photo":""},{"id":"u1","group":"covers","brand":"Sonoff","model":"MINI-ZBRBS","price":17,"connection":"Zigbee","desc":"Roletų ir užuolaidų variklio valdymas","photo":"sonoffcover"},{"id":"u2","group":"covers","brand":"Sonoff","model":"MINI-RBS","price":21,"connection":"Wi-Fi / Matter","desc":"Roletų ir žaliuzių variklio valdymas","photo":""},{"id":"u3","group":"covers","brand":"Moes","model":"MS-108WR","price":19,"connection":"Wi-Fi","desc":"Elektrinių užuolaidų modulis","photo":"moescover"},{"id":"u4","group":"covers","brand":"Nous","model":"B4Z","price":20,"connection":"Zigbee","desc":"Užuolaidų / roletų valdymo relė","photo":""},{"id":"u5","group":"covers","brand":"Shelly","model":"2PM Gen3","price":21,"connection":"Wi-Fi","desc":"Dviejų kanalų / variklio valdymo modulis","photo":""},{"id":"r1","group":"relay","brand":"Sonoff","model":"ZBMINIR2","price":12,"connection":"Zigbee","desc":"Įleidžiama šviesos relė","photo":""},{"id":"r2","group":"relay","brand":"Sonoff","model":"MINIR4M","price":17,"connection":"Wi-Fi / Matter","desc":"Kompaktiška Matter relė","photo":""},{"id":"r3","group":"relay","brand":"Sonoff","model":"MINI-ZBD","price":18,"connection":"Zigbee","desc":"Sauso kontakto Zigbee relė","photo":""},{"id":"r4","group":"relay","brand":"Shelly","model":"1 Gen3","price":15,"connection":"Wi-Fi","desc":"Vietinio valdymo relė","photo":"shellyrelay"},{"id":"r5","group":"relay","brand":"Shelly","model":"1 Mini Gen3","price":13,"connection":"Wi-Fi","desc":"Miniatiūrinė relė jungikliui","photo":""},{"id":"r6","group":"relay","brand":"Sonoff","model":"DUALR3","price":16,"connection":"Wi-Fi","desc":"Dviejų kanalų valdiklis","photo":"dual"},{"id":"r7","group":"relay","brand":"Shelly","model":"Dimmer Gen3","price":30,"connection":"Wi-Fi","desc":"Apšvietimo ryškumo valdymas","photo":""},{"id":"o1","group":"sockets","brand":"Nous","model":"A7","price":14,"connection":"Wi-Fi","desc":"Išmanioji rozetė su energijos matavimu","photo":""},{"id":"o2","group":"sockets","brand":"Nous","model":"A8M","price":15,"connection":"Wi-Fi / Matter","desc":"Išmanioji rozetė su galios matavimu","photo":""},{"id":"o3","group":"sockets","brand":"Sonoff","model":"S61s Gen2","price":14,"connection":"Wi-Fi / Matter","desc":"Kištukinis lizdas su apskaita","photo":""},{"id":"o4","group":"sockets","brand":"Shelly","model":"Plug S Gen3","price":24,"connection":"Wi-Fi","desc":"Rozetė nuotoliniam valdymui","photo":""},{"id":"e1","group":"energy","brand":"Shelly","model":"PM Mini Gen3","price":17,"connection":"Wi-Fi","desc":"Kompaktiškas galios matuoklis","photo":""},{"id":"e2","group":"energy","brand":"Shelly","model":"EM Mini Gen4","price":24,"connection":"Wi-Fi / Zigbee","desc":"Vienos grandinės energijos apskaita","photo":""},{"id":"e3","group":"energy","brand":"Shelly","model":"Pro 3EM","price":135,"connection":"LAN / Wi-Fi","desc":"Trifazė energijos apskaita","photo":""},{"id":"e4","group":"energy","brand":"Sonoff","model":"POWR316","price":19,"connection":"Wi-Fi","desc":"Srovės ir galios stebėjimas","photo":""},{"id":"h1","group":"heating","brand":"Sonoff","model":"TRVZB","price":32,"connection":"Zigbee","desc":"Termostatinė radiatoriaus galvutė","photo":"trv"},{"id":"h2","group":"heating","brand":"Tuya","model":"TRV06","price":43,"connection":"Zigbee","desc":"Radiatoriaus termostatas su ekranu","photo":""},{"id":"h3","group":"heating","brand":"Tuya","model":"N-TRV16","price":47,"connection":"Zigbee","desc":"Radiatoriaus temperatūros reguliavimas","photo":""},{"id":"h4","group":"heating","brand":"Sonoff","model":"THR316","price":13,"connection":"Wi-Fi","desc":"Temperatūros valdymo modulis","photo":""},{"id":"h5","group":"heating","brand":"Sonoff","model":"THR316D","price":16,"connection":"Wi-Fi","desc":"Valdiklis su LCD ekranu","photo":""},{"id":"g1","group":"garden","brand":"Sonoff","model":"MS01","price":15,"connection":"Laidinis priedas","desc":"Dirvožemio drėgmės zondas, reikalingas suderinamas valdiklis","photo":""},{"id":"g2","group":"garden","brand":"Third Reality","model":"Gen2 Soil Sensor","price":28,"connection":"Zigbee","desc":"Dirvožemio drėgmės jutiklis","photo":""},{"id":"g3","group":"garden","brand":"Moes","model":"ZWV-YC-EU-GY-MS","price":35,"connection":"Zigbee","desc":"Laistymo zonos valdiklis","photo":""},{"id":"g4","group":"garden","brand":"Tuya","model":"SWT60","price":35,"connection":"Wi-Fi","desc":"Programuojamas laistymo valdiklis","photo":""},{"id":"n1","group":"network","brand":"Sonoff","model":"ZBDongle-E","price":20,"connection":"Zigbee USB","desc":"Home Assistant Zigbee koordinatorius","photo":"dongle"},{"id":"n2","group":"network","brand":"Sonoff","model":"Dongle Lite MG21","price":23,"connection":"Zigbee USB","desc":"Kompaktiškas koordinatorius","photo":""},{"id":"n3","group":"network","brand":"Sonoff","model":"Dongle MAX","price":40,"connection":"LAN / PoE","desc":"Tinklo Zigbee / Thread adapteris","photo":""},{"id":"n4","group":"network","brand":"SMLIGHT","model":"SLZB-06","price":49,"connection":"LAN / PoE","desc":"Zigbee koordinatorius per tinklą","photo":""},{"id":"n5","group":"network","brand":"TP-Link","model":"Archer AX55","price":99,"connection":"Wi-Fi 6","desc":"Dviejų dažnių maršrutizatorius","photo":"router"},{"id":"n6","group":"network","brand":"Teltonika","model":"RUT241","price":180,"connection":"4G LTE","desc":"Mobiliojo interneto maršrutizatorius","photo":""},{"id":"n7","group":"network","brand":"TP-Link","model":"TL-SG108","price":26,"connection":"Ethernet","desc":"8 prievadų tinklo komutatorius","photo":""},{"id":"i1","group":"infrared","brand":"Moes","model":"UFO-R6","price":19,"connection":"Wi-Fi / IR","desc":"TV ir kondicionierių IR valdymas","photo":""},{"id":"i2","group":"infrared","brand":"Moes","model":"UFO-R11","price":29,"connection":"Zigbee / IR","desc":"IR pultelių valdiklis","photo":""},{"id":"i3","group":"infrared","brand":"BroadLink","model":"RM4 Mini","price":30,"connection":"Wi-Fi / IR","desc":"Universalus infraraudonųjų spindulių valdiklis","photo":""}];
-const PN_BUY_PHOTOS={"t2p":"https://www.tinytronics.nl/image/cache/catalog/products_2023/sonoff-snzb-02p-temperature-and-humidity-sensor-zigbee-content-1500x1500w.jpg","t2d":"https://www.chytrobot.cz/uploads/images/sonoff-snzb-02d.jpg","co2":"https://www.opentools.lv/uploads/item/13951_58436_1.jpg","pir":"https://chippycz.s34.cdn-upgates.com/_cache/9/5/95c5bd34713d3df27eecbd2c9d739bb1-119-5-sonoff-snzb-03p-zigbee-motion-sensor.jpg","presence":"https://media.s-bol.com/4nV9XYznQrEx/82WWmkm/1200x1200.jpg","fp2":"https://shop.everythingsmart.io/cdn/shop/files/AqaraPresenceSensorFP21.jpg?v=1726828258&width=1946","leak":"https://a.allegroimg.com/original/119080/e7ef3cef40e9bdc7561540aebad3/Sonoff-SNZB-05P-z-Kablem-Detekcyjnym-Czujnik-Zalania-Wycieku-Wody-ZigBee","shellyflood":"https://www.digitalbaytech.com/cdn/shop/files/Shelly_Flood_Gen4_0.png?v=1768495603","sonoffcover":"https://www.swiss-domotique.ch/13556-large_default/sonoff-mini-zbrbs-intelligentes-zigbee-modul-fur-rollladen-und-jalousien.jpg","moescover":"https://www.anodas.lt/image/cache/catalog/AN3/tuya-wifi-nuleidziamas-roletu-valdiklis-android-ios-programa-moes-ms-108wr-256657-500x500.jpg","shellyrelay":"https://cdn1.domadoo.fr/30965-large_default/shelly-wi-fi-smart-relay-switch-shelly-1-gen3.jpg","dual":"https://cdn1.domadoo.fr/17604-large_default/sonoff-2-channel-wifi-onoff-smart-switch-power-metering-dualr3.jpg","trv":"https://mokivezi.lt/media/cache/sylius_shop_product_original/2/d/a/c/2dac015e10359125827b2ce1878bb825f9a6625d_1086976_5.jpg","dongle":"https://jp.robotshop.com/cdn/shop/files/sonoff_zigbee_3.0_usb_dongle_plus_zbdongle_e_1_resized_1200x1200.webp?v=1720507043","router":"https://i.ebayimg.com/images/g/-hgAAOSwpEFk4N0R/s-l1200.jpg"};
-const pnBuyQty={};
-let pnBuyGroup='temp',pnBuyQuery='';
-const pnBuyRows=()=>PN_BUY_ITEMS.filter(x=>(pnBuyQty[x.id]||0)>0).map(x=>({...x,qty:pnBuyQty[x.id],total:x.price*pnBuyQty[x.id]}));
-const pnBuyTotal=()=>pnBuyRows().reduce((sum,x)=>sum+x.total,0);
-
 function pricing(){
   const seen={};let dev=0,disc=0,devS=0,instS=0,intS=0;
   const lines=items.map(it=>{
@@ -2205,8 +2134,7 @@ function pricing(){
   sel.zb.forEach(id=>{const o=OPTS.zb.items.find(x=>x.id===id);extra+=o.p;ex.push([o.t,o.p])});
   sel.auto.forEach(id=>{const o=OPTS.auto.items.find(x=>x.id===id);extra+=o.p;ex.push([o.t,o.p])});
   extra+=BASE_SETUP_PRICE;ex.splice(sel.server==='own'?0:1,0,['Bazinis Home Assistant paruošimas',BASE_SETUP_PRICE]);
-  const buyLines=pnBuyRows(),buyTotal=pnBuyTotal();
-  return {lines,dev,devS,instS,intS,disc,extra,ex,month,buyLines,buyTotal,total:dev-disc+extra+buyTotal};
+  return {lines,dev,devS,instS,intS,disc,extra,ex,month,total:dev-disc+extra};
 }
 
 /* ===================== ATVAIZDAVIMAS ===================== */
@@ -2284,20 +2212,19 @@ document.querySelectorAll('.opts').forEach(el=>el.addEventListener('change',e=>{
 
 function renderSum(P){
   try{accSum(P)}catch(_){}
-  try{const n=items.reduce((a,i)=>a+i.qty,0)+P.buyLines.reduce((a,x)=>a+x.qty,0);$('#tbSum').textContent='nuo '+eur(P.total);$('#tbM').textContent=P.month?'+ '+P.month+' €/mėn.':'';$('#tbN').textContent=n?n+' įreng.':''}catch(_){}
+  try{const n=items.reduce((a,i)=>a+i.qty,0);$('#tbSum').textContent='nuo '+eur(P.total);$('#tbM').textContent=P.month?'+ '+P.month+' €/mėn.':'';$('#tbN').textContent=n?n+' įreng.':''}catch(_){}
   const devLines=P.lines.filter(l=>l.c);
   $('#summary').innerHTML=`<h3>Jūsų sąmata</h3>
    <div class="slines">${devLines.length?devLines.map(l=>`<div class="sline"><span>${l.it.qty} × ${esc(l.it.brand?l.it.brand+' ':'')}${esc(itName(l.it).toLowerCase())}</span><b>nuo ${eur(l.total)}</b></div>`).join(''):'<div class="small">Įrenginiai dar nepridėti</div>'}</div>
    <div class="sdiv"></div>
    ${P.devS?`<div class="srow"><span>Įranga</span><b>${eur(P.devS)}</b></div>`:''}${P.instS?`<div class="srow"><span>Įrengimas</span><b>${eur(P.instS)}</b></div>`:''}<div class="srow"><span>Pridėjimas prie sistemos</span><b>${eur(P.intS)}</b></div>
    ${P.disc?`<div class="srow d"><span>Kiekio nuolaida</span><b>−${eur(P.disc)}</b></div>`:''}
-   ${P.buyLines.length?`<div class="pn-buy-sum-title">🛒 Papildomai pasirinkta įranga</div>${P.buyLines.map(x=>`<div class="srow pn-buy-summary-line"><span>${x.qty} × ${esc(x.brand)} ${esc(x.model)}</span><b>~${eur(x.total)}</b></div>`).join('')}<div class="srow pn-buy-summary-total"><span>Įrangos suma</span><b>~${eur(P.buyTotal)}</b></div>`:''}
    ${P.ex.filter(e=>!e[2]).map(e=>`<div class="srow"><span>${e[0]}</span><b>${e[3]||'nuo '+eur(e[1])}</b></div>`).join('')}
    <div class="sdiv"></div>
    <div class="stotal"><span>Preliminariai nuo</span><b>${eur(P.total)}</b></div>
    ${P.ex.filter(e=>e[2]).map(e=>`<div class="smonth"><span>${e[0]}</span><b>${e[1]} €/mėn.</b></div>`).join('')}${P.ex.filter(e=>e[2]).length>1?`<div class="smonth" style="color:#fff"><span>Iš viso kas mėnesį</span><b>${P.month} €/mėn.</b></div>`:''}
    <button class="btn btn-p" id="toOrder">Pateikti užklausą</button>
-   <p class="disclaimer">Visos kainos nurodytos <strong>nuo</strong> ir yra preliminarios. Bazinis paruošimas nuo 149 € įtrauktas net turint savo serverį; jis neapima prietaisų integracijų, sudėtingų automatizacijų, sistemos migracijos ar atvykimo. Papildomai įsigyjamų jutiklių ir valdiklių kainos yra atskira orientacinė įrangos dalis, be montavimo ir integravimo. Galutinę sąmatą patvirtinsime įvertinę įrangą ir darbų apimtį.</p>`;
+   <p class="disclaimer">Visos kainos nurodytos <strong>nuo</strong> ir yra preliminarios. Bazinis paruošimas nuo 149 € įtrauktas net turint savo serverį; jis neapima prietaisų integracijų, sudėtingų automatizacijų, sistemos migracijos ar atvykimo. Galutinę sąmatą patvirtinsime įvertinę įrangą ir darbų apimtį.</p>`;
   $('#toOrder').onclick=()=>{$('#cMsg').value=estimateText(P);location.hash='kontaktai';setTimeout(()=>$('#cName').focus(),50)};
 }
 function estimateText(P){
@@ -2305,7 +2232,6 @@ function estimateText(P){
   const L=['Preliminari sąmata (kainos nuo):',`Serveris: ${selectedServer?selectedServer.t:'Nepasirinktas'}`];
   P.lines.forEach(l=>{if(l.c){const ml=modelsOf(l.it),mm=ml&&l.it.model>=0?ml[l.it.model][0]:l.it.model===-2?'kitas modelis':'';L.push(`• ${l.it.qty} × ${l.it.brand?l.it.brand+' ':''}${itName(l.it)}${mm?' ('+mm+')':''} – nuo ${eur(l.total)} · ${CMP[compatOf(l.it)][1].toLowerCase()}`)}else L.push(`• ${l.it.qty} × „${l.it.raw}“ – kategorija nenurodyta`)});
   if(P.disc)L.push(`Kiekio nuolaida: −${eur(P.disc)}`);
-  if(P.buyLines.length){L.push('','Papildomai pageidaujama įranga (orientacinės kainos):');P.buyLines.forEach(x=>L.push(`• ${x.qty} × ${x.brand} ${x.model} – ~${eur(x.total)}`));L.push(`Įrangos suma: ~${eur(P.buyTotal)}`)}
   P.ex.forEach(e=>L.push(`• ${e[0]} – ${e[3]?'kaina derinama':e[2]?'nuo '+e[1]+' €/mėn.':'nuo '+eur(e[1])}`));
   L.push(`Preliminari suma nuo: ${eur(P.total)}${P.month?` + nuo ${P.month} €/mėn.`:''}`);
   L.push('','Papildoma informacija:');
@@ -2449,49 +2375,6 @@ document.querySelectorAll('[data-dev-quick]').forEach(button=>button.addEventLis
  renderCgrid();
  $('#cgrid').scrollIntoView({behavior:'smooth',block:'start'});
 }));
-
-function pnBuyArt(x){
- const k={temp:'sensor',co2:'co2',presence:'presence',entry:'door',leak:'leak',safety:'smoke',covers:'blind',relay:'relay',sockets:'relay',energy:'battery',heating:'heat',garden:'irrigation',network:/Dongle|SLZB|MG21/.test(x.model)?'zigbee':'router',infrared:'tv'}[x.group]||'sensor';
- const vector='<span class="pn-buy-fallback">'+deviceSketch(x.model,k)+'</span>';
- const uri=PN_BUY_PHOTOS[x.photo];
- const photo=uri?'<img loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="'+esc(x.brand+' '+x.model)+'" src="'+esc(uri)+'" onload="this.previousElementSibling.hidden=true" onerror="this.hidden=true">':'';
- return '<div class="pn-buy-photo">'+vector+photo+'</div>';
-}
-function pnBuyRender(){
- const target=document.getElementById('pn-buy-products'),tabs=document.getElementById('pn-buy-groups');
- if(!target||!tabs)return;
- const query=pnBuyQuery.trim().toLocaleLowerCase('lt-LT');
- const matching=PN_BUY_ITEMS.filter(x=>!query||[x.brand,x.model,x.connection,x.desc,PN_BUY_GROUPS.find(g=>g[0]===x.group)?.[2]||''].join(' ').toLocaleLowerCase('lt-LT').includes(query));
- const visibleGroups=PN_BUY_GROUPS.filter(g=>matching.some(x=>x.group===g[0]));
- tabs.innerHTML=visibleGroups.map(g=>'<button type="button" class="pn-buy-group '+(pnBuyGroup===g[0]?'active':'')+'" data-pn-buy-group="'+g[0]+'" aria-pressed="'+String(pnBuyGroup===g[0])+'"><span>'+g[1]+'</span><strong>'+g[2]+'</strong><small>'+matching.filter(x=>x.group===g[0]).length+'</small></button>').join('');
- const displayed=matching.filter(x=>query||x.group===pnBuyGroup);
- target.innerHTML=displayed.length?displayed.map(x=>{
-  const qty=pnBuyQty[x.id]||0;
-  return '<article class="pn-buy-card" data-buy-card="'+x.id+'">'+pnBuyArt(x)+
-  '<div class="pn-buy-info"><div class="pn-buy-brand">'+brandLogo(x.brand)+'</div><h4>'+esc(x.model)+'</h4><p>'+esc(x.desc)+'</p><div class="pn-buy-meta"><span>'+esc(x.connection)+'</span><small>Modelis tikrinamas prieš užsakymą</small></div></div>'+
-  '<div class="pn-buy-bottom"><div><span>Orientacinė įrangos kaina</span><strong>~'+eur(x.price)+'</strong></div>'+
-  '<div class="pn-buy-qty">'+(qty?'<button type="button" data-pn-buy-dec="'+x.id+'" aria-label="Sumažinti '+esc(x.model)+' kiekį">−</button><b>'+qty+'</b>':'')+
-  '<button type="button" data-pn-buy-add="'+x.id+'" aria-label="Pridėti '+esc(x.model)+' į sąmatą">'+(qty?'+':'Pridėti +')+'</button></div></div></article>'
- }).join(''):'<div class="pn-buy-noresults">Pagal šią paiešką įrangos nerasta. Bandykite trumpesnį modelio ar kategorijos pavadinimą.</div>';
- const cart=document.getElementById('pn-buy-tally');
- if(cart){const rows=pnBuyRows();cart.innerHTML='<span><strong>'+rows.reduce((a,x)=>a+x.qty,0)+'</strong> vnt. pasirinktos įrangos</span><strong>~'+eur(pnBuyTotal())+'</strong>'}
-}
-const pnBuyArea=document.getElementById('pn-buy-section');
-if(pnBuyArea){
- pnBuyArea.addEventListener('click',e=>{
-  const group=e.target.closest('[data-pn-buy-group]');
-  if(group){pnBuyGroup=group.dataset.pnBuyGroup;pnBuyQuery='';const search=document.getElementById('pn-buy-search');if(search)search.value='';pnBuyRender();return}
-  const add=e.target.closest('[data-pn-buy-add]'),dec=e.target.closest('[data-pn-buy-dec]');
-  const id=add?.dataset.pnBuyAdd||dec?.dataset.pnBuyDec;
-  if(!id||!PN_BUY_ITEMS.some(x=>x.id===id))return;
-  const next=(pnBuyQty[id]||0)+(add?1:-1);
-  if(next<=0)delete pnBuyQty[id];else pnBuyQty[id]=Math.min(99,next);
-  pnBuyRender();renderSum(pricing());
- });
- const query=document.getElementById('pn-buy-search');
- if(query)query.addEventListener('input',()=>{pnBuyQuery=query.value||'';pnBuyRender()});
- pnBuyRender();
-}
 
 $('#cgrid').addEventListener('click',e=>{
   const moreBrands=e.target.closest('[data-more-brands]');
@@ -3045,8 +2928,8 @@ function accSum(P){
   {const v=sel.voice.map(id=>OPTS.voice.items.find(x=>x.id===id));set('voice',v.length?v.map(x=>x.t).join(', '):'Nepasirinkta',v.length?'nuo '+eur(v.reduce((a,x)=>a+x.p,0)):'')}
   const au=sel.auto.map(id=>OPTS.auto.items.find(x=>x.id===id));set('auto',au.length?au.map(x=>x.t).join(', '):'Nepasirinkta',au.length?'nuo '+eur(au.reduce((a,x)=>a+x.p,0)):'');
   const c=pick('care');set('care',c.t,c.p?'nuo '+c.p+' €/mėn.':'');
-  const n=items.reduce((a,i)=>a+i.qty,0),dv=P.lines.filter(l=>l.c).reduce((a,l)=>a+l.total,0);const buyCount=P.buyLines.reduce((a,x)=>a+x.qty,0);
-  set('dev',n||buyCount?(n?n+' prijungiami':'')+(n&&buyCount?' · ':'')+(buyCount?buyCount+' įsigyjami':''):'Dar nepridėta',(n||buyCount)?'nuo '+eur(dv+P.buyTotal):'');
+  const n=items.reduce((a,i)=>a+i.qty,0),dv=P.lines.filter(l=>l.c).reduce((a,l)=>a+l.total,0);
+  set('dev',n?n+' prijungiami':'Dar nepridėta',n?'nuo '+eur(dv):'');
 }
 initDemo();
 let sumVis=false;try{accSum(pricing())}catch(_){}
