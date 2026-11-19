@@ -1385,9 +1385,71 @@ body.v14-dark .brandmark .pn-brand-art>.brand-initial{background:hsl(var(--pn-br
 .footer-logo .logo-img{height:42px;width:auto;max-width:min(240px,72vw);object-fit:contain}
 .footer-brand{display:flex;align-items:center;gap:15px;flex-wrap:wrap}
 .footer-brand a{display:inline-flex;align-items:center}
+
+/* v4.4 interactive experience: lightweight motion, safe page switches and accessible controls */
+#pn-scroll-progress{position:fixed;left:0;top:0;width:100%;height:3px;z-index:1250;background:linear-gradient(90deg,#21b99e,#54a7e6,#7d88de);transform:scaleX(0);transform-origin:left;pointer-events:none;will-change:transform}
+.page.on{animation:pn-page-arrive .42s cubic-bezier(.22,1,.36,1) both}
+@keyframes pn-page-arrive{from{opacity:.6;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.pn-reveal{opacity:0;transform:translate3d(0,22px,0);transition:opacity .64s ease,transform .64s cubic-bezier(.22,1,.36,1);transition-delay:var(--pn-reveal-delay,0ms)}
+.pn-reveal.pn-visible{opacity:1;transform:translate3d(0,0,0)}
+.btn,.pn-simple-card,.v17-services>a,.pn-journey-nav a,.menu-btn,.pn-home-scenarios button{transition:transform .23s ease,background-color .23s ease,border-color .23s ease,box-shadow .23s ease,color .23s ease}
+.btn:active,.pn-home-scenarios button:active,.menu-btn:active{transform:scale(.975)}
+@media(hover:hover) and (pointer:fine){
+ .btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(29,80,134,.16)}
+ .pn-simple-card:hover,.v17-services>a:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(27,73,108,.16);border-color:var(--teal)}
+ .v17-preview:hover{transform:translateY(-3px);box-shadow:0 34px 80px rgba(25,73,110,.18)}
+ .pn-journey-nav a:hover{transform:translateY(-2px)}
+}
+.btn,.pn-journey-nav a,.pn-home-scenarios button{position:relative;overflow:hidden}
+.pn-ripple{position:absolute;left:var(--pn-ripple-x);top:var(--pn-ripple-y);width:14px;height:14px;border-radius:100%;background:currentColor;opacity:.17;transform:translate(-50%,-50%) scale(0);animation:pn-ripple .58s ease-out forwards;pointer-events:none}
+@keyframes pn-ripple{to{opacity:0;transform:translate(-50%,-50%) scale(var(--pn-ripple-size,20))}}
+.v17-preview{transition:transform .38s ease,box-shadow .38s ease,border-color .38s ease}
+.v17-preview:focus-within{border-color:var(--teal)}
+.v17-preview .v17-house{transition:background .6s ease}
+.v17-preview .pn-house-svg{overflow:visible}
+.pn-house-panels{filter:drop-shadow(0 1px 1px rgba(10,40,78,.28))}
+.pn-house-cell{fill:url(#pn-hpanel);stroke:#b9e6ff;stroke-width:.72;stroke-linejoin:round}
+.pn-house-sun,.pn-house-moon,.pn-house-window,.pn-house-light{transition:opacity .6s ease,fill .6s ease,transform .6s ease}
+.pn-house-sun{transform-origin:266px 27px;animation:pn-sun-breathe 6s ease-in-out infinite}
+.pn-house-moon{opacity:0}
+.pn-house-connection path{animation:pn-energy-move 2.5s linear infinite}
+.pn-home-scenarios{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px;align-items:center}
+.pn-home-scenarios button{font:800 11px/1.2 Manrope,system-ui,sans-serif;color:var(--tx2);border:1px solid var(--line2);background:var(--card2);padding:10px 12px;min-height:39px;border-radius:999px;cursor:pointer;flex:1 1 auto}
+.pn-home-scenarios button[aria-pressed="true"]{background:color-mix(in srgb,var(--teal) 15%,var(--card));border-color:var(--teal);color:var(--tx);box-shadow:0 0 0 1px color-mix(in srgb,var(--teal) 22%,transparent)}
+.pn-home-scenarios .pn-demo-play{border-style:dashed;flex:1 0 auto}
+.pn-home-scenarios button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.v17-meter:before{transition:width .65s cubic-bezier(.2,.7,.2,1)}
+.v17-preview[data-pn-scene="evening"] .v17-house{background:radial-gradient(ellipse at 82% 65%,rgba(250,173,95,.24),transparent 55%),radial-gradient(ellipse at 50% 95%,rgba(28,156,140,.10),transparent 65%)}
+.v17-preview[data-pn-scene="night"] .v17-house{background:radial-gradient(ellipse at 75% 22%,rgba(68,100,172,.23),transparent 58%),radial-gradient(ellipse at 50% 100%,rgba(21,62,106,.09),transparent 70%)}
+.v17-preview[data-pn-scene="night"] .pn-house-sun{opacity:0;transform:translateY(13px)}
+.v17-preview[data-pn-scene="night"] .pn-house-moon{opacity:1}
+.v17-preview[data-pn-scene="night"] .pn-house-window{fill:#e3b976}
+.v17-preview[data-pn-scene="night"] .pn-house-light{fill:#ffd47b;opacity:1}
+.v17-preview[data-pn-scene="night"] .pn-house-cell{fill:#225384;stroke:#81b5d9}
+.v17-preview[data-pn-scene="evening"] .pn-house-sun{transform:translate(-5px,8px)}
+.v17-preview[data-pn-scene="evening"] .pn-house-window{fill:#98b9be}
+@keyframes pn-sun-breathe{0%,100%{filter:drop-shadow(0 0 1px rgba(247,203,100,.22))}50%{filter:drop-shadow(0 0 7px rgba(247,203,100,.48))}}
+@keyframes pn-energy-move{to{stroke-dashoffset:-14}}
+.v17-hero-copy h1 .grad-tx{background-size:160% 160%;animation:pn-gradient-glide 9s ease-in-out infinite alternate}
+@keyframes pn-gradient-glide{to{background-position:100% 50%}}
+.v17-dot{animation:pn-status-breathe 3.2s ease-in-out infinite}
+@keyframes pn-status-breathe{50%{box-shadow:0 0 0 7px rgba(25,185,155,.06)}}
+#p-skaiciuotuvas .acc.open{box-shadow:0 9px 26px rgba(30,81,106,.09);border-color:color-mix(in srgb,var(--teal) 50%,var(--line))}
+#p-skaiciuotuvas .brand-choice:hover{box-shadow:0 7px 18px rgba(38,93,120,.1)}
+#p-kontaktai .field:focus,#p-skaiciuotuvas .field:focus{transition:border-color .2s ease,box-shadow .2s ease}
+@media(max-width:560px){.pn-home-scenarios{gap:5px}.pn-home-scenarios button{font-size:10px;min-height:37px;padding:8px 9px}.v17-preview{transition:box-shadow .3s ease}.pn-reveal{transform:translate3d(0,12px,0)}}
+@media(hover:none),(pointer:coarse){.v17-preview:hover,.btn:hover,.pn-simple-card:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto!important}
+ .page.on,.pn-reveal,.pn-house-sun,.pn-house-connection path,.v17-dot,.v17-hero-copy h1 .grad-tx,.pn-ripple{animation:none!important;transition:none!important}
+ .pn-reveal{opacity:1!important;transform:none!important}
+ .btn,.pn-simple-card,.v17-services>a,.pn-journey-nav a,.v17-preview,.pn-home-scenarios button,.v17-meter:before,.pn-house-sun,.pn-house-moon,.pn-house-window{transition:none!important;transform:none!important}
+}
+
 </style>
 </head>
 <body>
+<div id="pn-scroll-progress" aria-hidden="true"></div>
 
 <header>
   <div class="wrap nav">
@@ -3182,5 +3244,133 @@ $('#tbGo').onclick=()=>{if(!['#skaiciuotuvas','#iranga'].includes(location.hash)
 <div class="pn-design-mini-controls"><label>Apvalinimas <span id="pn-mini-radius-out">24 px</span><input id="pn-mini-radius" type="range" min="8" max="44" step="2" value="24"></label><label>Efektų galia <span id="pn-mini-intensity-out">48 %</span><input id="pn-mini-intensity" type="range" min="0" max="100" step="5" value="48"></label></div>
 <div class="pn-design-drawer-foot"><a href="#dizainas" id="pn-design-full">Visi 60 + efektų pasirinkimai ↗</a><button type="button" id="pn-design-reset">Atstatyti</button></div>
 </aside></div>
+<script>
+/* v4.4 motion controller. Independent of calculator and design-studio logic. */
+(function(){
+ const $=id=>document.getElementById(id);
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const saveData=Boolean(navigator.connection&&navigator.connection.saveData);
+ const progress=$('pn-scroll-progress');
+ let progressFrame=0;
+ function updateProgress(){
+   progressFrame=0;
+   const max=Math.max(0,document.documentElement.scrollHeight-innerHeight);
+   if(progress)progress.style.transform='scaleX('+(max>0?Math.min(1,Math.max(0,scrollY/max)):0)+')';
+ }
+ function progressQueued(){if(!progressFrame)progressFrame=requestAnimationFrame(updateProgress)}
+ addEventListener('scroll',progressQueued,{passive:true});
+ addEventListener('resize',progressQueued,{passive:true});
+ requestAnimationFrame(updateProgress);
+
+ // Reveal static sections only. Dynamic calculator items and dashboard controls are not hidden.
+ let revealObserver=null;
+ if(!reduced&&!saveData&&'IntersectionObserver' in window){
+   revealObserver=new IntersectionObserver(entries=>{
+     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('pn-visible');revealObserver.unobserve(e.target)}})
+   },{threshold:.08,rootMargin:'0px 0px -18px 0px'});
+ }
+ function revealActive(){
+   const page=document.querySelector('.page.on');
+   if(revealObserver&&page){
+     const els=page.querySelectorAll('.pn-simple-card,.v17-services>a,.pn-inlife-grid>.card,.pn-local .card,#services>.card,#p-apie .card,#p-kontaktai .card');
+     els.forEach((el,i)=>{
+       if(el.classList.contains('pn-reveal'))return;
+       el.classList.add('pn-reveal');
+       el.style.setProperty('--pn-reveal-delay',Math.min(i%4,3)*75+'ms');
+       revealObserver.observe(el);
+     });
+   }
+   progressQueued();
+ }
+ requestAnimationFrame(revealActive);
+ addEventListener('hashchange',()=>requestAnimationFrame(revealActive));
+ addEventListener('pageshow',()=>requestAnimationFrame(revealActive));
+
+ // A small tactile reaction on buttons; does not intercept their native actions.
+ if(!reduced&&!saveData){
+   document.addEventListener('pointerdown',event=>{
+     const el=event.target.closest&&event.target.closest('.btn,.pn-journey-nav a,.pn-home-scenarios button');
+     if(!el||event.button!==0)return;
+     const rect=el.getBoundingClientRect();
+     if(!rect.width||!rect.height)return;
+     const circle=document.createElement('span');
+     circle.className='pn-ripple';
+     circle.style.setProperty('--pn-ripple-x',(event.clientX-rect.left)+'px');
+     circle.style.setProperty('--pn-ripple-y',(event.clientY-rect.top)+'px');
+     circle.style.setProperty('--pn-ripple-size',String(Math.ceil(Math.max(rect.width,rect.height)/9)+3));
+     circle.setAttribute('aria-hidden','true');
+     el.append(circle);
+     circle.addEventListener('animationend',()=>circle.remove(),{once:true});
+   },{passive:true});
+ }
+ const preview=document.querySelector('.v17-preview[data-pn-scene]');
+ const group=document.querySelector('.pn-home-scenarios');
+ if(!preview||!group)return;
+ const switches=Array.from(group.querySelectorAll('button[data-pn-scene]'));
+ const autoplay=$('pn-demo-play');
+ const metrics=[
+   {el:$('v17-pv'),unit:'kW',digits:1},
+   {el:$('v17-soc'),unit:'%',digits:0},
+   {el:$('v17-load'),unit:'kW',digits:1}
+ ];
+ const scenarios={
+   day:{values:[6.8,82,1.9],fill:[70,82,25],insight:'Saulės energija pirmiausia naudojama namuose.'},
+   evening:{values:[0.7,74,2.4],fill:[8,74,36],insight:'Saulei leidžiantis, baterija padeda padengti namų poreikį.'},
+   night:{values:[0,63,1.3],fill:[0,63,20],insight:'Naktį namai gali naudoti baterijoje sukauptą energiją.'}
+ };
+ const format=(num,digits)=>num.toLocaleString('lt-LT',{minimumFractionDigits:digits,maximumFractionDigits:digits});
+ let current='day',values=scenarios.day.values.slice(),frame=0,autoTimer=0;
+ function writeNumbers(list){
+   metrics.forEach((metric,i)=>{
+     if(!metric.el)return;
+     const first=metric.el.firstChild;
+     if(first&&first.nodeType===3)first.nodeValue=format(list[i],metric.digits)+' ';
+   });
+ }
+ function changeScene(id){
+   if(!scenarios[id])return;
+   const next=scenarios[id];
+   preview.dataset.pnScene=id;
+   switches.forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.pnScene===id)));
+   const insight=$('v17-insight-text');
+   if(insight)insight.textContent=next.insight;
+   metrics.forEach((m,i)=>{const bar=m.el?.parentElement?.querySelector('.v17-meter');if(bar)bar.style.setProperty('--fill',next.fill[i]+'%')});
+   cancelAnimationFrame(frame);
+   if(reduced||saveData){values=next.values.slice();writeNumbers(values)}
+   else{
+     const start=values.slice(),end=next.values.slice(),started=performance.now(),duration=560;
+     const tick=now=>{
+       const t=Math.min(1,(now-started)/duration);
+       const ease=1-Math.pow(1-t,3);
+       values=start.map((v,i)=>v+(end[i]-v)*ease);
+       writeNumbers(values);
+       if(t<1)frame=requestAnimationFrame(tick);
+     };
+     frame=requestAnimationFrame(tick);
+   }
+   current=id;
+ }
+ switches.forEach(btn=>btn.addEventListener('click',()=>changeScene(btn.dataset.pnScene)));
+ function stopAuto(){
+   clearInterval(autoTimer);autoTimer=0;
+   if(autoplay){autoplay.setAttribute('aria-pressed','false');autoplay.textContent='▶ Automatiškai'}
+ }
+ function startAuto(){
+   if(reduced||saveData||document.hidden)return;
+   stopAuto();
+   autoTimer=setInterval(()=>{
+     if(document.hidden||!document.querySelector('#p-pradzia.on')){stopAuto();return}
+     const keys=Object.keys(scenarios),next=keys[(keys.indexOf(current)+1)%keys.length];
+     changeScene(next);
+   },5000);
+   autoplay.setAttribute('aria-pressed','true');
+   autoplay.textContent='Ⅱ Sustabdyti';
+ }
+ if(autoplay)autoplay.addEventListener('click',()=>autoTimer?stopAuto():startAuto());
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAuto()});
+ addEventListener('hashchange',()=>{if(location.hash&&location.hash!=='#pradzia')stopAuto()});
+ changeScene('day');
+})();
+</script>
 </body>
 </html>
