@@ -2152,6 +2152,64 @@ body.v14-dark header .nav .pn-full-menu .pn-menu-group a.on{
 body.v14-dark header .nav .pn-full-menu .pn-menu-group a:hover{background:#284957!important}
 body.v14-dark header .nav .pn-full-menu .pn-menu-group a.on .pn-menu-icon{background:#426d79}
 @media(prefers-reduced-motion:reduce){.pn-journey-nav a.pn-nav-card{transition:none!important;transform:none!important}}
+
+/* v4.20 – valdomas svetainės šrifto dydis. */
+#p-dizainas .pn-font-size-control{padding:15px;margin:0 0 18px;display:grid;gap:11px;border-radius:15px;background:var(--card2);border:1px solid var(--line2)}
+#p-dizainas .pn-font-size-header{display:flex;justify-content:space-between;gap:10px;align-items:center}
+#p-dizainas .pn-font-size-header>div{display:flex;flex-direction:column;gap:4px}
+#p-dizainas .pn-font-size-header strong{font-size:14px;color:var(--tx)}
+#p-dizainas .pn-font-size-header small{font-size:11px;color:var(--tx2)}
+#p-dizainas .pn-font-size-header output{padding:6px 9px;min-width:66px;text-align:center;background:var(--card);border:1px solid var(--line2);border-radius:10px;color:var(--tx);font-weight:900;font-size:12px}
+#p-dizainas .pn-font-size-presets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+#p-dizainas .pn-font-size-presets button{padding:8px 5px;min-height:36px;color:var(--tx);background:var(--card);border:1px solid var(--line2);border-radius:9px;font-size:10px;font-weight:850;line-height:1.3;cursor:pointer}
+#p-dizainas .pn-font-size-presets button[aria-pressed="true"]{background:var(--pn-accent)!important;color:#fff!important;border-color:var(--pn-accent)!important}
+#p-dizainas .pn-font-size-presets button:focus-visible{outline:2px solid var(--pn-accent);outline-offset:2px}
+#p-dizainas #pn-ds-font-size{width:100%;accent-color:var(--pn-accent);min-height:24px}
+#p-dizainas .pn-font-size-limits{display:flex;justify-content:space-between;color:var(--tx2);font-size:10px;margin-top:-9px}
+body[data-pn-design]{--pn-font-scale:1;font-size:calc(16px * var(--pn-font-scale))}
+body[data-pn-design]:not([data-pn-text-size="100"]) .v17-hero h1{font-size:calc(clamp(36px,5vw,66px) * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .v17-hero-copy>p{font-size:calc(clamp(15px,1.5vw,18px) * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-section-heading h1{font-size:calc(clamp(29px,4.3vw,48px) * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-section-heading p{font-size:calc(16px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-ds-hero h1{font-size:calc(clamp(32px,5vw,57px) * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-ds-hero p{font-size:calc(15px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-ds-preview h2{font-size:calc(clamp(25px,3vw,36px) * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-ds-preview>p{font-size:calc(13px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .page .lead{font-size:calc(17px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .page .sec-head h2{font-size:calc(clamp(25px,3vw,38px) * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-bhead h2{font-size:calc(clamp(24px,3.2vw,35px) * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-safety-copy h2{font-size:calc(clamp(25px,3vw,39px) * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-safety-copy>p{font-size:calc(14px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-safety-checks li{font-size:calc(13px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-bcard h3{font-size:calc(15px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-bcard p{font-size:calc(12px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-local-card p{font-size:calc(13px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-inlife h2{font-size:calc(clamp(23px,3vw,32px) * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-inlife-grid p{font-size:calc(13px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .v17-services strong{font-size:calc(14px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .v17-services small{font-size:calc(11px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-nav-card strong{font-size:calc(14px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .pn-nav-card small{font-size:calc(11px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) header .pn-menu-copy strong{font-size:calc(13px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) header .pn-menu-copy small{font-size:calc(10px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .page .btn{font-size:calc(13px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .page .pn-film-heading h2{font-size:calc(clamp(26px,3.6vw,42px) * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) .page .pn-film-heading p{font-size:calc(14px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) #p-skaiciuotuvas .device-family-label strong{font-size:calc(15px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) #p-skaiciuotuvas .brandmark .brand-name{font-size:calc(12px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) #p-skaiciuotuvas .opt-im .ot{font-size:calc(14px * var(--pn-font-scale))!important}
+body[data-pn-design]:not([data-pn-text-size="100"]) #p-skaiciuotuvas .opt-im .od{font-size:calc(12px * var(--pn-font-scale))!important}
+@media(max-width:560px){
+ #p-dizainas .pn-font-size-presets{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body[data-pn-design]:not([data-pn-text-size="100"]) .v17-hero h1{font-size:calc(clamp(33px,9vw,45px) * var(--pn-font-scale))!important}
+ body[data-pn-design]:not([data-pn-text-size="100"]) .pn-bcard h3{font-size:calc(13px * var(--pn-font-scale))!important}
+ body[data-pn-design]:not([data-pn-text-size="100"]) .pn-bcard p{font-size:calc(11px * var(--pn-font-scale))!important}
+ body[data-pn-design]:not([data-pn-text-size="100"]) .pn-nav-card strong{font-size:calc(13px * var(--pn-font-scale))!important}
+ body[data-pn-design]:not([data-pn-text-size="100"]) .pn-nav-card small{font-size:calc(10px * var(--pn-font-scale))!important}
+ body[data-pn-design]:not([data-pn-text-size="100"]) .pn-safety-copy h2{font-size:calc(27px * var(--pn-font-scale))!important}
+ body[data-pn-design]:not([data-pn-text-size="100"]) #p-skaiciuotuvas .device-family-label strong{font-size:calc(13px * var(--pn-font-scale))!important}
+ body[data-pn-design]:not([data-pn-text-size="100"]) #p-skaiciuotuvas .brandmark .brand-name{font-size:calc(11px * var(--pn-font-scale))!important}
+}
 </style>
 </head>
 <body>
@@ -2159,7 +2217,7 @@ body.v14-dark header .nav .pn-full-menu .pn-menu-group a.on .pn-menu-icon{backgr
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.19</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.20</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links pn-full-menu" id="links" aria-label="Visi svetainės skyriai">
 <div class="pn-full-menu-title"><span>MENIU</span><strong>Kur norėtumėte pradėti?</strong></div>
 <div class="pn-menu-group"><div class="pn-menu-heading">SUSIPAŽINKITE</div>
@@ -2474,7 +2532,7 @@ body.v14-dark header .nav .pn-full-menu .pn-menu-group a.on .pn-menu-icon{backgr
 <section class="pn-ds-panel"><div class="pn-ds-sectiontop"><div><small>05 / DVISPALVIAI</small><h2>Dviejų spalvų perėjimai</h2></div><span>10 derinių</span></div><p class="pn-ds-grad-note">Spalvos pereina nuo viršutinio kairiojo kampo iki apatinio dešiniojo. Pasirinkus pasikeis visos svetainės fonas.</p><div class="pn-ds-options pn-ds-gradients" id="pn-ds-duos" role="group" aria-label="Dvispalviai gradientai"></div></section>
 <section class="pn-ds-panel"><div class="pn-ds-sectiontop"><div><small>06 / ŠEŠĖLIAI</small><h2>Kortelių šešėliai</h2></div><span>8 variantai</span></div><div class="pn-ds-options pn-ds-effects" id="pn-ds-shadows" role="group" aria-label="Šešėlių variantai"></div></section>
 <section class="pn-ds-panel"><div class="pn-ds-sectiontop"><div><small>07 / GLOW</small><h2>Švytėjimo efektai</h2></div><span>8 variantai</span></div><div class="pn-ds-options pn-ds-effects" id="pn-ds-glows" role="group" aria-label="Švytėjimo variantai"></div></section>
-<section class="pn-ds-panel"><div class="pn-ds-sectiontop"><div><small>08 / DETALĖS</small><h2>Individualūs nustatymai</h2></div></div><div class="pn-ds-sliders"><label for="pn-ds-radius">Kortelių kampai <output id="pn-ds-radius-out">24 px</output></label><input id="pn-ds-radius" type="range" min="8" max="44" value="24" step="2"><label for="pn-ds-intensity">Efektų intensyvumas <output id="pn-ds-intensity-out">48 %</output></label><input id="pn-ds-intensity" type="range" min="0" max="100" value="48" step="5"></div></section>
+<section class="pn-ds-panel"><div class="pn-ds-sectiontop"><div><small>08 / DETALĖS</small><h2>Individualūs nustatymai</h2></div></div><div class="pn-font-size-control"><div class="pn-font-size-header"><div><strong>Šrifto dydis</strong><small>Reguliuokite antraštes ir pagrindinį tekstą</small></div><output id="pn-ds-font-size-out" for="pn-ds-font-size">100 %</output></div><div class="pn-font-size-presets" role="group" aria-label="Šrifto dydžio pasirinkimai"><button type="button" data-pn-font-preset="90" aria-pressed="false">Mažas</button><button type="button" data-pn-font-preset="100" aria-pressed="true">Įprastas</button><button type="button" data-pn-font-preset="110" aria-pressed="false">Didelis</button><button type="button" data-pn-font-preset="120" aria-pressed="false">Labai didelis</button></div><input id="pn-ds-font-size" type="range" min="85" max="125" step="5" value="100" aria-label="Svetainės šrifto dydis"><div class="pn-font-size-limits"><span>85 %</span><span>125 %</span></div></div><div class="pn-ds-sliders"><label for="pn-ds-radius">Kortelių kampai <output id="pn-ds-radius-out">24 px</output></label><input id="pn-ds-radius" type="range" min="8" max="44" value="24" step="2"><label for="pn-ds-intensity">Efektų intensyvumas <output id="pn-ds-intensity-out">48 %</output></label><input id="pn-ds-intensity" type="range" min="0" max="100" value="48" step="5"></div></section>
 </div>
 <div class="pn-ds-side"><div class="pn-ds-preview"><small>GYVA PERŽIŪRA</small><h2 id="pn-ds-preview-title">Namai, kuriuos valdote jūs.</h2><p>Vienas valdymas. Daugiau privatumo. Mažesnės energijos sąnaudos.</p><div class="pn-ds-preview-metrics"><div><b>6,8 kW</b><span>☀ Saulės gamyba</span></div><div><b>82 %</b><span>🔋 Baterija</span></div></div><div class="pn-ds-preview-nav"><span>🏡 Vietinis valdymas</span><span>⚡ Energija</span><span>🛡 Privatumas</span></div><button type="button" id="pn-ds-preview-apply" class="btn btn-p">Pamatyti pradiniame puslapyje ↗</button></div>
 <div class="pn-ds-saved"><div><b>Jūsų išvaizdos rinkinys</b><p id="pn-ds-summary">Mėlyna · Aurora · Outfit</p></div><button type="button" id="pn-ds-reset">↺ Atstatyti</button></div>
@@ -3984,7 +4042,7 @@ $('#tbGo').onclick=()=>{if(!['#skaiciuotuvas','#iranga'].includes(location.hash)
  gradients.push(...dualGradients);
  const groups={color:colors,design:styles,font:fonts,gradient:gradients,shadow:shadows,glow:glows};
  const labels={color:'Spalva',design:'Stilius',font:'Šriftas',gradient:'Gradientas',shadow:'Šešėlis',glow:'Glow'};
- const defaults={"color":"blue","design":"aurora","font":"outfit","gradient":"northern","shadow":"soft","glow":"subtle","radius":24,"intensity":48};
+ const defaults={"color":"blue","design":"aurora","font":"outfit","gradient":"northern","shadow":"soft","glow":"subtle","radius":24,"intensity":48,"fontSize":100};
  const $=id=>document.getElementById(id);
  const body=document.body;
  if(!$('pn-design-drawer')||!$('pn-ds-colors'))return;
@@ -4010,12 +4068,19 @@ $('#tbGo').onclick=()=>{if(!['#skaiciuotuvas','#iranga'].includes(location.hash)
      if(out)out.textContent=selected[type]+unit;
     }
    }
-   $('pn-ds-summary').textContent=[selected.color,selected.design,selected.font].map((v,i)=>groups[['color','design','font'][i]].find(x=>x[0]===v)[1]).join(' · ');
+   for(const prefix of ['pn-ds-','pn-mini-']){
+    const slider=$(prefix+'font-size'),out=$(prefix+'font-size-out');
+    if(slider)slider.value=selected.fontSize;
+    if(out)out.textContent=selected.fontSize+' %';
+   }
+   document.querySelectorAll('[data-pn-font-preset]').forEach(button=>button.setAttribute('aria-pressed',String(+button.dataset.pnFontPreset===selected.fontSize)));
+   $('pn-ds-summary').textContent=[selected.color,selected.design,selected.font].map((v,i)=>groups[['color','design','font'][i]].find(x=>x[0]===v)[1]).join(' · ')+' · '+selected.fontSize+' % tekstas';
  }
  function apply(save=true){
   for(const k of Object.keys(groups))selected[k]=valid(k,selected[k]);
   selected.radius=safeNumber(selected.radius,8,44,defaults.radius);
   selected.intensity=safeNumber(selected.intensity,0,100,defaults.intensity);
+  selected.fontSize=Math.round(safeNumber(selected.fontSize,85,125,defaults.fontSize)/5)*5;
   const c=colors.find(x=>x[0]===selected.color),f=fonts.find(x=>x[0]===selected.font);
   const gradient=gradients.find(x=>x[0]===selected.gradient);
   const shadow=shadows.find(x=>x[0]===selected.shadow);
@@ -4026,6 +4091,8 @@ $('#tbGo').onclick=()=>{if(!['#skaiciuotuvas','#iranga'].includes(location.hash)
   body.style.setProperty('--pn-accent-light',c[3]);
   body.style.setProperty('--pn-accent-soft',c[4]);
   body.style.setProperty('--pn-custom-font',"'"+f[2]+"',system-ui,sans-serif");
+  body.dataset.pnTextSize=String(selected.fontSize);
+  body.style.setProperty('--pn-font-scale',String(selected.fontSize/100));
   body.style.setProperty('--pn-canvas-bg',gradient[2]);
   body.style.setProperty('--pn-custom-radius',selected.radius+'px');
   body.style.setProperty('--pn-intensity',String(selected.intensity/100));
@@ -4085,6 +4152,11 @@ $('#tbGo').onclick=()=>{if(!['#skaiciuotuvas','#iranga'].includes(location.hash)
    const control=$(prefix+type);if(control)control.addEventListener('input',()=>{selected[type]=Number(control.value);apply()});
   }
  }
+ for(const prefix of ['pn-ds-','pn-mini-']){
+  const slider=$(prefix+'font-size');
+  if(slider)slider.addEventListener('input',()=>{selected.fontSize=Number(slider.value);apply()});
+ }
+ document.querySelectorAll('[data-pn-font-preset]').forEach(button=>button.addEventListener('click',()=>{selected.fontSize=Number(button.dataset.pnFontPreset);apply()}));
  function reset(){selected={...defaults};apply()}
  $('pn-design-reset').addEventListener('click',reset);
  $('pn-ds-reset').addEventListener('click',reset);
@@ -4096,7 +4168,7 @@ $('#tbGo').onclick=()=>{if(!['#skaiciuotuvas','#iranga'].includes(location.hash)
 <aside class="pn-design-drawer" id="pn-design-drawer" hidden aria-label="Greitas dizaino valdiklis">
 <div class="pn-design-drawer-header"><div><strong>🎨 Dizaino valdymas</strong></div><button type="button" id="pn-design-close" aria-label="Uždaryti dizaino valdiklį">×</button></div>
 <div class="pn-design-navs" id="pn-design-navs"></div>
-<details class="pn-design-extra"><summary>⚙ Papildomi nustatymai</summary><div class="pn-design-mini-controls"><label>Apvalinimas <span id="pn-mini-radius-out">24 px</span><input id="pn-mini-radius" type="range" min="8" max="44" step="2" value="24"></label><label>Efektų galia <span id="pn-mini-intensity-out">48 %</span><input id="pn-mini-intensity" type="range" min="0" max="100" step="5" value="48"></label></div></details>
+<details class="pn-design-extra"><summary>⚙ Papildomi nustatymai</summary><div class="pn-design-mini-controls"><label>Šrifto dydis <span id="pn-mini-font-size-out">100 %</span><input id="pn-mini-font-size" type="range" min="85" max="125" step="5" value="100" aria-label="Šrifto dydis"></label><label>Apvalinimas <span id="pn-mini-radius-out">24 px</span><input id="pn-mini-radius" type="range" min="8" max="44" step="2" value="24"></label><label>Efektų galia <span id="pn-mini-intensity-out">48 %</span><input id="pn-mini-intensity" type="range" min="0" max="100" step="5" value="48"></label></div></details>
 <div class="pn-design-drawer-foot"><a href="#dizainas" id="pn-design-full">Visi pasirinkimai ↗</a><button type="button" id="pn-design-reset">Atstatyti</button></div>
 </aside></div>
 <script>
