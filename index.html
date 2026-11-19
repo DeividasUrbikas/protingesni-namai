@@ -1583,7 +1583,7 @@ body.v14-dark[data-pn-gradient="duo-blue-champagne"]{--pn-canvas-bg:linear-gradi
 
 /* v4.8: harmonizuota mėlyna svetainės paletė.
    Logotipo originali mėlyna #3e69ae = visos sąsajos pagrindinė spalva.
-   Dizaino studijos parinkti gradientai tebenaudojami, bet su švelniu mėlynu filtru. */
+   Šviesi tema vėl naudoja nefiltruotus Dizaino studijos gradientus. */
 :root{
   --pn-brand-blue:#3e69ae;
   --pn-brand-deep:#224772;
@@ -1596,7 +1596,6 @@ body:not(.v14-dark){
   --teal:#326cad;
   --grad-tx:linear-gradient(105deg,#214975,#4b81c1);
   color:#183451;
-  background:linear-gradient(150deg,#eff6ff 0%,#e6effc 52%,#f4f8ff 100%) fixed!important;
 }
 body[data-pn-design]:not(.v14-dark){
   --tx:#183451;
@@ -1607,13 +1606,9 @@ body[data-pn-design]:not(.v14-dark){
   --line:rgba(100,143,191,.24);
   --line2:rgba(103,151,199,.36);
   --teal:#326cad;
-  --pn-base-a:#f0f6ff;
-  --pn-base-b:#dae9fb;
   --pn-surface-fill:rgba(255,255,255,.91);
-  background:
-    linear-gradient(155deg,rgba(246,250,255,.52) 0%,rgba(243,248,255,.68) 60%,rgba(233,243,255,.74) 100%),
-    var(--pn-canvas-bg)!important;
-  background-attachment:fixed!important;
+  /* Vėl rodomas originalus pasirenkamas gradientas be papildomo mėlyno filtro.
+     Fono reikšmę valdo Design Studio per --pn-canvas-bg ir v4.0 taisyklę. */
 }
 body:not(.v14-dark) header,
 body[data-pn-design]:not(.v14-dark) header{
@@ -1740,7 +1735,7 @@ body.v14-dark .footer-logo img.pn-logo-wordmark{filter:none}
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.9</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.10</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links" id="links" aria-label="Visi svetainės skyriai">
 <a href="#pradzia">Pradžia</a>
 <a href="#privalumai">Kodėl verta</a>
