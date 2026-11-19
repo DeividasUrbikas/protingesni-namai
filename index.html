@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ProtingesniNamai.lt – išmanieji namai ir energijos valdymas</title>
-<meta name="description" content="Home Assistant diegimas, šildymo, saulės elektrinių, baterijų ir elektromobilių įkrovimo integravimas bei optimizavimas.">
+<title>ProtingesniNamai.lt – išmanūs namai, kurie veikia išvien</title>
+<meta name="description" content="Sujungiame išmaniųjų namų technologijas į vieną sistemą. Home Assistant diegimas, šildymas, saulė, baterijos, apsauga ir skaidri darbų kainų skaičiuoklė.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
@@ -1770,13 +1770,321 @@ body[data-pn-design]:not(.v14-dark)::before{
   #p-skaiciuotuvas .sum .stotal-prices b{font-size:27px}
 }
 </style>
+<style id="pn-v5-linear-stripe-homey">
+
+/* ================================================================
+   PROTINGESNINAMAI V5  — Linear × Stripe × Homey-inspired design
+   Visual-only redesign. All existing scripts, calculator models,
+   compatibility database, demo controls and hash routes preserved.
+   ================================================================ */
+:root{--pn-v5-accent:#7667f6;--pn-v5-cyan:#51bdf0;--pn-v5-success:#31cea4}
+body[data-pn-design]{
+  --tx:#19223a;--tx2:#53627a;--tx3:#77849a;
+  --card:rgba(255,255,255,.88);--card2:rgba(242,245,254,.95);
+  --line:rgba(75,96,150,.13);--line2:rgba(89,112,164,.24);
+  --teal:#6c5ce7;--green:#139777;--amber:#b07b24;
+  --grad-tx:linear-gradient(112deg,#6d5ce7 0%,#4789ea 46%,#18b7ba 96%);
+  --r:22px;--r2:16px;
+  color:var(--tx);line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+body[data-pn-design].v14-dark{
+  --tx:#eff3ff;--tx2:#b1bdd4;--tx3:#8695ae;
+  --card:rgba(25,33,55,.79);--card2:rgba(35,44,70,.75);
+  --line:rgba(181,196,244,.12);--line2:rgba(173,190,242,.24);
+  --teal:#ac9dff;--green:#59e3ba;--amber:#f7c66d;
+  --grad-tx:linear-gradient(110deg,#c1a7ff 0%,#7caaff 53%,#7ee2dd 100%);
+  color:var(--tx);color-scheme:dark;
+}
+body[data-pn-design]:not(.v14-dark){color-scheme:light}
+body[data-pn-design]:not(.v14-dark)::before{
+  background:
+    radial-gradient(ellipse 55% 37% at 76% 13%,rgba(167,175,255,.23),transparent 80%),
+    radial-gradient(ellipse 47% 40% at 18% 28%,rgba(178,228,253,.24),transparent 82%),
+    radial-gradient(ellipse 40% 34% at 65% 93%,rgba(204,213,255,.14),transparent 85%),
+    #f8faff!important;
+}
+body[data-pn-design].v14-dark::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(ellipse 62% 42% at 78% 12%,rgba(86,68,177,.26),transparent 78%),
+    radial-gradient(ellipse 49% 36% at 7% 58%,rgba(25,91,155,.20),transparent 76%),
+    radial-gradient(ellipse 45% 32% at 77% 95%,rgba(21,115,137,.12),transparent 78%),
+    #090e1c!important;
+}
+body[data-pn-design] header,
+body[data-pn-design]:not(.v14-dark) header,
+body[data-pn-design].v14-dark header{
+  background:rgba(12,20,39,.96)!important;
+  border-bottom:1px solid rgba(189,203,255,.13)!important;
+  box-shadow:0 8px 30px rgba(6,11,27,.11)!important;
+  backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+}
+header .nav{height:76px;gap:16px}
+header .wrap.nav{max-width:1390px}
+header .nav>a.logo{flex:0 1 235px!important;max-width:235px!important}
+header .nav>a.logo img.pn-logo-wordmark{width:100%!important}
+header .site-version{display:none}
+header .links{gap:3px;align-items:center}
+header .links a{font-size:13px;font-weight:700;color:#bfc9e0;padding:10px 11px;border:1px solid transparent;border-radius:10px;white-space:nowrap}
+header .links a:hover,header .links a.on{color:#fff;background:rgba(255,255,255,.075);border-color:rgba(255,255,255,.09)}
+header .links a:nth-child(1),header .links a:nth-child(2){display:none}
+header .links a:last-child{display:none}
+header #v14-theme-toggle{
+  color:#e4ebff!important;background:rgba(255,255,255,.06)!important;
+  border:1px solid rgba(255,255,255,.16)!important;
+  border-radius:999px!important;min-height:39px;padding:9px 13px!important;
+  white-space:nowrap;font-size:12px;cursor:pointer;
+}
+header #v14-theme-toggle:hover{background:rgba(255,255,255,.12)!important}
+body[data-pn-design] header .nav .btn-cta,
+body[data-pn-design]:not(.v14-dark) header .nav .btn-cta{
+  background:linear-gradient(115deg,#7663ee,#447bf2)!important;color:#fff!important;
+  box-shadow:0 7px 25px rgba(75,70,206,.28)!important;border:none!important;
+  border-radius:12px;white-space:nowrap;font-size:13px;
+}
+.menu-btn{color:#fff;border-color:rgba(255,255,255,.23);border-radius:12px}
+#pn-scroll-progress{background:linear-gradient(90deg,#8c71ff,#55cafa)!important;height:3px!important}
+main.wrap{max-width:1260px}
+main>.pn-journey-nav{display:none!important}
+.page{padding-top:38px;padding-bottom:85px}
+h1,h2,h3{letter-spacing:-.045em}
+h1{font-weight:850}
+h2{font-weight:800}
+.eyebrow{font-weight:800;letter-spacing:.11em;color:var(--teal)}
+body[data-pn-design] .grad-tx,
+body[data-pn-design]:not(.v14-dark) .page .grad-tx{
+  background:var(--grad-tx)!important;-webkit-background-clip:text!important;
+  background-clip:text!important;color:transparent!important
+}
+.btn{border-radius:13px;min-height:46px;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease}
+body[data-pn-design] .page .btn-p,
+body[data-pn-design]:not(.v14-dark) .page .btn-p{
+  color:#fff!important;border:1px solid rgba(155,155,255,.23)!important;
+  background:linear-gradient(112deg,#745fec,#4d79e8)!important;
+  box-shadow:0 9px 24px rgba(89,84,212,.21)!important
+}
+body[data-pn-design] .page .btn-p:hover{
+  transform:translateY(-2px);box-shadow:0 14px 33px rgba(89,84,212,.30)!important
+}
+body[data-pn-design] .page .btn-g,
+body[data-pn-design]:not(.v14-dark) .page .btn-g{
+  background:var(--card)!important;border-color:var(--line2)!important;color:var(--tx)!important;
+}
+body[data-pn-design] .page .btn-g:hover{background:var(--card2)!important;transform:translateY(-2px)}
+.v17-hero{
+  display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);
+  gap:clamp(30px,5vw,72px);align-items:center;
+  min-height:610px;padding:55px 0 54px;position:relative;
+}
+.v17-hero:before{
+  content:"";position:absolute;left:-14%;top:15%;width:460px;height:460px;
+  border-radius:50%;background:radial-gradient(circle,rgba(118,103,248,.09),transparent 71%);
+  filter:blur(22px);pointer-events:none;
+}
+.v17-hero-copy{position:relative;z-index:1}
+.v17-kicker{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:11px;letter-spacing:.095em;font-weight:800;
+  padding:10px 16px;border-radius:999px;
+  border:1px solid var(--line2);
+  background:var(--card);color:var(--teal);
+  backdrop-filter:blur(12px);
+}
+.v17-kicker .v17-dot{background:#29cba7;box-shadow:0 0 0 4px rgba(36,211,164,.12)}
+.v17-hero h1{
+  margin:25px 0 22px;font-size:clamp(44px,5.4vw,76px);
+  line-height:1.04;letter-spacing:-.072em;
+  font-weight:850;max-width:700px;
+}
+.v17-hero-copy>p{
+  font-size:clamp(16px,1.5vw,19px);line-height:1.85;
+  max-width:580px;color:var(--tx2);
+}
+.v17-actions{margin-top:32px;margin-bottom:30px;gap:11px}
+.v17-actions .btn{min-height:53px;padding:14px 23px;font-size:14px}
+.v17-trust{gap:9px 18px;font-size:12px;font-weight:700;line-height:1.7}
+.v17-trust span{white-space:normal}
+.v17-preview{
+  border-radius:28px!important;overflow:visible!important;
+  background:linear-gradient(153deg,rgba(28,38,65,.98),rgba(13,21,42,.99))!important;
+  color:#f4f7ff!important;
+  border:1px solid rgba(154,169,245,.18)!important;
+  padding:24px!important;
+  box-shadow:0 40px 100px rgba(20,35,97,.22),0 0 0 6px rgba(105,119,243,.035)!important;
+  isolation:isolate;transform:rotate(-1deg);transition:transform .45s ease,box-shadow .45s ease!important;
+}
+.v17-preview:before{
+  content:"";position:absolute;inset:-2px;z-index:-1;border-radius:30px;pointer-events:none;
+  background:radial-gradient(circle at 80% 12%,rgba(109,108,250,.22),transparent 45%);
+}
+.v17-preview:after{
+  content:"";position:absolute;z-index:-2;width:56%;height:60%;
+  top:-18%;right:-17%;border-radius:100%;
+  background:rgba(90,81,246,.28);filter:blur(73px);pointer-events:none;
+}
+.v17-preview:hover{transform:rotate(0) translateY(-4px);box-shadow:0 42px 110px rgba(20,35,97,.28)!important}
+.v17-preview-head{color:#ecf2ff;font-size:13px}
+.v17-demo-badge{background:rgba(129,119,248,.15);border:1px solid rgba(153,139,255,.30);color:#c8b9ff;font-size:10px}
+.v17-house{height:220px;margin:4px -12px 12px;background:radial-gradient(ellipse at 50% 88%,rgba(59,128,196,.16),transparent 71%)!important}
+.v17-house svg{width:100%;max-width:430px;height:100%}
+.v17-metrics{gap:9px}
+.v17-metrics>div{
+  background:rgba(255,255,255,.055)!important;border:1px solid rgba(170,184,237,.13)!important;
+  border-radius:15px;padding:14px 11px;
+}
+.v17-metrics span,.v17-metrics small{color:#b1bfd9!important}
+.v17-metrics strong{font-size:clamp(20px,2vw,28px);color:#fff}
+.v17-meter{background:rgba(255,255,255,.11);height:5px}
+.pn-home-scenarios{gap:7px;margin-top:15px}
+.pn-home-scenarios button{
+  color:#c5d3ec!important;background:rgba(255,255,255,.045)!important;
+  border-color:rgba(191,200,244,.13)!important;border-radius:11px!important;
+  font-size:11px!important;padding:11px 7px;
+}
+.pn-home-scenarios button[aria-pressed="true"]{
+  color:#fff!important;background:rgba(107,101,228,.35)!important;
+  border-color:#8078f5!important;box-shadow:inset 0 0 0 1px rgba(127,112,255,.15)!important
+}
+.v17-insight{background:rgba(65,197,170,.085)!important;border:1px solid rgba(65,197,170,.16)!important;color:#eafdf7;padding:13px 14px}
+.v17-insight-icon{color:#5ceac9}
+.v17-caption{color:#8191ad!important}
+.ln-techstrip{display:flex;flex-wrap:wrap;align-items:center;gap:15px;margin:0 0 65px;padding:23px 5px 25px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ln-techstrip>span{font-size:12px;letter-spacing:.04em;font-weight:800;color:var(--tx3);margin-right:auto}
+.ln-techstrip strong{font-size:13px;letter-spacing:-.015em;font-weight:850;color:var(--tx2);white-space:nowrap}
+.ln-techstrip strong:before{content:"";display:inline-block;width:6px;height:6px;margin-right:7px;vertical-align:middle;background:#8471f6;border-radius:50%;opacity:.8}
+.pn-simple-intro{margin:10px 0 65px}
+.pn-intro-top{margin-bottom:22px;max-width:700px}
+.pn-intro-top h2,.pn-home-services-heading h2{font-size:clamp(30px,3.6vw,45px);line-height:1.15;letter-spacing:-.055em;margin:12px 0}
+.pn-simple-cards{gap:17px}
+.pn-simple-card,
+body[data-pn-design] .pn-simple-card{
+  background:var(--card)!important;border:1px solid var(--line)!important;
+  border-radius:24px;padding:28px;min-height:245px;
+  box-shadow:0 8px 28px rgba(23,35,80,.035);
+  position:relative;overflow:hidden;
+  transition:transform .32s ease,box-shadow .32s ease,border-color .32s ease!important;
+}
+.pn-simple-card:before{
+  content:"";position:absolute;left:0;right:0;top:0;height:3px;
+  background:linear-gradient(90deg,#7c6bf4,#63b2f7);opacity:0;transition:opacity .28s ease
+}
+.pn-simple-card:hover{transform:translateY(-5px)!important;border-color:rgba(126,112,241,.36)!important;box-shadow:0 18px 52px rgba(38,55,128,.10)!important}
+.pn-simple-card:hover:before{opacity:1}
+.pn-card-emoji{display:grid;place-items:center;width:55px;height:55px;border-radius:16px;background:linear-gradient(135deg,rgba(119,103,244,.13),rgba(62,181,231,.1));font-size:27px;margin-bottom:6px}
+.pn-simple-card b{font-size:19px;letter-spacing:-.035em}
+.pn-simple-card p{font-size:14px;line-height:1.8}
+.pn-card-link{color:var(--teal);font-size:13px}
+.pn-home-services-heading{margin:65px 0 25px}
+.v17-services{gap:14px}
+.v17-services>a,.pn-local-card,.pn-inlife-grid>div,.card,.v14-box,.pn-ds-panel,.pn-ds-preview,.pn-film-visual{
+  border:1px solid var(--line)!important;
+  border-radius:22px!important;
+  background:var(--card)!important;
+  box-shadow:0 8px 28px rgba(23,35,80,.035)
+}
+.v17-services>a{min-height:135px;padding:25px 22px!important;transition:transform .27s ease,box-shadow .27s ease,border-color .27s ease!important}
+.v17-services>a:hover{transform:translateY(-4px);box-shadow:0 13px 32px rgba(62,71,146,.11)!important;border-color:rgba(121,108,245,.36)!important}
+.v17-services>a span{font-size:29px!important}
+.v17-services>a strong{letter-spacing:-.035em;font-size:17px}
+.v17-services>a small{font-size:12px}
+.v17-bottom-cta,.cta-band,.pn-page-next,.pn-local-cta{
+  background:linear-gradient(112deg,rgba(116,103,245,.13),rgba(76,179,235,.075))!important;
+  border:1px solid rgba(129,116,241,.20)!important;
+  border-radius:23px!important;padding:27px 31px;
+}
+.v17-bottom-cta{margin-top:30px}
+.v17-bottom-cta strong{font-size:20px;letter-spacing:-.035em}
+.pn-section-heading h1,.sec-head h2{letter-spacing:-.06em}
+.pn-local-compare,.pn-local-note,.pn-inlife-grid>div,.pn-how-simple,.pn-film-expand,.pn-advanced,.pn-ds-hero,.pn-ds-panel,.acc,.opt,.item,.sum,.field{
+  border-radius:18px;
+}
+body[data-pn-design] .page .field{
+  background:var(--card2);color:var(--tx);border:1px solid var(--line2);
+  border-radius:13px;min-height:46px;
+}
+body[data-pn-design] .page .field:focus{
+  outline:0;border-color:#8678ef;box-shadow:0 0 0 4px rgba(120,107,245,.15)
+}
+body[data-pn-design] .page select.field option{color:#172138;background:#fff}
+body[data-pn-design].v14-dark .page select.field option{color:#fff;background:#202a42}
+#p-skaiciuotuvas .acc{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card)}
+body[data-pn-design] #p-skaiciuotuvas .opt.sel{
+  border-color:var(--teal)!important;box-shadow:inset 0 0 0 1px rgba(131,115,244,.1);
+}
+body[data-pn-design] #p-skaiciuotuvas .sum{
+  border:1px solid var(--line)!important;border-radius:22px!important;
+  background:var(--card)!important;box-shadow:0 18px 45px rgba(25,40,90,.08)
+}
+body[data-pn-design] footer{border-top-color:var(--line);padding-top:40px}
+body[data-pn-design] #pn-design-toggle{
+  border-radius:15px!important;background:linear-gradient(135deg,#7563ee,#507dea)!important;
+  color:#fff!important;border:1px solid rgba(255,255,255,.15)!important;
+  box-shadow:0 12px 30px rgba(65,68,184,.28)!important;
+}
+body[data-pn-design] a:focus-visible,
+body[data-pn-design] button:focus-visible{outline:3px solid #8f9dff;outline-offset:3px}
+.ln-reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.75,.25,1)}
+.ln-reveal.is-visible{opacity:1;transform:translateY(0)}
+@media(max-width:1300px){
+ header .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:2px;background:#10192e;padding:12px 22px 20px;box-shadow:0 24px 48px rgba(5,10,25,.34);border-bottom:1px solid rgba(255,255,255,.14);max-height:calc(100dvh - 76px);overflow-y:auto}
+ header .links.open{display:flex}
+ header .links a,header .links a:nth-child(1),header .links a:nth-child(2),header .links a:last-child{display:block;width:100%;color:#e4eaff;padding:13px 16px}
+ header .menu-btn{display:grid;place-items:center}
+}
+@media(max-width:900px){
+ .v17-hero{grid-template-columns:1fr;min-height:0;gap:40px;padding:45px 0}
+ .v17-hero-copy{text-align:left}
+ .v17-hero h1{font-size:clamp(43px,8vw,64px)}
+ .v17-preview{transform:none;max-width:630px;margin:auto;width:100%}
+ .v17-preview:hover{transform:translateY(-3px)}
+ .ln-techstrip{justify-content:flex-start;gap:13px 18px;margin-bottom:40px}
+ .ln-techstrip>span{flex-basis:100%}
+}
+@media(max-width:600px){
+ header .nav{height:66px;gap:9px}
+ header .nav>a.logo{flex:0 1 190px!important;max-width:min(190px,calc(100vw - 147px))!important}
+ header #v14-theme-toggle{font-size:0!important;padding:9px!important;min-width:37px!important;min-height:37px!important}
+ header #v14-theme-toggle:before{content:"◐";font-size:19px}
+ header .menu-btn{min-width:37px;min-height:37px;padding:8px}
+ header .nav .btn-cta{display:none}
+ .page{padding-top:15px;padding-bottom:55px}
+ .v17-hero{padding:25px 0 34px;gap:28px}
+ .v17-kicker{font-size:9px;padding:9px 12px;letter-spacing:.045em}
+ .v17-hero h1{font-size:clamp(39px,10.5vw,55px);letter-spacing:-.063em;margin:18px 0}
+ .v17-hero-copy>p{font-size:15px;line-height:1.8}
+ .v17-actions{gap:9px;margin:24px 0}
+ .v17-actions .btn{flex:1 1 175px;text-align:center;min-height:48px;font-size:13px;padding:11px 14px}
+ .v17-trust{gap:5px 12px;font-size:10.5px}
+ .v17-preview{padding:16px!important;border-radius:23px!important}
+ .v17-house{height:170px}
+ .v17-metrics strong{font-size:19px}
+ .v17-metrics>div{padding:10px 7px}
+ .pn-home-scenarios button{font-size:10px!important;min-height:39px;padding:9px 6px}
+ .ln-techstrip{margin-bottom:33px;gap:11px 13px}
+ .ln-techstrip strong{font-size:11px}
+ .pn-simple-intro{margin-bottom:35px}
+ .pn-simple-cards{gap:12px}
+ .pn-simple-card{min-height:0!important;padding:22px!important}
+ .pn-home-services-heading{margin-top:40px}
+ .v17-services>a{min-height:120px;padding:18px 15px!important}
+ .v17-bottom-cta,.cta-band{padding:21px;gap:18px}
+ .v17-bottom-cta .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+ .ln-reveal,.ln-reveal.is-visible{opacity:1!important;transform:none!important;transition:none!important}
+ .v17-preview,.pn-simple-card,.v17-services>a{transform:none!important;transition:none!important}
+}
+
+</style>
+<meta name="theme-color" content="#0c1427">
 </head>
 <body>
 <div id="pn-scroll-progress" aria-hidden="true"></div>
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.12</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v5.0</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links" id="links" aria-label="Visi svetainės skyriai">
 <a href="#pradzia">Pradžia</a>
 <a href="#privalumai">Kodėl verta</a>
@@ -1806,11 +2114,11 @@ body[data-pn-design]:not(.v14-dark)::before{
 
 <div class="v17-hero">
  <div class="v17-hero-copy">
-  <span class="v17-kicker"><span class="v17-dot"></span> VIETINIS VALDYMAS · PRIVATUMAS · ENERGIJOS TAUPYMAS</span>
-  <h1>Jūsų namai.<br><span class="grad-tx">Jūsų kontrolė.</span></h1>
-  <p>Sujungiame įrenginius į vieną sistemą, teikiame pirmenybę vietiniam valdymui ir mažiname priklausomybę nuo gamintojų debesų. Namai veikia jums – ne atvirkščiai.</p>
-  <div class="v17-actions"><a href="#skaiciuotuvas" class="btn btn-p">Apskaičiuoti kainą <span aria-hidden="true">↗</span></a><a href="#privalumai" class="btn btn-g">Kodėl verta?</a></div>
-  <div class="v17-trust"><span>✓ Duomenys jūsų namuose</span><span>✓ Mažesnė priklausomybė nuo debesų</span><span>✓ Taupymas ir automatizacijos</span></div>
+  <span class="v17-kicker"><span class="v17-dot"></span> IŠMANŪS NAMAI · ENERGIJA · AUTOMATIKA</span>
+  <h1>Technologijos, kurios <span class="grad-tx">rūpinasi namais.</span></h1>
+  <p>Šildymas, saulės elektrinė, baterija, apsauga ir visas namų komfortas – vienoje išmanioje sistemoje. Mažiau programėlių, daugiau automatikos ir daugiau kontrolės.</p>
+  <div class="v17-actions"><a href="#skaiciuotuvas" class="btn btn-p">Apskaičiuoti kainą <span aria-hidden="true">↗</span></a><a href="#kaip-veikia" class="btn btn-g">Pamatyti, kaip veikia <span aria-hidden="true">↗</span></a></div>
+  <div class="v17-trust"><span>✓ Pritaikyta turimai įrangai</span><span>✓ Vietinis valdymas, kai įmanoma</span><span>✓ Aiškios kainos</span></div>
  </div>
  <div class="v17-preview" data-pn-scene="day" aria-label="Išmanių namų valdymo skydelio demonstracija">
   <div class="v17-preview-head"><span><span class="v17-dot"></span> Namų energija</span><span class="v17-demo-badge">DEMO</span></div>
@@ -1859,7 +2167,8 @@ body[data-pn-design]:not(.v14-dark)::before{
  </div>
 </div>
 
-<div class="pn-simple-intro"><div class="pn-intro-top"><span class="eyebrow">KĄ TAI DUODA JUMS?</span><h2>Mažiau rūpesčių. Daugiau kontrolės.</h2><p>Nereikia domėtis technologijomis, kad namai veiktų paprasčiau.</p></div><div class="pn-simple-cards">
+<div class="ln-techstrip" aria-label="Integruojamų technologijų pavyzdžiai"><span>TECHNOLOGIJOS, SU KURIOMIS DIRBAME</span><strong>Home Assistant</strong><strong>Solis</strong><strong>Midea</strong><strong>Teltonika</strong><strong>Zigbee</strong><strong>Modbus</strong></div>
+<div class="pn-simple-intro"><div class="pn-intro-top"><span class="eyebrow">JŪSŲ NAMŲ NAUJA KASDIENYBĖ</span><h2>Vienas namas. <span class="grad-tx">Neribotos galimybės.</span></h2><p>Nereikia domėtis technologijomis, kad namai veiktų paprasčiau.</p></div><div class="pn-simple-cards">
 <a href="#privalumai" class="pn-simple-card"><span class="pn-card-emoji">🛡️</span><b>Namai jūsų rankose</b><p>Duomenys ir valdymas gali likti namuose, o ne vien gamintojų serveriuose.</p><span class="pn-card-link">Kodėl tai svarbu →</span></a>
 <a href="#kaip-veikia" class="pn-simple-card"><span class="pn-card-emoji">☀️</span><b>Energija be spėliojimų</b><p>Šildymas, baterija ir automobilis gali derintis prie saulės, tarifo bei poreikių.</p><span class="pn-card-link">Pamatyti pavyzdį →</span></a>
 <a href="#skaiciuotuvas" class="pn-simple-card"><span class="pn-card-emoji">📱</span><b>Viskas vienoje vietoje</b><p>Vienas ekranas vietoj atskirų programėlių, aiškesni pranešimai ir automatizacijos.</p><span class="pn-card-link">Įvertinti kainą →</span></a>
@@ -3394,7 +3703,7 @@ $('#tbGo').onclick=()=>{if(!['#skaiciuotuvas','#iranga'].includes(location.hash)
  }
  root.querySelectorAll('[data-v14-preset]').forEach(b=>b.addEventListener('click',()=>{const p=presets[b.dataset.v14Preset];sun.value=p[0];wind.value=p[1];temp.value=p[2];home.checked=p[3];root.querySelectorAll('[data-v14-preset]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));render()}));
  [sun,wind,temp,home].forEach(x=>x.addEventListener('input',()=>{root.querySelectorAll('[data-v14-preset]').forEach(b=>b.setAttribute('aria-pressed','false'));render()}));render();
- const toggle=by('v14-theme-toggle');if(toggle){toggle.addEventListener('click',()=>{const dark=document.body.classList.toggle('v14-dark');toggle.textContent=dark?'☀ Šviesi tema':'☾ Tamsi tema';toggle.setAttribute('aria-pressed',String(dark));try{localStorage.setItem('pn-theme',dark?'dark':'light')}catch(e){}});try{if(localStorage.getItem('pn-theme')==='dark'){document.body.classList.add('v14-dark');toggle.textContent='☀ Šviesi tema';toggle.setAttribute('aria-pressed','true')}}catch(e){}}
+ const toggle=by('v14-theme-toggle');if(toggle){toggle.addEventListener('click',()=>{const dark=document.body.classList.toggle('v14-dark');toggle.textContent=dark?'☀ Šviesi tema':'☾ Tamsi tema';toggle.setAttribute('aria-pressed',String(dark));try{localStorage.setItem('pn-theme',dark?'dark':'light')}catch(e){}});try{if(localStorage.getItem('pn-theme')!=='light'){document.body.classList.add('v14-dark');toggle.textContent='☀ Šviesi tema';toggle.setAttribute('aria-pressed','true')}}catch(e){}}
 })();
 </script>
 <script>
@@ -3710,6 +4019,21 @@ $('#tbGo').onclick=()=>{if(!['#skaiciuotuvas','#iranga'].includes(location.hash)
  document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAuto()});
  addEventListener('hashchange',()=>{if(location.hash&&location.hash!=='#pradzia')stopAuto()});
  changeScene('day');
+})();
+</script>
+
+<script id="pn-v5-effects">
+(function(){
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const root=document.getElementById('p-pradzia');
+  if(!root)return;
+  const els=[...root.querySelectorAll('.pn-simple-card,.v17-services>a,.pn-home-services-heading,.pn-intro-top')];
+  const observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}});
+  },{threshold:.09,rootMargin:'0px 0px 48px 0px'});
+  els.forEach(function(el){el.classList.add('ln-reveal');observer.observe(el)});
+  // Give sections the opportunity to render immediately when route changes.
+  window.addEventListener('hashchange',function(){requestAnimationFrame(function(){els.forEach(function(el){if(el.getBoundingClientRect().top<innerHeight)el.classList.add('is-visible')})})});
 })();
 </script>
 </body>
