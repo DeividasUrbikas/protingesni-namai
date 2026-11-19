@@ -1569,12 +1569,7 @@ body.v14-dark[data-pn-gradient="duo-sky-lime"]{--pn-canvas-bg:linear-gradient(13
 @media(max-width:540px){.pn-ds-grad-note{font-size:11px}}
 
 
-/* v4.6: originalus baltas logotipas ant mėlyno pagrindo, patikimas SVG ir penki Aurora Cloud deriniai */
-header .nav>.logo{display:flex;align-items:center;flex:0 0 clamp(166px,20vw,220px);min-width:0;padding:5px 7px;border-radius:10px;background:#3068ae!important;border:1px solid rgba(255,255,255,.16);box-shadow:0 2px 9px rgba(10,37,75,.12)}
-header .nav>.logo svg.logo-img{display:block!important;width:100%!important;max-width:none!important;height:auto!important;aspect-ratio:1134/358;flex:none;overflow:visible;opacity:1!important;visibility:visible!important}
-.footer-logo{display:inline-flex;align-items:center;padding:7px 10px;border-radius:10px;background:#3068ae!important;max-width:min(290px,85vw)}
-.footer-logo svg.logo-img{display:block!important;width:min(235px,68vw)!important;height:auto!important;max-width:100%!important;aspect-ratio:1134/358;flex:none}
-@media(max-width:560px){.nav{gap:6px}header .nav>.logo{flex:0 0 clamp(144px,44vw,175px);padding:5px 6px}header .nav>.site-version{display:none}header .nav #v14-theme-toggle{font-size:10px;padding:7px 8px;margin-left:0}header .nav .menu-btn{padding:8px}}
+/* v4.6: Aurora Cloud dizainai ir pastelinių gradientų variantai */
 body[data-pn-design="aurora-cloud-soft"]{--pn-angle:150deg;--pn-design-radius:39px;--pn-surface-blur:22px;--pn-surface-strength:.10;--pn-pattern:"cloud";--pn-style-opacity:.10;--pn-style-wash:10%;--pn-radius-scale:1.56;--pn-style-field:radial-gradient(ellipse 62% 66% at 76% 57%,color-mix(in srgb,var(--pn-accent-light) 19%,transparent),transparent 77%),radial-gradient(ellipse 82% 60% at 35% 38%,color-mix(in srgb,var(--pn-accent) 9%,transparent),transparent 76%)}
 body[data-pn-design="aurora-cloud-breeze"]{--pn-angle:143deg;--pn-design-radius:36px;--pn-surface-blur:18px;--pn-surface-strength:.12;--pn-pattern:"cloud";--pn-style-opacity:.12;--pn-style-wash:12%;--pn-radius-scale:1.5;--pn-style-field:radial-gradient(ellipse 66% 60% at 81% 48%,color-mix(in srgb,var(--pn-accent-light) 25%,transparent),transparent 78%),radial-gradient(ellipse 65% 68% at 23% 65%,color-mix(in srgb,var(--pn-accent) 10%,transparent),transparent 76%)}
 body[data-pn-design="aurora-cloud-pearl"]{--pn-angle:154deg;--pn-design-radius:40px;--pn-surface-blur:26px;--pn-surface-strength:.12;--pn-pattern:"pearl";--pn-style-opacity:.12;--pn-style-wash:13%;--pn-radius-scale:1.62;--pn-style-field:radial-gradient(ellipse 70% 65% at 80% 52%,color-mix(in srgb,var(--pn-accent-light) 28%,transparent),transparent 76%),radial-gradient(ellipse 72% 56% at 41% 24%,rgba(255,255,255,.23),transparent 77%)}
@@ -1585,31 +1580,6 @@ body.v14-dark[data-pn-gradient="duo-blue-apricot"]{--pn-canvas-bg:linear-gradien
 body.v14-dark[data-pn-gradient="duo-sky-coral"]{--pn-canvas-bg:linear-gradient(135deg,#1a536e,#713f43)!important}
 body.v14-dark[data-pn-gradient="duo-lavender-peach"]{--pn-canvas-bg:linear-gradient(135deg,#464075,#794c42)!important}
 body.v14-dark[data-pn-gradient="duo-blue-champagne"]{--pn-canvas-bg:linear-gradient(135deg,#204675,#74604d)!important}
-
-/* v4.7: originalus logotipas, be perpiešto SVG.
-   Apkerpamos tik nepanaudotos JPG paraštės CSS būdu. */
-.pn-logo-crop{
-  position:relative;display:block;flex:none;width:100%;aspect-ratio:1160 / 370;
-  overflow:hidden;border-radius:3px;background:#3e69ae;
-}
-.pn-logo-crop img.logo-img{
-  display:block!important;position:absolute!important;
-  width:132.413793%!important;max-width:none!important;min-width:0!important;
-  height:auto!important;left:-15.517241%;top:-27.027027%;
-  aspect-ratio:auto!important;object-fit:fill!important;
-  opacity:1!important;visibility:visible!important;
-}
-header .nav>.logo{
-  background:#3e69ae!important;display:flex;align-items:center;
-  flex:0 1 220px;max-width:220px;min-width:0;padding:5px 7px;overflow:hidden;
-}
-.footer-logo{background:#3e69ae!important;overflow:hidden}
-.footer-logo .pn-logo-crop{width:min(235px,68vw)}
-@media(max-width:560px){
-  header .nav>.logo{flex:0 1 175px;max-width:min(175px,calc(100vw - 124px));padding:5px 6px}
-  .pn-journey-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .pn-journey-nav a{min-width:0}
-}
 
 /* v4.8: harmonizuota mėlyna svetainės paletė.
    Logotipo originali mėlyna #3e69ae = visos sąsajos pagrindinė spalva.
@@ -1656,12 +1626,7 @@ body[data-pn-design].v14-dark header{
   background:#1b3e66!important;
   border-bottom-color:rgba(159,196,238,.20)!important;
 }
-header .nav>.logo{
-  background:#3e69ae!important;
-  border-color:transparent!important;
-  box-shadow:none!important;
-}
-header .nav>.logo .pn-logo-crop{background:#3e69ae}
+
 body:not(.v14-dark) .pn-journey-nav a,
 body[data-pn-design]:not(.v14-dark) .pn-journey-nav a{
   background:rgba(252,254,255,.91)!important;
@@ -1723,9 +1688,50 @@ body:not(.v14-dark) #pn-design-toggle{
   background:#3e69ae!important;
   border-color:#9abce0!important;
 }
-body:not(.v14-dark) .footer-logo{background:#3e69ae!important}
+
 @media(max-width:760px){
   body[data-pn-design]:not(.v14-dark){background-attachment:scroll!important}
+}
+
+/* v4.9 – iš originalaus failo iškirptas skaidrus užrašas: be mėlynos kortelės, ikonos ir šūkio. */
+header .nav>a.logo,
+body[data-pn-design] header .nav>a.logo,
+body.v14-dark header .nav>a.logo{
+  display:flex;align-items:center;
+  flex:0 1 230px;max-width:230px;min-width:0;
+  margin:0;padding:0!important;border:0!important;border-radius:0!important;
+  background:transparent!important;box-shadow:none!important;
+  overflow:visible;
+}
+header .nav>a.logo img.pn-logo-wordmark{
+  display:block!important;position:static!important;
+  width:100%!important;height:auto!important;max-width:230px!important;
+  aspect-ratio:914 / 108!important;object-fit:contain!important;
+  opacity:1!important;visibility:visible!important;filter:none!important;
+}
+.footer-logo,
+body:not(.v14-dark) .footer-logo,
+body.v14-dark .footer-logo{
+  display:inline-flex;align-items:center;
+  background:transparent!important;
+  box-shadow:none!important;border:0!important;border-radius:0!important;
+  padding:0!important;overflow:visible;
+}
+.footer-logo img.pn-logo-wordmark{
+  display:block!important;position:static!important;
+  width:min(235px,70vw)!important;max-width:100%!important;
+  height:auto!important;aspect-ratio:914 / 108!important;
+  object-fit:contain!important;
+  filter:brightness(0) saturate(100%) invert(31%) sepia(42%) saturate(988%)
+         hue-rotate(177deg) brightness(93%) contrast(95%);
+}
+body.v14-dark .footer-logo img.pn-logo-wordmark{filter:none}
+@media(max-width:560px){
+  header .nav>a.logo,
+  body[data-pn-design] header .nav>a.logo{
+    flex:0 1 210px;max-width:min(210px,calc(100vw - 166px));min-width:0;
+  }
+  header .nav>a.logo img.pn-logo-wordmark{max-width:100%!important}
 }
 </style>
 </head>
@@ -1734,7 +1740,7 @@ body:not(.v14-dark) .footer-logo{background:#3e69ae!important}
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><span class="pn-logo-crop"><img class="logo-img" src="assets/logo-original.jpg" width="1536" height="634" alt="ProtingesniNamai.lt – Patogus namų valdymas" decoding="async"></span></a><span class="site-version" title="Svetainės versija">v4.8</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.9</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links" id="links" aria-label="Visi svetainės skyriai">
 <a href="#pradzia">Pradžia</a>
 <a href="#privalumai">Kodėl verta</a>
@@ -2212,7 +2218,7 @@ body:not(.v14-dark) .footer-logo{background:#3e69ae!important}
 
 <footer>
   <div class="wrap foot">
-    <div class="footer-brand"><a class="footer-logo" href="#pradzia" aria-label="ProtingesniNamai.lt – į pradžią"><span class="pn-logo-crop"><img class="logo-img" src="assets/logo-original.jpg" width="1536" height="634" alt="ProtingesniNamai.lt – Patogus namų valdymas" decoding="async"></span></a><span>© <span id="yr"></span> · Išmanieji namai ir energijos valdymas</span></div>
+    <div class="footer-brand"><a class="footer-logo" href="#pradzia" aria-label="ProtingesniNamai.lt – į pradžią"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span>© <span id="yr"></span> · Išmanieji namai ir energijos valdymas</span></div>
     <nav><a href="#paslaugos">Paslaugos</a><a href="#skaiciuotuvas">Kainos</a><a href="#platforma">Platforma</a><a href="#kontaktai">Kontaktai</a></nav>
   </div>
 </footer>
