@@ -1748,6 +1748,27 @@ body[data-pn-design]:not(.v14-dark)::before{
   background-repeat:no-repeat;
   background-size:cover;
 }
+
+/* v4.12 – darbų sąmata ir skaidri kiekio nuolaida */
+#p-skaiciuotuvas .price-old,
+#p-skaiciuotuvas .sum del{
+  color:var(--tx3);font-size:.85em;font-weight:600;
+  text-decoration:line-through;text-decoration-thickness:1.5px;
+  text-decoration-color:var(--red);
+}
+#p-skaiciuotuvas .sum .sline-prices,
+#p-skaiciuotuvas .sum .stotal-prices{
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+  text-align:right;min-width:max-content;
+}
+#p-skaiciuotuvas .sum .stotal-prices del{font-size:15px}
+#p-skaiciuotuvas .sum .stotal-prices b{font-size:30px}
+#p-skaiciuotuvas .price-line .disc{display:inline-block;font-weight:700}
+#p-skaiciuotuvas .sum .sline{align-items:baseline}
+@media(max-width:520px){
+  #p-skaiciuotuvas .sum .sline{gap:9px;font-size:12px}
+  #p-skaiciuotuvas .sum .stotal-prices b{font-size:27px}
+}
 </style>
 </head>
 <body>
@@ -1755,7 +1776,7 @@ body[data-pn-design]:not(.v14-dark)::before{
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.11</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.12</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links" id="links" aria-label="Visi svetainės skyriai">
 <a href="#pradzia">Pradžia</a>
 <a href="#privalumai">Kodėl verta</a>
@@ -2573,9 +2594,9 @@ function renderItems(){
       ${c?'<div class="note">Dėl vietinio veikimo spręsime tik patikrinę konkretų modelį.</div>':'<div class="note">Pasirinkite kategoriją, kad galėtume įvertinti suderinamumą.</div>'}
       <div class="item-bot">
         <div class="qty"><button data-act="dec" aria-label="Mažiau">−</button><span>${it.qty}</span><button data-act="inc" aria-label="Daugiau">+</button></div>
-        ${c?`<div class="price-line">${it.qty} × ${eur(unit)}${disc?` · <span class="disc">nuolaida −${eur(disc)}</span>`:''}<b>${eur(total)}</b></div>`:'<div class="price-line"><b>—</b></div>'}
+        ${c?`<div class="price-line">${it.qty} × ${eur(unit)}${disc?` · <del class="price-old">${eur(it.qty*unit)}</del> <span class="disc">nuolaida −${eur(disc)}</span>`:''}<b>${eur(total)}</b></div>`:'<div class="price-line"><b>—</b></div>'}
       </div>
-      ${c?(()=>{const pt=parts(it);return `<div class="brk">${pt.sup?`<span>Įranga ~${eur(pt.dev)}</span><span>Įrengimas ${eur(pt.inst)}</span>`:''}<span>Pridėjimas prie sistemos ${eur(pt.int)}${it.qty>1?` (papildomi – ${eur(pt.int2)})`:''}</span></div>${pt.hasDev?`<label class="supt"><input type="checkbox" data-act="sup" ${pt.sup?'checked':''}> Įrangą parūpiname ir įrengiame mes</label>`:''}`})():''}
+      ${c?(()=>{const pt=parts(it);return `<div class="brk">${pt.sup?`<span>Montavimo darbai ${eur(pt.inst)}</span>`:''}<span>Integravimas ${eur(pt.int)}${it.qty>1?` (papildomi – ${eur(pt.int2)})`:''}</span></div>${pt.hasInst?`<label class="supt"><input type="checkbox" data-act="sup" ${pt.sup?'checked':''}> Įtraukti montavimo darbus (be įrangos kainos)</label>`:''}`})():''}
       <div style="display:none">
       </div>
     </div>`}).join('');
@@ -2609,7 +2630,7 @@ function renderOpts(){
       const on=o.type==='radio'?sel[g]===x.id:sel[g].includes(x.id);
       return `${g==='server'&&x.grp?`<div class="server-group"><span>${x.grp}</span></div>`:''}<label class="opt ${on?'sel':''} ${x.img?'opt-im':''}"><input type="${o.type==='radio'?'radio':'checkbox'}" name="${g}" value="${x.id}" ${on?'checked':''}>${x.img?`<div class="opt-img">${x.img}</div>`:''}
         <div class="opt-copy"><div class="ot">${x.t}${g==='server'&&x.tag?` <span class="server-chip">${x.tag}</span>`:''}</div><div class="od">${x.d}</div></div>
-        <div class="op">${x.q?x.q:x.p?(x.m?'nuo '+x.p+' €/mėn.':(g==='server'?'nuo ':'nuo ')+eur(x.p)):(g==='server'?'Turimas':'0 €')}${g==='dash'?`<button type="button" class="pv-btn ${typeof pvOpen!=='undefined'&&pvOpen&&tier===PVT[x.id]?'on':''}" data-pv="${x.id}">${ic('eye')}Pavyzdys</button>`:''}</div></label>`}).join('');
+        <div class="op">${g==='server'?'Paruošimas nuo '+eur(BASE_SETUP_PRICE):x.q?x.q:x.p?(x.m?'nuo '+x.p+' €/mėn.':'nuo '+eur(x.p)):'0 €'}${g==='dash'?`<button type="button" class="pv-btn ${typeof pvOpen!=='undefined'&&pvOpen&&tier===PVT[x.id]?'on':''}" data-pv="${x.id}">${ic('eye')}Pavyzdys</button>`:''}</div></label>`}).join('');
   });
 }
 document.querySelectorAll('.opts').forEach(el=>el.addEventListener('change',e=>{
@@ -2625,26 +2646,27 @@ function renderSum(P){
   try{const n=items.reduce((a,i)=>a+i.qty,0);$('#tbSum').textContent='nuo '+eur(P.total);$('#tbM').textContent=P.month?'+ '+P.month+' €/mėn.':'';$('#tbN').textContent=n?n+' įreng.':''}catch(_){}
   const devLines=P.lines.filter(l=>l.c);
   $('#summary').innerHTML=`<h3>Jūsų sąmata</h3>
-   <div class="slines">${devLines.length?devLines.map(l=>`<div class="sline"><span>${l.it.qty} × ${esc(l.it.brand?l.it.brand+' ':'')}${esc(itName(l.it).toLowerCase())}</span><b>nuo ${eur(l.total)}</b></div>`).join(''):'<div class="small">Įrenginiai dar nepridėti</div>'}</div>
+   <div class="slines">${devLines.length?devLines.map(l=>`<div class="sline"><span>${l.it.qty} × ${esc(l.it.brand?l.it.brand+' ':'')}${esc(itName(l.it).toLowerCase())}</span><span class="sline-prices">${l.disc?`<del>${eur(l.original)}</del>`:''}<b>nuo ${eur(l.total)}</b></span></div>`).join(''):'<div class="small">Įrenginiai dar nepridėti</div>'}</div>
    <div class="sdiv"></div>
-   ${P.devS?`<div class="srow"><span>Įranga</span><b>${eur(P.devS)}</b></div>`:''}${P.instS?`<div class="srow"><span>Įrengimas</span><b>${eur(P.instS)}</b></div>`:''}<div class="srow"><span>Pridėjimas prie sistemos</span><b>${eur(P.intS)}</b></div>
+   ${P.instS?`<div class="srow"><span>Montavimo darbai</span><b>${eur(P.instS)}</b></div>`:''}<div class="srow"><span>Integravimo darbai</span><b>${eur(P.intS)}</b></div>
    ${P.disc?`<div class="srow d"><span>Kiekio nuolaida</span><b>−${eur(P.disc)}</b></div>`:''}
    ${P.ex.filter(e=>!e[2]).map(e=>`<div class="srow"><span>${e[0]}</span><b>${e[3]||'nuo '+eur(e[1])}</b></div>`).join('')}
    <div class="sdiv"></div>
-   <div class="stotal"><span>Preliminariai nuo</span><b>${eur(P.total)}</b></div>
-   ${P.ex.filter(e=>e[2]).map(e=>`<div class="smonth"><span>${e[0]}</span><b>${e[1]} €/mėn.</b></div>`).join('')}${P.ex.filter(e=>e[2]).length>1?`<div class="smonth" style="color:#fff"><span>Iš viso kas mėnesį</span><b>${P.month} €/mėn.</b></div>`:''}
+    <div class="stotal"><span>Preliminariai nuo</span><span class="stotal-prices">${P.disc?`<del>${eur(P.originalTotal)}</del>`:''}<b>${eur(P.total)}</b></span></div>
+   ${P.ex.filter(e=>e[2]).map(e=>`<div class="smonth"><span>${e[0]}</span><b>${e[1]} €/mėn.</b></div>`).join('')}${P.ex.filter(e=>e[2]).length>1?`<div class="smonth" style="font-weight:800"><span>Iš viso kas mėnesį</span><b>${P.month} €/mėn.</b></div>`:''}
    <button class="btn btn-p" id="toOrder">Pateikti užklausą</button>
-   <p class="disclaimer">Visos kainos nurodytos <strong>nuo</strong> ir yra preliminarios. Bazinis paruošimas nuo 149 € įtrauktas net turint savo serverį; jis neapima prietaisų integracijų, sudėtingų automatizacijų, sistemos migracijos ar atvykimo. Galutinę sąmatą patvirtinsime įvertinę įrangą ir darbų apimtį.</p>`;
+    <p class="disclaimer"><strong>Įrangos, serverio, prietaisų, laikiklių ir medžiagų kainos neįtrauktos.</strong> Nurodyta tik preliminari darbų sąmata „nuo“. Bazinis paruošimas nuo 149 € skaičiuojamas ir turint savo serverį. Nestandartiniai papildomi darbai, neįkainoti pasirinkimai, atvykimas ir migracija įvertinami individualiai.</p>`;
   $('#toOrder').onclick=()=>{$('#cMsg').value=estimateText(P);location.hash='kontaktai';setTimeout(()=>$('#cName').focus(),50)};
 }
 function estimateText(P){
   const selectedServer=OPTS.server.items.find(x=>x.id===sel.server);
-  const L=['Preliminari sąmata (kainos nuo):',`Serveris: ${selectedServer?selectedServer.t:'Nepasirinktas'}`];
+  const L=['Preliminari darbų sąmata (be įrangos kainų):',`Serveris (įrangos kaina neįtraukta): ${selectedServer?selectedServer.t:'Nepasirinktas'}`];
   P.lines.forEach(l=>{if(l.c){const ml=modelsOf(l.it),mm=ml&&l.it.model>=0?ml[l.it.model][0]:l.it.model===-2?'kitas modelis':'';L.push(`• ${l.it.qty} × ${l.it.brand?l.it.brand+' ':''}${itName(l.it)}${mm?' ('+mm+')':''} – nuo ${eur(l.total)} · ${CMP[compatOf(l.it)][1].toLowerCase()}`)}else L.push(`• ${l.it.qty} × „${l.it.raw}“ – kategorija nenurodyta`)});
-  if(P.disc)L.push(`Kiekio nuolaida: −${eur(P.disc)}`);
+  if(P.disc)L.push(`Kiekio nuolaida: −${eur(P.disc)} (suma prieš nuolaidą ${eur(P.originalTotal)}, po nuolaidos ${eur(P.total)})`);
   P.ex.forEach(e=>L.push(`• ${e[0]} – ${e[3]?'kaina derinama':e[2]?'nuo '+e[1]+' €/mėn.':'nuo '+eur(e[1])}`));
-  L.push(`Preliminari suma nuo: ${eur(P.total)}${P.month?` + nuo ${P.month} €/mėn.`:''}`);
-  L.push('','Papildoma informacija:');
+  L.push(`Tik darbų kaina nuo: ${eur(P.total)}${P.month?` + nuo ${P.month} €/mėn.`:''}`);
+  if(sel.zb.length||sel.voice.includes('hav'))L.push('Papildomi Zigbee arba balso kolonėlės paruošimo darbai vertinami individualiai.');
+  L.push('Įrangos kainos neskaičiuojamos.','','Papildoma informacija:');
   return L.join('\n');
 }
 
@@ -2832,9 +2854,9 @@ function renderBM(){
    <div class="bm-st"><span class="lc ${lo[0]}">${lo[0]==='lc-l'?ic('home'):lo[0]==='lc-c'?ic('cloud'):ic('grid')}${lo[1]}</span><span class="small">${lo[2]}</span></div>
    ${ml?`<label class="bm-l">Modelis / serija</label><select class="field" data-bm="model"><option value="-1">Nežinau modelio</option>${ml.map((x,i)=>`<option value="${i}" ${BM.model===i?'selected':''}>${esc(x[0])} – ${CMP[x[1]][1].toLowerCase()}</option>`).join('')}<option value="-2" ${BM.model===-2?'selected':''}>Kitas modelis – vertinama individualiai</option></select>`:''}
    <p class="bm-note">Suderinamumo tikimybė ir vietinis veikimas tikslinami pagal pasirinktą modelį.</p>
-   ${(()=>{const pt=parts({cat:BM.cat,sub:BM.sub,sup:BM.sup});return `<div class="bm-brk">${pt.hasDev?`<label class="bm-sup"><input type="checkbox" data-bm="sup" ${pt.sup?'checked':''}> Įrangą parūpiname ir įrengiame mes</label>`:'<div class="small" style="color:#6b7a90;margin-bottom:6px">Prietaisą jau turite – kainuoja tik pridėjimas prie sistemos.</div>'}
-     ${pt.sup?`<div class="bm-r"><span>Įranga (vidutinė kaina)</span><b>~${eur(pt.dev)}</b></div><div class="bm-r"><span>Įrengimas</span><b>${eur(pt.inst)}</b></div>`:''}<div class="bm-r"><span>Pridėjimas prie sistemos${BM.cat==='cover'?' ir kalibravimas':''}</span><b>${eur(pt.int)}</b></div></div>
-   <div class="bm-f"><div class="bm-pr"><small>Už vienetą</small><b>${eur(pt.dev+pt.inst+pt.int)}</b><span>kiekvieno papildomo pridėjimas – ${eur(pt.int2)}</span></div>`})()}
+    ${(()=>{const pt=parts({cat:BM.cat,sub:BM.sub,sup:BM.sup});return `<div class="bm-brk">${pt.hasInst?`<label class="bm-sup"><input type="checkbox" data-bm="sup" ${pt.sup?'checked':''}> Įtraukti montavimo darbus (be įrangos kainos)</label>`:'<div class="small" style="color:#6b7a90;margin-bottom:6px">Skaičiuojamas tik integravimas į sistemą.</div>'}
+     ${pt.sup?`<div class="bm-r"><span>Montavimo darbai</span><b>${eur(pt.inst)}</b></div>`:''}<div class="bm-r"><span>Integravimas į sistemą${BM.cat==='cover'?' ir kalibravimas':''}</span><b>${eur(pt.int)}</b></div></div>
+    <div class="bm-f"><div class="bm-pr"><small>Už vienetą · tik darbai</small><b>${eur(pt.inst+pt.int)}</b><span>kiekvieno papildomo integravimas – ${eur(pt.int2)}</span></div>`})()}
     <div class="bm-a"><div class="cq"><button type="button" data-bm="-" aria-label="Mažiau">−</button><span>${BM.qty}</span><button type="button" data-bm="+" aria-label="Daugiau">+</button></div><button type="button" class="addb" data-bm="add">+ Pridėti</button></div></div>`;
 }
 $('#bmodal').addEventListener('click',e=>{
@@ -3335,7 +3357,7 @@ document.querySelector('.accs').addEventListener('click',e=>{
 function accSum(P){
   const pick=(g)=>OPTS[g].items.find(x=>x.id===sel[g]);
   const set=(k,t,pr)=>{const a=$('#accs-'+k),b=$('#accp-'+k);if(a)a.textContent=t;if(b)b.textContent=pr};
-  const sv=pick('server'),zb=sel.zb.length;set('server',sv.t+(zb?' + Zigbee adapteris':''),'nuo '+eur(sv.p+BASE_SETUP_PRICE+(zb?OPTS.zb.items[0].p:0)));
+  const sv=pick('server'),zb=sel.zb.length;set('server',sv.t+(zb?' + Zigbee adapteris':''),'nuo '+eur(BASE_SETUP_PRICE));
   {const r=pick('remote');set('remote',r.t,r.m?'nuo '+r.p+' €/mėn.':r.p?'nuo '+eur(r.p):'')}
   const d=pick('dash');set('dash',d.t,d.p?'nuo '+eur(d.p):'Įskaičiuota');
   {const t=pick('tab');set('tab',t.id==='none'?'Nereikia':t.t,t.p?'nuo '+eur(t.p):'')}
