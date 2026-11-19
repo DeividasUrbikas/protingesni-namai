@@ -1610,6 +1610,123 @@ header .nav>.logo{
   .pn-journey-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
   .pn-journey-nav a{min-width:0}
 }
+
+/* v4.8: harmonizuota mėlyna svetainės paletė.
+   Logotipo originali mėlyna #3e69ae = visos sąsajos pagrindinė spalva.
+   Dizaino studijos parinkti gradientai tebenaudojami, bet su švelniu mėlynu filtru. */
+:root{
+  --pn-brand-blue:#3e69ae;
+  --pn-brand-deep:#224772;
+  --pn-brand-line:#cadbeb;
+}
+body:not(.v14-dark){
+  --tx:#183451;
+  --tx2:#536b83;
+  --tx3:#6c8198;
+  --teal:#326cad;
+  --grad-tx:linear-gradient(105deg,#214975,#4b81c1);
+  color:#183451;
+  background:linear-gradient(150deg,#eff6ff 0%,#e6effc 52%,#f4f8ff 100%) fixed!important;
+}
+body[data-pn-design]:not(.v14-dark){
+  --tx:#183451;
+  --tx2:#536b83;
+  --tx3:#6c8198;
+  --card:rgba(255,255,255,.90);
+  --card2:rgba(238,246,255,.91);
+  --line:rgba(100,143,191,.24);
+  --line2:rgba(103,151,199,.36);
+  --teal:#326cad;
+  --pn-base-a:#f0f6ff;
+  --pn-base-b:#dae9fb;
+  --pn-surface-fill:rgba(255,255,255,.91);
+  background:
+    linear-gradient(155deg,rgba(246,250,255,.52) 0%,rgba(243,248,255,.68) 60%,rgba(233,243,255,.74) 100%),
+    var(--pn-canvas-bg)!important;
+  background-attachment:fixed!important;
+}
+body:not(.v14-dark) header,
+body[data-pn-design]:not(.v14-dark) header{
+  background:#3e69ae!important;
+  border-bottom:1px solid rgba(255,255,255,.15)!important;
+  box-shadow:0 4px 18px rgba(36,75,127,.14)!important;
+}
+body.v14-dark header,
+body[data-pn-design].v14-dark header{
+  background:#1b3e66!important;
+  border-bottom-color:rgba(159,196,238,.20)!important;
+}
+header .nav>.logo{
+  background:#3e69ae!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
+header .nav>.logo .pn-logo-crop{background:#3e69ae}
+body:not(.v14-dark) .pn-journey-nav a,
+body[data-pn-design]:not(.v14-dark) .pn-journey-nav a{
+  background:rgba(252,254,255,.91)!important;
+  border:1px solid #cbdcf0!important;
+  color:#274462!important;
+  box-shadow:0 3px 12px rgba(48,94,147,.045);
+}
+body:not(.v14-dark) .pn-journey-nav a.on,
+body[data-pn-design]:not(.v14-dark) .pn-journey-nav a.on{
+  background:#e6f0fd!important;
+  border-color:#3e69ae!important;
+  box-shadow:inset 0 0 0 1px rgba(62,105,174,.16),0 5px 16px rgba(62,105,174,.09);
+}
+body:not(.v14-dark) .pn-journey-nav a span{color:#356da9!important}
+body:not(.v14-dark) .pn-journey-nav a strong{color:#234467}
+body:not(.v14-dark) .page .btn-p,
+body[data-pn-design]:not(.v14-dark) .page .btn-p,
+body:not(.v14-dark) #tbGo{
+  background:#376db3!important;
+  border-color:#376db3!important;
+  color:#fff!important;
+  box-shadow:0 6px 18px rgba(43,97,164,.19)!important;
+}
+body:not(.v14-dark) .page .btn-p:hover,
+body[data-pn-design]:not(.v14-dark) .page .btn-p:hover{
+  background:#295e9f!important;
+  border-color:#295e9f!important;
+}
+body:not(.v14-dark) .page .btn-g{
+  background:rgba(252,254,255,.93)!important;
+  border-color:#c8daee!important;
+  color:#2c4e73!important;
+}
+body:not(.v14-dark) .page .grad-tx,
+body[data-pn-design]:not(.v14-dark) .page .grad-tx{
+  background:linear-gradient(115deg,#224a78,#4682c0)!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  color:transparent!important;
+}
+body:not(.v14-dark) .v17-kicker{
+  background:rgba(255,255,255,.85);
+  border-color:#cbdff0;
+  color:#316392;
+}
+body:not(.v14-dark) .v17-hero-copy>p,
+body:not(.v14-dark) .v17-trust{color:#536e89}
+body:not(.v14-dark) .v17-preview{
+  background:rgba(255,255,255,.94)!important;
+  border-color:#d2e1f1!important;
+  box-shadow:0 15px 45px rgba(38,83,137,.11);
+}
+body:not(.v14-dark) .v17-insight{
+  background:#edf6fb;
+  border:1px solid #d5e7f1;
+}
+body:not(.v14-dark) .v17-insight-icon{color:#3179a7}
+body:not(.v14-dark) #pn-design-toggle{
+  background:#3e69ae!important;
+  border-color:#9abce0!important;
+}
+body:not(.v14-dark) .footer-logo{background:#3e69ae!important}
+@media(max-width:760px){
+  body[data-pn-design]:not(.v14-dark){background-attachment:scroll!important}
+}
 </style>
 </head>
 <body>
@@ -1617,7 +1734,7 @@ header .nav>.logo{
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><span class="pn-logo-crop"><img class="logo-img" src="assets/logo-original.jpg" width="1536" height="634" alt="ProtingesniNamai.lt – Patogus namų valdymas" decoding="async"></span></a><span class="site-version" title="Svetainės versija">v4.6</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><span class="pn-logo-crop"><img class="logo-img" src="assets/logo-original.jpg" width="1536" height="634" alt="ProtingesniNamai.lt – Patogus namų valdymas" decoding="async"></span></a><span class="site-version" title="Svetainės versija">v4.8</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links" id="links" aria-label="Visi svetainės skyriai">
 <a href="#pradzia">Pradžia</a>
 <a href="#privalumai">Kodėl verta</a>
