@@ -1833,6 +1833,43 @@ body[data-pn-design]:not(.v14-dark)::before{
   }
   #p-skaiciuotuvas .device-family-grid .cbtn{min-height:72px}
 }
+
+/* v4.15 – gamintojų logotipai su vienodais rėmeliais ir sklandžiu atsarginiu atvaizdu. */
+#p-skaiciuotuvas .brandmark .pn-brand-art{
+  width:38px;height:38px;flex:0 0 38px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:#fff;border:1px solid rgba(68,103,139,.13);
+  border-radius:10px;overflow:hidden;
+}
+#p-skaiciuotuvas .brandmark .pn-brand-art>.brand-initial{
+  width:100%;height:100%;min-width:0;
+  border-radius:9px;font-size:12px;
+}
+#p-skaiciuotuvas .brandmark .pn-brand-art>img{
+  position:static;width:30px;height:30px;
+  margin:auto;background:transparent;
+  border-radius:0;object-fit:contain;
+}
+#p-skaiciuotuvas .brand-choice{
+  min-height:75px;justify-content:flex-start;padding:10px 12px;
+}
+#p-skaiciuotuvas .brand-choice .brandmark{gap:10px;width:100%}
+#p-skaiciuotuvas .brand-choice .brand-name{font-size:12px}
+#p-skaiciuotuvas .brand-choice-alt{min-height:53px}
+#p-skaiciuotuvas .brand-choice-alt .brandmark .pn-brand-art{width:31px;height:31px;flex-basis:31px}
+#p-skaiciuotuvas .brand-choice-alt .brandmark .pn-brand-art>img{width:25px;height:25px}
+#p-skaiciuotuvas .item-name .brandmark .pn-brand-art{width:30px;height:30px;flex-basis:30px}
+#p-skaiciuotuvas .item-name .brandmark .pn-brand-art>img{width:25px;height:25px}
+#p-skaiciuotuvas .bm-h .brandmark .pn-brand-art{width:42px;height:42px;flex-basis:42px}
+#p-skaiciuotuvas .bm-h .brandmark .pn-brand-art>img{width:34px;height:34px}
+body.v14-dark #p-skaiciuotuvas .brandmark .pn-brand-art{background:#fff;border-color:rgba(255,255,255,.18)}
+@media(max-width:580px){
+  #p-skaiciuotuvas .brand-choice{min-height:70px;padding:9px}
+  #p-skaiciuotuvas .brand-choice .brandmark{gap:7px}
+  #p-skaiciuotuvas .brand-choice .brand-name{font-size:11px}
+  #p-skaiciuotuvas .brandmark .pn-brand-art{width:35px;height:35px;flex-basis:35px}
+  #p-skaiciuotuvas .brandmark .pn-brand-art>img{width:28px;height:28px}
+}
 </style>
 </head>
 <body>
@@ -1840,7 +1877,7 @@ body[data-pn-design]:not(.v14-dark)::before{
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.14</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.15</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links" id="links" aria-label="Visi svetainės skyriai">
 <a href="#pradzia">Pradžia</a>
 <a href="#privalumai">Kodėl verta</a>
@@ -2664,6 +2701,7 @@ function renderItems(){
       <div style="display:none">
       </div>
     </div>`}).join('');
+  applyBrandIcons(box);
   renderSum(P);
 }
 $('#items').addEventListener('click',e=>{
@@ -2761,18 +2799,56 @@ const LVLG=[['off','Labai didelė tikimybė','#1f9d63'],['mid','Didelė tikimyb�
 /* v3.4: shortlist selected from Lithuanian online retail assortment; NOT an official sales ranking */
 const LT_MAIN_BRANDS={"hp":["Daikin","Panasonic","Midea","Mitsubishi","Samsung","Nibe","Bosch","Vaillant","Viessmann","Gree","Buderus"],"ac":["Daikin","Mitsubishi","Midea","Samsung","LG","Gree","Panasonic","Toshiba","Haier","Hisense","Kaisai"],"rec":["Komfovent","Salda","Zehnder","Systemair","Brink","Mitsubishi Electric","Blauberg","Flexit"],"heat":["Salus","Danfoss","Honeywell","Aqara","Sonoff","Shelly","Tuya","Tado","Netatmo"],"dhw":["Ariston","Gorenje","Atlantic","Bosch","Thermor","Electrolux","Drazice"],"inv":["Solis","Huawei","Sungrow","GoodWe","Fronius","Deye","Sofar","Fox ESS","SolarEdge","Growatt","SMA","SolaX","Victron"],"bat":["Dyness","Pylontech","BYD","Huawei","Deye","Sungrow","Fox ESS","GoodWe","SolaX","Victron","EcoFlow"],"ev":["Teltonika","TeltoCharge","Wallbox","ABB","Zaptec","Easee","go-e","Tesla","Huawei","Zappi","Fronius"],"sec":["Ajax","Eldes","Paradox","Trikdis","Hikvision AX","Satel","DSC","Texecom","Bosch","Dahua Airshield"],"cam":["Hikvision","Dahua","Reolink","Tapo","Ezviz","Imou","UniFi","Ubiquiti","Aqara","Xiaomi","Eufy"],"light":["Sonoff","Aqara","Shelly","Philips Hue","IKEA","Xiaomi","Tuya","Govee","Yeelight","Schneider","Legrand","Moes"],"air":["Xiaomi","Philips","Dyson","Levoit","Sharp","Smartmi","Electrolux","Boneco","Stadler Form","Winix"],"cover":["Somfy","Nice","Shelly","Aqara","Velux","IKEA","Sonoff","Tuya","Hormann"],"sens":["Aqara","Sonoff","Xiaomi","Shelly","Tuya","IKEA","Fibaro","Netatmo","Govee"],"meter":["Shelly","Eastron","Carlo Gavazzi","Solis","Huawei","Chint","Sonoff","Elgama","Iskra"],"vac":["Roborock","Dreame","Xiaomi","iRobot","Ecovacs","Samsung","Eufy","Mova"],"app":["Bosch","Samsung","LG","AEG","Electrolux","Siemens","Miele","Whirlpool","Haier","Hisense","Gorenje","Beko"],"mow":["Husqvarna","Gardena","Worx","Segway","Navimow","Mammotion","Dreame","Stihl"],"media":["Samsung","LG","Sony","Philips","TCL","Sonos","Yamaha","JBL"],"lock":["Nuki","Yale","Aqara","Tedee","Hikvision","Dahua","Doorbird","SwitchBot","Ring"],"sauna":["Huum","Harvia","Saunum","Helo","Tylö"],"water":["Aqara","Shelly","Sonoff","Grohe","Tuya","Moes"],"vehicle":["Volkswagen","Škoda","Tesla","Audi","BMW","Hyundai","Kia","Volvo","Mercedes-Benz","Cupra","Renault","Toyota"],"irrigation":["Hunter","Rain Bird","Gardena","Orbit","Rachio","OpenSprinkler","Shelly","Tuya"],"garden":["Shelly","Sonoff","Aqara","Gardena","Hayward","Pentair","Tuya"]};
 const LT_POPULAR_CATEGORIES={"climate":["hp","ac","rec","heat","air"],"energy":["inv","bat","meter"],"security":["sec","cam","lock","water"],"light":["light","sens","cover"],"home":["vac","app","media"],"transport":["vehicle","ev"],"garden":["irrigation","mow","garden"]};
-const BRAND_LOGOS={"Samsung":"samsung","LG":"lg","Xiaomi":"xiaomi","Bosch":"bosch","Panasonic":"panasonic","Huawei":"huawei","Philips":"philips","IKEA":"ikea","Sonoff":"sonoff","Aqara":"aqara","Shelly":"shelly","Tesla":"tesla","Tapo":"tplink","TP-Link":"tplink","Daikin":"daikin","Toshiba":"toshiba","Sony":"sony","Roborock":"roborock","iRobot":"irobot","Dreame":"dreame","Eufy":"eufy","Miele":"miele","Whirlpool":"whirlpool","Electrolux":"electrolux","Hisense":"hisense","Tuya":"tuya","Govee":"govee","Netatmo":"netatmo","Yale":"yale","Ring":"ring","Fronius":"fronius","SMA":"sma","Victron":"victronenergy","Wallbox":"wallbox","Siemens":"siemens","Legrand":"legrand","Danfoss":"danfoss","Nibe":"nibe","Philips Hue":"philipshue","Sonos":"sonos","JBL":"jbl","Sharp":"sharp","Mitsubishi":"mitsubishi","Mitsubishi Electric":"mitsubishi","Fujitsu":"fujitsu","Dahua":"dahua","Hikvision":"hikvision","BYD":"byd","Ecovacs":"ecovacs","Ubiquiti":"ubiquiti","UniFi":"ubiquiti","Volkswagen":"volkswagen","Audi":"audi","BMW":"bmw","Volvo":"volvo","Kia":"kia","Hyundai":"hyundai","Mercedes-Benz":"mercedesbenz","Porsche":"porsche","Ford":"ford","Toyota":"toyota","Nissan":"nissan","Renault":"renault","SEAT":"seat","Škoda":"skoda","Cupra":"cupra","OpenSprinkler":"opensprinkler","Gardena":"gardena"};
+/* v4.15: visi gamintojų logotipai iš data/brand-logo-map.json, su atsarginiu simboliu. */
+const BRAND_ICON_SOURCES=Object.create(null);
 function brandLogo(name){
   if(!name)return '';
-  const slug=BRAND_LOGOS[name];
-  const words=String(name).trim().split(/[\s\-\/]+/).filter(Boolean);
+  const safeName=String(name).trim();
+  const words=safeName.split(/[\s\-\/]+/).filter(Boolean);
   const initials=(words.length>1?words.slice(0,2).map(w=>w[0]).join(''):words[0].slice(0,2)).toLocaleUpperCase('lt-LT');
   const hues=[193,217,251,166,279,32,335];
-  const hue=hues[Array.from(name).reduce((v,c)=>v+c.charCodeAt(0),0)%hues.length];
-  const mark='<span class="brand-initial" aria-hidden="true">'+esc(initials)+'</span>';
-  const img=slug?`<img loading="lazy" src="https://cdn.simpleicons.org/${slug}" alt="" referrerpolicy="no-referrer" onload="this.previousElementSibling.hidden=true" onerror="this.hidden=true">`:'';
-  return `<span class="brandmark"><span class="pn-brand-art" style="--pn-brand-hue:${hue}">${mark}${img}</span><span class="brand-name">${esc(name)}</span></span>`;
+  const hue=hues[Array.from(safeName).reduce((v,c)=>v+c.charCodeAt(0),0)%hues.length];
+  return '<span class="brandmark"><span class="pn-brand-art" data-brand="'+esc(safeName)+'" style="--pn-brand-hue:'+hue+'"><span class="brand-initial" aria-hidden="true">'+esc(initials)+'</span></span><span class="brand-name">'+esc(safeName)+'</span></span>';
 }
+function safeBrandIconUrl(info){
+  if(!info||typeof info.url!=='string')return '';
+  try{
+    const u=new URL(info.url);
+    if(u.protocol!=='https:')return '';
+    if(info.type==='simple_icons'&&u.hostname==='cdn.jsdelivr.net'&&/^\/npm\/simple-icons@v16\/icons\/[a-z0-9_-]+\.svg$/.test(u.pathname))return u.href;
+    if((info.type==='verified_official_domain_favicon'||info.type==='suggested_domain_favicon')&&u.hostname==='www.google.com'&&u.pathname==='/s2/favicons'&&u.searchParams.has('domain'))return u.href;
+  }catch(_){ }
+  return '';
+}
+function applyBrandIcons(root=document){
+  root.querySelectorAll('.pn-brand-art[data-brand]').forEach(art=>{
+    const src=BRAND_ICON_SOURCES[art.dataset.brand];
+    if(!src||art.dataset.brandIconSrc===src)return;
+    art.dataset.brandIconSrc=src;
+    const fallback=art.querySelector('.brand-initial');
+    if(!fallback)return;
+    const img=document.createElement('img');
+    img.loading='lazy';img.decoding='async';img.referrerPolicy='no-referrer';img.alt='';
+    img.addEventListener('load',()=>{if(img.isConnected&&img.naturalWidth>0){fallback.hidden=true;art.classList.add('has-logo')}});
+    img.addEventListener('error',()=>{img.remove();fallback.hidden=false;art.classList.remove('has-logo')});
+    img.src=src;
+    art.appendChild(img);
+  });
+}
+function loadBrandIconMap(){
+  fetch('data/brand-logo-map.json?v=4.15',{cache:'no-cache'})
+    .then(response=>{if(!response.ok)throw Error('HTTP '+response.status);return response.json()})
+    .then(data=>{
+      if(!data||!data.brands||typeof data.brands!=='object')throw Error('Netinkamas logotipų formatas');
+      for(const [name,info] of Object.entries(data.brands)){
+        const src=safeBrandIconUrl(info);
+        if(src)BRAND_ICON_SOURCES[name]=src;
+      }
+      applyBrandIcons(document);
+    })
+    .catch(err=>console.warn('Gamintojų logotipai nepasiekiami – naudojami inicialai.',err));
+}
+loadBrandIconMap();
 const DEVICE_GROUPS=[{"id":"climate","name":"Šildymas, vėdinimas ir klimatas","emoji":"🌡️","desc":"Šildymas, vėdinimas, kondicionavimas ir oro kokybė","cats":["hp","heat","dhw","ac","rec","air","sauna"]},{"id":"energy","name":"Saulės energija ir elektra","emoji":"☀️","desc":"Inverteriai, baterijos ir elektros apskaita","cats":["inv","bat","meter"]},{"id":"security","name":"Apsauga ir saugumas","emoji":"🛡️","desc":"Signalizacijos, kameros, spynos ir nuotėkiai","cats":["sec","cam","lock","water"]},{"id":"light","name":"Apšvietimas ir valdymas","emoji":"💡","desc":"Apšvietimas, užuolaidos, vartai ir jutikliai","cats":["light","cover","sens"]},{"id":"transport","name":"Automobiliai ir įkrovimas","emoji":"🚗","desc":"Automobilių duomenys ir elektromobilių įkrovimas","cats":["vehicle","ev"]},{"id":"garden","name":"Sodas ir laistymas","emoji":"🌱","desc":"Laistymas, šiltnamiai, baseinai ir vejapjovės","cats":["irrigation","garden","mow"]},{"id":"home","name":"Buitis ir laisvalaikis","emoji":"🏠","desc":"Buitiniai prietaisai, robotai, TV ir garsas","cats":["app","vac","media"]}];
 let openDeviceGroup=null,deviceCategoryQuery='',expandedOtherBrands=new Set(),expandedOtherCategories=new Set();
 function brandChoices(c,names,compact){
@@ -2871,6 +2947,7 @@ function renderCgrid(){
  });
  if(!html)html='<div class="device-empty">Neradome tokios kategorijos. Prietaisą galite įrašyti aukščiau.</div>';
  $('#cgrid').innerHTML=html;
+ applyBrandIcons($('#cgrid'));
 }
 document.querySelectorAll('[data-dev-quick]').forEach(button=>button.addEventListener('click',()=>{
  const id=button.dataset.devQuick;
@@ -2930,6 +3007,7 @@ function renderBM(){
      ${pt.sup?`<div class="bm-r"><span>Montavimo darbai</span><b>${eur(pt.inst)}</b></div>`:''}<div class="bm-r"><span>Integravimas į sistemą${BM.cat==='cover'?' ir kalibravimas':''}</span><b>${eur(pt.int)}</b></div></div>
     <div class="bm-f"><div class="bm-pr"><small>Už vienetą · tik darbai</small><b>${eur(pt.inst+pt.int)}</b><span>kiekvieno papildomo integravimas – ${eur(pt.int2)}</span></div>`})()}
     <div class="bm-a"><div class="cq"><button type="button" data-bm="-" aria-label="Mažiau">−</button><span>${BM.qty}</span><button type="button" data-bm="+" aria-label="Daugiau">+</button></div><button type="button" class="addb" data-bm="add">+ Pridėti</button></div></div>`;
+  applyBrandIcons($('#bmBox'));
 }
 $('#bmodal').addEventListener('click',e=>{
   if(e.target.id==='bmodal'){closeBM();return}
