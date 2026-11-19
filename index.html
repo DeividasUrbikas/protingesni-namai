@@ -1795,6 +1795,44 @@ body[data-pn-design]:not(.v14-dark)::before{
   #p-skaiciuotuvas .device-family-grid .cbtn{min-height:55px;padding:8px 10px}
   #p-skaiciuotuvas .device-family-grid .cbtn .pn-device-svg{width:37px;height:37px}
 }
+
+/* v4.14 – tikrų įrenginių stiliaus išpjovos be dirbtinio mėlyno kvadrato. */
+#p-skaiciuotuvas .pn-device-photo{
+  display:block;flex:none;width:64px;height:64px;
+  background-image:url("assets/device-icons-realistic.webp");
+  background-repeat:no-repeat;
+  background-size:500% 500%;
+  background-color:transparent;
+  border:0;border-radius:0;
+  filter:drop-shadow(0 2px 2px rgba(12,36,64,.14));
+}
+#p-skaiciuotuvas .device-family-icon{
+  background:transparent!important;
+  overflow:visible;
+}
+#p-skaiciuotuvas .device-family-icon .pn-device-photo{
+  width:100%;height:100%;filter:drop-shadow(0 2px 2px rgba(12,36,64,.14));
+}
+#p-skaiciuotuvas .device-family-grid .cbtn .pn-device-photo{
+  width:58px;height:58px;
+  margin-right:4px;
+}
+#p-skaiciuotuvas .device-family-grid .cbtn{
+  align-items:center;
+  min-height:76px;
+}
+#p-skaiciuotuvas .item-top .ico .pn-device-photo{
+  width:100%;height:100%;
+}
+#p-skaiciuotuvas .bm-h .bm-ico .pn-device-photo{
+  width:100%;height:100%;
+}
+@media(max-width:560px){
+  #p-skaiciuotuvas .device-family-grid .cbtn .pn-device-photo{
+    width:54px;height:54px;
+  }
+  #p-skaiciuotuvas .device-family-grid .cbtn{min-height:72px}
+}
 </style>
 </head>
 <body>
@@ -1802,7 +1840,7 @@ body[data-pn-design]:not(.v14-dark)::before{
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.13</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.14</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links" id="links" aria-label="Visi svetainės skyriai">
 <a href="#pradzia">Pradžia</a>
 <a href="#privalumai">Kodėl verta</a>
@@ -2772,7 +2810,15 @@ const DEVICE_SKETCHES={
  tv:'<rect x="13" y="21" width="95" height="69" rx="7" fill="#23374b" stroke="#4d7182" stroke-width="5"/><path d="M25 74l21-23 18 12 16-26 19 37" fill="none" stroke="#72c5c6" stroke-width="4"/><path d="M59 90v15M42 107h35" stroke="#536d7d" stroke-width="5" stroke-linecap="round"/>',
  sensor:'<rect x="30" y="25" width="60" height="76" rx="15" fill="#ecf7f5" stroke="#4b7688" stroke-width="5"/><circle cx="60" cy="60" r="17" fill="#c3e9e4" stroke="#599b9f" stroke-width="4"/><path d="M46 60h28M60 46v28" stroke="#389f96" stroke-width="3"/><circle cx="60" cy="89" r="4" fill="#5ba5ad"/>'
 };
+
+/* v4.14 – fotorealistiški prietaisų atvaizdai; vienas suspaustas WebP failas visoms kategorijoms. */
+const DEVICE_PHOTOS={"hp":[0,0],"heat":[1,0],"dhw":[2,0],"ac":[3,0],"rec":[4,0],"air":[0,1],"sauna":[1,1],"inv":[2,1],"bat":[3,1],"meter":[4,1],"sec":[0,2],"cam":[1,2],"lock":[2,2],"water":[3,2],"light":[4,2],"cover":[0,3],"sens":[1,3],"vehicle":[2,3],"ev":[3,3],"irrigation":[4,3],"garden":[0,4],"mow":[1,4],"app":[2,4],"vac":[3,4],"media":[4,4]};
+function realisticDevicePhoto(cat){
+  const p=DEVICE_PHOTOS[cat];
+  return p?'<span class="pn-device-photo" style="background-position:'+p[0]*25+'% '+p[1]*25+'%" aria-hidden="true"></span>':'';
+}
 function deviceSketch(kind,cat){
+  if(DEVICE_PHOTOS[cat])return realisticDevicePhoto(cat);
  const t=String(kind||'').toLocaleLowerCase('lt-LT');
  let key=cat;
  if(/šaldytuv|saldytuv|fridge/.test(t))key='fridge';
@@ -2797,7 +2843,7 @@ function renderCgrid(){
    if(!list.length)return;
    const expanded=!!needle||openDeviceGroup===gr.id;
    html+=`<div class="device-family ${expanded?'expanded':''}">
-    <button type="button" class="device-family-toggle" data-device-group="${gr.id}" aria-expanded="${expanded?'true':'false'}"><span class="device-family-icon">${gr.emoji}</span><span class="device-family-label"><strong>${gr.name}</strong><small>${gr.desc}</small></span><span class="device-family-count">${list.length} kategor.</span><span class="device-family-arrow" aria-hidden="true">${expanded?'⌃':'⌄'}</span></button>`;
+    <button type="button" class="device-family-toggle" data-device-group="${gr.id}" aria-expanded="${expanded?'true':'false'}"><span class="device-family-icon">${deviceSketch("",gr.cats[0])}</span><span class="device-family-label"><strong>${gr.name}</strong><small>${gr.desc}</small></span><span class="device-family-count">${list.length} kategor.</span><span class="device-family-arrow" aria-hidden="true">${expanded?'⌃':'⌄'}</span></button>`;
    if(expanded){
     html+='<div class="device-family-grid">';
     const popular=list.filter(c=>LT_POPULAR_CATEGORIES[gr.id].includes(c.id)),otherCats=list.filter(c=>!LT_POPULAR_CATEGORIES[gr.id].includes(c.id));
