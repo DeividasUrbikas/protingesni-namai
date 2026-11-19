@@ -1446,6 +1446,109 @@ body.v14-dark .brandmark .pn-brand-art>.brand-initial{background:hsl(var(--pn-br
  .btn,.pn-simple-card,.v17-services>a,.pn-journey-nav a,.v17-preview,.pn-home-scenarios button,.v17-meter:before,.pn-house-sun,.pn-house-moon,.pn-house-window{transition:none!important;transform:none!important}
 }
 
+
+/* v4.4.1 – kompaktiškas, aiškus dizaino valdiklis; nepriklauso nuo parinktos temos */
+#pn-design-toggle{width:44px;height:44px;padding:0;justify-content:center}
+#pn-design-toggle span:last-child{display:none}
+#pn-design-drawer{
+  width:min(316px,calc(100vw - 22px));
+  max-height:min(410px,calc(100dvh - 120px));
+  border-radius:14px;
+  background:#f7faff!important;
+  color:#193653!important;
+  border:1px solid #c9dbea!important;
+  box-shadow:0 16px 40px rgba(9,26,58,.3);
+  font-family:Manrope,system-ui,sans-serif;
+  color-scheme:light;
+}
+#pn-design-drawer .pn-design-drawer-header{
+  padding:8px 10px;min-height:43px;align-items:center;gap:8px;
+  background:#e6f1fc!important;border-bottom:1px solid #d2e2ef;
+}
+#pn-design-drawer .pn-design-drawer-header strong{font-size:13px;color:#193653!important;font-weight:900}
+#pn-design-drawer .pn-design-drawer-header button{
+  width:29px;height:29px;flex-basis:29px;font-size:20px;
+  color:#274866!important;background:#fff!important;
+}
+#pn-design-drawer .pn-design-navs{
+  padding:7px;gap:4px;overflow-y:auto;flex:0 1 auto;
+  scrollbar-width:thin;min-height:0;
+}
+#pn-design-drawer .pn-design-cycle,
+body[data-pn-design] #pn-design-drawer .pn-design-cycle{
+  display:grid;
+  grid-template-columns:67px 26px minmax(0,1fr) 26px;
+  align-items:center;gap:4px;min-height:34px;padding:3px 5px;
+  border-radius:8px!important;
+  border:1px solid #c8d9e9!important;
+  background:#fff!important;
+  color:#193653!important;
+  box-shadow:none!important;
+}
+#pn-design-drawer .pn-design-cycle-title{
+  font-size:10px;font-weight:900;line-height:1.2;
+  color:#304d68!important;
+}
+#pn-design-drawer .pn-design-cycle strong{
+  display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  font-size:11px;font-weight:800;text-align:center;
+  color:#143c64!important;opacity:1!important;
+}
+#pn-design-drawer .pn-design-cycle button{
+  min-height:27px;width:26px;padding:0;
+  background:#e9f3fd!important;border:1px solid #bfd5e9!important;
+  color:#15598f!important;font-size:19px;line-height:1;
+  border-radius:6px;opacity:1!important;
+}
+#pn-design-drawer .pn-design-cycle button:active{background:#cbe4fc!important}
+#pn-design-drawer .pn-design-extra{
+  flex:none;background:#f1f6fd;
+  border-top:1px solid #d2e2ef;color:#294e72!important;
+}
+#pn-design-drawer .pn-design-extra summary{
+  cursor:pointer;padding:7px 10px;line-height:1.35;
+  font-size:11px;font-weight:800;list-style-position:inside;
+  color:#294e72!important;
+}
+#pn-design-drawer .pn-design-extra summary:focus-visible,
+#pn-design-drawer .pn-design-cycle button:focus-visible{
+  outline:2px solid #236eb8;outline-offset:-2px;
+}
+#pn-design-drawer .pn-design-mini-controls{
+  padding:5px 10px 8px;gap:6px;background:#f1f6fd;
+}
+#pn-design-drawer .pn-design-mini-controls label{color:#294c6c!important;font-size:10px}
+#pn-design-drawer .pn-design-mini-controls label span{color:#123d66!important}
+#pn-design-drawer .pn-design-mini-controls input{height:16px}
+#pn-design-drawer .pn-design-drawer-foot{
+  padding:7px 10px;min-height:42px;gap:6px;
+  background:#f7faff;border-top:1px solid #d2e2ef;
+}
+#pn-design-drawer .pn-design-drawer-foot a{
+  color:#145c99!important;font-size:10px;line-height:1.25;
+  text-decoration:underline;text-underline-offset:2px;
+}
+#pn-design-drawer .pn-design-drawer-foot button{
+  padding:6px 9px;color:#244966!important;background:#e6f0fb!important;
+  font-size:10px;white-space:nowrap;
+}
+@media(max-width:580px){
+  #pn-design-drawer{
+    right:0;bottom:51px;width:min(300px,calc(100vw - 20px));
+    max-height:min(400px,calc(100dvh - 113px));
+  }
+  #pn-design-drawer .pn-design-navs{padding:6px;gap:3px}
+  #pn-design-drawer .pn-design-cycle,
+  body[data-pn-design] #pn-design-drawer .pn-design-cycle{
+    grid-template-columns:62px 25px minmax(0,1fr) 25px;
+    padding:3px 4px;min-height:33px;gap:3px;
+  }
+  #pn-design-drawer .pn-design-cycle button{width:25px;min-height:26px}
+}
+@media(max-height:480px){
+  #pn-design-drawer{max-height:calc(100dvh - 95px)}
+}
+
 </style>
 </head>
 <body>
@@ -3239,10 +3342,10 @@ $('#tbGo').onclick=()=>{if(!['#skaiciuotuvas','#iranga'].includes(location.hash)
 <div class="pn-float-tools" id="pn-float-tools">
 <button type="button" class="pn-float-trigger" id="pn-design-toggle" aria-controls="pn-design-drawer" aria-expanded="false" aria-label="Atidaryti greitą dizaino valdiklį"><span aria-hidden="true">🎨</span><span>Dizainas</span></button>
 <aside class="pn-design-drawer" id="pn-design-drawer" hidden aria-label="Greitas dizaino valdiklis">
-<div class="pn-design-drawer-header"><div><strong>🎨 Gyvas dizaino valdymas</strong><small>Keiskite visą svetainę – neslinkdami</small></div><button type="button" id="pn-design-close" aria-label="Uždaryti dizaino valdiklį">×</button></div>
+<div class="pn-design-drawer-header"><div><strong>🎨 Dizaino valdymas</strong></div><button type="button" id="pn-design-close" aria-label="Uždaryti dizaino valdiklį">×</button></div>
 <div class="pn-design-navs" id="pn-design-navs"></div>
-<div class="pn-design-mini-controls"><label>Apvalinimas <span id="pn-mini-radius-out">24 px</span><input id="pn-mini-radius" type="range" min="8" max="44" step="2" value="24"></label><label>Efektų galia <span id="pn-mini-intensity-out">48 %</span><input id="pn-mini-intensity" type="range" min="0" max="100" step="5" value="48"></label></div>
-<div class="pn-design-drawer-foot"><a href="#dizainas" id="pn-design-full">Visi 60 + efektų pasirinkimai ↗</a><button type="button" id="pn-design-reset">Atstatyti</button></div>
+<details class="pn-design-extra"><summary>⚙ Papildomi nustatymai</summary><div class="pn-design-mini-controls"><label>Apvalinimas <span id="pn-mini-radius-out">24 px</span><input id="pn-mini-radius" type="range" min="8" max="44" step="2" value="24"></label><label>Efektų galia <span id="pn-mini-intensity-out">48 %</span><input id="pn-mini-intensity" type="range" min="0" max="100" step="5" value="48"></label></div></details>
+<div class="pn-design-drawer-foot"><a href="#dizainas" id="pn-design-full">Visi pasirinkimai ↗</a><button type="button" id="pn-design-reset">Atstatyti</button></div>
 </aside></div>
 <script>
 /* v4.4 motion controller. Independent of calculator and design-studio logic. */
