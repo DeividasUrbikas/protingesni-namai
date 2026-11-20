@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#315eaf">
+<meta name="description" content="ProtingesniNamai.lt naujienos apie Home Assistant, IT saugumą, saulės elektrines ir baterijų kaupimą. Patikrinti šaltiniai, aiškūs paaiškinimai lietuviškai.">
+<title>Naujienos | ProtingesniNamai.lt</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Naujienos – ProtingesniNamai.lt">
+<meta property="og:description" content="IT saugumas, Home Assistant ir energijos technologijos – svarbiausios naujienos lietuviškai.">
+<meta property="og:url" content="https://protingesninamai.lt/naujienos/">
+<link rel="icon" type="image/png" href="../assets/logo-wordmark-transparent.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--ink:#163458;--muted:#56708f;--line:#dce8f6;--blue:#2664c5;--sky:#eaf3ff;--paper:#fff;--back:#f5f9fe;--shadow:0 16px 48px rgba(24,63,126,.085)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Manrope,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.65;background:var(--back);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}
+.wrap{max-width:1180px;margin:auto;padding-left:22px;padding-right:22px}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:12px;z-index:50}.skip:focus{left:8px}
+.header{position:sticky;top:0;z-index:20;background:rgba(248,251,255,.96);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.bar{min-height:76px;display:flex;align-items:center;gap:24px;justify-content:space-between}
+.brand{display:block;width:min(270px,45vw);line-height:1}.brand img{display:block;width:100%;height:auto;filter:drop-shadow(0 0 0 transparent)}
+.hlinks{display:flex;align-items:center;gap:8px}.hlinks a{padding:10px 14px;border-radius:12px;color:#35587f;font-weight:800;font-size:13px}
+.hlinks a:hover,.hlinks a[aria-current=page]{background:#e7f0ff;color:#225bb7}
+.hero{padding:62px 0 50px;background:radial-gradient(ellipse at 86% 5%,rgba(134,199,255,.35),transparent 40%),linear-gradient(128deg,#234a8e 0%,#2f65b8 57%,#608fd2 100%);color:#fff}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#c6e4ff}
+.hero h1{margin:12px 0 18px;letter-spacing:-.048em;line-height:1.13;font-size:clamp(36px,5vw,64px)}
+.hero p{max-width:670px;font-size:clamp(15px,1.5vw,18px);color:#e7f0ff;line-height:1.75;margin:0}
+.hero-bottom{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.hero-bottom span{font-size:12px;color:#e7f2ff;border:1px solid #ffffff55;background:#ffffff14;border-radius:99px;padding:7px 13px}
+main{padding-top:38px;padding-bottom:96px}
+.tools{display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:24px}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{border:1px solid #d5e4f7;background:#fff;color:#42648b;padding:9px 14px;border-radius:999px;font-weight:800;font-size:12px;transition:.18s}
+.filters button[aria-pressed=true],.filters button:hover{color:#fff;background:var(--blue);border-color:var(--blue)}
+.search{display:flex;align-items:center;gap:8px;padding:0 14px;background:#fff;border:1px solid #d5e4f7;border-radius:12px;min-height:43px;width:min(330px,100%)}
+.search svg{height:18px;width:18px;stroke:#6988a9;fill:none;stroke-width:2}
+.search input{background:transparent;border:0;outline:0;color:var(--ink);font-size:13px;width:100%}
+.search:focus-within{outline:2px solid #6aace7}
+.count{font-size:13px;color:#637e9a;margin:6px 0 24px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.story{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:24px;overflow:hidden;min-width:0;transition:border-color .2s,box-shadow .2s}
+.story[open]{grid-column:1/-1;box-shadow:0 20px 64px rgba(24,63,126,.12);border-color:#a8c8ec}
+.story summary{display:block;list-style:none;cursor:pointer;outline-offset:-4px}
+.story summary::-webkit-details-marker{display:none}
+.story summary:hover .read{color:#174b98}
+.visual{height:176px;position:relative;display:grid;place-items:center;isolation:isolate;overflow:hidden}
+.visual::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,#ffffff50,transparent 35%);z-index:-1}
+.visual svg{width:124px;height:124px;fill:none;stroke:rgba(255,255,255,.94);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 14px 22px #0002)}
+.visual i{position:absolute;right:22px;bottom:17px;color:#ffffffb7;font-style:normal;letter-spacing:.1em;font-size:11px;font-weight:800}
+.security{background:linear-gradient(132deg,#173d78,#3985d4)}
+.ha{background:linear-gradient(132deg,#107cb6,#46b6d9)}
+.solar{background:linear-gradient(132deg,#ca792d,#efb966)}
+.energy{background:linear-gradient(132deg,#0b7d89,#6dbbc6)}
+.cardbody{padding:25px}
+.meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:#66809c;font-size:12px;font-weight:700}
+.tag{font-weight:800;font-size:10px;letter-spacing:.08em;color:#2361aa;background:#eaf3ff;border-radius:100px;padding:5px 10px}
+.date{white-space:nowrap}
+.cardbody h2{font-size:clamp(20px,2.2vw,25px);line-height:1.35;letter-spacing:-.032em;margin:15px 0 10px}
+.cardbody .desc{color:#5b7691;font-size:14px;margin:0 0 20px}
+.read{display:inline-flex;align-items:center;gap:7px;color:#2866be;font-weight:800;font-size:13px}
+.story[open] .read{color:#425c78}
+.detail{margin:0 25px 30px;padding:26px clamp(0px,3vw,36px) 6px;border-top:1px solid var(--line);max-width:860px}
+.detail h3{font-size:20px;line-height:1.35;letter-spacing:-.022em;margin:26px 0 10px}
+.detail p,.detail li{font-size:15px;color:#365578;line-height:1.9}
+.detail ul,.detail ol{padding-left:24px}.detail li{margin-bottom:9px}
+.detail strong{color:#173f70}
+.tip{background:#edf5ff;border-left:4px solid #3281d4;border-radius:4px 10px 10px 4px;padding:14px 19px;margin:20px 0;color:#234d79;font-size:14px}
+.source{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);color:#647f99;font-size:12px}
+.source a{font-weight:800;text-decoration:underline;text-underline-offset:3px;color:#2865bd}
+.share{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 8px}
+.share button,.share a{border:1px solid var(--line);border-radius:10px;background:#f5f9ff;padding:9px 13px;font-size:12px;font-weight:800;color:#2b619f}
+.share button:hover,.share a:hover{background:#e5f0ff}
+.empty{display:none;text-align:center;padding:46px 16px;color:#647f99}
+.note{margin-top:32px;padding:18px 20px;border:1px solid var(--line);background:#edf5ff;border-radius:16px;color:#476c92;font-size:13px}
+.cta{margin-top:35px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:space-between;padding:30px;border-radius:20px;background:linear-gradient(125deg,#2457a6,#4385ca);color:#fff}
+.cta h2{font-size:20px;line-height:1.3;margin:0 0 5px}.cta p{font-size:13px;margin:0;color:#e5f2ff}
+.cta a{background:#fff;color:#21569e;border-radius:11px;font-size:13px;font-weight:800;padding:12px 17px}
+footer{border-top:1px solid var(--line);padding:30px 0;background:#fff;color:#7086a0;font-size:12px}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot a:hover{color:#2762b4}
+[hidden]{display:none!important}
+@media(max-width:750px){.grid{grid-template-columns:1fr}.story[open]{grid-column:auto}.hero{padding:44px 0}.bar{min-height:68px;gap:8px}.brand{width:min(220px,51vw)}.hlinks{gap:0}.hlinks a{font-size:11px;padding:9px 8px}.hlinks a:nth-child(3){display:none}.visual{height:150px}.detail{margin:0 18px 20px;padding:15px 0 0}.cardbody{padding:22px}.tools{gap:14px}.search{width:100%}.filters{width:100%}.cta{padding:23px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.story,.filters button{transition:none}}
+</style></head>
+<body>
+<a class="skip" href="#turinys">Pereiti prie turinio</a>
+<header class="header"><div class="wrap bar">
+<a class="brand" href="../#pradzia" aria-label="ProtingesniNamai.lt pradžia"><img src="../assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt"></a>
+<nav class="hlinks" aria-label="Pagrindinis meniu"><a href="../#pradzia">Pradžia</a><a href="./" aria-current="page">Naujienos</a><a href="../#skaiciuotuvas">Kainos</a><a href="../#kontaktai">Kontaktai</a></nav>
+</div></header>
+<section class="hero"><div class="wrap">
+<div class="eyebrow">ProtingesniNamai.lt · Žinių centras</div>
+<h1>Naujienos ir įžvalgos<span style="color:#bee4ff">.</span></h1>
+<p>Svarbiausios žinios apie išmaniųjų namų saugumą, „Home Assistant“, saulės elektrines ir energijos kaupimą. Tikrinti šaltiniai, aiškus paaiškinimas ir praktiški patarimai.</p>
+<div class="hero-bottom"><span>✓ Lietuviškai</span><span>✓ Nuorodos į šaltinius</span><span>✓ Be reklaminio triukšmo</span></div>
+</div></section>
+<main class="wrap" id="turinys">
+<div class="tools" role="search" aria-label="Naujienų paieška ir filtrai">
+<div class="filters" aria-label="Filtruoti naujienas"><button type="button" data-filter="all" aria-pressed="true">Visos</button><button type="button" data-filter="security" aria-pressed="false">IT saugumas</button><button type="button" data-filter="ha" aria-pressed="false">Home Assistant</button><button type="button" data-filter="solar" aria-pressed="false">Saulės elektrinės</button><button type="button" data-filter="energy" aria-pressed="false">Energijos kaupimas</button></div>
+<label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input type="search" id="news-search" placeholder="Ieškoti naujienų..." aria-label="Ieškoti naujienų"></label>
+</div>
+<div class="count" id="news-count" aria-live="polite">4 straipsniai · atnaujinta 2026-11-20</div>
+<div class="grid" id="stories">
+
+<article class="story" id="synology-saugumas" data-category="security">
+<details class="entry" aria-label="Synology NAS saugumo naujiena"><summary>
+<div class="visual security"><svg viewBox="0 0 128 128" aria-hidden="true"><rect x="16" y="29" width="65" height="71" rx="9"/><path d="M27 46h43M27 59h43M27 72h28"/><circle cx="67" cy="87" r="3"/><path d="M98 27 119 35v23c0 16-8 28-21 37-13-9-21-21-21-37V35Z"/><path d="m88 59 8 8 13-16"/></svg><i>SECURITY</i></div>
+<div class="cardbody"><div class="meta"><span class="tag">IT SAUGUMAS</span><time class="date" datetime="2026-11-18">2026-11-18</time><span>4 min.</span></div>
+<h2>„Synology“ NAS: CISA patvirtino aktyviai išnaudojamą saugumo spragą</h2>
+<p class="desc">Sena, bet pavojinga „DiskStation Manager“ spraga išnaudojama atakose. Ką patikrinti, kad namų ar įmonės duomenys būtų saugesni?</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. lapkričio 18 d. JAV kibernetinio saugumo agentūra CISA įtraukė <strong>CVE-2024-10441</strong> į aktyviai išnaudojamų pažeidžiamumų katalogą (KEV). Spraga susijusi su „Synology DiskStation Manager“ (DSM) ir „BeeStation OS“. Jos kritiškumo vertinimas – <strong>9,8 balo iš 10</strong>.</p>
+<h3>Kodėl tai svarbu dabar?</h3>
+<p>Pati spraga viešai žinoma nuo 2024 m., o gamintojas pataisas yra paskelbęs anksčiau. Naujas faktas – CISA turi įrodymų, kad pažeidžiamumas yra išnaudojamas. Naudojantiems senas DSM versijas tai signalas nedelsti su atnaujinimu.</p>
+<h3>Ką daryti NAS savininkams?</h3>
+<ol><li>DSM valdymo sąsajoje patikrinkite programinės įrangos versiją ir įdiekite naujausią savo modeliui skirtą saugumo atnaujinimą.</li><li>Neatverkite NAS administravimo sąsajos tiesiai į internetą be būtinybės. Nuotoliniam prisijungimui naudokite patikimą VPN ir stiprų prisijungimo saugumą.</li><li>Pasitikrinkite atsargines duomenų kopijas. Viename NAS laikoma vienintelė kopija nėra pakankama apsauga nuo įsilaužimo ar gedimo.</li><li>Jei įtariate įsilaužimą, išsaugokite žurnalus ir įvertinkite incidentą – vien atnaujinimas negarantuoja, kad įsilaužėlis pašalintas.</li></ol>
+<div class="tip"><strong>ProtingesniNamai.lt patarimas:</strong> saugokite ne tik „Home Assistant“, bet ir visą namų tinklą – maršrutizatorių, kameras, NAS ir kitus IoT įrenginius.</div>
+<p class="source">Pirminiai šaltiniai: <a href="https://www.synology.com/en-us/security/advisory/Synology_SA_24_20" target="_blank" rel="noopener noreferrer">„Synology“ SA-24:20</a> · <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">CISA KEV katalogas</a> · <a href="https://www.cirt.gov.jm/alert/cisa-warns-active-exploitation-flaws-synology-dsm-litellm-apache-axis-and-redcap" target="_blank" rel="noopener noreferrer">Nacionalinio CSIRT informacija</a></p>
+<div class="share"><button type="button" class="copy-news" data-slug="synology-saugumas">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl saugumo</a></div>
+</div></details></article>
+
+<article class="story" id="home-assistant-2026-11" data-category="ha">
+<details class="entry"><summary>
+<div class="visual ha"><svg viewBox="0 0 128 128" aria-hidden="true"><path d="M21 58 64 19l43 39v47H21Z"/><path d="M48 104V73h32v31"/><circle cx="64" cy="51" r="6"/><path d="M64 57v16M31 57l33-6 33 6"/></svg><i>HOME ASSISTANT</i></div>
+<div class="cardbody"><div class="meta"><span class="tag">HOME ASSISTANT</span><time class="date" datetime="2026-11-04">2026-11-04</time><span>4 min.</span></div>
+<h2>„Home Assistant 2026.11“: integruota „Marketplace“, daugiau galimybių kameroms</h2>
+<p class="desc">„HACS“ tampa integruota „Marketplace“ dalimi, gerėja kamerų valdymas, automatizacijų diagnostika ir DI funkcijos.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. lapkričio 4 d. išleista „Home Assistant 2026.11“ versija. Viena didžiausių naujienų – anksčiau atskirai diegiama „HACS“ bendruomenės parduotuvė tampa oficialiai integruota <strong>„Marketplace“</strong> aplinka. Ji pasiekiama per „Settings → Marketplace“ ir leidžia rasti bendruomenės integracijas, korteles, temas bei šablonus.</p>
+<h3>Kas iš tikrųjų pasikeitė?</h3>
+<ul><li><strong>Paprastesnis diegimas:</strong> daugelį bendruomenės integracijų galima pradėti konfigūruoti iškart po įdiegimo. Atnaujinimams kai kada vis dar reikia perkrovimo.</li><li><strong>Kameros:</strong> atsirado „Matter 1.5“ kamerų palaikymas, o suderinamose „Matter“ ir „Reolink“ kamerose – dvipusio garso galimybės, priklausomai nuo protokolo ir HTTPS.</li><li><strong>Automatizacijų diagnostika:</strong> veiksmo istorija ir susietų scenarijų vykdymo pėdsakai leidžia lengviau suprasti, kas ir kodėl įsijungė.</li><li><strong>Vietinis DI ir valdymas:</strong> praplėstas LLM API funkcionalumas, įskaitant sisteminės informacijos paiešką ir leidimų kontroliuojamus veiksmus.</li></ul>
+<h3>Ar verta atnaujinti?</h3>
+<p>Jeigu naudojate papildomas bendruomenės integracijas ar nestandartines „Dashboard“ korteles, prieš atnaujinimą pasidarykite pilną atsarginę kopiją. Šioje versijoje taip pat pakeistas įrenginių objektų pavadinimų formavimo principas, todėl dalis užrašų skydeliuose gali pasikeisti. Perskaitykite nesuderinamų pakeitimų sąrašą.</p>
+<div class="tip"><strong>Praktiškai:</strong> „Marketplace“ supaprastina sistemos plėtrą, tačiau bendruomenės papildiniai netampa automatiškai patikrinti ar saugūs. Prieš diegdami įvertinkite jų kilmę ir palaikymą.</div>
+<p class="source">Pirminis šaltinis: <a href="https://www.home-assistant.io/blog/2026/11/04/release-202611/" target="_blank" rel="noopener noreferrer">„Home Assistant 2026.11“ oficialus leidimo aprašymas</a></p>
+<div class="share"><button type="button" class="copy-news" data-slug="home-assistant-2026-11">Kopijuoti nuorodą</button><a href="../#paslaugos">Home Assistant paslaugos</a></div>
+</div></details></article>
+
+<article class="story" id="eu-elektros-tinklai" data-category="solar">
+<details class="entry"><summary>
+<div class="visual solar"><svg viewBox="0 0 128 128" aria-hidden="true"><circle cx="98" cy="28" r="15"/><path d="M98 3v8M98 45v8M73 28h8M115 28h8M80 10l6 6M110 40l6 6M116 10l-6 6"/><path d="m19 62 69-8 14 44-71 6Z"/><path d="m42 60 10 42M64 58l11 42M26 78l68-4M33 92l65-5"/></svg><i>SOLAR / GRID</i></div>
+<div class="cardbody"><div class="meta"><span class="tag">SAULĖS ELEKTRINĖS</span><time class="date" datetime="2026-11-18">2026-11-18</time><span>3 min.</span></div>
+<h2>ES siekia paspartinti saulės elektrinių ir kaupiklių leidimų išdavimą</h2>
+<p class="desc">Europos Parlamentas ir ES Taryba pasiekė preliminarų susitarimą dėl spartesnių leidimų elektros tinklams ir energijos projektams.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. lapkričio 18 d. Europos Sąjungos Taryba ir Europos Parlamentas paskelbė pasiekę <strong>preliminarų susitarimą</strong> dėl leidimų išdavimo supaprastinimo atsinaujinančios energijos projektams, elektros tinklams, energijos kaupimo sistemoms ir elektromobilių įkrovimo infrastruktūrai.</p>
+<h3>Ką numato susitarimas?</h3>
+<p>Jo tikslas – trumpinti administracinius terminus, sumažinti užsitęsusias derinimo procedūras ir padėti sparčiau prijungti švarios energijos projektus. Numatyti skaitmeniniai leidimų portalai, aiškesnės procedūros ir galimybė valstybėms narėms kai kuriuos energetikos projektus laikyti itin svarbiais viešajam interesui.</p>
+<h3>Ar taisyklės jau galioja Lietuvoje?</h3>
+<p><strong>Dar ne.</strong> Tai preliminarus politinis susitarimas. Dokumentą dar turi patvirtinti ES institucijos; po jo priėmimo valstybės narės turės perkelti direktyvos nuostatas į nacionalinę teisę. Konkrečios sąlygos namų ūkių saulės elektrinėms ir prijungimams priklausys nuo galutinio teksto bei Lietuvos tvarkos.</p>
+<div class="tip"><strong>Kodėl tai aktualu?</strong> Kuo lengviau ir greičiau į tinklą integruoti elektros generaciją bei kaupimą, tuo geresnės sąlygos lankstesniam energijos naudojimui. Tačiau kiekvieno projekto ekonomiškumą ir prijungimo sąlygas reikia vertinti atskirai.</div>
+<p class="source">Pirminis šaltinis: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/11/18/grids-package-council-and-parliament-agree-to-streamline-permitting-for-a-faster-clean-energy-transition/" target="_blank" rel="noopener noreferrer">ES Tarybos 2026-11-18 pranešimas</a></p>
+<div class="share"><button type="button" class="copy-news" data-slug="eu-elektros-tinklai">Kopijuoti nuorodą</button><a href="../#skaiciuotuvas">Suplanuoti sistemą</a></div>
+</div></details></article>
+
+<article class="story" id="baterijos-europoje-2026" data-category="energy">
+<details class="entry"><summary>
+<div class="visual energy"><svg viewBox="0 0 128 128" aria-hidden="true"><rect x="23" y="26" width="77" height="78" rx="10"/><path d="M49 18h25v8M38 45h47M38 61h47M38 78h47"/><path d="m66 48-9 19h12l-8 17"/><path d="M108 52v27"/></svg><i>ENERGY STORAGE</i></div>
+<div class="cardbody"><div class="meta"><span class="tag">ENERGIJOS KAUPIMAS</span><time class="date" datetime="2026-11-13">2026-11-13</time><span>3 min.</span></div>
+<h2>Europoje baterijų kaupimo galia per metus išaugo daugiau nei dvigubai</h2>
+<p class="desc">ENTSO-E žiemos elektros sistemos apžvalga rodo sparčią saulės energetikos ir baterijų kaupimo infrastruktūros plėtrą.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>Europos elektros perdavimo sistemos operatorių asociacija ENTSO-E 2026 m. lapkričio 13 d. paskelbė <strong>2026–2027 m. žiemos elektros sistemos pakankamumo prognozę</strong>. Jos duomenimis, baterijų kaupimo įrengtoji galia Europoje, palyginti su ankstesne žiema, daugiau nei padvigubėjo ir pasiekė maždaug <strong>38 GW</strong>.</p>
+<h3>Kodėl baterijų daugėja?</h3>
+<p>Augant saulės ir vėjo elektrinių daliai, tinklui reikia daugiau lankstumo. Kaupikliai gali perkelti elektros suvartojimą ir tiekimą laike, padėti valdyti apkrovas bei integruoti nepastovią generaciją. ENTSO-E taip pat nurodo, kad atsinaujinančių energijos šaltinių galia Europoje padidėjo apie 134 GW, arba maždaug 16 %.</p>
+<h3>Ar tai reiškia, kad elektra bus pigesnė?</h3>
+<p>Ne automatiškai. Didėjanti kaupimo infrastruktūra gali padėti mažinti sistemos disbalansą, tačiau elektros kainas lemia ir oro sąlygos, tinklo ribojimai, paklausa bei kiti veiksniai. Namų ūkiui kaupiklio nauda priklauso nuo tarifo, elektrinės dydžio, vartojimo įpročių ir automatizavimo.</p>
+<div class="tip"><strong>Ką verta įvertinti namuose?</strong> Baterijos naudingumas didėja, kai jos įkrovimas ir iškrovimas derinami su saulės gamybos prognoze, elektros kainomis, atsarginiu rezervu ir realiu vartojimu.</div>
+<p class="source">Pirminis šaltinis: <a href="https://www.entsoe.eu/news/2026/11/13/entso-e-winter-outlook-2026-2027-europe-is-prepared-some-risks-remain-in-specific-areas/" target="_blank" rel="noopener noreferrer">ENTSO-E, „Winter Outlook 2026–2027“</a></p>
+<div class="share"><button type="button" class="copy-news" data-slug="baterijos-europoje-2026">Kopijuoti nuorodą</button><a href="../#paslaugos">Energijos automatizavimas</a></div>
+</div></details></article>
+
+</div>
+<p class="empty" id="news-empty">Pagal pasirinktus filtrus naujienų nerasta. Pabandykite kitą paiešką.</p>
+<div class="note">Straipsniai parengti pagal oficialius, viešai prieinamus šaltinius. Tai informacinė skiltis, ne saugumo auditas ar individuali techninė konsultacija. Publikavimo datos nurodytos prie straipsnių; šios skilties turinys dar neatnaujinamas automatiškai.</div>
+<div class="cta"><div><h2>Norite, kad technologijos dirbtų jūsų naudai?</h2><p>Padedame saugiai sujungti įrenginius ir automatizuoti energijos valdymą.</p></div><a href="../#skaiciuotuvas">Apskaičiuoti kainą ↗</a></div>
+</main>
+<footer><div class="wrap foot"><span>© 2026 ProtingesniNamai.lt · Išmanieji namai ir energijos valdymas</span><a href="../#pradzia">Grįžti į pagrindinį puslapį ↑</a></div></footer>
+<script>
+(function(){
+"use strict";
+const items=Array.from(document.querySelectorAll(".story"));
+const buttons=Array.from(document.querySelectorAll("[data-filter]"));
+const search=document.getElementById("news-search");
+const count=document.getElementById("news-count");
+const empty=document.getElementById("news-empty");
+let category="all";
+function filter(){
+ const q=search.value.trim().toLocaleLowerCase("lt-LT");
+ let n=0;
+ items.forEach(function(it){
+  const visible=(category==="all"||it.dataset.category===category)&&(!q||it.textContent.toLocaleLowerCase("lt-LT").includes(q));
+  it.hidden=!visible;if(visible)n++;
+ });
+ count.textContent=n+" "+(n===1?"straipsnis":n>=2&&n<=9?"straipsniai":"straipsnių")+" · atnaujinta 2026-11-20";
+ empty.style.display=n?"none":"block";
+}
+buttons.forEach(function(b){b.addEventListener("click",function(){category=b.dataset.filter;buttons.forEach(function(x){x.setAttribute("aria-pressed",String(x===b))});filter()})});
+search.addEventListener("input",filter);
+function openDeepLink(){
+ let id="";
+ try{id=decodeURIComponent(location.hash.slice(1))}catch(_){return}
+ const article=document.getElementById(id);
+ if(article&&article.classList.contains("story")){
+  const details=article.querySelector("details"); if(details){details.open=true;article.hidden=false;setTimeout(function(){article.scrollIntoView({block:"start",behavior:"smooth"})},30)}
+ }
+}
+items.forEach(function(item){
+ const details=item.querySelector("details");
+ details.addEventListener("toggle",function(){if(details.open){items.forEach(function(other){if(other!==item)other.querySelector("details").open=false});if(location.hash!=="#"+item.id)history.replaceState(null,"","#"+item.id)}});
+});
+window.addEventListener("hashchange",openDeepLink);
+document.querySelectorAll(".copy-news").forEach(function(button){
+ button.addEventListener("click",async function(){
+  const url=location.origin+location.pathname+"#"+button.dataset.slug;
+  try{await navigator.clipboard.writeText(url);button.textContent="Nuoroda nukopijuota ✓"}
+  catch(_){window.prompt("Nukopijuokite nuorodą:",url)}
+  setTimeout(function(){button.textContent="Kopijuoti nuorodą"},2200);
+ })
+});
+filter();openDeepLink();
+})();
+</script>
+</body>
+</html>
