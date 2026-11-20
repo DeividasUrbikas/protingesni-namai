@@ -2485,37 +2485,28 @@ body.v14-dark #p-pradzia .pn-cmp-demo-heading p,body.v14-dark #p-pradzia .pn-cmp
 #p-kaip-veikia .pn-device-iframe{width:100%;height:100%;border:0;display:block;background:#fff}
 #p-kaip-veikia .pn-device-camera{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:68px;height:14px;border-radius:0 0 13px 13px;background:#101722;z-index:2;pointer-events:none}
 #p-kaip-veikia .pn-device-gesture{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:92px;height:4px;background:#c4cdd6;border-radius:99px;opacity:.75;pointer-events:none;z-index:2}
-/* Galaxy Tab S11 Ultra: horizontalus 14,6 col. (2960×1848, 16:10) dizainas */
-#p-kaip-veikia .pn-device-scale-box[data-pn-profile="tablet"]::before{
- content:"";pointer-events:none;position:absolute;z-index:0;top:-14px;left:22px;
- width:calc(100% - 24px);height:calc(100% - 6px);border-radius:19px;
- background:linear-gradient(135deg,#646b77 0%,#484f59 45%,#272c37 100%);
- border:1px solid #737a85;box-shadow:0 9px 24px #10263c34;
-}
-#p-kaip-veikia .pn-device-scale-box[data-pn-profile="tablet"]::after{
- content:"";pointer-events:none;position:absolute;z-index:0;top:-5px;right:25px;
- width:11px;height:11px;border-radius:50%;background:#0b111b;
- border:2px solid #828c98;box-shadow:-21px 0 0 0 #0b111b,-21px 0 0 2px #828c98;
-}
+/* Galaxy Tab S12+ – priekinis horizontalus planšetes vaizdas pagal vartotojo nuotrauką.
+   Tik išorinis rėmelis: viduje lieka originalus Home Assistant demo iframe. */
+#p-kaip-veikia .pn-device-scale-box[data-pn-profile="tablet"]::before,
+#p-kaip-veikia .pn-device-scale-box[data-pn-profile="tablet"]::after{content:none!important;display:none!important}
 #p-kaip-veikia .pn-device-shell[data-pn-screen="tablet"]{
  position:relative;z-index:1;
- border:7px solid #111722;border-radius:21px;
- background:linear-gradient(130deg,#080c12,#232a34);
- box-shadow:0 17px 36px #0e203c58,0 5px 10px #0e203c38,inset 0 0 0 1px #525f6c;
+ border:22px solid #111216;
+ border-radius:30px;
+ background:#090b0e;
+ box-shadow:0 17px 35px rgba(10,25,41,.37),0 4px 9px rgba(10,25,41,.22),
+            inset 0 0 0 1px rgba(255,255,255,.13),0 0 0 1px rgba(40,46,54,.42);
 }
 #p-kaip-veikia .pn-device-shell[data-pn-screen="tablet"] .pn-device-display{
- inset:3px;border-radius:12px;background:#fff;
+ inset:0;
+ border-radius:7px;
+ background:#fff;
+ overflow:hidden;
 }
-#p-kaip-veikia .pn-device-shell[data-pn-screen="tablet"] .pn-device-camera{
- display:block;top:7px;width:30px;height:11px;border-radius:0 0 11px 11px;
- background:linear-gradient(180deg,#101722,#171d29);
- border:0;z-index:3;
+#p-kaip-veikia .pn-device-shell[data-pn-screen="tablet"] .pn-device-camera,
+#p-kaip-veikia .pn-device-shell[data-pn-screen="tablet"] .pn-device-gesture{
+ display:none!important;
 }
-#p-kaip-veikia .pn-device-shell[data-pn-screen="tablet"] .pn-device-camera::after{
- content:"";position:absolute;top:3px;left:12px;width:6px;height:6px;
- border-radius:50%;background:#313e54;box-shadow:inset 1px 1px 2px #0a1020;
-}
-#p-kaip-veikia .pn-device-shell[data-pn-screen="tablet"] .pn-device-gesture{display:none}
 #p-kaip-veikia .pn-device-shell[data-pn-screen="sonoff86"],#p-kaip-veikia .pn-device-shell[data-pn-screen="sonoff120"]{border:12px solid #242b32;border-radius:15px;background:#202831;box-shadow:0 16px 35px #1c344c52,0 0 0 5px #70808c22}
 #p-kaip-veikia .pn-device-shell[data-pn-screen="shelly"]{border:12px solid #171d26;border-radius:16px;background:#121922;box-shadow:0 16px 35px #1c344c52,0 0 0 5px #70808c22}
 #p-kaip-veikia .pn-device-shell[data-pn-screen="sonoff86"] .pn-device-display,#p-kaip-veikia .pn-device-shell[data-pn-screen="sonoff120"] .pn-device-display,#p-kaip-veikia .pn-device-shell[data-pn-screen="shelly"] .pn-device-display{inset:0;border-radius:3px}
@@ -2864,7 +2855,7 @@ body.v14-dark #p-kaip-veikia .pn-device-head p,body.v14-dark #p-kaip-veikia .pn-
   </div>
   <div class="pn-device-selector" role="group" aria-label="Pasirinkite įrenginio ekraną">
     <button class="pn-device-choice is-active" type="button" data-pn-device="phone" aria-pressed="true"><span aria-hidden="true">▯</span> Telefonas</button>
-    <button class="pn-device-choice" type="button" data-pn-device="tablet" aria-pressed="false"><span aria-hidden="true">▭</span> Tab S11 Ultra</button>
+    <button class="pn-device-choice" type="button" data-pn-device="tablet" aria-pressed="false"><span aria-hidden="true">▭</span> Tab S12+</button>
     <button class="pn-device-choice" type="button" data-pn-device="sonoff86" aria-pressed="false"><span aria-hidden="true">▦</span> Sonoff 86</button>
     <button class="pn-device-choice" type="button" data-pn-device="sonoff120" aria-pressed="false"><span aria-hidden="true">▯</span> Sonoff 120</button>
     <button class="pn-device-choice" type="button" data-pn-device="shelly" aria-pressed="false"><span aria-hidden="true">▭</span> Shelly X2i</button>
@@ -4857,7 +4848,7 @@ $('#tbGo').onclick=()=>{if(!['#skaiciuotuvas','#iranga'].includes(location.hash)
  var buttons=[].slice.call(root.querySelectorAll("button[data-pn-device]"));
  var devices={
   phone:{width:390,height:844,title:"Telefonas",desc:"Vertikalus telefono ekranas · 390 × 844 (peržiūros proporcijos)"},
-  tablet:{width:960,height:600,title:"Samsung Galaxy Tab S11 Ultra",desc:"14,6″ horizontalus ekranas · 2960 × 1848 proporcijos (WQXGA+)"},
+  tablet:{width:960,height:600,title:"Samsung Galaxy Tab S12+",desc:"Horizontalus 16:10 ekranas · juodas rėmelis pagal pateiktą nuotrauką"},
   sonoff86:{width:480,height:480,title:"Sonoff NSPanel Pro 86",desc:"Kvadratinis 480 × 480 formato ekranas"},
   sonoff120:{width:375,height:667,title:"Sonoff NSPanel Pro 120",desc:"Vertikalus ekranas, atitinka 750 × 1334 proporcijas"},
   shelly:{width:900,height:450,title:"Shelly Wall Display X2i",desc:"Horizontalus ekranas, atitinka 1440 × 720 proporcijas"}
