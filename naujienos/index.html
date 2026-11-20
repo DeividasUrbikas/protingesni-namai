@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="../assets/logo-wordmark-transparent.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;--ink:#163458;--muted:#56708f;--line:#dce8f6;--blue:#2664c5;--sky:#eaf3ff;--paper:#fff;--back:#f5f9fe;--shadow:0 16px 48px rgba(24,63,126,.085)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Manrope,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.65;background:var(--back);color:var(--ink);-webkit-font-smoothing:antialiased}
@@ -85,6 +85,56 @@ footer{border-top:1px solid var(--line);padding:30px 0;background:#fff;color:#70
 [hidden]{display:none!important}
 @media(max-width:750px){.grid{grid-template-columns:1fr}.story:has(details[open]){grid-column:auto}.hero{padding:44px 0}.bar{min-height:68px;gap:8px}.brand{width:min(220px,51vw)}.hlinks{gap:0}.hlinks a{font-size:11px;padding:9px 8px}.hlinks a:nth-child(3){display:none}.visual{height:150px}.detail{margin:0 18px 20px;padding:15px 0 0}.cardbody{padding:22px}.tools{gap:14px}.search{width:100%}.filters{width:100%}.cta{padding:23px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.story,.filters button{transition:none}}
+
+/* v4.22 – shared blue/pearl brand style and REAL source photographs */
+:root{--ink:#1b3e68;--muted:#5d779a;--line:#d6e2f0;--blue:#3a72bf;--back:#e2edfa;--shadow:0 10px 28px rgba(36,76,139,.08)}
+body{background:radial-gradient(ellipse at 8% 4%,rgba(113,160,231,.44),transparent 40%),radial-gradient(ellipse at 90% 64%,rgba(255,188,145,.4),transparent 48%),linear-gradient(143deg,#d9e9fb,#e9edf9 55%,#faebe8) fixed;color:var(--ink)}
+.header{background:rgba(56,90,148,.96)}
+.bar{min-height:68px}
+.hero{padding:39px 0 25px;background:none;color:var(--ink)}
+.eyebrow{color:#2e689f}
+.hero h1{font-family:Outfit,Manrope,sans-serif;font-size:clamp(31px,4vw,46px);letter-spacing:-.04em;margin:10px 0 10px}
+.hero h1 span{color:#4b8bcf!important}
+.hero p{font-size:14px;line-height:1.8;color:#4f698b;max-width:730px}
+.hero-bottom{margin-top:16px}
+.hero-bottom span{background:#ffffffaa;border:1px solid #ccdbed;color:#436c9a;padding:6px 11px;font-size:11px}
+main{padding-top:22px;padding-bottom:68px}
+.tools{margin-bottom:12px}
+.grid{grid-template-columns:minmax(0,1fr);gap:15px}
+.story,.story:has(details[open]){grid-column:auto;border-radius:21px;background:rgba(255,255,255,.9);box-shadow:var(--shadow);border-color:#d8e4f2}
+.story:has(details[open]){border-color:#90b7e5}
+.story summary{display:grid;grid-template-columns:minmax(0,33%) minmax(0,67%);min-height:173px;align-items:stretch}
+.visual{height:auto;min-height:173px;position:relative;overflow:hidden;background:#e5eef8}
+.visual::before{display:none}
+.visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+.cardbody{padding:19px 25px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.cardbody h2{font-family:Outfit,Manrope,sans-serif;font-size:clamp(19px,2.1vw,24px);line-height:1.32;margin:10px 0 7px;font-weight:750;color:#183a64}
+.cardbody .desc{font-size:13px;line-height:1.65;margin:0 0 9px;color:#597493}
+.cardbody .read{font-size:12px;margin-top:5px}
+.meta{gap:9px;font-size:11px}
+.tag{background:#e6f1ff;color:#386fb4;font-size:9px;padding:4px 9px}
+.detail{max-width:100%;margin:0 25px 24px;padding:24px 16px 6px}
+.detail h3{font-family:Outfit,Manrope,sans-serif}
+.photo-credit{margin:14px 0 8px;color:#7187a3!important;font-size:11px!important;line-height:1.7!important}
+.photo-credit a{color:#376bb7!important;text-decoration:underline;text-underline-offset:2px}
+.filters button{background:#ffffffce}
+.search{background:#ffffffd9}
+.count{margin-bottom:16px}
+@media(max-width:710px){
+ .story summary{grid-template-columns:minmax(0,1fr);display:block;min-height:0}
+ .visual{height:172px;min-height:0}
+ .cardbody{padding:15px 18px 18px}
+ .cardbody h2{font-size:20px;line-height:1.32;margin:10px 0 7px}
+ .cardbody .desc{font-size:12.5px}
+ .detail{margin:0 17px 18px;padding:16px 0 2px}
+ .hero{padding:28px 0 16px}
+ .hero h1{font-size:clamp(29px,8vw,38px)}
+ .hero p{font-size:13px}
+ .hero-bottom{margin-top:12px}
+ .tools{gap:10px}
+}
+@media(max-width:430px){.visual{height:150px}.cardbody h2{font-size:18px}.story{border-radius:18px}.hero-bottom span{font-size:10px}.filters{gap:6px}.filters button{padding:7px 10px}}
+
 </style></head>
 <body>
 <a class="skip" href="#turinys">Pereiti prie turinio</a>
@@ -108,7 +158,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;background:#fff;color:#70
 
 <article class="story" id="synology-saugumas" data-category="security">
 <details class="entry" aria-label="Synology NAS saugumo naujiena"><summary>
-<div class="visual security"><svg viewBox="0 0 128 128" aria-hidden="true"><rect x="16" y="29" width="65" height="71" rx="9"/><path d="M27 46h43M27 59h43M27 72h28"/><circle cx="67" cy="87" r="3"/><path d="M98 27 119 35v23c0 16-8 28-21 37-13-9-21-21-21-37V35Z"/><path d="m88 59 8 8 13-16"/></svg><i>SECURITY</i></div>
+<div class="visual security"><img loading="lazy" decoding="async" width="960" height="720" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Synology_DS213%2B_-_z_dyskami.jpg/960px-Synology_DS213%2B_-_z_dyskami.jpg" alt="Tikro „Synology DS213+“ NAS įrenginio nuotrauka"></div>
 <div class="cardbody"><div class="meta"><span class="tag">IT SAUGUMAS</span><time class="date" datetime="2026-11-18">2026-11-18</time><span>4 min.</span></div>
 <h2>„Synology“ NAS: CISA patvirtino aktyviai išnaudojamą saugumo spragą</h2>
 <p class="desc">Sena, bet pavojinga „DiskStation Manager“ spraga išnaudojama atakose. Ką patikrinti, kad namų ar įmonės duomenys būtų saugesni?</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
@@ -119,13 +169,14 @@ footer{border-top:1px solid var(--line);padding:30px 0;background:#fff;color:#70
 <h3>Ką daryti NAS savininkams?</h3>
 <ol><li>DSM valdymo sąsajoje patikrinkite programinės įrangos versiją ir įdiekite naujausią savo modeliui skirtą saugumo atnaujinimą.</li><li>Neatverkite NAS administravimo sąsajos tiesiai į internetą be būtinybės. Nuotoliniam prisijungimui naudokite patikimą VPN ir stiprų prisijungimo saugumą.</li><li>Pasitikrinkite atsargines duomenų kopijas. Viename NAS laikoma vienintelė kopija nėra pakankama apsauga nuo įsilaužimo ar gedimo.</li><li>Jei įtariate įsilaužimą, išsaugokite žurnalus ir įvertinkite incidentą – vien atnaujinimas negarantuoja, kad įsilaužėlis pašalintas.</li></ol>
 <div class="tip"><strong>ProtingesniNamai.lt patarimas:</strong> saugokite ne tik „Home Assistant“, bet ir visą namų tinklą – maršrutizatorių, kameras, NAS ir kitus IoT įrenginius.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Synology_DS213%2B_-_z_dyskami.jpg" target="_blank" rel="noopener noreferrer">Piotr Doroszewski / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> (kortelėje apkirpta).</p>
 <p class="source">Pirminiai šaltiniai: <a href="https://www.synology.com/en-us/security/advisory/Synology_SA_24_20" target="_blank" rel="noopener noreferrer">„Synology“ SA-24:20</a> · <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">CISA KEV katalogas</a> · <a href="https://www.cirt.gov.jm/alert/cisa-warns-active-exploitation-flaws-synology-dsm-litellm-apache-axis-and-redcap" target="_blank" rel="noopener noreferrer">Nacionalinio CSIRT informacija</a></p>
 <div class="share"><button type="button" class="copy-news" data-slug="synology-saugumas">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl saugumo</a></div>
 </div></details></article>
 
 <article class="story" id="home-assistant-2026-11" data-category="ha">
 <details class="entry"><summary>
-<div class="visual ha"><svg viewBox="0 0 128 128" aria-hidden="true"><path d="M21 58 64 19l43 39v47H21Z"/><path d="M48 104V73h32v31"/><circle cx="64" cy="51" r="6"/><path d="M64 57v16M31 57l33-6 33 6"/></svg><i>HOME ASSISTANT</i></div>
+<div class="visual ha"><img loading="lazy" decoding="async" width="960" height="720" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Home_Assistant_Dashboard.png/960px-Home_Assistant_Dashboard.png" alt="Tikra „Home Assistant“ valdymo skydelio ekrano nuotrauka"></div>
 <div class="cardbody"><div class="meta"><span class="tag">HOME ASSISTANT</span><time class="date" datetime="2026-11-04">2026-11-04</time><span>4 min.</span></div>
 <h2>„Home Assistant 2026.11“: integruota „Marketplace“, daugiau galimybių kameroms</h2>
 <p class="desc">„HACS“ tampa integruota „Marketplace“ dalimi, gerėja kamerų valdymas, automatizacijų diagnostika ir DI funkcijos.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
@@ -136,13 +187,14 @@ footer{border-top:1px solid var(--line);padding:30px 0;background:#fff;color:#70
 <h3>Ar verta atnaujinti?</h3>
 <p>Jeigu naudojate papildomas bendruomenės integracijas ar nestandartines „Dashboard“ korteles, prieš atnaujinimą pasidarykite pilną atsarginę kopiją. Šioje versijoje taip pat pakeistas įrenginių objektų pavadinimų formavimo principas, todėl dalis užrašų skydeliuose gali pasikeisti. Perskaitykite nesuderinamų pakeitimų sąrašą.</p>
 <div class="tip"><strong>Praktiškai:</strong> „Marketplace“ supaprastina sistemos plėtrą, tačiau bendruomenės papildiniai netampa automatiškai patikrinti ar saugūs. Prieš diegdami įvertinkite jų kilmę ir palaikymą.</div>
+<p class="photo-credit">Tikra „Home Assistant“ demonstracinės sistemos ekrano nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Home_Assistant_Dashboard.png" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>, <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener noreferrer">Apache 2.0</a> (kortelėje apkirpta).</p>
 <p class="source">Pirminis šaltinis: <a href="https://www.home-assistant.io/blog/2026/11/04/release-202611/" target="_blank" rel="noopener noreferrer">„Home Assistant 2026.11“ oficialus leidimo aprašymas</a></p>
 <div class="share"><button type="button" class="copy-news" data-slug="home-assistant-2026-11">Kopijuoti nuorodą</button><a href="../#paslaugos">Home Assistant paslaugos</a></div>
 </div></details></article>
 
 <article class="story" id="eu-elektros-tinklai" data-category="solar">
 <details class="entry"><summary>
-<div class="visual solar"><svg viewBox="0 0 128 128" aria-hidden="true"><circle cx="98" cy="28" r="15"/><path d="M98 3v8M98 45v8M73 28h8M115 28h8M80 10l6 6M110 40l6 6M116 10l-6 6"/><path d="m19 62 69-8 14 44-71 6Z"/><path d="m42 60 10 42M64 58l11 42M26 78l68-4M33 92l65-5"/></svg><i>SOLAR / GRID</i></div>
+<div class="visual solar"><img loading="lazy" decoding="async" width="960" height="720" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Solar_panels_-_4_July_2025.jpg/960px-Solar_panels_-_4_July_2025.jpg" alt="Tikra ant gyvenamojo namo įrengtos saulės elektrinės nuotrauka"></div>
 <div class="cardbody"><div class="meta"><span class="tag">SAULĖS ELEKTRINĖS</span><time class="date" datetime="2026-11-18">2026-11-18</time><span>3 min.</span></div>
 <h2>ES siekia paspartinti saulės elektrinių ir kaupiklių leidimų išdavimą</h2>
 <p class="desc">Europos Parlamentas ir ES Taryba pasiekė preliminarų susitarimą dėl spartesnių leidimų elektros tinklams ir energijos projektams.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
@@ -153,13 +205,14 @@ footer{border-top:1px solid var(--line);padding:30px 0;background:#fff;color:#70
 <h3>Ar taisyklės jau galioja Lietuvoje?</h3>
 <p><strong>Dar ne.</strong> Tai preliminarus politinis susitarimas. Dokumentą dar turi patvirtinti ES institucijos; po jo priėmimo valstybės narės turės perkelti direktyvos nuostatas į nacionalinę teisę. Konkrečios sąlygos namų ūkių saulės elektrinėms ir prijungimams priklausys nuo galutinio teksto bei Lietuvos tvarkos.</p>
 <div class="tip"><strong>Kodėl tai aktualu?</strong> Kuo lengviau ir greičiau į tinklą integruoti elektros generaciją bei kaupimą, tuo geresnės sąlygos lankstesniam energijos naudojimui. Tačiau kiekvieno projekto ekonomiškumą ir prijungimo sąlygas reikia vertinti atskirai.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Solar_panels_-_4_July_2025.jpg" target="_blank" rel="noopener noreferrer">Aethonatic / Wikimedia Commons</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0</a> (kortelėje apkirpta).</p>
 <p class="source">Pirminis šaltinis: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/11/18/grids-package-council-and-parliament-agree-to-streamline-permitting-for-a-faster-clean-energy-transition/" target="_blank" rel="noopener noreferrer">ES Tarybos 2026-11-18 pranešimas</a></p>
 <div class="share"><button type="button" class="copy-news" data-slug="eu-elektros-tinklai">Kopijuoti nuorodą</button><a href="../#skaiciuotuvas">Suplanuoti sistemą</a></div>
 </div></details></article>
 
 <article class="story" id="baterijos-europoje-2026" data-category="energy">
 <details class="entry"><summary>
-<div class="visual energy"><svg viewBox="0 0 128 128" aria-hidden="true"><rect x="23" y="26" width="77" height="78" rx="10"/><path d="M49 18h25v8M38 45h47M38 61h47M38 78h47"/><path d="m66 48-9 19h12l-8 17"/><path d="M108 52v27"/></svg><i>ENERGY STORAGE</i></div>
+<div class="visual energy"><img loading="lazy" decoding="async" width="960" height="720" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Two_Tesla_power_wall_3_devices_installed_inside_in_a_residential_home.jpg/960px-Two_Tesla_power_wall_3_devices_installed_inside_in_a_residential_home.jpg" alt="Tikra namuose įrengtų „Tesla Powerwall“ baterijų nuotrauka"></div>
 <div class="cardbody"><div class="meta"><span class="tag">ENERGIJOS KAUPIMAS</span><time class="date" datetime="2026-11-13">2026-11-13</time><span>3 min.</span></div>
 <h2>Europoje baterijų kaupimo galia per metus išaugo daugiau nei dvigubai</h2>
 <p class="desc">ENTSO-E žiemos elektros sistemos apžvalga rodo sparčią saulės energetikos ir baterijų kaupimo infrastruktūros plėtrą.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
@@ -170,6 +223,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;background:#fff;color:#70
 <h3>Ar tai reiškia, kad elektra bus pigesnė?</h3>
 <p>Ne automatiškai. Didėjanti kaupimo infrastruktūra gali padėti mažinti sistemos disbalansą, tačiau elektros kainas lemia ir oro sąlygos, tinklo ribojimai, paklausa bei kiti veiksniai. Namų ūkiui kaupiklio nauda priklauso nuo tarifo, elektrinės dydžio, vartojimo įpročių ir automatizavimo.</p>
 <div class="tip"><strong>Ką verta įvertinti namuose?</strong> Baterijos naudingumas didėja, kai jos įkrovimas ir iškrovimas derinami su saulės gamybos prognoze, elektros kainomis, atsarginiu rezervu ir realiu vartojimu.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Two_Tesla_power_wall_3_devices_installed_inside_in_a_residential_home.jpg" target="_blank" rel="noopener noreferrer">Rsparks3 / Wikimedia Commons</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0</a> (kortelėje apkirpta). Pavaizduota tikra namų kaupimo sistema, ne ENTSO-E projektas.</p>
 <p class="source">Pirminis šaltinis: <a href="https://www.entsoe.eu/news/2026/11/13/entso-e-winter-outlook-2026-2027-europe-is-prepared-some-risks-remain-in-specific-areas/" target="_blank" rel="noopener noreferrer">ENTSO-E, „Winter Outlook 2026–2027“</a></p>
 <div class="share"><button type="button" class="copy-news" data-slug="baterijos-europoje-2026">Kopijuoti nuorodą</button><a href="../#paslaugos">Energijos automatizavimas</a></div>
 </div></details></article>
