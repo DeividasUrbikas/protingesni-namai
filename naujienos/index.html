@@ -247,12 +247,11 @@ body.news-dark footer{background:#172b46;color:#c0d3eb}
 </div></section>
 <main class="wrap" id="turinys">
 <div class="tools" role="search" aria-label="Naujienų paieška ir filtrai">
-<div class="filters" aria-label="Filtruoti naujienas"><button type="button" data-filter="all" aria-pressed="true">Visos</button><button type="button" data-filter="security" aria-pressed="false">IT saugumas</button><button type="button" data-filter="ha" aria-pressed="false">Home Assistant</button><button type="button" data-filter="solar" aria-pressed="false">Saulės elektrinės</button><button type="button" data-filter="energy" aria-pressed="false">Energijos kaupimas</button></div>
+<div class="filters" aria-label="Filtruoti naujienas"><button type="button" data-filter="all" aria-pressed="true">Visos</button><button type="button" data-filter="lt" aria-pressed="false">Lietuvoje 🇱🇹</button><button type="button" data-filter="security" aria-pressed="false">IT saugumas</button><button type="button" data-filter="ha" aria-pressed="false">Home Assistant</button><button type="button" data-filter="solar" aria-pressed="false">Saulės elektrinės</button><button type="button" data-filter="energy" aria-pressed="false">Energijos kaupimas</button></div>
 <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input type="search" id="news-search" placeholder="Ieškoti naujienų..." aria-label="Ieškoti naujienų"></label>
 </div>
-<div class="count" id="news-count" aria-live="polite">4 straipsniai · atnaujinta 2026-11-20</div>
+<div class="count" id="news-count" aria-live="polite">20 straipsnių · atnaujinta 2026-11-20</div>
 <div class="grid" id="stories">
-
 <article class="story" id="synology-saugumas" data-category="security">
 <details class="entry" aria-label="Synology NAS saugumo naujiena"><summary>
 <div class="visual security"><img loading="lazy" decoding="async" width="960" height="720" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Synology_DS213%2B_-_z_dyskami.jpg/960px-Synology_DS213%2B_-_z_dyskami.jpg" alt="Tikro „Synology DS213+“ NAS įrenginio nuotrauka"></div>
@@ -269,24 +268,6 @@ body.news-dark footer{background:#172b46;color:#c0d3eb}
 <p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Synology_DS213%2B_-_z_dyskami.jpg" target="_blank" rel="noopener noreferrer">Piotr Doroszewski / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> (kortelėje apkirpta).</p>
 <p class="source">Pirminiai šaltiniai: <a href="https://www.synology.com/en-us/security/advisory/Synology_SA_24_20" target="_blank" rel="noopener noreferrer">„Synology“ SA-24:20</a> · <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">CISA KEV katalogas</a> · <a href="https://www.cirt.gov.jm/alert/cisa-warns-active-exploitation-flaws-synology-dsm-litellm-apache-axis-and-redcap" target="_blank" rel="noopener noreferrer">Nacionalinio CSIRT informacija</a></p>
 <div class="share"><button type="button" class="copy-news" data-slug="synology-saugumas">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl saugumo</a></div>
-</div></details></article>
-
-<article class="story" id="home-assistant-2026-11" data-category="ha">
-<details class="entry"><summary>
-<div class="visual ha"><img loading="lazy" decoding="async" width="960" height="720" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Home_Assistant_Dashboard.png/960px-Home_Assistant_Dashboard.png" alt="Tikra „Home Assistant“ valdymo skydelio ekrano nuotrauka"></div>
-<div class="cardbody"><div class="meta"><span class="tag">HOME ASSISTANT</span><time class="date" datetime="2026-11-04">2026-11-04</time><span>4 min.</span></div>
-<h2>„Home Assistant 2026.11“: integruota „Marketplace“, daugiau galimybių kameroms</h2>
-<p class="desc">„HACS“ tampa integruota „Marketplace“ dalimi, gerėja kamerų valdymas, automatizacijų diagnostika ir DI funkcijos.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
-</summary><div class="detail">
-<p>2026 m. lapkričio 4 d. išleista „Home Assistant 2026.11“ versija. Viena didžiausių naujienų – anksčiau atskirai diegiama „HACS“ bendruomenės parduotuvė tampa oficialiai integruota <strong>„Marketplace“</strong> aplinka. Ji pasiekiama per „Settings → Marketplace“ ir leidžia rasti bendruomenės integracijas, korteles, temas bei šablonus.</p>
-<h3>Kas iš tikrųjų pasikeitė?</h3>
-<ul><li><strong>Paprastesnis diegimas:</strong> daugelį bendruomenės integracijų galima pradėti konfigūruoti iškart po įdiegimo. Atnaujinimams kai kada vis dar reikia perkrovimo.</li><li><strong>Kameros:</strong> atsirado „Matter 1.5“ kamerų palaikymas, o suderinamose „Matter“ ir „Reolink“ kamerose – dvipusio garso galimybės, priklausomai nuo protokolo ir HTTPS.</li><li><strong>Automatizacijų diagnostika:</strong> veiksmo istorija ir susietų scenarijų vykdymo pėdsakai leidžia lengviau suprasti, kas ir kodėl įsijungė.</li><li><strong>Vietinis DI ir valdymas:</strong> praplėstas LLM API funkcionalumas, įskaitant sisteminės informacijos paiešką ir leidimų kontroliuojamus veiksmus.</li></ul>
-<h3>Ar verta atnaujinti?</h3>
-<p>Jeigu naudojate papildomas bendruomenės integracijas ar nestandartines „Dashboard“ korteles, prieš atnaujinimą pasidarykite pilną atsarginę kopiją. Šioje versijoje taip pat pakeistas įrenginių objektų pavadinimų formavimo principas, todėl dalis užrašų skydeliuose gali pasikeisti. Perskaitykite nesuderinamų pakeitimų sąrašą.</p>
-<div class="tip"><strong>Praktiškai:</strong> „Marketplace“ supaprastina sistemos plėtrą, tačiau bendruomenės papildiniai netampa automatiškai patikrinti ar saugūs. Prieš diegdami įvertinkite jų kilmę ir palaikymą.</div>
-<p class="photo-credit">Tikra „Home Assistant“ demonstracinės sistemos ekrano nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Home_Assistant_Dashboard.png" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>, <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener noreferrer">Apache 2.0</a> (kortelėje apkirpta).</p>
-<p class="source">Pirminis šaltinis: <a href="https://www.home-assistant.io/blog/2026/11/04/release-202611/" target="_blank" rel="noopener noreferrer">„Home Assistant 2026.11“ oficialus leidimo aprašymas</a></p>
-<div class="share"><button type="button" class="copy-news" data-slug="home-assistant-2026-11">Kopijuoti nuorodą</button><a href="../#paslaugos">Home Assistant paslaugos</a></div>
 </div></details></article>
 
 <article class="story" id="eu-elektros-tinklai" data-category="solar">
@@ -325,9 +306,266 @@ body.news-dark footer{background:#172b46;color:#c0d3eb}
 <div class="share"><button type="button" class="copy-news" data-slug="baterijos-europoje-2026">Kopijuoti nuorodą</button><a href="../#paslaugos">Energijos automatizavimas</a></div>
 </div></details></article>
 
+<article class="story" id="litgrid-168mw-2026" data-category="energy" data-region="lt">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Tesvolt_battery_energy_storage_system_Rheineck.jpg/720px-Tesvolt_battery_energy_storage_system_Rheineck.jpg" alt="Iliustracinė realaus kaupiklių parko nuotrauka Šveicarijoje, ne Lietuvos projektas."></div>
+<div class="cardbody"><div class="meta"><span class="tag">LIETUVA · KAUPIKLIAI</span><time class="date" datetime="2026-11-13">2026-11-13</time><span>4 min.</span></div>
+<h2>„Litgrid“: spalį Lietuvoje prijungti dar 168 MW energijos kaupiklių</h2><p class="desc">Trys baterijų parkai papildė šalies elektros sistemą; jų bendra talpa – 336 MWh.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. lapkričio 13 d. „Litgrid“ paskelbė, kad per spalį prie Lietuvos elektros perdavimo tinklo prijungti <strong>trys nauji baterijų parkai</strong>. Jų bendra įrengtoji galia – 168 MW, o energijos talpa – 336 MWh.</p>
+<h3>Kokie projektai?</h3><p>Pranešime minimi „Anykščiai BS“ (33 MW ir 65 MWh), „Arvilsa“ (90 MW ir 181 MWh) ir „Sai-Ignalina“ (45 MW ir 90 MWh). Taip pat prie tinklo prijungtas 25 MW įrengtosios galios saulės elektrinės parkas Kretingalėje.</p>
+<h3>Ką tai keičia Lietuvos energetikoje?</h3><p>„Litgrid“ nurodė, kad 2026 m. lapkričio viduryje Lietuvoje iš viso veikė apie <strong>1,36 GW</strong> baterijų galios ir 2,6 GWh talpos. Dideli kaupikliai svarbūs energijos sistemos lankstumui ir saulės bei vėjo generacijos integravimui, bet jų ekonomika skiriasi nuo namų ūkio baterijos.</p>
+<div class="tip"><strong>Svarbu:</strong> projektų galia (MW) ir kaupiamos energijos talpa (MWh) yra skirtingi rodikliai.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Tesvolt_battery_energy_storage_system_Rheineck.jpg" target="_blank" rel="noopener noreferrer">Kecko / Wikimedia Commons</a> (Wikimedia Commons, kortelėje apkirpta). Iliustracinė realaus kaupiklių parko nuotrauka Šveicarijoje, ne Lietuvos projektas.</p>
+<p class="source">Šaltinis: <a href="https://www.litgrid.eu/naujienos/litgrid-spali-prie-tinklo-prijunge-168-mw-galios-energijos-kaupikliu" target="_blank" rel="noopener noreferrer">Litgrid oficialus pranešimas (2026-11-13)</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="litgrid-168mw-2026">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="home-assistant-2026-11" data-category="ha">
+<details class="entry"><summary>
+<div class="visual ha"><img loading="lazy" decoding="async" width="960" height="720" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Home_Assistant_Dashboard.png/960px-Home_Assistant_Dashboard.png" alt="Tikra „Home Assistant“ valdymo skydelio ekrano nuotrauka"></div>
+<div class="cardbody"><div class="meta"><span class="tag">HOME ASSISTANT</span><time class="date" datetime="2026-11-04">2026-11-04</time><span>4 min.</span></div>
+<h2>„Home Assistant 2026.11“: integruota „Marketplace“, daugiau galimybių kameroms</h2>
+<p class="desc">„HACS“ tampa integruota „Marketplace“ dalimi, gerėja kamerų valdymas, automatizacijų diagnostika ir DI funkcijos.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. lapkričio 4 d. išleista „Home Assistant 2026.11“ versija. Viena didžiausių naujienų – anksčiau atskirai diegiama „HACS“ bendruomenės parduotuvė tampa oficialiai integruota <strong>„Marketplace“</strong> aplinka. Ji pasiekiama per „Settings → Marketplace“ ir leidžia rasti bendruomenės integracijas, korteles, temas bei šablonus.</p>
+<h3>Kas iš tikrųjų pasikeitė?</h3>
+<ul><li><strong>Paprastesnis diegimas:</strong> daugelį bendruomenės integracijų galima pradėti konfigūruoti iškart po įdiegimo. Atnaujinimams kai kada vis dar reikia perkrovimo.</li><li><strong>Kameros:</strong> atsirado „Matter 1.5“ kamerų palaikymas, o suderinamose „Matter“ ir „Reolink“ kamerose – dvipusio garso galimybės, priklausomai nuo protokolo ir HTTPS.</li><li><strong>Automatizacijų diagnostika:</strong> veiksmo istorija ir susietų scenarijų vykdymo pėdsakai leidžia lengviau suprasti, kas ir kodėl įsijungė.</li><li><strong>Vietinis DI ir valdymas:</strong> praplėstas LLM API funkcionalumas, įskaitant sisteminės informacijos paiešką ir leidimų kontroliuojamus veiksmus.</li></ul>
+<h3>Ar verta atnaujinti?</h3>
+<p>Jeigu naudojate papildomas bendruomenės integracijas ar nestandartines „Dashboard“ korteles, prieš atnaujinimą pasidarykite pilną atsarginę kopiją. Šioje versijoje taip pat pakeistas įrenginių objektų pavadinimų formavimo principas, todėl dalis užrašų skydeliuose gali pasikeisti. Perskaitykite nesuderinamų pakeitimų sąrašą.</p>
+<div class="tip"><strong>Praktiškai:</strong> „Marketplace“ supaprastina sistemos plėtrą, tačiau bendruomenės papildiniai netampa automatiškai patikrinti ar saugūs. Prieš diegdami įvertinkite jų kilmę ir palaikymą.</div>
+<p class="photo-credit">Tikra „Home Assistant“ demonstracinės sistemos ekrano nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Home_Assistant_Dashboard.png" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>, <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener noreferrer">Apache 2.0</a> (kortelėje apkirpta).</p>
+<p class="source">Pirminis šaltinis: <a href="https://www.home-assistant.io/blog/2026/11/04/release-202611/" target="_blank" rel="noopener noreferrer">„Home Assistant 2026.11“ oficialus leidimo aprašymas</a></p>
+<div class="share"><button type="button" class="copy-news" data-slug="home-assistant-2026-11">Kopijuoti nuorodą</button><a href="../#paslaugos">Home Assistant paslaugos</a></div>
+</div></details></article>
+
+<article class="story" id="tapo-tc70-2026" data-category="security">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/TP-Link_Tapo_C100.jpg/720px-TP-Link_Tapo_C100.jpg" alt="Iliustracinė „Tapo C100“ nuotrauka – ne TC70."></div>
+<div class="cardbody"><div class="meta"><span class="tag">IT SAUGUMAS</span><time class="date" datetime="2026-11-02">2026-11-02</time><span>4 min.</span></div>
+<h2>„Tapo TC70“ saugumo spraga: kodėl svarbu atnaujinti kamerą?</h2><p class="desc">Gamintojas įvardijo senesnių TC70 V3 ir kitų „Tapo“ kamerų programinės įrangos pažeidžiamumus.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. lapkričio 2 d. „TP-Link“ atnaujino saugumo pranešimą apie kelias „Tapo“ kamerų spragas. Į sąrašą įtraukta ir <strong>Tapo TC70 V3</strong> su CVE-2026-34118. Tai atminties apdorojimo problema, dėl kurios specialiai suformuoti duomenys gali sukelti kameros paslaugos sutrikimą arba įrenginio persikrovimą.</p>
+<h3>Ar tai reiškia, kad kamera buvo nulaužta?</h3><p>Ne. Gamintojo pranešimas patvirtina techninį pažeidžiamumą, o ne konkretų įsilaužimą į kiekvieną kamerą. Skirtinguose modeliuose nurodyti nevienodi poveikiai. TC70 savininkams svarbu vertinti <strong>aparatinę versiją ir programinės įrangos leidimą</strong>, o ne vien modelio pavadinimą.</p>
+<h3>Kaip patikrinti?</h3><ol><li>„Tapo“ programėlėje atsidarykite kameros nustatymus ir peržiūrėkite „Device Info“ bei „Firmware Update“.</li><li>Jei turite TC70 V3, palyginkite savo versiją su gamintojo nurodytu pataisytu leidimu – <strong>1.9.2 Build 261009 Rel.61408n</strong> arba naujesniu savo regiono leidimu.</li><li>Ribokite tiesioginę prieigą iš interneto, naudokite stiprų paskyros slaptažodį ir prireikus atskirkite IoT įrenginius nuo kompiuterių tinklo.</li></ol>
+<div class="tip"><strong>Praktinė išvada:</strong> kamera su vietiniu įrašymu nėra automatiškai apsaugota nuo tinklo spragų. Atnaujinimai ir prieigos kontrolė išlieka svarbūs.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:TP-Link_Tapo_C100.jpg" target="_blank" rel="noopener noreferrer">Vis M / Wikimedia Commons</a> (CC BY-SA 4.0, kortelėje apkirpta). Iliustracinė „Tapo C100“ nuotrauka – ne TC70.</p>
+<p class="source">Šaltinis: <a href="https://www.tp-link.com/us/support/faq/5047/" target="_blank" rel="noopener noreferrer">TP-Link oficialus saugumo pranešimas (2026-11-02)</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="tapo-tc70-2026">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="tapo-c210-prieiga-2026" data-category="security">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/TP-Link_Tapo_Wire-Free_Pan_and_Tilt_Floodlight_Camera_with_Solar_Panel.jpg/720px-TP-Link_Tapo_Wire-Free_Pan_and_Tilt_Floodlight_Camera_with_Solar_Panel.jpg" alt="Iliustracinė kito „Tapo“ modelio lauko kamera."></div>
+<div class="cardbody"><div class="meta"><span class="tag">IT SAUGUMAS</span><time class="date" datetime="2026-10-19">2026-10-19</time><span>4 min.</span></div>
+<h2>„Tapo C210“ spragos: kaimyniniame tinkle galimas valdymas be prisijungimo</h2><p class="desc">C210 V3.60 modelyje aptiktos autentifikavimo ir medijos sesijų apsaugos problemos.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. spalio 19 d. „TP-Link“ paskelbė informaciją apie dvi <strong>Tapo C210 V3.60</strong> spragas: CVE-2026-105814 ir CVE-2026-105815. Viena susijusi su autentifikavimo patikrų taikymu JSON API, kita – su prisijungimo medžiagos atskleidimu ir medijos sesijomis.</p>
+<h3>Kokia reali rizika?</h3><p>Gamintojas nurodo, kad užpuolikas <strong>greta esančiame tinkle</strong> tam tikromis sąlygomis galėtų vykdyti saugomus kameros veiksmus, pavyzdžiui, pasukti jos objektyvą, o antra spraga gali paveikti prieigą prie medijos sesijų. Tai nėra teiginys, kad visos C210 kameros matomos bet kam iš interneto – būtina atsižvelgti į konkrečią versiją ir tinklo pasiekiamumą.</p>
+<h3>Kaip sumažinti riziką?</h3><ol><li>Patikrinkite C210 aparatinę versiją; pažeidžiamumas aprašytas V3.60.</li><li>Įdiekite naujausią gamintojo siūlomą programinę įrangą, jei įrenginys palaikomas.</li><li>Nelaikykite kameros tame pačiame neapsaugotame tinkle su nepatikimais įrenginiais ir be reikalo neatverkite jos valdymo prievadų.</li></ol>
+<div class="tip"><strong>Svarbu:</strong> viešas spragos aprašymas nereiškia patvirtinto masinio „Tapo C210“ kamerų užvaldymo. Šis straipsnis – apie užfiksuotą techninę riziką.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:TP-Link_Tapo_Wire-Free_Pan_and_Tilt_Floodlight_Camera_with_Solar_Panel.jpg" target="_blank" rel="noopener noreferrer">TaurusEmerald / Wikimedia Commons</a> (CC BY-SA 4.0, kortelėje apkirpta). Iliustracinė kito „Tapo“ modelio lauko kamera.</p>
+<p class="source">Šaltinis: <a href="https://www.tp-link.com/us/support/faq/5352/" target="_blank" rel="noopener noreferrer">TP-Link oficialus C210 pranešimas (2026-10-19)</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="tapo-c210-prieiga-2026">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="eso-200k-gaminanciu-2026" data-category="solar" data-region="lt">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Saules_elektrine.jpg/720px-Saules_elektrine.jpg" alt="Tikra saulės elektrinės nuotrauka Vilniuje, fotografuota anksčiau."></div>
+<div class="cardbody"><div class="meta"><span class="tag">LIETUVA · SAULĖS ELEKTRINĖS</span><time class="date" datetime="2026-10-12">2026-10-12</time><span>4 min.</span></div>
+<h2>Lietuva peržengė 200 tūkst. gaminančių vartotojų ribą</h2><p class="desc">ESO skelbia naują etapą: augimui vis svarbesni kaupikliai ir didesnis savos energijos suvartojimas.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. spalio 12 d. ESO paskelbė, kad prie skirstomojo tinklo prijungta daugiau kaip <strong>200 tūkst. gaminančių vartotojų</strong>. Tai reikšmingas Lietuvos energetikos plėtros rodiklis: šios grupės elektrinių bendra įrengtoji galia viršijo 2,7 GW.</p>
+<h3>Ką rodo skaičiai?</h3><p>ESO duomenimis, apie 68 proc. vartotojų elektrines turi ant savo pastatų arba šalia jų, o likę 32 proc. yra nutolusių parkų naudotojai. Piko vasaros laikotarpiais į tinklą patiekta energija sudarė iki trečdalio šalies suvartojimo.</p>
+<h3>Koks kitas plėtros etapas?</h3><p>Operatorius akcentuoja ne tik naujų elektrinių skaičių, bet ir efektyvesnį energijos naudojimą vietoje. Todėl didėja kaupiklių, lanksčių įkrovimo grafikų ir išmanaus buitinių apkrovų valdymo reikšmė.</p>
+<div class="tip"><strong>Namų ūkiui:</strong> prieš didinant elektrinės galią verta įvertinti elektros atidavimo į tinklą apribojimus bei galimybę didesnę energijos dalį suvartoti namuose.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Saules_elektrine.jpg" target="_blank" rel="noopener noreferrer">Vamockute / Wikimedia Commons</a> (CC BY-SA 4.0, kortelėje apkirpta). Tikra saulės elektrinės nuotrauka Vilniuje, fotografuota anksčiau.</p>
+<p class="source">Šaltinis: <a href="https://www.eso.lt/eso-prie-tinklo-prijunge-200-tukst.-gaminanciu-vartotoju-ju-elektrines-sugeneravo-ketvirtadali-lietuvos-elektros-poreikio/5123" target="_blank" rel="noopener noreferrer">ESO duomenys (2026-10-12)</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="eso-200k-gaminanciu-2026">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="ha-zemelapiai-2026-10" data-category="ha">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Home_Assistant_Dashboard.png/960px-Home_Assistant_Dashboard.png" alt="Tikra „Home Assistant“ valdymo sąsajos nuotrauka."></div>
+<div class="cardbody"><div class="meta"><span class="tag">HOME ASSISTANT</span><time class="date" datetime="2026-10-07">2026-10-07</time><span>4 min.</span></div>
+<h2>„Home Assistant 2026.10“: nauji žemėlapiai ir daugiau tinklo įrenginių galimybių</h2><p class="desc">Atnaujinimas keičia vietos rodymą ir praplečia ESPHome bei kitų integracijų veikimą.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. spalio 7 d. išleistoje „Home Assistant 2026.10“ versijoje daug dėmesio skirta žemėlapiams. Po ankstesnio žemėlapių tiekėjo API rakto reikalavimų pokyčio sistema perėjo prie „OpenStreetMap“ pagrindo ir įdiegė modernesnį vektorinį vaizdą.</p>
+<h3>Kokios dar naujovės?</h3><p>Versija taip pat papildė įrenginių ir integracijų galimybes. Pavyzdžiui, ESPHome įrenginiai gali patys inicijuoti saugų ryšį į „Home Assistant“, kai serveriui sudėtinga pasiekti juos tiesiogiai. Išplėstos kai kurių „Matter“ įrenginių valdymo funkcijos, taip pat pranešimų atkūrimas per „Music Assistant“.</p>
+<h3>Praktinė reikšmė</h3><p>Žemėlapiai svarbūs šeimos vietos automatikai, o nauji ESPHome tinklo ryšio sprendimai – sudėtingesniuose namų tinkluose. Prieš pagrindinės sistemos atnaujinimą verta sukurti atsarginę kopiją ir įvertinti nesuderinamus pokyčius.</p>
+<div class="tip"><strong>Kam naudinga:</strong> turintiems kelis maršrutizatorius, daug IoT įrenginių, ESPHome jutiklių arba vietos pagrindu veikiančias automatizacijas.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Home_Assistant_Dashboard.png" target="_blank" rel="noopener noreferrer">Wikimedia Commons / Wikimedia Commons</a> (Apache 2.0, kortelėje apkirpta). Tikra „Home Assistant“ valdymo sąsajos nuotrauka.</p>
+<p class="source">Šaltinis: <a href="https://www.home-assistant.io/blog/2026/10/07/release-202610/" target="_blank" rel="noopener noreferrer">Home Assistant oficialus 2026.10 aprašymas</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="ha-zemelapiai-2026-10">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="litgrid-baterijos-1gw-2026" data-category="energy" data-region="lt">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Tesvolt_battery_energy_storage_system_Rheineck.jpg/720px-Tesvolt_battery_energy_storage_system_Rheineck.jpg" alt="Iliustracinė realaus kaupiklių parko nuotrauka, ne Anykščių PV."></div>
+<div class="cardbody"><div class="meta"><span class="tag">LIETUVA · KAUPIKLIAI</span><time class="date" datetime="2026-10-02">2026-10-02</time><span>4 min.</span></div>
+<h2>Lietuvos baterijų parkų bendra galia viršijo 1 GW</h2><p class="desc">„Litgrid“ pranešė ir apie 2 GWh sukauptinos energijos ribos peržengimą.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. spalio 2 d. „Litgrid“ pranešė, kad Lietuvoje veikiančių baterijų energijos kaupimo sistemų bendra įrengtoji galia viršijo <strong>1 GW</strong>, o jų talpa – 2 GWh. Tą dieną įvardytas didelis „Anykščių PV“ hibridinis projektas.</p>
+<h3>Saulė ir baterijos viename projekte</h3><p>„Anykščių PV“ parke įrengta 25 MW galios ir 65 MWh talpos kaupimo sistema veikia kartu su 87,5 MW saulės elektrinių parku. Tokie projektai padeda prisitaikyti prie kintančios saulės gamybos ir elektros sistemos poreikių.</p>
+<h3>Kodėl tai ne tas pats, kas namų kaupiklis?</h3><p>Dideli baterijų parkai dalyvauja elektros sistemos balansavime ir rinkose, o namų kaupiklis dažniausiai naudojamas didinti savo energijos suvartojimą bei, jei įranga tinkama, užtikrinti atsarginį maitinimą. Abiejų baterijų techniniai rodikliai gali būti panašūs, tačiau jų paskirtis ir atsiperkamumo skaičiavimai skiriasi.</p>
+<div class="tip"><strong>Duomenų data:</strong> tai 2026-10-02 įrengtosios galios riba. Lapkritį „Litgrid“ jau pranešė apie tolesnį augimą.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Tesvolt_battery_energy_storage_system_Rheineck.jpg" target="_blank" rel="noopener noreferrer">Kecko / Wikimedia Commons</a> (Wikimedia Commons, kortelėje apkirpta). Iliustracinė realaus kaupiklių parko nuotrauka, ne Anykščių PV.</p>
+<p class="source">Šaltinis: <a href="https://www.litgrid.eu/naujienos/lietuvoje-irengtu-bateriju-energijos-kaupimo-sistemu-galia-virsijo-1-gw" target="_blank" rel="noopener noreferrer">Litgrid oficialus pranešimas (2026-10-02)</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="litgrid-baterijos-1gw-2026">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="ha-modbus-2026-09" data-category="ha">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/ESP32_Dev_Board.jpg/720px-ESP32_Dev_Board.jpg" alt="Iliustracinė tikro ESP32 valdiklio nuotrauka."></div>
+<div class="cardbody"><div class="meta"><span class="tag">HOME ASSISTANT</span><time class="date" datetime="2026-09-02">2026-09-02</time><span>4 min.</span></div>
+<h2>„Home Assistant 2026.9“: „Modbus“ įrenginius jungti tampa paprasčiau</h2><p class="desc">Naudinga šilumos siurbliams, rekuperatoriams, skaitikliams ir energetikos įrangai.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. rugsėjo 2 d. „Home Assistant“ paskelbė 2026.9 leidimą su svarbiais „Modbus“ integracijos architektūros pakeitimais. Tikslas – leisti kelioms integracijoms naudoti bendrą ryšio kanalą ir padaryti įrenginių sąranką patogesnę grafinėje sąsajoje.</p>
+<h3>Kodėl „Modbus“ svarbu namams?</h3><p>Šį protokolą naudoja įvairūs rekuperatoriai, šildymo valdikliai, elektros skaitikliai ir inverteriai. Bendra ryšio valdymo infrastruktūra gali sumažinti situacijų, kai dvi integracijos bando nepriklausomai naudoti tą patį TCP ar nuoseklųjį prievadą.</p>
+<h3>Ar visi įrenginiai automatiškai prisijungs?</h3><p>Ne. Konkretaus modelio registrai, ryšio parametrai ir integracijos palaikymas vis tiek turi būti suderinti. Individualios YAML konfigūracijos nereikia aklai perkelti, kol neįvertintas naujas integracijos būdas ir galimi nesuderinamumai.</p>
+<div class="tip"><strong>Naudinga praktika:</strong> prieš atnaujinimą išsaugokite veikiančią konfigūraciją ir palyginkite įrenginių reikšmes po paleidimo.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:ESP32_Dev_Board.jpg" target="_blank" rel="noopener noreferrer">Edwiyanto / Wikimedia Commons</a> (CC BY-SA 4.0, kortelėje apkirpta). Iliustracinė tikro ESP32 valdiklio nuotrauka.</p>
+<p class="source">Šaltinis: <a href="https://www.home-assistant.io/blog/2026/09/02/release-20269/" target="_blank" rel="noopener noreferrer">Home Assistant 2026.9 oficialus leidimas</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="ha-modbus-2026-09">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="tapo-c200-onvif-2026" data-category="security">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/TP-Link_Tapo_C100.jpg/720px-TP-Link_Tapo_C100.jpg" alt="Iliustracinė „Tapo C100“ nuotrauka – ne C200."></div>
+<div class="cardbody"><div class="meta"><span class="tag">IT SAUGUMAS</span><time class="date" datetime="2026-08-14">2026-08-14</time><span>4 min.</span></div>
+<h2>„Tapo C200“ ir C520WS: gamintojas aprašė ONVIF ir API saugumo spragas</h2><p class="desc">Svarbūs pataisymai kelioms populiarioms kameroms; būtina patikrinti aparatinę versiją.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. rugpjūčio 14 d. atnaujintame „TP-Link“ pranešime išvardytos spragos „Tapo C200“, C520WS, C100 ir C425 įrenginiuose. Viena jų, <strong>CVE-2025-8065</strong>, susijusi su ONVIF SOAP XML duomenų apdorojimu „Tapo C200 V3“ ir „C520WS V2.6“.</p>
+<h3>Kodėl tai svarbu „Home Assistant“ naudotojui?</h3><p>ONVIF dažnai naudojamas IP kamerų integravimui į įrašymo ir valdymo sistemas. Pažeidžiamumas tokiame protokole ypač aktualus, jei kamera prieinama daugeliui vidinio tinklo įrenginių. Gamintojas taip pat aprašė kitus trūkumus, galinčius sukelti paslaugos sutrikimą arba netinkamą API prieigos kontrolę.</p>
+<h3>Veiksmų seka</h3><ol><li>Patikrinkite tikslų modelį, V-versiją ir firmware numerį „Tapo“ programėlėje.</li><li>C200 V3 gamintojas nurodo pataisytą <strong>V3_1.4.5 Build 251104</strong> arba naujesnį suderinamą leidimą; kitiems modeliams ribos skiriasi.</li><li>Atnaujinkite įrenginį ir neeksponuokite ONVIF ar RTSP be tinklo prieigos kontrolės.</li></ol>
+<div class="tip"><strong>Pastaba:</strong> tai oficialiai patvirtinti pažeidžiamumai, bet ne įrodymas, kad jūsų kamera jau buvo nulaužta.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:TP-Link_Tapo_C100.jpg" target="_blank" rel="noopener noreferrer">Vis M / Wikimedia Commons</a> (CC BY-SA 4.0, kortelėje apkirpta). Iliustracinė „Tapo C100“ nuotrauka – ne C200.</p>
+<p class="source">Šaltinis: <a href="https://www.tp-link.com/us/support/faq/4849/" target="_blank" rel="noopener noreferrer">TP-Link saugumo biuletenis, atnaujintas 2026-08-14</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="tapo-c200-onvif-2026">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="esphome-starter-kit-2026" data-category="ha">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/ESP32_Dev_Board.jpg/720px-ESP32_Dev_Board.jpg" alt="Tikro ESP32 valdiklio nuotrauka, ne „Starter Kit“ nuotrauka."></div>
+<div class="cardbody"><div class="meta"><span class="tag">PRIETAISŲ NAUJOVĖS</span><time class="date" datetime="2026-08-12">2026-08-12</time><span>4 min.</span></div>
+<h2>Pasirodė oficialus „ESPHome Starter Kit“: saviems jutikliams kurti</h2><p class="desc">„Home Assistant“ ekosistema pristatė rinkinį, skirtą paprastam vietinių įrenginių prototipavimui.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. rugpjūčio 12 d. oficialiai pristatytas „ESPHome Starter Kit“ – pirmasis oficialus ESPHome ekosistemos produktas, skirtas lengviau pradėti kurti savo išmaniųjų namų įrenginius. Tai žingsnis tiems, kurie nori ne pirkti kiekvieną funkciją atskirai, o susikurti ją iš suderinamų komponentų.</p>
+<h3>Ką galima daryti su ESPHome?</h3><p>ESPHome leidžia kurti vietinius temperatūros, drėgmės, apšvietimo, durų ir kitus valdiklius bei jutiklius su ESP klasės mikrovaldikliais. Jų rodmenys ir veiksmai gali būti tiesiogiai prijungiami prie „Home Assistant“, nepriklausomai nuo gamintojo debesijos.</p>
+<h3>Kam verta?</h3><p>Rinkinys aktualus mokymuisi, individualiems prototipams ir specifinėms automatizacijoms. Tačiau savadarbiai prietaisai neturi pakeisti sertifikuotų apsaugos ar elektros saugos sistemų be tinkamo projektavimo bei bandymų.</p>
+<div class="tip"><strong>Idėja:</strong> CO₂, drėgmės arba papildomo temperatūros jutiklio prototipas gali būti geras pirmas ESPHome projektas.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:ESP32_Dev_Board.jpg" target="_blank" rel="noopener noreferrer">Edwiyanto / Wikimedia Commons</a> (CC BY-SA 4.0, kortelėje apkirpta). Tikro ESP32 valdiklio nuotrauka, ne „Starter Kit“ nuotrauka.</p>
+<p class="source">Šaltinis: <a href="https://www.home-assistant.io/blog/2026/08/12/the-esphome-starter-kit-is-here/" target="_blank" rel="noopener noreferrer">ESPHome / Home Assistant oficialus produkto pranešimas</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="esphome-starter-kit-2026">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="eso-birzelio-305gwh-2026" data-category="solar" data-region="lt">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Saules_elektrine.jpg/720px-Saules_elektrine.jpg" alt="Tikra Lietuvoje įrengtos saulės elektrinės nuotrauka."></div>
+<div class="cardbody"><div class="meta"><span class="tag">LIETUVA · SAULĖS ELEKTRINĖS</span><time class="date" datetime="2026-07-29">2026-07-29</time><span>4 min.</span></div>
+<h2>Birželį gaminantys vartotojai į Lietuvos tinklą patiekė daugiau nei 305 GWh</h2><p class="desc">ESO paskelbė generacijos rekordą, rodantį sparčiai augančią saulės energetikos įtaką.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. liepos 29 d. ESO pranešė, kad gaminantys vartotojai per birželį į Lietuvos elektros tinklą patiekė daugiau kaip <strong>305 GWh</strong> elektros energijos. Tai buvo rekordas: trijų šimtų gigavatvalandžių riba peržengta pirmą kartą.</p>
+<h3>Ką reiškia toks mastas?</h3><p>ESO duomenimis, tai sudarė beveik trečdalį viso birželio Lietuvos elektros energijos poreikio, kuris siekė apie 1 022 GWh. Per tą patį mėnesį prijungta beveik 4,5 tūkst. naujų gaminančių vartotojų.</p>
+<h3>Kodėl aktualūs kaupikliai?</h3><p>Didžiausia saulės gamyba paprastai sutampa su šviesiuoju paros metu, kai ne visi namų ūkiai sunaudoja pagamintą perteklių. ESO informavo, kad 2026 m. vasarą Lietuvoje jau buvo deklaruota daugiau nei 15 tūkst. kaupiklių. Toks augimas padeda namų ūkiams perkelti dalį saulės energijos vartojimo į vakarą.</p>
+<div class="tip"><strong>Praktinis klausimas:</strong> ar naudingiau didinti panelių galią, ar pridėti bateriją? Atsakymas priklauso nuo suvartojimo kreivės ir atidavimo į tinklą sąlygų.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Saules_elektrine.jpg" target="_blank" rel="noopener noreferrer">Vamockute / Wikimedia Commons</a> (CC BY-SA 4.0, kortelėje apkirpta). Tikra Lietuvoje įrengtos saulės elektrinės nuotrauka.</p>
+<p class="source">Šaltinis: <a href="https://www.eso.lt/atsinaujinancios-energetikos-naujienos-gaminantys-vartotojai-per-birzeli-i-tinkla-sugeneravo-beveik-trecdali-salies-elektros-poreikio/5056" target="_blank" rel="noopener noreferrer">ESO oficialūs 2026 m. birželio duomenys, paskelbta 2026-07-29</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="eso-birzelio-305gwh-2026">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="parama-saules-2026-13mln" data-category="solar" data-region="lt">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Solar_panels_-_4_July_2025.jpg/960px-Solar_panels_-_4_July_2025.jpg" alt="Iliustracinė tikrų saulės modulių nuotrauka."></div>
+<div class="cardbody"><div class="meta"><span class="tag">LIETUVA · PARAMA</span><time class="date" datetime="2026-06-02">2026-06-02</time><span>4 min.</span></div>
+<h2>2026 m. skirta 13 mln. eurų parama įsirengusiems saulės elektrines</h2><p class="desc">Energetikos ministerija pristatė finansavimo sąlygas, įskaitant papildomus modulių kriterijus.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. birželio 2 d. Energetikos ministerija paskelbė <strong>13 mln. eurų</strong> finansavimo priemonę gyventojams, įsirengusiems saulės elektrines. Pranešime nurodyta, kad prašymai per APVIS turėjo būti priimami nuo birželio 9 d. iki lėšų išnaudojimo.</p>
+<h3>Kokios buvo svarbios sąlygos?</h3><p>Didesnė parama numatyta įrangai, atitinkančiai papildomus kilmės ir efektyvumo kriterijus, įskaitant daugiau nei 23 proc. saulės modulio efektyvumą. Programoje taip pat buvo atsižvelgta į tam tikrus anksčiau įrengtus projektus.</p>
+<h3>Ar tai šiandien galiojantis kvietimas?</h3><p>Šis straipsnis aprašo <strong>2026 m. birželį skelbtas sąlygas</strong>. Lapkričio mėnesį paramos biudžetas ir paraiškų priėmimo būsena gali būti pasikeitę. Prieš užsakydami įrangą būtinai patikrinkite dabartinius kvietimus oficialioje APVIS arba ministerijos svetainėje.</p>
+<div class="tip"><strong>Rekomendacija:</strong> neplanuokite projekto finansavimo remdamiesi vien senesne naujiena – aktualus yra šiuo metu galiojantis kvietimo aprašas.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Solar_panels_-_4_July_2025.jpg" target="_blank" rel="noopener noreferrer">Aethonatic / Wikimedia Commons</a> (CC0, kortelėje apkirpta). Iliustracinė tikrų saulės modulių nuotrauka.</p>
+<p class="source">Šaltinis: <a href="https://enmin.lrv.lt/lt/naujienos/gyventojams-isirengusiems-saules-elektrines-13-mln-euru-parama-PwrS/" target="_blank" rel="noopener noreferrer">Energetikos ministerija (2026-06-02)</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="parama-saules-2026-13mln">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="eso-namu-kaupikliai-2026" data-category="energy" data-region="lt">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Two_Tesla_power_wall_3_devices_installed_inside_in_a_residential_home.jpg/960px-Two_Tesla_power_wall_3_devices_installed_inside_in_a_residential_home.jpg" alt="Tikras namų kaupiklis, įrengtas užsienyje; iliustracinė nuotrauka."></div>
+<div class="cardbody"><div class="meta"><span class="tag">LIETUVA · KAUPIKLIAI</span><time class="date" datetime="2026-05-08">2026-05-08</time><span>4 min.</span></div>
+<h2>ESO: namų ūkiuose daugėja kaupiklių, o elektrinės dydis nebėra svarbiausias</h2><p class="desc">Be kaupiklio tiesiogiai sunaudojama apie 35 % gamybos, o baterija gali pagerinti savarankiškumą.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2026 m. gegužės 8 d. ESO paskelbė, kad Lietuvos gaminantys vartotojai vis dažniau prioritetą teikia ne maksimaliai saulės elektrinės galiai, o efektyvesniam pagamintos elektros naudojimui. Operatorius atkreipė dėmesį į sparčiai augantį namų baterijų skaičių.</p>
+<h3>Kiek elektros galima suvartoti vietoje?</h3><p>ESO pateiktais orientaciniais skaičiavimais, vidutinis namų ūkis <strong>be kaupiklio tiesiogiai sunaudoja apie 35 %</strong> saulės elektrinės gaminamos energijos. Kaupiklis gali padidinti energetinį savarankiškumą iki maždaug 60 %, tačiau tikras rezultatas priklauso nuo vartojimo grafiko ir įrangos.</p>
+<h3>Kas svarbu renkantis bateriją?</h3><p>Įvertinkite ne tik talpą kWh, bet ir didžiausią įkrovimo / iškrovimo galią kW, akumuliatoriaus darbo ciklus, avarinio maitinimo funkcijas ir inverterio suderinamumą. Išmanus valdymas gali koreguoti baterijos įkrovą pagal prognozę ir elektros tarifą.</p>
+<div class="tip"><strong>Naudinga:</strong> kiekvienam namų ūkiui verta apskaičiuoti suvartojimo pasiskirstymą, ne aklai kopijuoti kaimyno kaupiklio talpą.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Two_Tesla_power_wall_3_devices_installed_inside_in_a_residential_home.jpg" target="_blank" rel="noopener noreferrer">Rsparks3 / Wikimedia Commons</a> (CC0, kortelėje apkirpta). Tikras namų kaupiklis, įrengtas užsienyje; iliustracinė nuotrauka.</p>
+<p class="source">Šaltinis: <a href="https://www.eso.lt/naujienos/naujos-tendencijos-gaminantys-vartotojai-vietoje-perteklines-galios-renkasi-kaupiklius/4981" target="_blank" rel="noopener noreferrer">ESO analizė (2026-05-08)</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="eso-namu-kaupikliai-2026">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="wyze-kameru-nutekejimas-2024" data-category="security">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/CCTV_Security_cameras.jpg/720px-CCTV_Security_cameras.jpg" alt="Bendrinė realių stebėjimo kamerų nuotrauka."></div>
+<div class="cardbody"><div class="meta"><span class="tag">IT SAUGUMAS · ISTORIJA</span><time class="date" datetime="2024-02-19">2024-02-19</time><span>4 min.</span></div>
+<h2>„Wyze“ incidentas: 13 tūkst. naudotojų pamatė svetimų kamerų vaizdus</h2><p class="desc">Patvirtintas 2024 m. privatumo incidentas parodė, kad pavojų gali sukelti ne tik įsilaužėliai, bet ir debesijos klaidos.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2024 m. vasario 16 d. po debesijos paslaugos sutrikimo „Wyze“ klientai susidūrė su privatumo incidentu. Gamintojas vasario 19 d. patvirtino, kad apie <strong>13 tūkst. naudotojų</strong> pamatė ne savo kamerų įvykių miniatiūras, o <strong>1 504</strong> jas atidarė. Kai kuriais atvejais buvo galima peržiūrėti ir įvykių vaizdo įrašus.</p>
+<h3>Kas įvyko?</h3><p>Pasak „Wyze“, sistemos apkrovai išaugus atsistatant po AWS gedimo, trečiosios šalies spartinimo bibliotekos komponentas klaidingai susiejo kameros ir naudotojo identifikatorius. Tai nebuvo slaptažodžių spėliojimo ataka prieš visas kameras. Gamintojas pakeitė prieigos tikrinimą ir informavo paveiktus naudotojus.</p>
+<h3>Ko galima pasimokyti?</h3><p>Net stiprus slaptažodis neapsaugo nuo paslaugos tiekėjo serverio klaidų. Vidaus kameroms rekomenduojama rinktis išjungimo arba privatumo režimą, kai stebėjimas nebūtinas, peržiūrėti debesijos funkcijų reikalingumą ir pasidomėti vietinio įrašymo galimybėmis.</p>
+<div class="tip"><strong>Data:</strong> tai 2024 m. incidentas, o ne šią savaitę įvykęs „Wyze“ nulaužimas.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:CCTV_Security_cameras.jpg" target="_blank" rel="noopener noreferrer">Santeri Viinamäki / Wikimedia Commons</a> (Wikimedia Commons, kortelėje apkirpta). Bendrinė realių stebėjimo kamerų nuotrauka.</p>
+<p class="source">Šaltinis: <a href="https://forums.wyze.com/t/update-on-investigation-of-2-16-24-security-issue/291002" target="_blank" rel="noopener noreferrer">Wyze oficialus incidento paaiškinimas (2024-02-19)</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="wyze-kameru-nutekejimas-2024">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="ring-ftc-kameru-privatumas" data-category="security">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Ring_video_doorbell.jpg/720px-Ring_video_doorbell.jpg" alt="Tikras „Ring“ durų skambučio įrenginys."></div>
+<div class="cardbody"><div class="meta"><span class="tag">IT SAUGUMAS · ISTORIJA</span><time class="date" datetime="2023-05-31">2023-05-31</time><span>4 min.</span></div>
+<h2>„Ring“ privatumo byla: FTC įvardijo darbuotojų ir įsilaužėlių prieigos riziką</h2><p class="desc">JAV reguliuotojas paskelbė, kokių saugumo priemonių kameros gamintojas neįgyvendino.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2023 m. gegužės 31 d. JAV Federalinė prekybos komisija (FTC) paskelbė bylą prieš „Ring“. Reguliuotojas nurodė, kad bendrovė neužtikrino pakankamų privataus kamerų vaizdo prieigos apribojimų darbuotojams ir rangovams bei neįgyvendino bazinių paskyrų saugumo priemonių. Dėl to dalis paskyrų ir kamerų tapo prieinamos įsilaužėliams.</p>
+<h3>Koks pagrindinis pažeidžiamumas?</h3><p>Čia problema apėmė tiek vidinę prieigą prie kliento įrašų, tiek paskyrų apsaugos praktiką. FTC teigimu, buvo sunku atsekti, kurie darbuotojai netinkamai žiūrėjo privačius vaizdo įrašus. Tai rodo, kad vien patikimo kameros įrenginio nepakanka – svarbi ir ją administruojanti paslaugų infrastruktūra.</p>
+<h3>Ką daryti savo namuose?</h3><ol><li>Kamerų paskyroms įjunkite kelių veiksnių autentifikavimą.</li><li>Periodiškai peržiūrėkite šeimos narių ir svečių prieigos teises.</li><li>Venkite nereikalingos vaizdo istorijos saugojimo debesijoje ir naudokite įrenginio privatumo funkcijas.</li></ol>
+<div class="tip"><strong>Teisinis kontekstas:</strong> tai FTC 2023 m. paskelbti kaltinimai ir susitarimas, ne nauja 2026 m. ataka.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Ring_video_doorbell.jpg" target="_blank" rel="noopener noreferrer">Ring / Wikimedia Commons</a> (Wikimedia Commons, kortelėje apkirpta). Tikras „Ring“ durų skambučio įrenginys.</p>
+<p class="source">Šaltinis: <a href="https://www.ftc.gov/news-events/news/press-releases/2023/05/ftc-says-ring-employees-illegally-surveilled-customers-failed-stop-hackers-taking-control-users" target="_blank" rel="noopener noreferrer">JAV FTC pranešimas (2023-05-31)</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="ring-ftc-kameru-privatumas">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="eufy-debesijos-saugumas-2023" data-category="security">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Security_Dome_Camera.jpg/720px-Security_Dome_Camera.jpg" alt="Bendrinė apsaugos kameros nuotrauka, ne „Eufy“ modelis."></div>
+<div class="cardbody"><div class="meta"><span class="tag">IT SAUGUMAS · ISTORIJA</span><time class="date" datetime="2023-02-02">2023-02-02</time><span>4 min.</span></div>
+<h2>„Eufy“ kamerų atvejis: „vietinis“ vaizdo stebėjimas ne visada reiškė be debesijos</h2><p class="desc">Po tyrėjų atradimų gamintojas pripažino nešifruoto srauto riziką interneto portale.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2022 m. pabaigoje saugumo tyrėjai pastebėjo neatitikimų tarp „Eufy“ kamerų privatumo pažadų ir realaus jų veikimo. 2023 m. vasario pradžioje pripažinta, kad internetinis kamerų peržiūros portalas anksčiau ne visuomet užtikrindavo galutinio taško šifravimą ir kad tam tikromis sąlygomis srautą buvo galima pasiekti naudojant nuorodą.</p>
+<h3>Kokia čia pamoka?</h3><p>Net jeigu kamera įrašinėja į vietinį diską, jos mobilioji programėlė, miniatiūrų pranešimai arba internetinis peržiūros portalas gali naudoti gamintojo serverius. Todėl užrašas „local storage“ savaime nereiškia, kad jokie duomenys nepatenka į debesiją.</p>
+<h3>Ką rekomenduojama patikrinti?</h3><ol><li>Ar iš tikrųjų galima peržiūrėti kamerą ir įrašus be interneto?</li><li>Ar miniatiūrų pranešimai arba nuotolinė peržiūra siunčiami per tiekėjo debesiją?</li><li>Ar norimos funkcijos veikia apribojus įrenginio interneto ryšį ir naudojant saugų VPN?</li></ol>
+<div class="tip"><strong>Pastaba:</strong> tai istorinė „Eufy“ platformos saugumo istorija, o ne naujai patvirtintas visų kamerų nulaužimas.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Security_Dome_Camera.jpg" target="_blank" rel="noopener noreferrer">Artechvideo / Wikimedia Commons</a> (CC BY-SA 4.0, kortelėje apkirpta). Bendrinė apsaugos kameros nuotrauka, ne „Eufy“ modelis.</p>
+<p class="source">Šaltinis: <a href="https://arstechnica.com/gadgets/2023/02/ankers-eufy-admits-problems-with-unencrypted-video-access-pledges-overhaul/" target="_blank" rel="noopener noreferrer">Ars Technica, remiantis gamintojo paaiškinimais (2023-02-02)</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="eufy-debesijos-saugumas-2023">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
+
+<article class="story" id="samsung-saldytuvas-defcon-2015" data-category="security">
+<details class="entry"><summary>
+<div class="visual"><img loading="lazy" decoding="async" width="720" height="540" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Samsung_smart_refrigerator_-_The_Talking_Fridge.jpg/720px-Samsung_smart_refrigerator_-_The_Talking_Fridge.jpg" alt="Tikras „Samsung“ išmanusis šaldytuvas – kitas modelis nei tirtasis."></div>
+<div class="cardbody"><div class="meta"><span class="tag">IT SAUGUMAS · ISTORIJA</span><time class="date" datetime="2015-08-24">2015-08-24</time><span>4 min.</span></div>
+<h2>Ar galima nulaužti išmanųjį šaldytuvą? „Samsung“ tyrimas iš 2015 metų</h2><p class="desc">Tyrėjai pademonstravo duomenų perėmimo riziką. Tai nebuvo masinis nuotolinis šaldytuvų išjungimas.</p><span class="read">Skaityti pilną straipsnį <span aria-hidden="true">↗</span></span></div>
+</summary><div class="detail">
+<p>2015 m. „Pen Test Partners“ tyrėjai DEF CON renginyje tyrė „Samsung RF28HMELBSR“ išmanųjį šaldytuvą. Jis galėjo rodyti „Google“ kalendoriaus informaciją, tačiau ryšio klientas nepakankamai tikrino serverio TLS sertifikatą. Turint tinklo prieigos galimybių buvo aptikta <strong>„man-in-the-middle“ tipo paskyros duomenų perėmimo rizika</strong>.</p>
+<h3>Ar įsilaužėliai nuotoliniu būdu išjungė šaldytuvus?</h3><p>Šio konkretaus atvejo dokumentuose <strong>nepatvirtinta</strong>, kad programišiai masiškai būtų atjungę šaldytuvų šaldymo funkciją. Tyrimo esmė buvo nesaugus tinklo ryšio sertifikatų tikrinimas ir galimas prieigos duomenų atskleidimas. Fizinis maisto šaldymas ir prijungtos internetinės funkcijos nėra tas pats.</p>
+<h3>Ką šis atvejis reiškia dabar?</h3><p>Prie interneto jungiamus buities prietaisus verta vertinti kaip mažus kompiuterius. Patikrinkite, kiek metų gamintojas jiems teikia saugumo pataisas, ir atskirkite juos nuo svarbių namų kompiuterių. Jei interneto funkcijos nereikalingos, verta patikrinti, ar prietaisas vis tiek veikia be jų.</p>
+<div class="tip"><strong>Įvykio data:</strong> 2015 m. Tai technologijų saugumo pamoka, o ne šių dienų incidentas.</div>
+<p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Samsung_smart_refrigerator_-_The_Talking_Fridge.jpg" target="_blank" rel="noopener noreferrer">Eliseandchai / Wikimedia Commons</a> (CC BY-SA 4.0, kortelėje apkirpta). Tikras „Samsung“ išmanusis šaldytuvas – kitas modelis nei tirtasis.</p>
+<p class="source">Šaltinis: <a href="https://www.theregister.com/security/2015/08/24/samsung-smart_fridge_leaves_gmail_logins_open_to_attack/" target="_blank" rel="noopener noreferrer">The Register apie „Pen Test Partners“ DEF CON tyrimą (2015-08-24)</a>.</p>
+<div class="share"><button type="button" class="copy-news" data-slug="samsung-saldytuvas-defcon-2015">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
+</div></details></article>
 </div>
 <p class="empty" id="news-empty">Pagal pasirinktus filtrus naujienų nerasta. Pabandykite kitą paiešką.</p>
-<div class="note">Straipsniai parengti pagal oficialius, viešai prieinamus šaltinius. Tai informacinė skiltis, ne saugumo auditas ar individuali techninė konsultacija. Publikavimo datos nurodytos prie straipsnių; šios skilties turinys dar neatnaujinamas automatiškai.</div>
+<div class="note">Straipsniai parengti pagal oficialius pranešimus ir patikimų leidinių tyrimus. Senesni įsilaužimų ar saugumo istorijų atvejai pateikiami su tikrosiomis jų datomis. Tai informacinė skiltis, ne saugumo auditas ar individuali techninė konsultacija. Publikavimo datos nurodytos prie straipsnių; šios skilties turinys dar neatnaujinamas automatiškai.</div>
 <div class="cta"><div><h2>Norite, kad technologijos dirbtų jūsų naudai?</h2><p>Padedame saugiai sujungti įrenginius ir automatizuoti energijos valdymą.</p></div><a href="../#skaiciuotuvas">Apskaičiuoti kainą ↗</a></div>
 </main>
 <footer><div class="wrap foot"><span>© 2026 ProtingesniNamai.lt · Išmanieji namai ir energijos valdymas</span><a href="../#pradzia">Grįžti į pagrindinį puslapį ↑</a></div></footer>
@@ -389,7 +627,7 @@ function filter(){
  const q=search.value.trim().toLocaleLowerCase("lt-LT");
  let n=0;
  items.forEach(function(it){
-  const visible=(category==="all"||it.dataset.category===category)&&(!q||it.textContent.toLocaleLowerCase("lt-LT").includes(q));
+  const visible=(category==="all"||(category==="lt"?it.dataset.region==="lt":it.dataset.category===category))&&(!q||it.textContent.toLocaleLowerCase("lt-LT").includes(q));
   it.hidden=!visible;if(visible)n++;
  });
  count.textContent=n+" "+(n===1?"straipsnis":n>=2&&n<=9?"straipsniai":"straipsnių")+" · atnaujinta 2026-11-20";
