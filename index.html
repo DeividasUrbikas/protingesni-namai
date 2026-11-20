@@ -2210,6 +2210,24 @@ body[data-pn-design]:not([data-pn-text-size="100"]) #p-skaiciuotuvas .opt-im .od
  body[data-pn-design]:not([data-pn-text-size="100"]) #p-skaiciuotuvas .device-family-label strong{font-size:calc(13px * var(--pn-font-scale))!important}
  body[data-pn-design]:not([data-pn-text-size="100"]) #p-skaiciuotuvas .brandmark .brand-name{font-size:calc(11px * var(--pn-font-scale))!important}
 }
+
+/* Naujienų peržiūra pagrindiniame puslapyje. Išlaikomi dizaino studijos spalvų kintamieji. */
+.pn-news-home{margin-top:42px;padding:5px 0 10px}
+.pn-news-home-head{display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:22px}
+.pn-news-home-head h2{margin:8px 0 9px;font-size:clamp(24px,3vw,36px)}
+.pn-news-home-head p{color:var(--tx2);max-width:570px;font-size:14px}
+.pn-news-home-all{display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;padding:12px 17px;background:var(--card2);border:1px solid var(--line2);border-radius:12px;color:var(--tx)}
+.pn-news-home-all:hover{filter:brightness(1.07);transform:translateY(-2px)}
+.pn-news-home-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.pn-news-home-card{display:flex;flex-direction:column;align-items:flex-start;gap:11px;padding:23px;background:var(--card);border:1px solid var(--line);border-radius:20px;min-height:215px;transition:transform .2s,border-color .2s}
+.pn-news-home-card:hover{transform:translateY(-3px);border-color:var(--line2)}
+.pn-news-home-card .pn-news-home-type{font-size:10px;font-weight:800;letter-spacing:.055em;color:var(--tx2)}
+.pn-news-home-card strong{font-size:17px;line-height:1.35;color:var(--tx)}
+.pn-news-home-card>span:not(.pn-news-home-type){font-size:13px;line-height:1.6;color:var(--tx2)}
+.pn-news-home-card b{margin-top:auto;font-size:12px;color:var(--tx)}
+@media(max-width:930px){.pn-news-home-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.pn-news-home-grid{grid-template-columns:1fr}.pn-news-home-card{min-height:auto}.pn-news-home{margin-top:32px}}
+@media(prefers-reduced-motion:reduce){.pn-news-home-card,.pn-news-home-all{transition:none}}
 </style>
 </head>
 <body>
@@ -2217,7 +2235,7 @@ body[data-pn-design]:not([data-pn-text-size="100"]) #p-skaiciuotuvas .opt-im .od
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.20</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.21</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links pn-full-menu" id="links" aria-label="Visi svetainės skyriai">
 <div class="pn-full-menu-title"><span>MENIU</span><strong>Kur norėtumėte pradėti?</strong></div>
 <div class="pn-menu-group"><div class="pn-menu-heading">SUSIPAŽINKITE</div>
@@ -2231,6 +2249,7 @@ body[data-pn-design]:not([data-pn-text-size="100"]) #p-skaiciuotuvas .opt-im .od
 <a href="#platforma"><span class="pn-menu-icon" aria-hidden="true">▣</span><span class="pn-menu-copy"><strong>Klientų platforma</strong><small>Sistemos peržiūra</small></span><span class="pn-menu-arrow" aria-hidden="true">›</span></a>
 </div>
 <div class="pn-menu-group"><div class="pn-menu-heading">INFORMACIJA</div>
+<a href="naujienos/"><span class="pn-menu-icon" aria-hidden="true">▤</span><span class="pn-menu-copy"><strong>Naujienos</strong><small>IT saugumas, Home Assistant ir energetika</small></span><span class="pn-menu-arrow" aria-hidden="true">›</span></a>
 <a href="#apie"><span class="pn-menu-icon" aria-hidden="true">i</span><span class="pn-menu-copy"><strong>Apie mus</strong><small>Kas esame</small></span><span class="pn-menu-arrow" aria-hidden="true">›</span></a>
 <a href="#kontaktai"><span class="pn-menu-icon" aria-hidden="true">✉</span><span class="pn-menu-copy"><strong>Kontaktai</strong><small>Pateikite užklausą</small></span><span class="pn-menu-arrow" aria-hidden="true">›</span></a>
 </div>
@@ -2380,6 +2399,13 @@ body[data-pn-design]:not([data-pn-text-size="100"]) #p-skaiciuotuvas .opt-im .od
  <a href="#paslaugos"><span>📱</span><strong>Valdymo skydai</strong><small>Viskas vienoje vietoje</small></a>
 </div>
 <div class="v17-bottom-cta"><div><strong>Norite sužinoti kainą?</strong><span>Pasirinkite turimus įrenginius – matysite preliminarią sąmatą.</span></div><a href="#skaiciuotuvas" class="btn btn-p">Skaičiuoti kainą ↗</a></div>
+<section class="pn-news-home" aria-labelledby="pn-news-home-title">
+<div class="pn-news-home-head"><div><span class="eyebrow">ŽINIOS IR PATARIMAI</span><h2 id="pn-news-home-title">Aktualu išmaniems namams</h2><p>Patikrintos IT saugumo, Home Assistant ir energetikos naujienos lietuviškai.</p></div><a class="pn-news-home-all" href="naujienos/">Visos naujienos ↗</a></div>
+<div class="pn-news-home-grid">
+<a class="pn-news-home-card" href="naujienos/#synology-saugumas"><span class="pn-news-home-type">🛡️ IT SAUGUMAS · 2026-11-18</span><strong>„Synology“ NAS spraga aktyviai išnaudojama</strong><span>CISA įspėjimas ir praktiniai veiksmai, kaip apsaugoti įrenginį.</span><b>Skaityti →</b></a>
+<a class="pn-news-home-card" href="naujienos/#eu-elektros-tinklai"><span class="pn-news-home-type">☀️ SAULĖS ELEKTRINĖS · 2026-11-18</span><strong>ES planuoja spartesnius energijos projektų leidimus</strong><span>Kas keisis elektrinių, kaupiklių ir tinklo plėtros srityje?</span><b>Skaityti →</b></a>
+<a class="pn-news-home-card" href="naujienos/#home-assistant-2026-11"><span class="pn-news-home-type">🏠 HOME ASSISTANT · 2026-11-04</span><strong>„Home Assistant 2026.11“ naujovės</strong><span>„Marketplace“, kameros ir patogesnė automatizacijų diagnostika.</span><b>Skaityti →</b></a>
+</div></section>
 
 </section>
 <section class="page pn-journey-page" id="p-privalumai">
@@ -2761,7 +2787,7 @@ body[data-pn-design]:not([data-pn-text-size="100"]) #p-skaiciuotuvas .opt-im .od
 <footer>
   <div class="wrap foot">
     <div class="footer-brand"><a class="footer-logo" href="#pradzia" aria-label="ProtingesniNamai.lt – į pradžią"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span>© <span id="yr"></span> · Išmanieji namai ir energijos valdymas</span></div>
-    <nav><a href="#paslaugos">Paslaugos</a><a href="#skaiciuotuvas">Kainos</a><a href="#platforma">Platforma</a><a href="#kontaktai">Kontaktai</a></nav>
+    <nav><a href="#paslaugos">Paslaugos</a><a href="#skaiciuotuvas">Kainos</a><a href="naujienos/">Naujienos</a><a href="#platforma">Platforma</a><a href="#kontaktai">Kontaktai</a></nav>
   </div>
 </footer>
 
