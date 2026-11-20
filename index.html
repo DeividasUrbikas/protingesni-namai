@@ -2507,7 +2507,17 @@ body.v14-dark #p-pradzia .pn-cmp-demo-heading p,body.v14-dark #p-pradzia .pn-cmp
  #p-kaip-veikia .pn-ha-live-stage ha-embed-dashboard{height:590px!important}
 }
 
+
+/* PN_HA_NATIVE_VIEW_V2: vietinis valdymas rodomas iskart, o originalios HA korteles uzsikrauna nepastebimai */
+#p-kaip-veikia .pn-ha-live-screen{position:relative}
+#p-kaip-veikia .pn-ha-live-screen .pn-ha-live-status{display:none!important}
+#p-kaip-veikia .pn-ha-live-screen .pn-ha-live-stage{display:block!important;position:absolute;visibility:hidden;pointer-events:none;top:0;left:-99999px;width:100%;max-height:0;overflow:hidden}
+#p-kaip-veikia .pn-ha-live-lab[data-state="ready"] .pn-ha-live-stage{position:relative;left:auto;top:auto;visibility:visible;pointer-events:auto;max-height:none;overflow:visible}
+#p-kaip-veikia .pn-ha-live-lab[data-state="ready"] #pn-ha-native{display:none!important}
+#p-kaip-veikia .pn-ha-live-note{color:#b4fff0;font-size:12px;font-weight:800}
+
 </style>
+<link rel="stylesheet" href="assets/ha-inline-demo.css?v=2">
 </head>
 <body>
 <div id="pn-scroll-progress" aria-hidden="true"></div>
@@ -2822,7 +2832,7 @@ body.v14-dark #p-pradzia .pn-cmp-demo-heading p,body.v14-dark #p-pradzia .pn-cmp
 <div class="pn-section-heading"><span class="eyebrow">03 · KAIP VEIKIA</span><h1>Įrenginiai tariasi tarpusavyje.</h1><p>Saulė, šildymas, baterija ir automobilis matomi vienoje vietoje. Sistema gali priimti sprendimus pagal realias sąlygas.</p></div>
 
 <!-- PN_HA_LIVE_EMBED_V1: oficialūs Home Assistant interaktyvūs komponentai -->
-<section class="pn-ha-live-lab" id="pn-ha-demo-embed" data-state="idle" aria-labelledby="pn-ha-live-title">
+<section class="pn-ha-live-lab" id="pn-ha-demo-embed" data-state="native" aria-labelledby="pn-ha-live-title">
   <div class="pn-ha-live-top">
     <span class="pn-ha-live-eyebrow"><span aria-hidden="true"></span> IŠBANDYKITE PATS · TIKRA HOME ASSISTANT SĄSAJA</span>
     <div class="pn-ha-live-heading">
@@ -2841,19 +2851,114 @@ body.v14-dark #p-pradzia .pn-cmp-demo-heading p,body.v14-dark #p-pradzia .pn-cmp
   </div>
   <div class="pn-ha-live-screen">
     <div class="pn-ha-live-toolbar"><span aria-hidden="true" class="pn-ha-live-lights"><i></i><i></i><i></i></span><span>MANO NAMAI / DEMONSTRACIJA</span><span class="pn-ha-live-signal">⌂ Vietinis valdymas</span></div>
-    <div class="pn-ha-live-status" role="status" aria-live="polite">Demonstracija įkeliama atidarius šią skiltį…</div>
+
+    <!-- Integruotas tiesiogiai valdomas demonstracinis skydelis: veikia net be isoriniu skriptu -->
+    <div class="pn-ha-native" id="pn-ha-native" aria-label="Interaktyvus namų valdymas">
+      <div class="pn-ha-native-head">
+        <div><h3>🏠 Mano namai</h3><p>Viskas viename ekrane. Išbandykite bet kurį valdiklį.</p></div>
+        <span class="pn-ha-native-online">Demonstracinė sistema aktyvi</span>
+      </div>
+      <nav class="pn-ha-native-tabs" role="tablist" aria-label="Valdymo dalys">
+        <button type="button" role="tab" data-ha-view="namai" aria-selected="true">⌂ Namai</button>
+        <button type="button" role="tab" data-ha-view="klimatas" aria-selected="false">🌡 Šildymas</button>
+        <button type="button" role="tab" data-ha-view="energija" aria-selected="false">☀ Energija</button>
+        <button type="button" role="tab" data-ha-view="apsauga" aria-selected="false">🛡 Apsauga</button>
+      </nav>
+
+      <div role="tabpanel" data-ha-panel="namai">
+        <div class="pn-ha-native-zone-title"><strong>Apšvietimas ir įrenginiai</strong><span>Įjungta: <b data-ha-on-count>3</b> · Šviesos <b data-ha-all-lights>2 / 3</b></span></div>
+        <div class="pn-ha-native-grid">
+          <article class="pn-ha-native-card">
+            <div class="pn-ha-native-device-head"><span class="pn-ha-native-symbol">💡</span><div><strong>Svetainės apšvietimas</strong><small>Reguliuojamas ryškumas</small></div></div>
+            <button type="button" class="pn-ha-switch" data-ha-toggle="living" data-ha-name="Svetainės apšvietimas" aria-pressed="true"><span data-ha-status>Įjungta</span></button>
+            <label class="pn-ha-native-label" for="pn-ha-slider-brightness">Ryškumas <strong data-ha-value="brightness">72 %</strong></label>
+            <input id="pn-ha-slider-brightness" type="range" min="1" max="100" step="1" value="72" data-ha-slider="brightness" data-ha-name="Šviesos ryškumas">
+          </article>
+          <article class="pn-ha-native-card">
+            <div class="pn-ha-native-device-head"><span class="pn-ha-native-symbol">🍳</span><div><strong>Virtuvės apšvietimas</strong><small>Įjungti / išjungti</small></div></div>
+            <button type="button" class="pn-ha-switch" data-ha-toggle="kitchen" data-ha-name="Virtuvės apšvietimas" aria-pressed="false"><span data-ha-status>Išjungta</span></button>
+          </article>
+          <article class="pn-ha-native-card">
+            <div class="pn-ha-native-device-head"><span class="pn-ha-native-symbol">🛏️</span><div><strong>Miegamojo apšvietimas</strong><small>Apšvietimo scena</small></div></div>
+            <button type="button" class="pn-ha-switch" data-ha-toggle="bedroom" data-ha-name="Miegamojo apšvietimas" aria-pressed="true"><span data-ha-status>Įjungta</span></button>
+          </article>
+          <article class="pn-ha-native-card">
+            <div class="pn-ha-native-device-head"><span class="pn-ha-native-symbol">🪟</span><div><strong>Svetainės užuolaidos</strong><small data-ha-blinds-text>Atidarytos</small></div></div>
+            <label class="pn-ha-native-label" for="pn-ha-slider-blinds">Atidarymas <strong data-ha-value="blinds">100 %</strong></label>
+            <input id="pn-ha-slider-blinds" type="range" min="0" max="100" step="5" value="100" data-ha-slider="blinds" data-ha-name="Užuolaidos">
+          </article>
+        </div>
+        <div class="pn-ha-native-scenarios" aria-label="Išbandyti vieno paspaudimo scenarijus">
+          <button type="button" data-ha-scene="home">🏠 Grįžau namo</button>
+          <button type="button" data-ha-scene="away">🚗 Išvykstu</button>
+          <button type="button" data-ha-scene="night">🌙 Nakties režimas</button>
+        </div>
+      </div>
+
+      <div role="tabpanel" data-ha-panel="klimatas" hidden>
+        <div class="pn-ha-native-grid">
+          <article class="pn-ha-native-card">
+            <h4>🌡️ Namų temperatūra</h4>
+            <div class="pn-ha-native-thermo"><div class="pn-ha-native-thermo-ring" data-ha-thermo-ring><div class="pn-ha-native-thermo-center"><span>Nustatyta</span><strong data-ha-temp-main>22,0°</strong><span>Šiuo metu <b data-ha-temp-current>21,1 °C</b></span></div></div></div>
+            <div class="pn-ha-native-thermo-adjust"><button type="button" data-ha-adjust="-0.5" aria-label="Sumažinti temperatūrą">−</button><span>0,5 °C</span><button type="button" data-ha-adjust="0.5" aria-label="Padidinti temperatūrą">+</button></div>
+            <label class="pn-ha-native-label" for="pn-ha-slider-target">Norima temperatūra <strong data-ha-value="target">22,0 °C</strong></label>
+            <input id="pn-ha-slider-target" type="range" min="16" max="28" step=".5" value="22" data-ha-slider="target" data-ha-name="Temperatūra">
+          </article>
+          <article class="pn-ha-native-card">
+            <div class="pn-ha-native-device-head"><span class="pn-ha-native-symbol">💨</span><div><strong>Vėdinimo sistema</strong><small>Rekuperatoriaus valdymas</small></div></div>
+            <button type="button" class="pn-ha-switch" data-ha-toggle="vent" data-ha-name="Vėdinimas" aria-pressed="true"><span data-ha-status>Įjungta</span></button>
+            <p style="margin-top:15px">Sistemos gali automatiškai prisitaikyti prie jūsų namų temperatūros ir gyvenimo ritmo.</p>
+          </article>
+        </div>
+      </div>
+
+      <div role="tabpanel" data-ha-panel="energija" hidden>
+        <div class="pn-ha-native-zone-title"><strong>Saulės elektrinė ir kaupiklis</strong><span>Imituojami duomenys</span></div>
+        <div class="pn-ha-native-grid three">
+          <article class="pn-ha-native-card"><h4>☀️ Saulės gamyba</h4><div class="pn-ha-native-stat" data-ha-metric="pv">4,6 kW</div><div class="pn-ha-native-meter"><span data-ha-meter="pv" style="width:46%"></span></div><label class="pn-ha-native-label" for="pn-ha-slider-pv">Keisti gamybą <strong data-ha-value="pv">4,6 kW</strong></label><input id="pn-ha-slider-pv" type="range" min="0" max="10" step=".1" value="4.6" data-ha-slider="pv" data-ha-name="Saulės gamyba"></article>
+          <article class="pn-ha-native-card"><h4>🔋 Baterijos įkrova</h4><div class="pn-ha-native-stat" data-ha-metric="battery">78 %</div><div class="pn-ha-native-meter"><span data-ha-meter="battery" style="width:78%"></span></div><p>Saulės perteklių galima saugoti baterijoje.</p></article>
+          <article class="pn-ha-native-card"><h4>🏡 Namų vartojimas</h4><div class="pn-ha-native-stat" data-ha-metric="power">1,8 kW</div><div class="pn-ha-native-meter"><span data-ha-meter="power" style="width:18%"></span></div><p>Galima automatiškai prisitaikyti prie apkrovos.</p></article>
+        </div>
+        <div class="pn-ha-native-energy-flow" aria-label="Automatinio energijos nukreipimo pavyzdys"><b>☀️</b><i></i><span data-ha-flow>Saulė → namai + baterija</span><i></i><b>🔋</b></div>
+        <div class="pn-ha-native-grid">
+          <article class="pn-ha-native-card">
+            <div class="pn-ha-native-device-head"><span class="pn-ha-native-symbol">🚗</span><div><strong>Elektromobilio įkrovimas</strong><small data-ha-ev-status>Pristabdyta</small></div></div>
+            <button type="button" class="pn-ha-switch" data-ha-toggle="charger" data-ha-name="EV įkrovimas" aria-pressed="false"><span data-ha-status>Išjungta</span></button>
+          </article>
+          <article class="pn-ha-native-card"><h4>⚡ Protingas energijos panaudojimas</h4><p>Imituokite saulėtą dieną: keisis gamyba, baterijos įkrova ir automobilio įkrovimo būsena.</p><div class="pn-ha-native-scenarios"><button type="button" data-ha-scene="sunny">☀️ Saulėtas scenarijus</button></div></article>
+        </div>
+      </div>
+
+      <div role="tabpanel" data-ha-panel="apsauga" hidden>
+        <div class="pn-ha-native-grid">
+          <article class="pn-ha-native-card">
+            <div class="pn-ha-native-device-head"><span class="pn-ha-native-symbol">🛡️</span><div><strong>Namų signalizacija</strong><small data-ha-alarm-status>Apsauga išjungta</small></div></div>
+            <button type="button" class="pn-ha-switch" data-ha-toggle="security" data-ha-name="Signalizacija" aria-pressed="false"><span data-ha-status>Išjungta</span></button>
+            <p style="margin-top:15px">Tai tik demonstracinis režimas – jokios realios apsaugos sistemos nevaldomos.</p>
+          </article>
+          <article class="pn-ha-native-card">
+            <h4>🌙 Namų scenarijai</h4><p>Vienu paspaudimu galima išjungti šviesas, užtraukti užuolaidas ir įjungti apsaugą.</p>
+            <div class="pn-ha-native-scenarios"><button type="button" data-ha-scene="away">🚗 Išvykstu</button><button type="button" data-ha-scene="night">🌙 Nakties režimas</button><button type="button" data-ha-scene="home">🏠 Grįžau</button></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="pn-ha-native-feedback" data-ha-feedback role="status" aria-live="polite">Išbandykite valdiklius – kiekvienas paspaudimas keičia demonstracinę sistemos būseną.</div>
+      <div class="pn-ha-native-footer"><span>✓ Visi įrenginiai ir rodikliai demonstraciniai, prie tikrų namų neprisijungiama.</span><button type="button" data-ha-reset>↻ Atstatyti demonstraciją</button></div>
+    </div>
+    <div class="pn-ha-live-status" role="status" aria-live="polite">Įkeliamas oficialus „Home Assistant“ skydelis…</div>
     <div class="pn-ha-live-stage">
       <ha-embed-provider id="pn-demo-provider" color-scheme="light">
-        <script type="application/json">{"entities":[{"entity_id":"light.svetaine","state":"on","attributes":{"friendly_name":"Svetainės apšvietimas","supported_color_modes":["brightness"],"color_mode":"brightness","brightness":185}},{"entity_id":"light.virtuve","state":"off","attributes":{"friendly_name":"Virtuvės apšvietimas","supported_color_modes":["brightness"],"color_mode":"brightness"}},{"entity_id":"light.miegamasis","state":"on","attributes":{"friendly_name":"Miegamojo apšvietimas","supported_color_modes":["brightness"],"color_mode":"brightness","brightness":95}},{"entity_id":"switch.vedinimas","state":"on","attributes":{"friendly_name":"Vėdinimo sistema","icon":"mdi:fan"}},{"entity_id":"switch.ev_krovimas","state":"off","attributes":{"friendly_name":"Elektromobilio įkrovimas","icon":"mdi:ev-station"}},{"entity_id":"cover.svetaines_uzuolaidos","state":"open","attributes":{"friendly_name":"Svetainės užuolaidos","device_class":"curtain","current_position":100,"supported_features":15}},{"entity_id":"climate.sildymas","state":"heat","attributes":{"friendly_name":"Šildymo sistema","hvac_modes":["off","heat"],"current_temperature":21.1,"temperature":22,"min_temp":16,"max_temp":28,"target_temp_step":0.5,"supported_features":1,"hvac_action":"heating"}},{"entity_id":"sensor.lauko_temperatura","state":"7.2","attributes":{"friendly_name":"Lauko temperatūra","device_class":"temperature","unit_of_measurement":"°C"}},{"entity_id":"sensor.pv_galia","state":"4.6","attributes":{"friendly_name":"Saulės elektrinės galia","device_class":"power","unit_of_measurement":"kW"}},{"entity_id":"sensor.baterijos_ikrova","state":"78","attributes":{"friendly_name":"Baterijos įkrova","device_class":"battery","unit_of_measurement":"%"}},{"entity_id":"sensor.namu_vartojimas","state":"1.8","attributes":{"friendly_name":"Namų elektros vartojimas","device_class":"power","unit_of_measurement":"kW"}}]}</script>
+        <script type="application/json">{"entities":[{"entity_id":"light.svetaine","state":"on","attributes":{"friendly_name":"Svetainės apšvietimas","supported_color_modes":["brightness"],"color_mode":"brightness","brightness":185}},{"entity_id":"light.virtuve","state":"off","attributes":{"friendly_name":"Virtuvės apšvietimas","supported_color_modes":["brightness"],"color_mode":"brightness"}},{"entity_id":"light.miegamasis","state":"on","attributes":{"friendly_name":"Miegamojo apšvietimas","supported_color_modes":["brightness"],"color_mode":"brightness","brightness":95}},{"entity_id":"switch.vedinimas","state":"on","attributes":{"friendly_name":"Vėdinimo sistema","icon":"mdi:fan"}},{"entity_id":"switch.ev_krovimas","state":"off","attributes":{"friendly_name":"Elektromobilio įkrovimas","icon":"mdi:ev-station"}},{"entity_id":"cover.svetaines_uzuolaidos","state":"open","attributes":{"friendly_name":"Svetainės užuolaidos","device_class":"curtain","current_position":100,"supported_features":15}},{"entity_id":"climate.sildymas","state":"heat","attributes":{"friendly_name":"Šildymo sistema","hvac_modes":["off","heat"],"current_temperature":21.1,"temperature":22,"min_temp":16,"max_temp":28,"target_temp_step":0.5,"supported_features":1,"hvac_action":"heating"}},{"entity_id":"sensor.lauko_temperatura","state":"7.2","attributes":{"friendly_name":"Lauko temperatūra","device_class":"temperature","unit_of_measurement":"°C"}},{"entity_id":"sensor.pv_galia","state":"4.6","attributes":{"friendly_name":"Saulės elektrinės galia","device_class":"power","unit_of_measurement":"kW"}},{"entity_id":"sensor.baterijos_ikrova","state":"78","attributes":{"friendly_name":"Baterijos įkrova","device_class":"battery","unit_of_measurement":"%"}},{"entity_id":"sensor.namu_vartojimas","state":"1.8","attributes":{"friendly_name":"Namų elektros vartojimas","device_class":"power","unit_of_measurement":"kW"}},{"entity_id":"switch.apsauga","state":"off","attributes":{"friendly_name":"Namų signalizacija","icon":"mdi:shield-home"}}]}</script>
         <ha-embed-dashboard style="height:610px;display:block" view="namai">
-          <script type="application/json">{"views":[{"title":"Namai","path":"namai","cards":[{"type":"heading","heading":"Apšvietimas ir įrenginiai","heading_style":"title","icon":"mdi:home"},{"type":"tile","entity":"light.svetaine","tap_action":{"action":"toggle"},"features":[{"type":"light-brightness"}],"vertical":false},{"type":"tile","entity":"light.virtuve","tap_action":{"action":"toggle"},"features":[{"type":"light-brightness"}],"vertical":false},{"type":"tile","entity":"light.miegamasis","tap_action":{"action":"toggle"},"features":[{"type":"light-brightness"}],"vertical":false},{"type":"tile","entity":"cover.svetaines_uzuolaidos","tap_action":{"action":"more-info"},"features":[{"type":"cover-open-close"}],"vertical":false},{"type":"tile","entity":"switch.vedinimas","tap_action":{"action":"toggle"},"vertical":false},{"type":"tile","entity":"switch.ev_krovimas","tap_action":{"action":"toggle"},"vertical":false},{"type":"tile","entity":"sensor.lauko_temperatura"}]},{"title":"Šildymas","path":"sildymas","cards":[{"type":"heading","heading":"Temperatūra ir vėdinimas","heading_style":"title","icon":"mdi:thermostat"},{"type":"thermostat","entity":"climate.sildymas","name":"Namo šildymas"},{"type":"tile","entity":"switch.vedinimas","tap_action":{"action":"toggle"},"vertical":false},{"type":"tile","entity":"sensor.lauko_temperatura"}]},{"title":"Energija","path":"energija","cards":[{"type":"heading","heading":"Saulė ir energija","heading_style":"title","icon":"mdi:solar-power"},{"type":"gauge","entity":"sensor.pv_galia","name":"Saulės gamyba","min":0,"max":10,"needle":true},{"type":"gauge","entity":"sensor.baterijos_ikrova","name":"Baterijos įkrova","min":0,"max":100,"needle":true},{"type":"tile","entity":"sensor.namu_vartojimas"},{"type":"tile","entity":"switch.ev_krovimas","tap_action":{"action":"toggle"},"vertical":false}]}]}</script>
+          <script type="application/json">{"views":[{"title":"Namai","path":"namai","cards":[{"type":"heading","heading":"Apšvietimas ir įrenginiai","heading_style":"title","icon":"mdi:home"},{"type":"tile","entity":"light.svetaine","tap_action":{"action":"toggle"},"features":[{"type":"light-brightness"}],"vertical":false},{"type":"tile","entity":"light.virtuve","tap_action":{"action":"toggle"},"features":[{"type":"light-brightness"}],"vertical":false},{"type":"tile","entity":"light.miegamasis","tap_action":{"action":"toggle"},"features":[{"type":"light-brightness"}],"vertical":false},{"type":"tile","entity":"cover.svetaines_uzuolaidos","tap_action":{"action":"more-info"},"features":[{"type":"cover-open-close"}],"vertical":false},{"type":"tile","entity":"switch.vedinimas","tap_action":{"action":"toggle"},"vertical":false},{"type":"tile","entity":"switch.ev_krovimas","tap_action":{"action":"toggle"},"vertical":false},{"type":"tile","entity":"sensor.lauko_temperatura"}]},{"title":"Šildymas","path":"sildymas","cards":[{"type":"heading","heading":"Temperatūra ir vėdinimas","heading_style":"title","icon":"mdi:thermostat"},{"type":"thermostat","entity":"climate.sildymas","name":"Namo šildymas"},{"type":"tile","entity":"switch.vedinimas","tap_action":{"action":"toggle"},"vertical":false},{"type":"tile","entity":"sensor.lauko_temperatura"}]},{"title":"Energija","path":"energija","cards":[{"type":"heading","heading":"Saulė ir energija","heading_style":"title","icon":"mdi:solar-power"},{"type":"gauge","entity":"sensor.pv_galia","name":"Saulės gamyba","min":0,"max":10,"needle":true},{"type":"gauge","entity":"sensor.baterijos_ikrova","name":"Baterijos įkrova","min":0,"max":100,"needle":true},{"type":"tile","entity":"sensor.namu_vartojimas"},{"type":"tile","entity":"switch.ev_krovimas","tap_action":{"action":"toggle"},"vertical":false}]},{"title":"Apsauga","path":"apsauga","cards":[{"type":"heading","heading":"Namų apsaugos sistema","heading_style":"title","icon":"mdi:shield-lock"},{"type":"tile","entity":"switch.apsauga","tap_action":{"action":"toggle"}},{"type":"tile","entity":"light.svetaine","tap_action":{"action":"toggle"}},{"type":"tile","entity":"cover.svetaines_uzuolaidos","features":[{"type":"cover-open-close"}]}]}]}</script>
         </ha-embed-dashboard>
       </ha-embed-provider>
     </div>
   </div>
   <div class="pn-ha-live-footer">
     <p><strong>Demonstracinis režimas:</strong> tai oficialios „Home Assistant“ kortelės, veikiančios su pavyzdiniais duomenimis jūsų naršyklėje. Tikri namų įrenginiai nevaldomi.</p>
-    <a href="https://demo.home-assistant.io/#/lovelace/home" target="_blank" rel="noopener noreferrer">Atidaryti visą oficialią demonstraciją <span aria-hidden="true">↗</span></a>
+    <span class="pn-ha-live-note">Visas valdymas veikia šiame puslapyje – be išorinių nuorodų.</span>
   </div>
 </section>
 <!-- /PN_HA_LIVE_EMBED_V1 -->
@@ -4806,40 +4911,45 @@ $('#tbGo').onclick=()=>{if(!['#skaiciuotuvas','#iranga'].includes(location.hash)
 
 
 <script type="module">
-/* PN_HA_LIVE_EMBED_V1: load the official HA demo only when visible */
+/* PN_HA_LIVE_EMBED_V2: tikras HA valdikliu rinkinys su nepriklausomu atsarginiu valdymu */
 (()=>{
   const section=document.getElementById('pn-ha-demo-embed');
   if(!section)return;
-  const status=section.querySelector('.pn-ha-live-status');
   let started=false;
-  const start=()=>{
+  const start=async()=>{
     if(started)return;
     started=true;
-    section.dataset.state='loading';
-    status.textContent='Įkeliama interaktyvi „Home Assistant“ demonstracija…';
-    import('https://demo.home-assistant.io/embed.js')
-      .then(()=>customElements.whenDefined('ha-embed-dashboard'))
-      .then(()=>{section.dataset.state='ready'})
-      .catch(()=>{
-        section.dataset.state='error';
-        status.innerHTML='Šioje naršyklėje nepavyko įkelti valdymo skydelio. <a href="https://demo.home-assistant.io/#/lovelace/home" target="_blank" rel="noopener noreferrer">Atidaryti oficialią demonstraciją ↗</a>';
-      });
+    try{
+      await import('https://demo.home-assistant.io/embed.js');
+      await customElements.whenDefined('ha-embed-dashboard');
+      const dashboard=section.querySelector('ha-embed-dashboard');
+      let built=false;
+      for(let i=0;i<26;i++){
+        await new Promise(resolve=>setTimeout(resolve,180));
+        if(dashboard && dashboard.shadowRoot && dashboard.shadowRoot.children.length>0){
+          built=true;break;
+        }
+      }
+      if(built) section.dataset.state='ready';
+    }catch(e){
+      section.dataset.state='native';
+    }
   };
   if('IntersectionObserver' in window){
     const observer=new IntersectionObserver(entries=>{
       if(entries.some(entry=>entry.isIntersecting)){observer.disconnect();start()}
-    },{rootMargin:'450px 0px',threshold:0});
+    },{rootMargin:'400px 0px'});
     observer.observe(section);
   }else{start()}
   document.addEventListener('click',event=>{
-    if(event.target.closest('a[href="#kaip-veikia"]'))start();
+    const link=event.target.closest('a[href="#kaip-veikia"]');
+    if(link)start();
   });
-  window.addEventListener('hashchange',()=>{
-    if(location.hash==='#kaip-veikia')start();
-  });
+  window.addEventListener('hashchange',()=>{if(location.hash==='#kaip-veikia')start()});
   if(location.hash==='#kaip-veikia')start();
 })();
 </script>
 
+<script src="assets/ha-inline-demo.js?v=2" defer></script>
 </body>
 </html>
