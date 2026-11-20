@@ -135,12 +135,109 @@ main{padding-top:22px;padding-bottom:68px}
 }
 @media(max-width:430px){.visual{height:150px}.cardbody h2{font-size:18px}.story{border-radius:18px}.hero-bottom span{font-size:10px}.filters{gap:6px}.filters button{padding:7px 10px}}
 
+
+/* v4.23: match the LIVE homepage canvas and header; list rows stay horizontal on mobile */
+body{
+ --pn-accent:#285CBA;--pn-accent-light:#B5D6FF;--pn-accent-soft:#E6F1FF;
+ --pn-base-a:#eff6ff;--pn-base-b:#dceafd;
+ --pn-canvas-bg:linear-gradient(135deg,#77aaf0 0%,#ffbc86 100%);
+ --pn-style-field:linear-gradient(transparent,transparent);
+ background:var(--pn-style-field),var(--pn-canvas-bg) fixed!important;
+ color:#183451;
+}
+body[data-pn-gradient^="duo-"]{--pn-style-field:linear-gradient(transparent,transparent)}
+/* Main site's native Aurora field — same colors and placements */
+body[data-pn-design="aurora"]{--pn-style-field:radial-gradient(ellipse 43% 43% at 12% 6%,color-mix(in srgb,var(--pn-accent-light) 23%,transparent),transparent 76%),radial-gradient(ellipse 57% 43% at 90% 14%,color-mix(in srgb,var(--pn-accent) 12%,transparent),transparent 77%)}
+body[data-pn-design="aurora-ice"]{--pn-style-field:radial-gradient(ellipse 49% 52% at 41% 19%,color-mix(in srgb,var(--pn-accent-light) 30%,transparent),transparent 76%),radial-gradient(ellipse 66% 49% at 67% 33%,color-mix(in srgb,var(--pn-accent) 15%,transparent),transparent 77%)}
+body[data-pn-design="aurora-cloud"]{--pn-style-field:radial-gradient(ellipse 61% 70% at 82% 57%,color-mix(in srgb,var(--pn-accent-light) 24%,transparent),transparent 76%),radial-gradient(ellipse 84% 61% at 41% 39%,color-mix(in srgb,var(--pn-accent) 12%,transparent),transparent 77%)}
+body[data-pn-gradient^="duo-"]{--pn-style-field:linear-gradient(transparent,transparent)}
+.header{
+ background-color:rgba(27,56,102,.70)!important;
+ background-image:linear-gradient(180deg,rgba(22,49,92,.66),rgba(22,49,92,.48)),var(--pn-style-field),var(--pn-canvas-bg)!important;
+ background-size:100% 100%,100vw 100dvh,100vw 100dvh!important;
+ background-position:center,center top,center top!important;
+ background-repeat:no-repeat!important;
+ border-bottom:1px solid rgba(255,255,255,.14)!important;
+ box-shadow:0 5px 14px rgba(27,55,96,.07)!important;
+ backdrop-filter:blur(12px) saturate(1.12);
+}
+.bar{min-height:68px;gap:12px}
+.brand{width:min(260px,42vw);flex:0 1 260px}
+.brand img{width:100%;max-width:100%;height:auto}
+.news-version{font-size:10px;font-weight:800;white-space:nowrap;color:#173854;border:1px solid rgba(255,255,255,.54);background:#d9e9ff;padding:5px 9px;border-radius:999px}
+.news-theme{flex:none;white-space:nowrap;border:1px solid #bfd2e4;border-radius:999px;padding:9px 13px;background:#f6f8ff;color:#233c59;font-size:11px;font-weight:800}
+.news-menu-btn{display:inline-flex;align-items:center;justify-content:center;flex:none;width:46px;height:46px;border:1px solid #d2e1ed;border-radius:13px;background:#f4f8fc;color:#203953}
+.hlinks{display:none;position:absolute;right:max(20px,calc((100vw - 1136px)/2));top:calc(100% + 6px);width:min(310px,calc(100vw - 40px));z-index:30;flex-direction:column;gap:4px;padding:12px;border:1px solid #ccdbec;border-radius:17px;background:#fff;box-shadow:0 20px 45px #12386230}
+.hlinks.open{display:flex}
+.hlinks a{padding:13px 14px;font-size:13px;border-radius:10px;color:#274d78}
+.hlinks a:hover,.hlinks a[aria-current=page]{background:#e7f0ff;color:#245bb4}
+.hero{background:transparent!important;color:#183451}
+.hero h1{color:#183451}
+.hero p,.count{color:#536b83}
+.story{background:rgba(252,254,255,.92);border-color:#cbdcf0}
+.story:has(details[open]){border-color:#7fa5d6}
+.story summary{display:grid;grid-template-columns:minmax(0,34%) minmax(0,66%);min-height:167px}
+.visual{height:100%;min-height:167px}
+.visual img{object-fit:cover}
+.cardbody{min-width:0;padding:17px 21px}
+.cardbody h2{font-size:clamp(17px,2.1vw,22px);line-height:1.30;color:#183451}
+.cardbody .desc{font-size:12.5px;line-height:1.5;color:#536b83}
+.cardbody .read{margin-top:5px;color:#326cad}
+.tag{color:#326cad}
+.cta{background:linear-gradient(110deg,#2c5ba4,#5483c2)}
+.news-theme:focus-visible,.news-menu-btn:focus-visible,.hlinks a:focus-visible,.story summary:focus-visible{outline:3px solid #63a9f1;outline-offset:3px}
+@media(max-width:710px){
+ .wrap{padding-left:18px;padding-right:18px}
+ .bar{gap:8px}
+ .brand{width:auto;min-width:0;flex:1 1 150px}
+ .brand img{max-width:100%}
+ .news-version{padding:4px 7px;font-size:9px}
+ .news-theme{padding:8px 9px;font-size:10px}
+ .news-menu-btn{width:44px;height:44px;min-width:44px}
+ .story summary{display:grid;grid-template-columns:minmax(0,35%) minmax(0,65%);min-height:164px}
+ .visual{height:100%;min-height:164px}
+ .cardbody{padding:11px 12px;min-width:0}
+ .cardbody h2{font-size:clamp(13.5px,3.5vw,17px);line-height:1.26;margin:7px 0 6px}
+ .cardbody .desc{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:11px;line-height:1.45;margin-bottom:5px}
+ .cardbody .read{font-size:10.5px;line-height:1.35}
+ .meta{gap:5px;font-size:10px}
+ .tag{font-size:9px;padding:3px 7px}
+ .story{border-radius:18px}
+ .detail{margin:0 15px 18px;padding:17px 0 0}
+ .hero{padding:24px 0 15px}
+ .hero-bottom{margin-top:12px}
+}
+@media(max-width:390px){
+ .bar{gap:6px}
+ .news-theme{font-size:0;padding:8px 9px}
+ .news-theme::first-letter{font-size:16px}
+ .cardbody{padding:10px 10px}
+ .cardbody h2{font-size:13px}
+ .cardbody .desc{font-size:10.5px}
+ .story summary{grid-template-columns:35% minmax(0,65%)}
+}
+body.news-dark{--pn-style-field:linear-gradient(transparent,transparent);--pn-canvas-bg:linear-gradient(135deg,#182f53,#374760)!important;--ink:#f0f6ff;--muted:#c0d0e3;--line:#344b69;--back:#182f53;--blue:#7fb2fb;color:#ecf5ff}
+body.news-dark .header{background-image:linear-gradient(180deg,rgba(10,23,44,.60),rgba(10,23,44,.43)),var(--pn-style-field),var(--pn-canvas-bg)!important}
+body.news-dark .hero,body.news-dark .hero h1,body.news-dark .hero p,body.news-dark .count{color:#ecf5ff}
+body.news-dark .hero-bottom span,body.news-dark .story,body.news-dark .search,body.news-dark .filters button,body.news-dark .note{background:rgba(31,52,79,.92);color:#ebf5ff;border-color:#425f83}
+body.news-dark .story h2,body.news-dark .cardbody h2,body.news-dark .story .detail strong{color:#eff7ff}
+body.news-dark .story .desc,body.news-dark .detail p,body.news-dark .detail li,body.news-dark .meta{color:#c8d7e9}
+body.news-dark .tag{background:#294c79;color:#d1e8ff}
+body.news-dark .search input,body.news-dark .search input::placeholder{color:#dbeaff}
+body.news-dark .hlinks{background:#1f3553;border-color:#446488}
+body.news-dark .hlinks a{color:#e1efff}
+body.news-dark .hlinks a[aria-current=page],body.news-dark .hlinks a:hover{color:#fff;background:#335b89}
+body.news-dark footer{background:#172b46;color:#c0d3eb}
+
 </style></head>
 <body>
 <a class="skip" href="#turinys">Pereiti prie turinio</a>
 <header class="header"><div class="wrap bar">
 <a class="brand" href="../#pradzia" aria-label="ProtingesniNamai.lt pradžia"><img src="../assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt"></a>
-<nav class="hlinks" aria-label="Pagrindinis meniu"><a href="../#pradzia">Pradžia</a><a href="./" aria-current="page">Naujienos</a><a href="../#skaiciuotuvas">Kainos</a><a href="../#kontaktai">Kontaktai</a></nav>
+<span class="news-version" title="Svetainės versija">v4.23</span>
+<button type="button" id="news-theme" class="news-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+<button type="button" id="news-menu-btn" class="news-menu-btn" aria-label="Atidaryti meniu" aria-controls="news-menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+<nav class="hlinks" id="news-menu" aria-label="Pagrindinis meniu"><a href="../#pradzia">Pradžia</a><a href="./" aria-current="page">Naujienos</a><a href="../#skaiciuotuvas">Kainos</a><a href="../#kontaktai">Kontaktai</a><a href="../#dizainas">Dizaino studija</a></nav>
 </div></header>
 <section class="hero"><div class="wrap">
 <div class="eyebrow">ProtingesniNamai.lt · Žinių centras</div>
@@ -234,6 +331,51 @@ main{padding-top:22px;padding-bottom:68px}
 <div class="cta"><div><h2>Norite, kad technologijos dirbtų jūsų naudai?</h2><p>Padedame saugiai sujungti įrenginius ir automatizuoti energijos valdymą.</p></div><a href="../#skaiciuotuvas">Apskaičiuoti kainą ↗</a></div>
 </main>
 <footer><div class="wrap foot"><span>© 2026 ProtingesniNamai.lt · Išmanieji namai ir energijos valdymas</span><a href="../#pradzia">Grįžti į pagrindinį puslapį ↑</a></div></footer>
+
+<script>
+/* Reuse the same localStorage design as the primary website. No extra app required. */
+(function(){
+"use strict";
+   const colors=[["blue","Mėlyna","#285CBA","#B5D6FF","#E6F1FF"],["cobalt","Kobaltas","#2356C6","#A7C9FF","#E1EDFF"],["royal","Karališka","#224EC0","#BCD0FF","#E9EFFF"],["sapphire","Safyras","#1D60A5","#ACD7FF","#E4F2FF"],["azure","Žydra","#0879B7","#A2E0FF","#E3F6FF"],["ocean","Vandenynas","#09679B","#9FD7EC","#DBF0F8"],["navy","Tamsiai mėlyna","#274883","#B5C8EB","#E9EEFA"],["ice","Ledo mėlyna","#367C9C","#B9EAF3","#EBFBFD"],["sky","Dangaus","#3281CA","#BEE5FF","#EAF7FF"],["denim","Džinso","#38699B","#AFD0EF","#EAF2FA"],["electric","Elektrinė","#1954E4","#B0C8FF","#E8EEFF"],["indigo","Indigo mėlyna","#4859A8","#C2CAFF","#ECEEFF"],["lagoon","Lagūna","#087F9B","#A5E7ED","#DFF7F8"],["steel","Plieno mėlyna","#3F648B","#B5D1E5","#EAF2F7"],["fjord","Fiordas","#225C81","#A9D4E4","#E5F3F7"],["arctic","Arkties","#237CA9","#C8ECFA","#EDF9FD"],["twilight","Sutemų","#455C9A","#BFCBF0","#ECEFFD"],["marine","Jūrinė","#18608B","#A9D9EC","#E5F3FA"],["periwinkle","Rugiagėlių","#6472BB","#D5D9FF","#F0F1FF"],["deepblue","Gilioji mėlyna","#184A83","#A9C5EA","#E6F0FC"]],styles=[["aurora","Aurora","Subtilus poliarinis švytėjimas",140,24,16,0.12,"drift"],["aurora-ice","Aurora Ice","Ledinis stiklas ir šalti atspindžiai",170,28,24,0.18,"frost"],["aurora-ocean","Aurora Ocean","Gylis ir bangų formos",115,22,18,0.19,"wave"],["aurora-glass","Aurora Glass","Stiklo sluoksniai",158,30,29,0.22,"glass"],["aurora-mist","Aurora Mist","Miglotos šviesos",185,34,33,0.1,"soft"],["aurora-crystal","Aurora Crystal","Ryškūs kristalo kraštai",50,13,12,0.2,"prism"],["aurora-prism","Aurora Prism","Daugialypiai spalvų lūžiai",62,23,16,0.32,"prism"],["aurora-wave","Aurora Wave","Judėjimo ir bangų ritmas",107,30,18,0.27,"wave"],["aurora-halo","Aurora Halo","Šviesos aureolės",132,40,26,0.3,"halo"],["aurora-neon","Aurora Neon","Intensyvūs švytintys akcentai",125,19,14,0.34,"neon"],["aurora-pearl","Aurora Pearl","Šviesūs perlamutro paviršiai",156,32,19,0.09,"pearl"],["aurora-deep","Aurora Deep","Gilūs mėlyni paviršiai",218,17,16,0.22,"deep"],["aurora-silk","Aurora Silk","Švelnios šilkinės perėjos",164,31,17,0.12,"soft"],["aurora-horizon","Aurora Horizon","Šviesos horizontas",95,22,14,0.19,"horizon"],["aurora-cosmos","Aurora Cosmos","Kosminio ūko sluoksniai",246,27,25,0.31,"cosmos"],["aurora-cloud","Aurora Cloud","Plūduriuojančios kortelės",148,38,23,0.13,"cloud"],["aurora-cloud-soft","Aurora Cloud Soft","Švelnesni matiniai debesys",150,39,22,0.1,"cloud"],["aurora-cloud-breeze","Aurora Cloud Breeze","Lengvas ir gaivus švytėjimas",143,36,18,0.12,"cloud"],["aurora-cloud-pearl","Aurora Cloud Pearl","Perlamutriniai atspindžiai",154,40,26,0.12,"pearl"],["aurora-cloud-sunset","Aurora Cloud Sunset","Šiltas saulėlydžio atspindys",138,38,24,0.14,"cloud"],["aurora-cloud-glass","Aurora Cloud Glass","Subtilus stiklinių kortelių gylis",157,35,30,0.16,"glass"],["aurora-luxe","Aurora Luxe","Prabangus mėlyno stiklo paviršius",131,21,18,0.24,"luxe"],["aurora-frost","Aurora Frost","Matinis stiklas ir subtili tekstūra",171,23,36,0.15,"frost"],["aurora-midnight","Aurora Midnight","Nakties šviesos efektai",235,16,22,0.29,"deep"],["aurora-minimal","Aurora Minimal","Švytėjimas be vizualinio triukšmo",152,14,9,0.07,"minimal"]],fonts=[["outfit","Outfit","Outfit"],["jakarta","Plus Jakarta Sans","Plus Jakarta Sans"],["manrope","Manrope","Manrope"],["dm","DM Sans","DM Sans"],["inter","Inter","Inter"],["figtree","Figtree","Figtree"],["nunito","Nunito Sans","Nunito Sans"],["poppins","Poppins","Poppins"],["sora","Sora","Sora"],["urbanist","Urbanist","Urbanist"],["jost","Jost","Jost"],["rubik","Rubik","Rubik"],["lexend","Lexend","Lexend"],["quicksand","Quicksand","Quicksand"],["montserrat","Montserrat","Montserrat"],["mulish","Mulish","Mulish"],["raleway","Raleway","Raleway"],["work","Work Sans","Work Sans"],["space","Space Grotesk","Space Grotesk"],["onest","Onest","Onest"]];
+   const gradients=[["northern","Šiaurės pašvaistė","radial-gradient(ellipse 70% 55% at 16% 5%,color-mix(in srgb,var(--pn-accent-light) 67%,transparent),transparent 72%),radial-gradient(ellipse 76% 65% at 96% 17%,color-mix(in srgb,var(--pn-accent) 18%,transparent),transparent 73%),linear-gradient(138deg,var(--pn-base-a),var(--pn-base-b))"],["ocean","Vandenyno gelmė","radial-gradient(ellipse at 78% 16%,color-mix(in srgb,var(--pn-accent) 21%,transparent),transparent 60%),linear-gradient(158deg,var(--pn-base-a) 5%,var(--pn-base-b) 52%,var(--pn-base-a))"],["ice","Ledynas","linear-gradient(125deg,var(--pn-base-a) 10%,color-mix(in srgb,var(--pn-accent-soft) 47%,var(--pn-base-b)) 55%,var(--pn-base-a))"],["nebula","Ūkas","radial-gradient(circle at 16% 18%,color-mix(in srgb,var(--pn-accent-light) 57%,transparent),transparent 43%),radial-gradient(circle at 88% 63%,color-mix(in srgb,var(--pn-accent) 30%,transparent),transparent 50%),linear-gradient(120deg,var(--pn-base-a),var(--pn-base-b))"],["horizon","Horizontas","linear-gradient(180deg,var(--pn-base-a) 0%,color-mix(in srgb,var(--pn-accent-soft) 28%,var(--pn-base-b)) 48%,var(--pn-base-b) 100%)"],["sky","Dangus","radial-gradient(circle at 63% 8%,color-mix(in srgb,var(--pn-accent-light) 60%,transparent),transparent 46%),linear-gradient(160deg,var(--pn-base-a),var(--pn-base-b))"],["prism","Prizmė","linear-gradient(115deg,var(--pn-base-a),color-mix(in srgb,var(--pn-accent-soft) 46%,var(--pn-base-b)),var(--pn-base-a) 92%)"],["wave","Bangos","radial-gradient(ellipse 90% 30% at 15% 30%,color-mix(in srgb,var(--pn-accent-light) 44%,transparent),transparent),radial-gradient(ellipse 85% 39% at 86% 73%,color-mix(in srgb,var(--pn-accent) 22%,transparent),transparent),linear-gradient(170deg,var(--pn-base-a),var(--pn-base-b))"],["silk","Šilkas","linear-gradient(130deg,var(--pn-base-a),color-mix(in srgb,var(--pn-accent-soft) 42%,var(--pn-base-b)) 36%,var(--pn-base-a) 72%,var(--pn-base-b))"],["halo","Aureolė","radial-gradient(circle 320px at 50% 23%,color-mix(in srgb,var(--pn-accent-light) 70%,transparent),transparent),linear-gradient(145deg,var(--pn-base-a),var(--pn-base-b))"],["deep","Gylis","linear-gradient(210deg,var(--pn-base-b),color-mix(in srgb,var(--pn-accent) 25%,var(--pn-base-a)),var(--pn-base-a))"],["clean","Švarus","linear-gradient(135deg,var(--pn-base-a),var(--pn-base-b))"]],shadows=[["soft","Lengvas","0 9px 28px rgba(15,47,92,.10)"],["none","Be šešėlių","0 0 0 transparent"],["float","Plūduriavimas","0 15px 36px rgba(18,57,107,.17)"],["deep","Gilus","0 24px 58px rgba(13,36,78,.27)"],["layered","Sluoksniai","0 6px 13px rgba(14,37,82,.1),0 22px 55px rgba(24,69,121,.17)"],["fine","Subtilus","0 5px 15px rgba(29,68,93,.08)"],["cinema","Kinematografinis","0 30px 75px rgba(10,37,75,.25)"],["edge","Kontūrinis","0 0 0 1px rgba(55,110,176,.17),0 13px 32px rgba(13,49,83,.14)"]],glows=[["subtle","Subtilus",".13","25px"],["none","Be švytėjimo","0","0px"],["soft","Švelnus",".20","35px"],["aura","Aura",".28","52px"],["neon","Neoninis",".38","48px"],["halo","Aureolė",".24","70px"],["crystal","Kristalinis",".16","17px"],["cinema","Kino šviesa",".30","90px"]];
+   const dualGradients=[["duo-blue-orange","Mėlyna → oranžinė","linear-gradient(135deg,#77aaf0 0%,#ffbc86 100%)"],["duo-blue-purple","Mėlyna → violetinė","linear-gradient(135deg,#76adf0 0%,#d9b7ee 100%)"],["duo-blue-mint","Mėlyna → mėtinė","linear-gradient(135deg,#76b4ef 0%,#9be4c9 100%)"],["duo-blue-pink","Mėlyna → rožinė","linear-gradient(135deg,#7ab0ed 0%,#fac1d3 100%)"],["duo-navy-gold","Jūrinė → auksinė","linear-gradient(135deg,#849dc9 0%,#f8d496 100%)"],["duo-turquoise-peach","Turkio → persikinė","linear-gradient(135deg,#84d8d4 0%,#ffbca2 100%)"],["duo-lavender-yellow","Violetinė → geltona","linear-gradient(135deg,#c1a8ee 0%,#ffe4a3 100%)"],["duo-green-blue","Žalia → mėlyna","linear-gradient(135deg,#a0d5b2 0%,#88b8ef 100%)"],["duo-coral-indigo","Koralinė → indigo","linear-gradient(135deg,#ffb49f 0%,#94a2ec 100%)"],["duo-sky-lime","Žydra → laimo","linear-gradient(135deg,#92d4ec 0%,#d6eaa0 100%)"],["duo-blue-peach","Mėlyna → persikinė","linear-gradient(135deg,#86ace9 0%,#fac5af 100%)"],["duo-blue-apricot","Mėlyna → abrikosinė","linear-gradient(135deg,#8cb8ed 0%,#fbd0a4 100%)"],["duo-sky-coral","Žydra → koralinė","linear-gradient(135deg,#8cc9ee 0%,#f5aca8 100%)"],["duo-lavender-peach","Levanda → persikinė","linear-gradient(135deg,#afaeea 0%,#fac4a9 100%)"],["duo-blue-champagne","Mėlyna → šampaninė","linear-gradient(135deg,#8daee8 0%,#f5d8bb 100%)"]];
+ gradients.push(...dualGradients);
+ const body=document.body;
+ const themeButton=document.getElementById('news-theme');
+ const menuButton=document.getElementById('news-menu-btn');
+ const menu=document.getElementById('news-menu');
+ let selected={};
+ try{selected=JSON.parse(localStorage.getItem('pn-design-v4')||'{}')||{}}catch(_){}
+ const c=colors.find(x=>x[0]===selected.color)||colors[0];
+ const g=gradients.find(x=>x[0]===selected.gradient);
+ body.style.setProperty('--pn-accent',c[2]);
+ body.style.setProperty('--pn-accent-light',c[3]);
+ body.style.setProperty('--pn-accent-soft',c[4]);
+ body.dataset.pnDesign=selected.design||'aurora';
+ body.dataset.pnGradient=g?g[0]:'duo-blue-orange';
+ if(g)body.style.setProperty('--pn-canvas-bg',g[2]);
+ function applyTheme(dark){
+   body.classList.toggle('news-dark',dark);
+   themeButton.textContent=dark?'☀ Šviesi tema':'☾ Tamsi tema';
+   themeButton.setAttribute('aria-pressed',String(dark));
+ }
+ let savedDark=false;
+ try{savedDark=localStorage.getItem('pn-theme')==='dark'}catch(_){}
+ applyTheme(savedDark);
+ themeButton.addEventListener('click',function(){
+   const dark=!body.classList.contains('news-dark');applyTheme(dark);
+   try{localStorage.setItem('pn-theme',dark?'dark':'light')}catch(_){}
+ });
+ function closeMenu(){menu.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Atidaryti meniu')}
+ menuButton.addEventListener('click',function(){
+   const open=menu.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Uždaryti meniu':'Atidaryti meniu')
+ });
+ menu.querySelectorAll('a').forEach(function(link){link.addEventListener('click',closeMenu)});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()});
+ document.addEventListener('pointerdown',function(e){if(!e.target.closest('.header'))closeMenu()});
+})();
+</script>
+
 <script>
 (function(){
 "use strict";
