@@ -229,12 +229,22 @@ body.news-dark .hlinks a{color:#e1efff}
 body.news-dark .hlinks a[aria-current=page],body.news-dark .hlinks a:hover{color:#fff;background:#335b89}
 body.news-dark footer{background:#172b46;color:#c0d3eb}
 
+
+/* v4.24 – tikras 20 straipsnių archyvas, aiškios kategorijos telefone */
+@media(max-width:430px){
+ .filters{display:flex;gap:6px;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;padding:2px 0 6px;scrollbar-width:thin}
+ .filters button{white-space:nowrap;flex-shrink:0}
+ .story summary{grid-template-columns:minmax(0,35%) minmax(0,65%)}
+ .cardbody .meta{flex-wrap:wrap}
+}
+.story .visual img{background:#e7edf7}
+
 </style></head>
 <body>
 <a class="skip" href="#turinys">Pereiti prie turinio</a>
 <header class="header"><div class="wrap bar">
 <a class="brand" href="../#pradzia" aria-label="ProtingesniNamai.lt pradžia"><img src="../assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt"></a>
-<span class="news-version" title="Svetainės versija">v4.23</span>
+<span class="news-version" title="Svetainės versija">v4.24</span>
 <button type="button" id="news-theme" class="news-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
 <button type="button" id="news-menu-btn" class="news-menu-btn" aria-label="Atidaryti meniu" aria-controls="news-menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 <nav class="hlinks" id="news-menu" aria-label="Pagrindinis meniu"><a href="../#pradzia">Pradžia</a><a href="./" aria-current="page">Naujienos</a><a href="../#skaiciuotuvas">Kainos</a><a href="../#kontaktai">Kontaktai</a><a href="../#dizainas">Dizaino studija</a></nav>
@@ -560,7 +570,7 @@ body.news-dark footer{background:#172b46;color:#c0d3eb}
 <h3>Ką šis atvejis reiškia dabar?</h3><p>Prie interneto jungiamus buities prietaisus verta vertinti kaip mažus kompiuterius. Patikrinkite, kiek metų gamintojas jiems teikia saugumo pataisas, ir atskirkite juos nuo svarbių namų kompiuterių. Jei interneto funkcijos nereikalingos, verta patikrinti, ar prietaisas vis tiek veikia be jų.</p>
 <div class="tip"><strong>Įvykio data:</strong> 2015 m. Tai technologijų saugumo pamoka, o ne šių dienų incidentas.</div>
 <p class="photo-credit">Nuotrauka: <a href="https://commons.wikimedia.org/wiki/File:Samsung_smart_refrigerator_-_The_Talking_Fridge.jpg" target="_blank" rel="noopener noreferrer">Eliseandchai / Wikimedia Commons</a> (CC BY-SA 4.0, kortelėje apkirpta). Tikras „Samsung“ išmanusis šaldytuvas – kitas modelis nei tirtasis.</p>
-<p class="source">Šaltinis: <a href="https://www.theregister.com/security/2015/08/24/samsung-smart_fridge_leaves_gmail_logins_open_to_attack/" target="_blank" rel="noopener noreferrer">The Register apie „Pen Test Partners“ DEF CON tyrimą (2015-08-24)</a>.</p>
+<p class="source">Šaltinis: <a href="https://www.theregister.com/security/2015/08/24/samsung-smart-fridge-leaves-gmail-logins-open-to-attack/1166945" target="_blank" rel="noopener noreferrer">The Register apie „Pen Test Partners“ DEF CON tyrimą (2015-08-24)</a>.</p>
 <div class="share"><button type="button" class="copy-news" data-slug="samsung-saldytuvas-defcon-2015">Kopijuoti nuorodą</button><a href="../#kontaktai">Pasikonsultuoti dėl sistemos</a></div>
 </div></details></article>
 </div>
