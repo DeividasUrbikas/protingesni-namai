@@ -2465,23 +2465,52 @@ body.v14-dark #p-pradzia .pn-cmp-demo-heading p,body.v14-dark #p-pradzia .pn-cmp
 
 
 
-/* PN_HA_OFFICIAL_IFRAME — rodomas visas originalus demo.home-assistant.io puslapis */
-#p-kaip-veikia .pn-ha-full-embed{margin:28px 0 38px;padding:clamp(15px,2.6vw,28px);border:1px solid var(--line2);background:var(--card);border-radius:22px;overflow:hidden}
-#p-kaip-veikia .pn-ha-full-embed-heading{max-width:850px;margin:0 0 20px}
-#p-kaip-veikia .pn-ha-full-embed-heading h2{font-size:clamp(24px,3.5vw,36px);line-height:1.16;letter-spacing:-.03em;margin:9px 0 10px}
-#p-kaip-veikia .pn-ha-full-embed-heading p{color:var(--tx2);font-size:14px;line-height:1.7}
-#p-kaip-veikia .pn-ha-full-embed-window{overflow:hidden;background:#f4f8fb;border:1px solid #c2d8e7;border-radius:15px;box-shadow:0 10px 28px #102e501b}
-#p-kaip-veikia .pn-ha-full-embed-bar{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#e8f2f8;border-bottom:1px solid #c2d8e7;color:#456981;font-size:11px}
-#p-kaip-veikia .pn-ha-full-embed-bar strong{font-size:12px;color:#224c6d}
-#p-kaip-veikia .pn-ha-full-embed-dots{display:flex;gap:5px}
-#p-kaip-veikia .pn-ha-full-embed-dots i{width:9px;height:9px;background:#f5a58d;border-radius:50%}
-#p-kaip-veikia .pn-ha-full-embed-dots i:nth-child(2){background:#f0c576}
-#p-kaip-veikia .pn-ha-full-embed-dots i:nth-child(3){background:#82d5b3}
-#p-kaip-veikia .pn-ha-full-embed-pill{margin-left:auto;padding:5px 9px;border-radius:100px;background:#d9f6e9;color:#11806a;font-size:10px;font-weight:850}
-#p-kaip-veikia .pn-ha-full-embed-frame{display:block;width:100%;height:830px;min-height:580px;border:0;background:#fff}
-#p-kaip-veikia .pn-ha-full-embed-note{font-size:11px;line-height:1.65;color:var(--tx2);margin-top:13px}
-@media(max-width:760px){#p-kaip-veikia .pn-ha-full-embed{padding:12px;border-radius:17px;margin:20px 0 32px}#p-kaip-veikia .pn-ha-full-embed-heading p{font-size:12px}#p-kaip-veikia .pn-ha-full-embed-frame{height:760px}#p-kaip-veikia .pn-ha-full-embed-bar{padding:9px 10px}}
-@media(max-width:420px){#p-kaip-veikia .pn-ha-full-embed-frame{height:720px}}
+
+/* PN_HA_DEVICE_PREVIEW_V3 – pritaikomas fizinio irenginio remelis + tikras oficialus demo */
+#p-kaip-veikia .pn-device-showcase{margin:24px 0 42px;padding:clamp(16px,3vw,32px);border-radius:24px;border:1px solid var(--line2);background:linear-gradient(155deg,rgba(255,255,255,.90),rgba(222,239,249,.86));color:#1b405d;overflow:hidden;isolation:isolate}
+#p-kaip-veikia .pn-device-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin-bottom:19px}
+#p-kaip-veikia .pn-device-head h2{font-size:clamp(23px,3.5vw,37px);line-height:1.18;letter-spacing:-.035em;margin:0 0 8px;color:#1a476b}
+#p-kaip-veikia .pn-device-head .grad-tx{background:linear-gradient(120deg,#17809c,#1aa78b);background-clip:text;-webkit-background-clip:text;color:transparent}
+#p-kaip-veikia .pn-device-head p{max-width:700px;font-size:13px;line-height:1.7;color:#627f91}
+#p-kaip-veikia .pn-device-selector{display:flex;justify-content:center;align-items:center;gap:7px;flex-wrap:wrap;padding:8px;border:1px solid #ccdde9;background:#e8f2f8;border-radius:15px;margin-bottom:20px}
+#p-kaip-veikia .pn-device-choice{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;background:transparent;color:#476981;padding:10px 14px;border-radius:10px;white-space:nowrap;cursor:pointer;font:800 12px/1.4 Manrope,system-ui,sans-serif;transition:background .2s,box-shadow .2s,color .2s,transform .2s}
+#p-kaip-veikia .pn-device-choice span{font-size:18px;line-height:1}
+#p-kaip-veikia .pn-device-choice.is-active{background:#fff;border-color:#cfe4f1;color:#155a83;box-shadow:0 4px 12px rgba(29,81,114,.11)}
+#p-kaip-veikia .pn-device-choice:hover{background:#f8fdff;transform:translateY(-1px)}
+#p-kaip-veikia .pn-device-choice:focus-visible{outline:3px solid #29a8bf;outline-offset:3px}
+#p-kaip-veikia .pn-device-stage{padding:24px 8px 26px;display:flex;justify-content:center;align-items:flex-start;min-width:0;overflow:hidden;border-radius:20px;background:radial-gradient(ellipse at center,#e9f3fa 0%,#d7e9f4 65%,#d5e5f0 100%);border:1px solid #cfe3ef}
+#p-kaip-veikia .pn-device-scale-box{position:relative;flex:none;margin:0 auto;transition:width .25s ease,height .25s ease}
+#p-kaip-veikia .pn-device-shell{position:relative;width:390px;height:844px;transform-origin:top left;overflow:hidden;background:linear-gradient(138deg,#151c29,#343d4b 55%,#0b101b);border:7px solid #141b26;border-radius:37px;box-shadow:0 20px 42px #102c4560,0 4px 7px #11263630,inset 0 0 0 1px #ffffff3d;will-change:transform}
+#p-kaip-veikia .pn-device-display{position:absolute;inset:13px 5px 13px;overflow:hidden;background:#fff;border-radius:25px}
+#p-kaip-veikia .pn-device-iframe{width:100%;height:100%;border:0;display:block;background:#fff}
+#p-kaip-veikia .pn-device-camera{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:68px;height:14px;border-radius:0 0 13px 13px;background:#101722;z-index:2;pointer-events:none}
+#p-kaip-veikia .pn-device-gesture{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:92px;height:4px;background:#c4cdd6;border-radius:99px;opacity:.75;pointer-events:none;z-index:2}
+#p-kaip-veikia .pn-device-shell[data-pn-screen="tablet"]{border-radius:28px;border-width:10px}
+#p-kaip-veikia .pn-device-shell[data-pn-screen="tablet"] .pn-device-display{inset:9px 5px;border-radius:15px}
+#p-kaip-veikia .pn-device-shell[data-pn-screen="tablet"] .pn-device-camera{width:8px;height:8px;border-radius:50%;top:7px;background:#55677a}
+#p-kaip-veikia .pn-device-shell[data-pn-screen="tablet"] .pn-device-gesture{bottom:6px;height:3px}
+#p-kaip-veikia .pn-device-shell[data-pn-screen="sonoff86"],#p-kaip-veikia .pn-device-shell[data-pn-screen="sonoff120"]{border:12px solid #242b32;border-radius:15px;background:#202831;box-shadow:0 16px 35px #1c344c52,0 0 0 5px #70808c22}
+#p-kaip-veikia .pn-device-shell[data-pn-screen="shelly"]{border:12px solid #171d26;border-radius:16px;background:#121922;box-shadow:0 16px 35px #1c344c52,0 0 0 5px #70808c22}
+#p-kaip-veikia .pn-device-shell[data-pn-screen="sonoff86"] .pn-device-display,#p-kaip-veikia .pn-device-shell[data-pn-screen="sonoff120"] .pn-device-display,#p-kaip-veikia .pn-device-shell[data-pn-screen="shelly"] .pn-device-display{inset:0;border-radius:3px}
+#p-kaip-veikia .pn-device-shell[data-pn-screen="sonoff86"] .pn-device-camera,#p-kaip-veikia .pn-device-shell[data-pn-screen="sonoff120"] .pn-device-camera,#p-kaip-veikia .pn-device-shell[data-pn-screen="shelly"] .pn-device-camera,#p-kaip-veikia .pn-device-shell[data-pn-screen="sonoff86"] .pn-device-gesture,#p-kaip-veikia .pn-device-shell[data-pn-screen="sonoff120"] .pn-device-gesture,#p-kaip-veikia .pn-device-shell[data-pn-screen="shelly"] .pn-device-gesture{display:none}
+#p-kaip-veikia .pn-device-foot{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:16px}
+#p-kaip-veikia .pn-device-foot>div{display:flex;flex-direction:column;gap:3px}
+#p-kaip-veikia .pn-device-profile-title{font-size:14px;font-weight:850;color:#234e6c}
+#p-kaip-veikia .pn-device-profile-description{font-size:11px;color:#618099}
+#p-kaip-veikia .pn-device-foot p{max-width:500px;font-size:10.5px;line-height:1.6;color:#698397}
+body.v14-dark #p-kaip-veikia .pn-device-showcase{background:linear-gradient(140deg,#243c54,#1e344d);border-color:#547187}
+body.v14-dark #p-kaip-veikia .pn-device-head h2,body.v14-dark #p-kaip-veikia .pn-device-profile-title{color:#f0f9ff}
+body.v14-dark #p-kaip-veikia .pn-device-head p,body.v14-dark #p-kaip-veikia .pn-device-profile-description,body.v14-dark #p-kaip-veikia .pn-device-foot p{color:#bdd4e2}
+@media(max-width:760px){
+ #p-kaip-veikia .pn-device-showcase{margin:20px 0 34px;padding:12px;border-radius:17px}
+ #p-kaip-veikia .pn-device-selector{padding:5px;gap:5px}
+ #p-kaip-veikia .pn-device-choice{padding:10px 9px;font-size:11px;gap:5px}
+ #p-kaip-veikia .pn-device-choice span{font-size:15px}
+ #p-kaip-veikia .pn-device-stage{padding:15px 5px 18px}
+ #p-kaip-veikia .pn-device-head p{font-size:12px}
+}
+@media(max-width:380px){#p-kaip-veikia .pn-device-choice{font-size:10px;padding:9px 7px}}
+@media(prefers-reduced-motion:reduce){#p-kaip-veikia .pn-device-choice,#p-kaip-veikia .pn-device-scale-box{transition:none}}
 
 </style>
 </head>
@@ -2490,7 +2519,7 @@ body.v14-dark #p-pradzia .pn-cmp-demo-heading p,body.v14-dark #p-pradzia .pn-cmp
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.26</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.27</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links pn-full-menu" id="links" aria-label="Visi svetainės skyriai">
 <div class="pn-full-menu-title"><span>MENIU</span><strong>Kur norėtumėte pradėti?</strong></div>
 <div class="pn-menu-group"><div class="pn-menu-heading">SUSIPAŽINKITE</div>
@@ -2797,26 +2826,45 @@ body.v14-dark #p-pradzia .pn-cmp-demo-heading p,body.v14-dark #p-pradzia .pn-cmp
 <section class="page pn-journey-page" id="p-kaip-veikia">
 <div class="pn-section-heading"><span class="eyebrow">03 · KAIP VEIKIA</span><h1>Įrenginiai tariasi tarpusavyje.</h1><p>Saulė, šildymas, baterija ir automobilis matomi vienoje vietoje. Sistema gali priimti sprendimus pagal realias sąlygas.</p></div>
 
-<!-- PN_HA_OFFICIAL_IFRAME: Originalus visas Home Assistant demo, ne imitacija -->
-<section class="pn-ha-full-embed" id="pn-ha-demo-embed" aria-labelledby="pn-ha-official-title">
-  <div class="pn-ha-full-embed-heading">
-    <span class="eyebrow">TIKRA INTERAKTYVI DEMONSTRACIJA</span>
-    <h2 id="pn-ha-official-title">Išbandykite <span class="grad-tx">Home Assistant</span> tiesiog čia.</h2>
-    <p>Žemiau – visas oficialus „Home Assistant“ demonstracinis valdymo ekranas. Galite spausti jo mygtukus, atidaryti įrenginius, perjungti skiltis ir keisti nustatymus neišeidami iš mūsų svetainės.</p>
+
+<!-- PN_HA_DEVICE_PREVIEW_V3 — official demo in phone/tablet/wall-display device shells -->
+<section class="pn-device-showcase" id="pn-ha-demo-embed" aria-label="Oficialus Home Assistant demo skirtinguose ekranuose">
+  <div class="pn-device-head">
+    <div>
+      <h2>Išbandykite valdymą <span class="grad-tx">tiesiog čia.</span></h2>
+      <p>Pasirinkite ekrano dydį – visuose režimuose veikia tas pats oficialus „Home Assistant“ demonstracinis puslapis.</p>
+    </div>
   </div>
-  <div class="pn-ha-full-embed-window">
-    <div class="pn-ha-full-embed-bar"><span class="pn-ha-full-embed-dots" aria-hidden="true"><i></i><i></i><i></i></span><strong>Home Assistant Demo</strong><span class="pn-ha-full-embed-pill">Interaktyvus</span></div>
-    <iframe
-      class="pn-ha-full-embed-frame"
-      title="Oficiali interaktyvi Home Assistant demonstracija"
-      src="https://demo.home-assistant.io/#/lovelace/home"
-      loading="lazy"
-      allow="fullscreen"
-      referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <div class="pn-device-selector" role="group" aria-label="Pasirinkite įrenginio ekraną">
+    <button class="pn-device-choice is-active" type="button" data-pn-device="phone" aria-pressed="true"><span aria-hidden="true">▯</span> Telefonas</button>
+    <button class="pn-device-choice" type="button" data-pn-device="tablet" aria-pressed="false"><span aria-hidden="true">▣</span> Planšetė</button>
+    <button class="pn-device-choice" type="button" data-pn-device="sonoff86" aria-pressed="false"><span aria-hidden="true">▦</span> Sonoff 86</button>
+    <button class="pn-device-choice" type="button" data-pn-device="sonoff120" aria-pressed="false"><span aria-hidden="true">▯</span> Sonoff 120</button>
+    <button class="pn-device-choice" type="button" data-pn-device="shelly" aria-pressed="false"><span aria-hidden="true">▭</span> Shelly X2i</button>
   </div>
-  <p class="pn-ha-full-embed-note">Oficiali „Home Assistant“ demonstracinė sistema su pavyzdiniais duomenimis, ne jūsų namų įranga. Valdymas veikia šiame lange; jei demonstracijos tiekėjas ribotų įterpimą, tokį apribojimą nustato jis.</p>
+  <div class="pn-device-stage">
+    <div class="pn-device-scale-box">
+      <div class="pn-device-shell" data-pn-screen="phone">
+        <span class="pn-device-camera" aria-hidden="true"></span>
+        <div class="pn-device-display">
+          <iframe
+            class="pn-device-iframe"
+            title="Oficiali Home Assistant demonstracija įrenginio ekrane"
+            src="https://demo.home-assistant.io/#/lovelace/home"
+            loading="lazy"
+            allow="fullscreen"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <span class="pn-device-gesture" aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
+  <div class="pn-device-foot">
+    <div><strong class="pn-device-profile-title">Telefonas</strong><span class="pn-device-profile-description">Vertikalus telefono ekranas · 390 × 844 (peržiūros proporcijos)</span></div>
+    <p>Tai tikros oficialios demonstracijos peržiūra. Sieninių ekranų režimai imituoja jų ekrano proporcijas, o ne garantuoja identišką gamintojo sąsają.</p>
+  </div>
 </section>
-<!-- /PN_HA_OFFICIAL_IFRAME -->
+<!-- /PN_HA_DEVICE_PREVIEW_V3 -->
 
 
 <section class="pn-cinema" id="pn-cinema" data-phase="day" aria-label="Interaktyvi saulės, baterijos ir elektros tinklo demonstracija">
@@ -4767,5 +4815,59 @@ $('#tbGo').onclick=()=>{if(!['#skaiciuotuvas','#iranga'].includes(location.hash)
 
 
 
+
+<script>
+/* PN_HA_DEVICE_PREVIEW_V3 — nesukuria nauju skydeliu, keicia tik iframe isore */
+(function(){
+ "use strict";
+ var root=document.getElementById("pn-ha-demo-embed");
+ if(!root)return;
+ var stage=root.querySelector(".pn-device-stage");
+ var sizer=root.querySelector(".pn-device-scale-box");
+ var shell=root.querySelector(".pn-device-shell");
+ var title=root.querySelector(".pn-device-profile-title");
+ var description=root.querySelector(".pn-device-profile-description");
+ var buttons=[].slice.call(root.querySelectorAll("button[data-pn-device]"));
+ var devices={
+  phone:{width:390,height:844,title:"Telefonas",desc:"Vertikalus telefono ekranas · 390 × 844 (peržiūros proporcijos)"},
+  tablet:{width:820,height:1080,title:"Planšetė",desc:"Planšetės ekranas · 820 × 1080 (peržiūros proporcijos)"},
+  sonoff86:{width:480,height:480,title:"Sonoff NSPanel Pro 86",desc:"Kvadratinis 480 × 480 formato ekranas"},
+  sonoff120:{width:375,height:667,title:"Sonoff NSPanel Pro 120",desc:"Vertikalus ekranas, atitinka 750 × 1334 proporcijas"},
+  shelly:{width:900,height:450,title:"Shelly Wall Display X2i",desc:"Horizontalus ekranas, atitinka 1440 × 720 proporcijas"}
+ };
+ var selected="phone";
+ function render(){
+  var device=devices[selected];
+  if(!device)return;
+  var styles=window.getComputedStyle(stage);
+  var freeWidth=stage.clientWidth-parseFloat(styles.paddingLeft||0)-parseFloat(styles.paddingRight||0)-8;
+  if(freeWidth<=0)return;
+  var scale=Math.min(1,freeWidth/device.width);
+  shell.style.width=device.width+"px";
+  shell.style.height=device.height+"px";
+  shell.style.transform="scale("+scale+")";
+  shell.setAttribute("data-pn-screen",selected);
+  sizer.style.width=(device.width*scale)+"px";
+  sizer.style.height=(device.height*scale)+"px";
+  title.textContent=device.title;
+  description.textContent=device.desc;
+  buttons.forEach(function(btn){
+   var active=btn.getAttribute("data-pn-device")===selected;
+   btn.classList.toggle("is-active",active);
+   btn.setAttribute("aria-pressed",String(active));
+  });
+ }
+ buttons.forEach(function(button){button.addEventListener("click",function(){
+  selected=button.getAttribute("data-pn-device");
+  render();
+ })});
+ if("ResizeObserver" in window){new ResizeObserver(render).observe(stage)}
+ window.addEventListener("resize",render);
+ document.addEventListener("click",function(e){if(e.target.closest('a[href="#kaip-veikia"]'))requestAnimationFrame(render)});
+ window.addEventListener("hashchange",function(){if(location.hash==="#kaip-veikia")requestAnimationFrame(render)});
+ if(location.hash==="#kaip-veikia")requestAnimationFrame(render);
+ render();
+})();
+</script>
 </body>
 </html>
