@@ -2530,6 +2530,76 @@ body.v14-dark #p-kaip-veikia .pn-device-head p,body.v14-dark #p-kaip-veikia .pn-
 @media(max-width:380px){#p-kaip-veikia .pn-device-choice{font-size:10px;padding:9px 7px}}
 @media(prefers-reduced-motion:reduce){#p-kaip-veikia .pn-device-choice,#p-kaip-veikia .pn-device-scale-box{transition:none}}
 
+
+/* v4.28 — paprastesnė pradžia; saugumas ir vietinis ryšys VIENOJE kortelėje */
+#p-pradzia .v17-hero{
+  grid-template-columns:minmax(0,1fr);
+  padding:clamp(26px,4vw,52px) 0 clamp(22px,3vw,35px);
+  gap:0;
+}
+#p-pradzia .v17-hero-copy{
+  max-width:860px;
+  margin:0 auto;
+  text-align:center;
+}
+#p-pradzia .v17-hero-copy>p{
+  max-width:730px;
+  margin-left:auto;
+  margin-right:auto;
+}
+#p-pradzia .v17-actions,
+#p-pradzia .v17-trust{justify-content:center}
+#p-pradzia .pn-safety-showcase{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  gap:clamp(24px,3vw,38px);
+  align-items:center;
+  padding:clamp(24px,3.5vw,40px);
+  background:linear-gradient(135deg,rgba(248,252,255,.96),rgba(235,246,253,.95));
+  border:1px solid rgba(158,191,214,.57);
+  box-shadow:0 16px 36px rgba(28,65,97,.08);
+  overflow:hidden;
+}
+#p-pradzia .pn-safety-copy{min-width:0}
+#p-pradzia .pn-safety-diagram{
+  width:100%;
+  max-width:none!important;
+  margin:0!important;
+  min-width:0;
+  border:0!important;
+  border-left:1px solid rgba(125,169,200,.31)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  padding:10px 0 10px clamp(20px,3vw,34px)!important;
+  align-self:center;
+}
+/* Pačią įrenginių schemą paliekame – panaikinamas tik jos antras fonas / rėmelis. */
+#p-pradzia .pn-sdiag-foot{opacity:.75}
+body.v14-dark #p-pradzia .pn-safety-showcase{
+  background:linear-gradient(145deg,rgba(33,57,85,.97),rgba(25,49,75,.97));
+  border-color:rgba(114,155,185,.42);
+}
+body.v14-dark #p-pradzia .pn-safety-diagram{
+  border-left-color:rgba(145,186,216,.25)!important;
+}
+@media(max-width:850px){
+  #p-pradzia .pn-safety-showcase{grid-template-columns:minmax(0,1fr);gap:18px}
+  #p-pradzia .pn-safety-diagram{
+    border-left:0!important;
+    border-top:1px solid rgba(125,169,200,.31)!important;
+    padding:22px 0 0!important;
+  }
+  body.v14-dark #p-pradzia .pn-safety-diagram{
+    border-top-color:rgba(145,186,216,.25)!important;
+  }
+}
+@media(max-width:650px){
+  #p-pradzia .pn-safety-showcase{padding:19px 16px;border-radius:19px}
+  #p-pradzia .pn-safety-diagram{padding:20px 0 0!important}
+  #p-pradzia .v17-hero{padding-top:25px;padding-bottom:22px}
+}
+
 </style>
 <!-- GitHub Pages redeploy trigger 2026-11-20; no UI changes. -->
 </head>
@@ -2538,7 +2608,7 @@ body.v14-dark #p-kaip-veikia .pn-device-head p,body.v14-dark #p-kaip-veikia .pn-
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.27</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/logo-wordmark-transparent.png" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.28</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links pn-full-menu" id="links" aria-label="Visi svetainės skyriai">
 <div class="pn-full-menu-title"><span>MENIU</span><strong>Kur norėtumėte pradėti?</strong></div>
 <div class="pn-menu-group"><div class="pn-menu-heading">SUSIPAŽINKITE</div>
@@ -2584,51 +2654,7 @@ body.v14-dark #p-kaip-veikia .pn-device-head p,body.v14-dark #p-kaip-veikia .pn-
   <div class="v17-actions"><a href="#skaiciuotuvas" class="btn btn-p">Apskaičiuoti kainą <span aria-hidden="true">↗</span></a><a href="#privalumai" class="btn btn-g">Kodėl verta?</a></div>
   <div class="v17-trust"><span>✓ Galima riboti interneto prieigą</span><span>✓ Mažiau gamintojų programėlių</span><span>✓ Išmanesnis energijos naudojimas</span></div>
  </div>
- <div class="v17-preview" data-pn-scene="day" aria-label="Išmanių namų valdymo skydelio demonstracija">
-  <div class="v17-preview-head"><span><span class="v17-dot"></span> Namų energija</span><span class="v17-demo-badge">DEMO</span></div>
-  <div class="v17-house"><svg class="pn-house-svg" viewBox="0 0 320 155" role="img" aria-label="Tvarkingas namas su dviem saulės modulių eilėmis ant abiejų stogo šlaitų. Pakeiskite paros scenarijų žemiau.">
- <defs>
-  <linearGradient id="pn-hwall" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#e0f0f3"/></linearGradient>
-  <linearGradient id="pn-hroof" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#345674"/><stop offset="1" stop-color="#1f3854"/></linearGradient>
-  <linearGradient id="pn-hpanel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4db3e1"/><stop offset=".5" stop-color="#1579bb"/><stop offset="1" stop-color="#164a88"/></linearGradient>
-  <linearGradient id="pn-hwindow" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#7dc7e2"/><stop offset="1" stop-color="#317e9f"/></linearGradient>
- </defs>
- <g class="pn-house-sun"><circle cx="266" cy="27" r="18" fill="#f7cb64"/><circle cx="266" cy="27" r="24" fill="#f7cb64" opacity=".1"/></g>
- <g class="pn-house-moon"><circle cx="266" cy="27" r="16" fill="#daeaff"/><circle cx="272" cy="21" r="14" fill="#d0dff0"/></g>
- <path d="M30 135H290" stroke="#a9cad2" stroke-width="2.4" stroke-linecap="round"/>
- <ellipse cx="161" cy="136" rx="112" ry="5" fill="#80bda8" opacity=".14"/>
- <rect x="69" y="72" width="182" height="61" fill="url(#pn-hwall)" stroke="#a5c4cf" stroke-width="1.5"/>
- <rect x="73" y="74" width="174" height="7" fill="#b7d4dc" opacity=".55"/>
- <path d="M48 84L160 16L160 85H48Z" fill="url(#pn-hroof)"/>
- <path d="M160 16L272 84H160Z" fill="#263f5d"/>
- <path d="M48 84L160 16L272 84" fill="none" stroke="#1b3550" stroke-width="4" stroke-linejoin="round"/>
- <path d="M46 86H274" stroke="#172f48" stroke-width="6" stroke-linecap="round"/>
- <path d="M160 18V84" stroke="#456682" stroke-width="1.3" opacity=".55"/>
- <g class="pn-house-panels"><g class="pn-panels-left"><polygon class="pn-house-cell" points="83.7,66.0 93.9,60.1 102.1,64.1 91.9,70.1"/><polygon class="pn-house-cell" points="95.4,59.2 105.6,53.4 113.8,57.3 103.6,63.2"/><polygon class="pn-house-cell" points="107.2,52.5 117.4,46.6 125.6,50.4 115.4,56.4"/><polygon class="pn-house-cell" points="118.9,45.7 129.1,39.8 137.3,43.5 127.1,49.5"/><polygon class="pn-house-cell" points="93.7,71.0 103.9,65.0 112.1,69.0 101.9,75.1"/><polygon class="pn-house-cell" points="105.4,64.1 115.6,58.1 123.8,62.0 113.6,68.1"/><polygon class="pn-house-cell" points="117.2,57.2 127.4,51.2 135.6,55.0 125.4,61.1"/><polygon class="pn-house-cell" points="128.9,50.3 139.1,44.4 147.3,48.0 137.1,54.1"/></g><g class="pn-panels-right"><polygon class="pn-house-cell" points="236.3,66.0 226.1,60.1 217.9,64.1 228.1,70.1"/><polygon class="pn-house-cell" points="224.6,59.2 214.4,53.4 206.2,57.3 216.4,63.2"/><polygon class="pn-house-cell" points="212.8,52.5 202.6,46.6 194.4,50.4 204.6,56.4"/><polygon class="pn-house-cell" points="201.1,45.7 190.9,39.8 182.7,43.5 192.9,49.5"/><polygon class="pn-house-cell" points="226.3,71.0 216.1,65.0 207.9,69.0 218.1,75.1"/><polygon class="pn-house-cell" points="214.6,64.1 204.4,58.1 196.2,62.0 206.4,68.1"/><polygon class="pn-house-cell" points="202.8,57.2 192.6,51.2 184.4,55.0 194.6,61.1"/><polygon class="pn-house-cell" points="191.1,50.3 180.9,44.4 172.7,48.0 182.9,54.1"/></g></g>
- <rect x="98" y="93" width="44" height="40" rx="2.5" fill="#e7f3f6" stroke="#8fb1c2" stroke-width="1.2"/>
- <rect x="103" y="96" width="34" height="37" rx="1.5" fill="#4d718a"/>
- <path d="M107 96V132" stroke="#7f9fb3" stroke-width="1" opacity=".5"/>
- <rect x="131" y="113" width="2" height="10" rx="1" fill="#d9e6eb"/>
- <rect x="180" y="95" width="48" height="34" rx="2" fill="#e9f4f8" stroke="#8eb2c5" stroke-width="1.4"/>
- <rect class="pn-house-window" x="184" y="99" width="40" height="26" fill="url(#pn-hwindow)"/>
- <path d="M204 99V125M184 112H224" stroke="#e4f4fa" stroke-width="2.5"/>
- <path d="M184 123Q193 113 201 121Q212 109 224 120V125H184Z" fill="#78b7a3" opacity=".46"/>
- <rect x="157" y="105" width="5" height="8" rx="1.4" fill="#547b8d"/>
- <circle class="pn-house-light" cx="159.5" cy="111" r="5.5" fill="#ffd988" opacity=".55"/>
- <g class="pn-house-connection"><path d="M241 119H260" stroke="#1ea894" stroke-width="2" stroke-dasharray="3 4"/><rect x="259" y="112" width="12" height="13" rx="3" fill="#e9f9f6" stroke="#94c6bd"/><circle cx="265" cy="118.5" r="3" fill="#13a993"/></g>
- <g fill="#77ba91"><circle cx="60" cy="130" r="10"/><circle cx="52" cy="131" r="7"/><circle cx="70" cy="132" r="7"/><circle cx="262" cy="131" r="10"/><circle cx="273" cy="130" r="7"/><circle cx="252" cy="133" r="7"/></g>
- <path d="M40 135H281" stroke="#8bb59d" stroke-width="2" stroke-linecap="round"/>
-</svg></div>
-  <div class="v17-metrics"><div><span>☀️ Saulė</span><strong id="v17-pv">6,8 <small>kW</small></strong><i class="v17-meter" style="--fill:70%;--meter:#e5ad28"></i></div><div><span>🔋 Baterija</span><strong id="v17-soc">82 <small>%</small></strong><i class="v17-meter" style="--fill:82%;--meter:#15a58e"></i></div><div><span>🏠 Namai</span><strong id="v17-load">1,9 <small>kW</small></strong><i class="v17-meter" style="--fill:25%;--meter:#6091ca"></i></div></div>
-  <div class="pn-home-scenarios" role="group" aria-label="Energijos demonstracijos scenarijai">
- <button type="button" data-pn-scene="day" aria-pressed="true">☀️ Diena</button>
- <button type="button" data-pn-scene="evening" aria-pressed="false">🌇 Vakaras</button>
- <button type="button" data-pn-scene="night" aria-pressed="false">🌙 Naktis</button>
- <button type="button" class="pn-demo-play" id="pn-demo-play" aria-pressed="false">▶ Automatiškai</button>
-</div>
-<div class="v17-insight"><span class="v17-insight-icon">✦</span><span id="v17-insight-text">Saulės energija pirmiausia naudojama namuose.</span></div>
-  <span class="v17-caption">Iliustracinis valdymo skydelis · ne realūs duomenys</span>
- </div>
+
 </div>
 
 
