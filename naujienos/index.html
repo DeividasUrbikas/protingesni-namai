@@ -352,8 +352,8 @@ body.news-dark footer{background:#172b46;color:#c0d3eb}
  body.style.setProperty('--pn-accent-light',c[3]);
  body.style.setProperty('--pn-accent-soft',c[4]);
  body.dataset.pnDesign=selected.design||'aurora';
- body.dataset.pnGradient=g?g[0]:'duo-blue-orange';
- if(g)body.style.setProperty('--pn-canvas-bg',g[2]);
+ body.dataset.pnGradient=(g||gradients[0])[0];
+ body.style.setProperty('--pn-canvas-bg',(g||gradients[0])[2]);
  function applyTheme(dark){
    body.classList.toggle('news-dark',dark);
    themeButton.textContent=dark?'☀ Šviesi tema':'☾ Tamsi tema';
