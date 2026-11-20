@@ -2450,6 +2450,19 @@ body.v14-dark #p-pradzia .pn-cmp-demo-heading p,body.v14-dark #p-pradzia .pn-cmp
  #p-pradzia .pn-cmp-switch-thumb{transition:none}
 }
 
+
+/* PN official Home Assistant demo link: accessible external CTA beneath dashboard */
+#p-pradzia .pn-ha-real-demo-link{display:flex;align-items:center;gap:11px;padding:12px 13px;margin-top:13px;border-radius:13px;background:linear-gradient(110deg,#ffffff,#effbff);border:1px solid #83c9e2;color:#18567d;text-decoration:none;box-shadow:0 4px 12px #0c2b4a18;transition:transform .2s,box-shadow .2s,background .2s}
+#p-pradzia .pn-ha-real-demo-link:hover{transform:translateY(-2px);box-shadow:0 10px 23px #0b335439;background:#fff}
+#p-pradzia .pn-ha-real-demo-link:focus-visible{outline:3px solid #63dded;outline-offset:3px}
+#p-pradzia .pn-ha-real-demo-mark{display:grid;place-items:center;flex:0 0 35px;width:35px;height:35px;border-radius:10px;background:#1686b9;color:#fff;font-size:26px;line-height:1}
+#p-pradzia .pn-ha-real-demo-text{display:flex;flex-direction:column;gap:3px;min-width:0}
+#p-pradzia .pn-ha-real-demo-text strong{color:#174a69;font-size:12px;line-height:1.35;font-weight:900}
+#p-pradzia .pn-ha-real-demo-text small{font-size:10px;line-height:1.35;color:#557f97}
+#p-pradzia .pn-ha-real-demo-arrow{margin-left:auto;color:#1879a5;font-size:22px;font-weight:800}
+@media(max-width:400px){#p-pradzia .pn-ha-real-demo-link{padding:11px 9px;gap:8px}}
+@media(prefers-reduced-motion:reduce){#p-pradzia .pn-ha-real-demo-link{transition:none}}
+
 </style>
 </head>
 <body>
@@ -2634,6 +2647,11 @@ body.v14-dark #p-pradzia .pn-cmp-demo-heading p,body.v14-dark #p-pradzia .pn-cmp
           <span><b aria-hidden="true">🔌</b>Įkrovimas</span>
         </div>
       </div>
+      <a class="pn-ha-real-demo-link" href="https://demo.home-assistant.io/#/lovelace/home" target="_blank" rel="noopener noreferrer" aria-label="Išbandyti oficialią Home Assistant demonstraciją (atsidaro naujame lange)">
+        <span class="pn-ha-real-demo-mark" aria-hidden="true">⌂</span>
+        <span class="pn-ha-real-demo-text"><strong>Išbandykite tikrą „Home Assistant“</strong><small>Atidaryti oficialią interaktyvią demonstraciją</small></span>
+        <span class="pn-ha-real-demo-arrow" aria-hidden="true">↗</span>
+      </a>
       <div class="pn-cmp-local-route" aria-label="Suderinami įrenginiai jungiami vietiniame tinkle"><span>Įrenginiai</span><i aria-hidden="true"></i><b aria-hidden="true">⌂</b><span>Vietinis tinklas</span></div>
       <div class="pn-compare-foot"><span aria-hidden="true">✓</span> Vienas ekranas, bendros automatizacijos, daugiau kontrolės</div>
     </article>
