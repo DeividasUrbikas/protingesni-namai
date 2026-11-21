@@ -1089,8 +1089,6 @@ body.v14-dark #p-skaiciuotuvas #o-tab .opt-im .opt-img{background:linear-gradien
 #p-skaiciuotuvas .brand-choice:focus-visible{outline:3px solid var(--teal);outline-offset:1px}
 #p-skaiciuotuvas .brandmark{display:inline-flex;align-items:center;gap:7px;min-width:0;max-width:100%;vertical-align:middle}
 #p-skaiciuotuvas .brandmark img{width:21px;height:21px;object-fit:contain;flex-shrink:0}
-#p-skaiciuotuvas .brandmark .brand-initial{display:inline-flex;align-items:center;justify-content:center;min-width:25px;height:25px;border-radius:7px;background:#d8edea;color:#216d73;font-size:10px;font-weight:900;letter-spacing:-.02em}
-#p-skaiciuotuvas .brandmark img:not([hidden])+.brand-initial{display:none}
 #p-skaiciuotuvas .brandmark .brand-name{color:var(--tx);font-size:12px;font-weight:850;overflow-wrap:anywhere;line-height:1.25}
 #p-skaiciuotuvas .brand-other-grid{display:flex;flex-wrap:wrap;gap:7px;padding:11px;background:var(--card);border-radius:11px;border:1px solid var(--line);margin-top:8px}
 #p-skaiciuotuvas .brand-choice-alt{min-height:40px;padding:5px 8px}
@@ -1103,13 +1101,11 @@ body.v14-dark #p-skaiciuotuvas #o-tab .opt-im .opt-img{background:linear-gradien
 #p-skaiciuotuvas .device-brand-note{font-size:11px;line-height:1.5;color:var(--tx2);margin-top:12px}
 #p-skaiciuotuvas .device-family-grid .device-brand-panel .cg-b .bchip{color:#19354a}
 #p-skaiciuotuvas .item-name .brandmark{margin-right:4px}
-#p-skaiciuotuvas .item-name .brandmark .brand-initial{min-width:27px;height:27px}
 #p-skaiciuotuvas .bm-h .brandmark{max-width:100%;font-size:17px}
 body:not(.v14-dark) #p-skaiciuotuvas .device-family-grid .device-brand-panel{background:#f1f7f9;border-color:#d5e3e8;color:#203347}
 body:not(.v14-dark) #p-skaiciuotuvas .brand-choice{background:#fff;border-color:#d0dfe6;color:#203347}
 body:not(.v14-dark) #p-skaiciuotuvas .brandmark .brand-name{color:#203347}
 body:not(.v14-dark) #p-skaiciuotuvas .brand-other-grid{background:#fff}
-body.v14-dark #p-skaiciuotuvas .brandmark .brand-initial{background:#41636a;color:#e7fbf5}
 body.v14-dark #p-skaiciuotuvas .brand-choice{background:#2c434d;color:#f0fbfc;border-color:#54717a}
 body.v14-dark #p-skaiciuotuvas .brandmark .brand-name{color:#f0fbfc}
 body.v14-dark #p-skaiciuotuvas .device-brand-panel .cg-b .bchip{color:#172e3b}
@@ -1365,12 +1361,7 @@ body[data-pn-design=aurora-minimal] .page .card,body[data-pn-design=aurora-minim
 @media(max-width:680px){body[data-pn-design] .page .card,body[data-pn-design] .page .pn-simple-card,body[data-pn-design] .page .pn-ds-panel{backdrop-filter:blur(min(16px,var(--pn-surface-blur))) saturate(1.07)}}
 
 /* Brand identity: official icon where available, a labelled initial mark otherwise. */
-.brandmark .pn-brand-art{position:relative;display:inline-flex;width:24px;height:24px;flex:0 0 24px;align-items:center;justify-content:center;border-radius:7px}
-.brandmark .pn-brand-art>.brand-initial{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;min-width:24px;border-radius:7px;background:hsl(var(--pn-brand-hue) 58% 88%);color:hsl(var(--pn-brand-hue) 60% 28%);font-size:10px;font-weight:900;line-height:1;letter-spacing:-.035em}
-.brandmark .pn-brand-art>img{width:22px;height:22px;object-fit:contain;display:block;position:absolute;inset:1px;background:var(--card,#fff);border-radius:5px}
-.brandmark .pn-brand-art>[hidden]{display:none!important}
-body.v14-dark .brandmark .pn-brand-art>.brand-initial{background:hsl(var(--pn-brand-hue) 36% 32%);color:#fff}
-#p-skaiciuotuvas .brandmark .pn-brand-art{vertical-align:middle}
+
 .footer-logo .logo-img{height:42px;width:auto;max-width:min(240px,72vw);object-fit:contain}
 .footer-brand{display:flex;align-items:center;gap:15px;flex-wrap:wrap}
 .footer-brand a{display:inline-flex;align-items:center}
@@ -1823,41 +1814,21 @@ body[data-pn-design]:not(.v14-dark)::before{
   #p-skaiciuotuvas .device-family-grid .cbtn{min-height:72px}
 }
 
-/* v4.15 – gamintojų logotipai su vienodais rėmeliais ir sklandžiu atsarginiu atvaizdu. */
+#p-skaiciuotuvas .brand-choice .brandmark{width:100%}
 #p-skaiciuotuvas .brandmark .pn-brand-art{
-  width:38px;height:38px;flex:0 0 38px;
-  display:inline-flex;align-items:center;justify-content:center;
-  background:#fff;border:1px solid rgba(68,103,139,.13);
-  border-radius:10px;overflow:hidden;
+  display:inline-flex;position:relative;align-items:center;justify-content:center;
+  flex:none;width:28px;height:24px;
 }
-#p-skaiciuotuvas .brandmark .pn-brand-art>.brand-initial{
-  width:100%;height:100%;min-width:0;
-  border-radius:9px;font-size:12px;
-}
+#p-skaiciuotuvas .brandmark .pn-brand-art.has-logo{width:auto;min-width:24px}
 #p-skaiciuotuvas .brandmark .pn-brand-art>img{
-  position:static;width:30px;height:30px;
-  margin:auto;background:transparent;
-  border-radius:0;object-fit:contain;
+  position:absolute;width:auto;height:24px;max-width:52px;object-fit:contain;
 }
-#p-skaiciuotuvas .brand-choice{
-  min-height:75px;justify-content:flex-start;padding:10px 12px;
-}
-#p-skaiciuotuvas .brand-choice .brandmark{gap:10px;width:100%}
-#p-skaiciuotuvas .brand-choice .brand-name{font-size:12px}
-#p-skaiciuotuvas .brand-choice-alt{min-height:53px}
-#p-skaiciuotuvas .brand-choice-alt .brandmark .pn-brand-art{width:31px;height:31px;flex-basis:31px}
-#p-skaiciuotuvas .brand-choice-alt .brandmark .pn-brand-art>img{width:25px;height:25px}
-#p-skaiciuotuvas .item-name .brandmark .pn-brand-art{width:30px;height:30px;flex-basis:30px}
-#p-skaiciuotuvas .item-name .brandmark .pn-brand-art>img{width:25px;height:25px}
-#p-skaiciuotuvas .bm-h .brandmark .pn-brand-art{width:42px;height:42px;flex-basis:42px}
-#p-skaiciuotuvas .bm-h .brandmark .pn-brand-art>img{width:34px;height:34px}
-body.v14-dark #p-skaiciuotuvas .brandmark .pn-brand-art{background:#fff;border-color:rgba(255,255,255,.18)}
+#p-skaiciuotuvas .brandmark .pn-brand-art.has-logo>img{position:static}
+#p-skaiciuotuvas .brandmark .brand-fallback{color:var(--tx2)}
+#p-skaiciuotuvas .brandmark .brand-fallback .i{width:18px;height:18px}
+body.v14-dark #p-skaiciuotuvas .pn-brand-monochrome{filter:invert(1)}
 @media(max-width:580px){
-  #p-skaiciuotuvas .brand-choice{min-height:70px;padding:9px}
-  #p-skaiciuotuvas .brand-choice .brandmark{gap:7px}
-  #p-skaiciuotuvas .brand-choice .brand-name{font-size:11px}
-  #p-skaiciuotuvas .brandmark .pn-brand-art{width:35px;height:35px;flex-basis:35px}
-  #p-skaiciuotuvas .brandmark .pn-brand-art>img{width:28px;height:28px}
+  #p-skaiciuotuvas .brandmark .pn-brand-art>img{height:21px;max-width:42px}
 }
 
 /* v4.16: realistiškos planšetės su naudotojo Premium skydelio vizualizacija. */
@@ -1909,55 +1880,6 @@ body[data-pn-design].v14-dark header{
   box-shadow:0 5px 14px rgba(8,18,36,.12)!important;
 }
 header .nav{background:transparent!important}
-/* Gamintojų ikonėlės – pilnas suapvalintas kvadratas ir vienodas dydis.
-   Logotipai neperpiešiami, išlaikomas jų kraštinių santykis. */
-#p-skaiciuotuvas .brandmark .pn-brand-art{
-  position:relative;
-  background:#fff!important;
-  border:1px solid rgba(61,97,136,.16)!important;
-  border-radius:10px!important;
-  overflow:hidden;
-  isolation:isolate;
-}
-#p-skaiciuotuvas .brandmark .pn-brand-art>img,
-#p-skaiciuotuvas .brand-choice-alt .brandmark .pn-brand-art>img,
-#p-skaiciuotuvas .item-name .brandmark .pn-brand-art>img,
-#p-skaiciuotuvas .bm-h .brandmark .pn-brand-art>img{
-  position:static!important;
-  display:block!important;
-  width:100%!important;
-  height:100%!important;
-  min-width:100%!important;
-  min-height:100%!important;
-  max-width:none!important;
-  max-height:none!important;
-  padding:0!important;
-  margin:0!important;
-  border:0!important;
-  border-radius:9px!important;
-  background:#fff!important;
-  object-fit:contain!important;
-  object-position:center!important;
-  transform:scale(1.10);
-  transform-origin:center;
-}
-#p-skaiciuotuvas .brandmark .pn-brand-art[data-brand="Dyness"]>img{
-  transform:scale(1.30);
-}
-#p-skaiciuotuvas .brandmark .pn-brand-art[data-brand="Pylontech"]>img{
-  transform:scale(1.015);
-}
-#p-skaiciuotuvas .brandmark .pn-brand-art>.brand-initial{
-  border-radius:9px!important;
-  width:100%!important;height:100%!important;min-width:0!important;
-  display:inline-flex;align-items:center;justify-content:center;
-}
-#p-skaiciuotuvas .brandmark .pn-brand-art>.brand-initial[hidden]{display:none!important}
-body.v14-dark #p-skaiciuotuvas .brandmark .pn-brand-art{background:#fff!important}
-@media(max-width:580px){
-  #p-skaiciuotuvas .brand-choice .brandmark .pn-brand-art{flex-shrink:0}
-}
-
 /* v4.18 – pagrindinio puslapio vertės ir saugumo pristatymas. */
 #p-pradzia .pn-benefits-2026{margin:14px 0 36px}
 #p-pradzia .pn-bstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:12px 0 21px}

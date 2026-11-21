@@ -91,7 +91,7 @@ function loadServiceTools() {
   pages.forEach(page => { page.inert = true; });
   status.textContent = 'Įkeliama…';
   const script = document.createElement('script');
-  script.src = 'service-tools.js?v=4.29';
+  script.src = 'service-tools.js?v=4.30';
   script.onload = () => {
     serviceToolsReady = true;
     serviceToolsLoading = false;

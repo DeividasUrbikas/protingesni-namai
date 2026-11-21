@@ -399,22 +399,11 @@ const BRAND_ICON_SOURCES=Object.create(null);
 function brandLogo(name){
   if(!name)return '';
   const safeName=String(name).trim();
-  const words=safeName.split(/[\s\-\/]+/).filter(Boolean);
-  const initials=(words.length>1?words.slice(0,2).map(w=>w[0]).join(''):words[0].slice(0,2)).toLocaleUpperCase('lt-LT');
-  const hues=[193,217,251,166,279,32,335];
-  const hue=hues[Array.from(safeName).reduce((v,c)=>v+c.charCodeAt(0),0)%hues.length];
-  return '<span class="brandmark"><span class="pn-brand-art" data-brand="'+esc(safeName)+'" style="--pn-brand-hue:'+hue+'"><span class="brand-initial" aria-hidden="true">'+esc(initials)+'</span></span><span class="brand-name">'+esc(safeName)+'</span></span>';
+  if(!safeName)return '';
+  return '<span class="brandmark"><span class="pn-brand-art" data-brand="'+esc(safeName)+'" aria-hidden="true"><span class="brand-fallback">'+ic('cpu')+'</span></span><span class="brand-name">'+esc(safeName)+'</span></span>';
 }
 function safeBrandIconUrl(info){
-  if(!info||typeof info.url!=='string')return '';
-  // Vietiniai originalių logotipų failai: saugus, aiškiai apribotas kelias.
-  if(info.type==='local_asset'&&/^assets\/brands\/[a-z0-9._-]+\.(?:svg|png|webp)$/.test(info.url))return info.url;
-  try{
-    const u=new URL(info.url);
-    if(u.protocol!=='https:')return '';
-    if(info.type==='simple_icons'&&u.hostname==='cdn.jsdelivr.net'&&/^\/npm\/simple-icons@v16\/icons\/[a-z0-9_-]+\.svg$/.test(u.pathname))return u.href;
-    if((info.type==='verified_official_domain_favicon'||info.type==='suggested_domain_favicon')&&u.hostname==='www.google.com'&&u.pathname==='/s2/favicons'&&u.searchParams.has('domain'))return u.href;
-  }catch(_){ }
+  if(info?.type==='local_asset'&&/^assets\/brands\/[a-z0-9._-]+\.(?:svg|png|webp)$/.test(info.url))return info.url;
   return '';
 }
 let brandMapRequest;
@@ -425,33 +414,35 @@ function applyBrandIcons(root=document){
     return;
   }
   root.querySelectorAll('.pn-brand-art[data-brand]').forEach(art=>{
-    const src=BRAND_ICON_SOURCES[art.dataset.brand];
+    const icon=BRAND_ICON_SOURCES[art.dataset.brand];
+    const src=icon?.src;
     if(!src||art.dataset.brandIconSrc===src)return;
     art.dataset.brandIconSrc=src;
-    const fallback=art.querySelector('.brand-initial');
+    const fallback=art.querySelector('.brand-fallback');
     if(!fallback)return;
     const img=document.createElement('img');
-    img.loading='lazy';img.decoding='async';img.referrerPolicy='no-referrer';img.alt='';
-    img.addEventListener('load',()=>{if(img.isConnected&&img.naturalWidth>0){fallback.hidden=true;art.classList.add('has-logo')}});
+    img.classList.toggle('pn-brand-monochrome',icon.monochrome);
+    img.style.visibility='hidden';img.decoding='async';img.referrerPolicy='no-referrer';img.alt='';
+    img.addEventListener('load',()=>{if(img.isConnected&&img.naturalWidth>0){fallback.hidden=true;img.style.visibility='';art.classList.add('has-logo')}});
     img.addEventListener('error',()=>{img.remove();fallback.hidden=false;art.classList.remove('has-logo')});
     img.src=src;
     art.appendChild(img);
   });
 }
 function loadBrandIconMap(){
-  return fetch('data/brand-logo-map.json?v=4.17')
+  return fetch('data/brand-logo-map.json?v=4.30')
     .then(response=>{if(!response.ok)throw Error('HTTP '+response.status);return response.json()})
     .then(data=>{
       if(!data||!data.brands||typeof data.brands!=='object')throw Error('Netinkamas logotipų formatas');
       for(const [name,info] of Object.entries(data.brands)){
         const src=safeBrandIconUrl(info);
-        if(src)BRAND_ICON_SOURCES[name]=src;
+        if(src)BRAND_ICON_SOURCES[name]={src,monochrome:info.monochrome===true};
       }
       applyBrandIcons(document);
     })
     .catch(err=>{
       brandMapRequest = null;
-      console.warn('Gamintojų logotipai nepasiekiami – naudojami inicialai.',err);
+      console.warn('Gamintojų logotipai nepasiekiami – rodomas įrenginio simbolis.',err);
     });
 }
 const DEVICE_GROUPS=[{"id":"climate","name":"Šildymas, vėdinimas ir klimatas","emoji":"🌡️","desc":"Šildymas, vėdinimas, kondicionavimas ir oro kokybė","cats":["hp","heat","dhw","ac","rec","air","sauna"]},{"id":"energy","name":"Saulės energija ir elektra","emoji":"☀️","desc":"Inverteriai, baterijos ir elektros apskaita","cats":["inv","bat","meter"]},{"id":"security","name":"Apsauga ir saugumas","emoji":"🛡️","desc":"Signalizacijos, kameros, spynos ir nuotėkiai","cats":["sec","cam","lock","water"]},{"id":"light","name":"Apšvietimas ir valdymas","emoji":"💡","desc":"Apšvietimas, užuolaidos, vartai ir jutikliai","cats":["light","cover","sens"]},{"id":"transport","name":"Automobiliai ir įkrovimas","emoji":"🚗","desc":"Automobilių duomenys ir elektromobilių įkrovimas","cats":["vehicle","ev"]},{"id":"garden","name":"Sodas ir laistymas","emoji":"🌱","desc":"Laistymas, šiltnamiai, baseinai ir vejapjovės","cats":["irrigation","garden","mow"]},{"id":"home","name":"Buitis ir laisvalaikis","emoji":"🏠","desc":"Buitiniai prietaisai, robotai, TV ir garsas","cats":["app","vac","media"]}];
