@@ -1,0 +1,1 @@
+window.addEventListener('message',function(event){const frame=document.getElementById('pn-room-demo');if(event.origin===location.origin&&event.source===frame.contentWindow&&Number.isFinite(event.data?.roomHeight)&&event.data.roomHeight>0){frame.style.height=Math.min(1800,event.data.roomHeight+2)+'px'}})
