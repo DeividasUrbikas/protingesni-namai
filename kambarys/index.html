@@ -4,10 +4,20 @@
 button{font:inherit;cursor:pointer;color:inherit}button:focus-visible{outline:3px solid #159dd6;outline-offset:3px}button svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.pin{position:absolute;transform:translate(-50%,-50%);width:44px;height:44px;border:1px solid #fff9;border-radius:50%;display:grid;place-items:center;color:white;background:#152e3dd9;box-shadow:0 2px 12px #0004}.pin[aria-pressed=true]{color:#183d49;background:#d5f3fa}.pin:hover{outline:2px solid white}.pin[data-k=main]{left:89%;top:48%}.pin[data-k=accent]{left:34%;top:14%}.pin[data-k=closed]{left:19%;top:49%}.pin[data-k=cool]{left:77%;top:32%}.caption{position:absolute;bottom:0;left:0;right:0;padding:8% 4% 3%;background:linear-gradient(transparent,#101c24bb);color:white;font:500 clamp(20px,2.4vw,34px)/1.1 Georgia,serif;pointer-events:none}
 aside{border:1px solid #d4dfe3;border-radius:20px;padding:clamp(15px,2vw,28px);background:#fff;align-self:start}h2{font-size:16px;margin:0 0 12px}.presets{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}.preset{font-size:14px;border:1px solid #cddbe0;background:white;border-radius:20px;padding:9px 13px}.preset[aria-pressed=true]{background:#194458;color:white;border-color:#194458}.device{width:100%;border:0;border-top:1px solid #e0e7e9;background:none;display:flex;align-items:center;gap:11px;padding:12px 0;text-align:left}.device span{flex:1;font-size:15px;font-weight:600}.device small{display:block;font-size:13px;color:#56717b;font-weight:400}.switch{width:34px;height:20px;background:#bbc8cc;border-radius:15px;position:relative}.switch:after{content:'';position:absolute;top:3px;left:3px;width:14px;height:14px;background:white;border-radius:100%;transition:transform .2s}[aria-pressed=true] .switch{background:#267187}[aria-pressed=true] .switch:after{transform:translateX(14px)}@media(max-width:800px){.layout{grid-template-columns:1fr}header{display:block}header p{margin-top:8px}.presets{margin-bottom:16px}.devices{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}.device{gap:6px}.device svg{display:none}}@media(max-width:425px){.devices{grid-template-columns:1fr}.device svg{display:block}.layout{gap:10px}.pin{width:40px;height:40px}.brand{font-size:12px}}@media(prefers-reduced-motion:reduce){*,*:after{animation:none!important;transition:none!important}}body.embed{background:transparent}body.embed main{padding:4px}
 
-.fabric{position:absolute;top:12.292%;height:61.875%;background-size:100% 100%;background-repeat:no-repeat;transition:width 6s cubic-bezier(.38,.02,.62,.98)}
-.fabric.l{left:.6944%;width:7.9167%;background-image:url(kaire.webp)}
-.fabric.r{right:46.1111%;width:7.7778%;background-image:url(desine.webp)}
-.closed .fabric.l{width:30.6%}.closed .fabric.r{width:28.6%}
+/* Both panels sample a continuous photograph at their fully extended width. */
+.fabric{
+  position:absolute;
+  top:12.4%;
+  height:61.65%;
+  background-image:linear-gradient(to bottom,#241c1424,transparent 9%,transparent 95%,#3a2d1e0e),url(linas.webp);
+  background-size:100% 100%,200% 100%;
+  background-repeat:no-repeat;
+  transition:width 6s cubic-bezier(.38,.02,.62,.98);
+  box-shadow:0 2px 3px #22180f40;
+}
+.fabric.l{left:.6%;width:7.95%;background-position:center,left center}
+.fabric.r{right:46.1%;width:7.8%;background-position:center,right center}
+.closed .fabric.l,.closed .fabric.r{width:calc(26.65% + .4px)}
 .sofa-edge{position:absolute;inset:0;background:var(--room) center/100% 100%;clip-path:polygon(47.59% 73.9%,47.55% 67%,47.8% 62.5%,48.2% 60%,48.8% 58.6%,49.6% 57.9%,51.6% 57%,53.6% 56.6%,54.2% 58.8%,55.5% 63%,55.5% 79%,48.8% 79%)}
 .motion{position:absolute;width:100%;height:100%;inset:0}.flap{position:absolute;left:76.55%;top:20.45%;width:12.6%;height:1.1%;border-radius:0 0 60% 45%;background:linear-gradient(#191c1b,#555955 58%,#bec1b7);transform:scaleY(0);transform-origin:top;transition:transform .7s}.cool .flap{transform:scaleY(.7)}.heat .flap{transform:scaleY(1.25)}
 .climate{margin-bottom:20px}.modes{display:flex;gap:4px;padding:3px;background:#edf2f4;border-radius:12px}.modes button{flex:1;border:0;border-radius:9px;padding:9px 2px;background:transparent;font-size:14px}.modes [aria-pressed=true]{background:#fff;box-shadow:0 1px 5px #223c4822;font-weight:650}.modes [data-mode=cool][aria-pressed=true]{color:#12628a}.modes [data-mode=heat][aria-pressed=true]{color:#94511e}
