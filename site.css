@@ -1817,18 +1817,18 @@ body[data-pn-design]:not(.v14-dark)::before{
 #p-skaiciuotuvas .brand-choice .brandmark{width:100%}
 #p-skaiciuotuvas .brandmark .pn-brand-art{
   display:inline-flex;position:relative;align-items:center;justify-content:center;
-  flex:none;width:28px;height:24px;
+  flex:none;width:40px;height:26px;
 }
-#p-skaiciuotuvas .brandmark .pn-brand-art.has-logo{width:auto;min-width:24px}
+#p-skaiciuotuvas .brandmark .pn-brand-art:has(.brand-fallback:empty):not(.has-logo){display:none}
 #p-skaiciuotuvas .brandmark .pn-brand-art>img{
-  position:absolute;width:auto;height:24px;max-width:52px;object-fit:contain;
+  position:absolute;width:100%;height:100%;object-fit:contain;
 }
 #p-skaiciuotuvas .brandmark .pn-brand-art.has-logo>img{position:static}
 #p-skaiciuotuvas .brandmark .brand-fallback{color:var(--tx2)}
 #p-skaiciuotuvas .brandmark .brand-fallback .i{width:18px;height:18px}
-body.v14-dark #p-skaiciuotuvas .pn-brand-monochrome{filter:invert(1)}
+
 @media(max-width:580px){
-  #p-skaiciuotuvas .brandmark .pn-brand-art>img{height:21px;max-width:42px}
+  #p-skaiciuotuvas .brandmark .pn-brand-art{width:34px;height:23px}
 }
 
 /* v4.16: realistiškos planšetės su naudotojo Premium skydelio vizualizacija. */

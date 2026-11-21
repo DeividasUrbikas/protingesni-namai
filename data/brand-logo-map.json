@@ -679,13 +679,15 @@
   ],
   "brands": {
     "2N": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "2n.com",
-      "url": "https://www.google.com/s2/favicons?domain=2n.com&sz=128",
+      "url": "assets/brands/2n-mark.svg",
       "initials": "2",
       "categories": [
         "lock"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=2n.com&sz=128",
+      "monochrome": false
     },
     "ABB": {
       "type": "local_asset",
@@ -697,18 +699,20 @@
         "ev",
         "light"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/abb.svg"
     },
     "Abus": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "abus.com",
-      "url": "https://www.google.com/s2/favicons?domain=abus.com&sz=128",
+      "url": "assets/brands/abus-mark.svg",
       "initials": "A",
       "categories": [
         "sec",
         "lock"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=abus.com&sz=128",
+      "monochrome": false
     },
     "Acrel": {
       "type": "fallback",
@@ -728,13 +732,15 @@
       ]
     },
     "Aeotec": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "aeotec.com",
-      "url": "https://www.google.com/s2/favicons?domain=aeotec.com&sz=128",
+      "url": "assets/brands/aeotec-mark.svg",
       "initials": "A",
       "categories": [
         "sens"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=aeotec.com&sz=128",
+      "monochrome": false
     },
     "Afore": {
       "type": "fallback",
@@ -761,13 +767,15 @@
       ]
     },
     "Airthings": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "airthings.com",
-      "url": "https://www.google.com/s2/favicons?domain=airthings.com&sz=128",
+      "url": "assets/brands/airthings-mark.svg",
       "initials": "A",
       "categories": [
         "sens"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=airthings.com&sz=128",
+      "monochrome": false
     },
     "Airwell": {
       "type": "fallback",
@@ -778,41 +786,49 @@
       ]
     },
     "Ajax": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "ajax.systems",
-      "url": "https://www.google.com/s2/favicons?domain=ajax.systems&sz=128",
+      "url": "assets/brands/ajax-mark.svg",
       "initials": "A",
       "categories": [
         "sec",
         "cam"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=ajax.systems&sz=128",
+      "monochrome": false
     },
     "Akuvox": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "akuvox.com",
-      "url": "https://www.google.com/s2/favicons?domain=akuvox.com&sz=128",
+      "url": "assets/brands/akuvox-mark.svg",
       "initials": "A",
       "categories": [
         "lock"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=akuvox.com&sz=128",
+      "monochrome": false
     },
     "Alfen": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "alfen.com",
-      "url": "https://www.google.com/s2/favicons?domain=alfen.com&sz=128",
+      "url": "assets/brands/alfen-mark.svg",
       "initials": "A",
       "categories": [
         "ev"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=alfen.com&sz=128",
+      "monochrome": false
     },
     "Alpha ESS": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "alphaess.com",
-      "url": "https://www.google.com/s2/favicons?domain=alphaess.com&sz=128",
+      "url": "assets/brands/alpha-ess-mark.svg",
       "initials": "AE",
       "categories": [
         "bat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=alphaess.com&sz=128",
+      "monochrome": false
     },
     "Alpha Innotec": {
       "type": "fallback",
@@ -847,13 +863,15 @@
       ]
     },
     "Amcrest": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "amcrest.com",
-      "url": "https://www.google.com/s2/favicons?domain=amcrest.com&sz=128",
+      "url": "assets/brands/amcrest-mark.svg",
       "initials": "A",
       "categories": [
         "cam"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=amcrest.com&sz=128",
+      "monochrome": false
     },
     "Android TV": {
       "type": "fallback",
@@ -864,23 +882,27 @@
       ]
     },
     "Anker": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "anker.com",
-      "url": "https://www.google.com/s2/favicons?domain=anker.com&sz=128",
+      "url": "assets/brands/anker-mark.svg",
       "initials": "A",
       "categories": [
         "inv",
         "bat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=anker.com&sz=128",
+      "monochrome": false
     },
     "Annke": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "annke.com",
-      "url": "https://www.google.com/s2/favicons?domain=annke.com&sz=128",
+      "url": "assets/brands/annke-mark.svg",
       "initials": "A",
       "categories": [
         "cam"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=annke.com&sz=128",
+      "monochrome": false
     },
     "Apple TV": {
       "type": "local_asset",
@@ -890,7 +912,7 @@
       "categories": [
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/appletv.svg"
     },
     "APsystems": {
@@ -921,24 +943,28 @@
       "source": "Gamintojo svetainė"
     },
     "Ariston": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "ariston.com",
-      "url": "https://www.google.com/s2/favicons?domain=ariston.com&sz=128",
+      "url": "assets/brands/ariston-mark.svg",
       "initials": "A",
       "categories": [
         "hp",
         "dhw"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=ariston.com&sz=128",
+      "monochrome": false
     },
     "Ariston Lydos": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "ariston.com",
-      "url": "https://www.google.com/s2/favicons?domain=ariston.com&sz=128",
+      "url": "assets/brands/ariston-lydos-mark.svg",
       "initials": "AL",
       "parent_brand": "Ariston",
       "categories": [
         "dhw"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=ariston.com&sz=128",
+      "monochrome": false
     },
     "Arlo": {
       "type": "local_asset",
@@ -948,27 +974,31 @@
       "categories": [
         "cam"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/arlo.svg"
     },
     "Assa Abloy": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "assaabloy.com",
-      "url": "https://www.google.com/s2/favicons?domain=assaabloy.com&sz=128",
+      "url": "assets/brands/assa-abloy-mark.svg",
       "initials": "AA",
       "categories": [
         "lock"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=assaabloy.com&sz=128",
+      "monochrome": false
     },
     "Atlantic": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "atlantic-comfort.com",
-      "url": "https://www.google.com/s2/favicons?domain=atlantic-comfort.com&sz=128",
+      "url": "assets/brands/atlantic-mark.svg",
       "initials": "A",
       "categories": [
         "hp",
         "dhw"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=atlantic-comfort.com&sz=128",
+      "monochrome": false
     },
     "Atmos": {
       "type": "fallback",
@@ -994,7 +1024,7 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/audi.svg"
     },
     "August": {
@@ -1022,22 +1052,26 @@
       ]
     },
     "AUX": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "auxair.com",
-      "url": "https://www.google.com/s2/favicons?domain=auxair.com&sz=128",
+      "url": "assets/brands/aux-mark.svg",
       "initials": "A",
       "categories": [
         "ac"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=auxair.com&sz=128",
+      "monochrome": false
     },
     "Axis": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "axis.com",
-      "url": "https://www.google.com/s2/favicons?domain=axis.com&sz=128",
+      "url": "assets/brands/axis-mark.svg",
       "initials": "A",
       "categories": [
         "cam"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=axis.com&sz=128",
+      "monochrome": false
     },
     "Axpert": {
       "type": "fallback",
@@ -1048,13 +1082,15 @@
       ]
     },
     "Ballu": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "ballu.com",
-      "url": "https://www.google.com/s2/favicons?domain=ballu.com&sz=128",
+      "url": "assets/brands/ballu-mark.svg",
       "initials": "B",
       "categories": [
         "ac"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=ballu.com&sz=128",
+      "monochrome": false
     },
     "Bang & Olufsen": {
       "type": "fallback",
@@ -1089,13 +1125,15 @@
       ]
     },
     "Beko": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "beko.com",
-      "url": "https://www.google.com/s2/favicons?domain=beko.com&sz=128",
+      "url": "assets/brands/beko-mark.svg",
       "initials": "B",
       "categories": [
         "app"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=beko.com&sz=128",
+      "monochrome": false
     },
     "Beninca": {
       "type": "fallback",
@@ -1146,13 +1184,15 @@
       ]
     },
     "BYD": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "byd.com",
-      "url": "https://www.google.com/s2/favicons?domain=byd.com&sz=128",
+      "url": "assets/brands/byd-mark.svg",
       "initials": "B",
       "categories": [
         "bat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=byd.com&sz=128",
+      "monochrome": false
     },
     "Blauberg": {
       "type": "fallback",
@@ -1171,13 +1211,15 @@
       ]
     },
     "Blueair": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "blueair.com",
-      "url": "https://www.google.com/s2/favicons?domain=blueair.com&sz=128",
+      "url": "assets/brands/blueair-mark.svg",
       "initials": "B",
       "categories": [
         "air"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=blueair.com&sz=128",
+      "monochrome": false
     },
     "BMW": {
       "type": "local_asset",
@@ -1187,7 +1229,7 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/bmw.svg"
     },
     "Bold": {
@@ -1222,7 +1264,7 @@
         "app",
         "mow"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/bosch.svg"
     },
     "Bose": {
@@ -1233,7 +1275,7 @@
       "categories": [
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/bose.svg"
     },
     "Brink": {
@@ -1285,13 +1327,15 @@
       ]
     },
     "Candy": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "candy-home.com",
-      "url": "https://www.google.com/s2/favicons?domain=candy-home.com&sz=128",
+      "url": "assets/brands/candy-mark.svg",
       "initials": "C",
       "categories": [
         "app"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=candy-home.com&sz=128",
+      "monochrome": false
     },
     "Carlo Gavazzi": {
       "type": "fallback",
@@ -1302,14 +1346,16 @@
       ]
     },
     "Carrier": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "carrier.com",
-      "url": "https://www.google.com/s2/favicons?domain=carrier.com&sz=128",
+      "url": "assets/brands/carrier-mark.svg",
       "initials": "C",
       "categories": [
         "hp",
         "ac"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=carrier.com&sz=128",
+      "monochrome": false
     },
     "Chamberlain": {
       "type": "suggested_domain_favicon",
@@ -1361,17 +1407,19 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/citroen.svg"
     },
     "Claber": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "claber.com",
-      "url": "https://www.google.com/s2/favicons?domain=claber.com&sz=128",
+      "url": "assets/brands/claber-mark.svg",
       "initials": "C",
       "categories": [
         "irrigation"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=claber.com&sz=128",
+      "monochrome": false
     },
     "Comelit": {
       "type": "fallback",
@@ -1382,13 +1430,15 @@
       ]
     },
     "Comfee": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "comfee.com",
-      "url": "https://www.google.com/s2/favicons?domain=comfee.com&sz=128",
+      "url": "assets/brands/comfee-mark.svg",
       "initials": "C",
       "categories": [
         "ac"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=comfee.com&sz=128",
+      "monochrome": false
     },
     "Computherm": {
       "type": "fallback",
@@ -1415,13 +1465,15 @@
       ]
     },
     "Coway": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "coway.com",
-      "url": "https://www.google.com/s2/favicons?domain=coway.com&sz=128",
+      "url": "assets/brands/coway-mark.svg",
       "initials": "C",
       "categories": [
         "air"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=coway.com&sz=128",
+      "monochrome": false
     },
     "Crow": {
       "type": "fallback",
@@ -1440,13 +1492,15 @@
       ]
     },
     "Cupra": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "cupraofficial.com",
-      "url": "https://www.google.com/s2/favicons?domain=cupraofficial.com&sz=128",
+      "url": "assets/brands/cupra-mark.svg",
       "initials": "C",
       "categories": [
         "vehicle"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=cupraofficial.com&sz=128",
+      "monochrome": false
     },
     "Dacia": {
       "type": "local_asset",
@@ -1456,28 +1510,32 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/dacia.svg"
     },
     "Dahua": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "dahuasecurity.com",
-      "url": "https://www.google.com/s2/favicons?domain=dahuasecurity.com&sz=128",
+      "url": "assets/brands/dahua-mark.svg",
       "initials": "D",
       "categories": [
         "cam",
         "lock"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=dahuasecurity.com&sz=128",
+      "monochrome": false
     },
     "Dahua Airshield": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "dahuasecurity.com",
-      "url": "https://www.google.com/s2/favicons?domain=dahuasecurity.com&sz=128",
+      "url": "assets/brands/dahua-airshield-mark.svg",
       "initials": "DA",
       "parent_brand": "Dahua",
       "categories": [
         "sec"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=dahuasecurity.com&sz=128",
+      "monochrome": false
     },
     "Daikin": {
       "type": "local_asset",
@@ -1517,14 +1575,16 @@
       ]
     },
     "Danfoss": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "danfoss.com",
-      "url": "https://www.google.com/s2/favicons?domain=danfoss.com&sz=128",
+      "url": "assets/brands/danfoss-mark.svg",
       "initials": "D",
       "categories": [
         "hp",
         "heat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=danfoss.com&sz=128",
+      "monochrome": false
     },
     "Dantherm": {
       "type": "fallback",
@@ -1552,7 +1612,7 @@
         "ac",
         "app"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/delonghi.svg"
     },
     "Defro": {
@@ -1564,14 +1624,16 @@
       ]
     },
     "Deye": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "deye.com",
-      "url": "https://www.google.com/s2/favicons?domain=deye.com&sz=128",
+      "url": "assets/brands/deye-mark.svg",
       "initials": "D",
       "categories": [
         "inv",
         "bat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=deye.com&sz=128",
+      "monochrome": false
     },
     "Delta": {
       "type": "local_asset",
@@ -1582,7 +1644,7 @@
         "inv",
         "ev"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/delta.svg"
     },
     "Denon": {
@@ -1593,7 +1655,7 @@
       "categories": [
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/denon.svg"
     },
     "Develco": {
@@ -1605,34 +1667,40 @@
       ]
     },
     "Dyness": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "dyness.com",
-      "url": "https://www.google.com/s2/favicons?domain=dyness.com&sz=128",
+      "url": "assets/brands/dyness-mark.svg",
       "initials": "D",
       "categories": [
         "bat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=dyness.com&sz=128",
+      "monochrome": false
     },
     "Dyson": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "dyson.com",
-      "url": "https://www.google.com/s2/favicons?domain=dyson.com&sz=128",
+      "url": "assets/brands/dyson-mark.svg",
       "initials": "D",
       "categories": [
         "air",
         "vac",
         "app"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=dyson.com&sz=128",
+      "monochrome": false
     },
     "Domekt": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "komfovent.com",
-      "url": "https://www.google.com/s2/favicons?domain=komfovent.com&sz=128",
+      "url": "assets/brands/domekt-mark.svg",
       "initials": "D",
       "parent_brand": "Komfovent",
       "categories": [
         "rec"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=komfovent.com&sz=128",
+      "monochrome": false
     },
     "Dooya": {
       "type": "fallback",
@@ -1643,14 +1711,16 @@
       ]
     },
     "Doorbird": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "doorbird.com",
-      "url": "https://www.google.com/s2/favicons?domain=doorbird.com&sz=128",
+      "url": "assets/brands/doorbird-mark.svg",
       "initials": "D",
       "categories": [
         "cam",
         "lock"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=doorbird.com&sz=128",
+      "monochrome": false
     },
     "Drazice": {
       "type": "fallback",
@@ -1661,14 +1731,16 @@
       ]
     },
     "Dreame": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "dreametech.com",
-      "url": "https://www.google.com/s2/favicons?domain=dreametech.com&sz=128",
+      "url": "assets/brands/dreame-mark.svg",
       "initials": "D",
       "categories": [
         "vac",
         "mow"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=dreametech.com&sz=128",
+      "monochrome": false
     },
     "DSC": {
       "type": "fallback",
@@ -1711,22 +1783,26 @@
       ]
     },
     "Easee": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "easee.com",
-      "url": "https://www.google.com/s2/favicons?domain=easee.com&sz=128",
+      "url": "assets/brands/easee-mark.svg",
       "initials": "E",
       "categories": [
         "ev"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=easee.com&sz=128",
+      "monochrome": false
     },
     "Eastron": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "eastroneurope.com",
-      "url": "https://www.google.com/s2/favicons?domain=eastroneurope.com&sz=128",
+      "url": "assets/brands/eastron-mark.svg",
       "initials": "E",
       "categories": [
         "meter"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=eastroneurope.com&sz=128",
+      "monochrome": false
     },
     "Easun": {
       "type": "fallback",
@@ -1737,23 +1813,27 @@
       ]
     },
     "Ecobee": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "ecobee.com",
-      "url": "https://www.google.com/s2/favicons?domain=ecobee.com&sz=128",
+      "url": "assets/brands/ecobee-mark.svg",
       "initials": "E",
       "categories": [
         "heat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=ecobee.com&sz=128",
+      "monochrome": false
     },
     "EcoFlow": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "ecoflow.com",
-      "url": "https://www.google.com/s2/favicons?domain=ecoflow.com&sz=128",
+      "url": "assets/brands/ecoflow-mark.svg",
       "initials": "E",
       "categories": [
         "inv",
         "bat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=ecoflow.com&sz=128",
+      "monochrome": false
     },
     "ecoMAX": {
       "type": "fallback",
@@ -1772,7 +1852,7 @@
         "vac",
         "mow"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/ecovacs.svg"
     },
     "Ecovent": {
@@ -1808,13 +1888,15 @@
       ]
     },
     "Eldes": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "eldesalarms.com",
-      "url": "https://www.google.com/s2/favicons?domain=eldesalarms.com&sz=128",
+      "url": "assets/brands/eldes-mark.svg",
       "initials": "E",
       "categories": [
         "sec"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=eldesalarms.com&sz=128",
+      "monochrome": false
     },
     "Eldom": {
       "type": "fallback",
@@ -1825,16 +1907,18 @@
       ]
     },
     "Electrolux": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "electrolux.com",
-      "url": "https://www.google.com/s2/favicons?domain=electrolux.com&sz=128",
+      "url": "assets/brands/electrolux-mark.svg",
       "initials": "E",
       "categories": [
         "ac",
         "dhw",
         "air",
         "app"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=electrolux.com&sz=128",
+      "monochrome": false
     },
     "Elektra": {
       "type": "fallback",
@@ -1893,14 +1977,16 @@
       ]
     },
     "Enphase": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "enphase.com",
-      "url": "https://www.google.com/s2/favicons?domain=enphase.com&sz=128",
+      "url": "assets/brands/enphase-mark.svg",
       "initials": "E",
       "categories": [
         "inv",
         "bat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=enphase.com&sz=128",
+      "monochrome": false
     },
     "Ensy": {
       "type": "fallback",
@@ -1934,7 +2020,7 @@
       "categories": [
         "light"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/esphome.svg"
     },
     "Etrel": {
@@ -1946,14 +2032,16 @@
       ]
     },
     "Eufy": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "eufy.com",
-      "url": "https://www.google.com/s2/favicons?domain=eufy.com&sz=128",
+      "url": "assets/brands/eufy-mark.svg",
       "initials": "E",
       "categories": [
         "cam",
         "vac"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=eufy.com&sz=128",
+      "monochrome": false
     },
     "Euroster": {
       "type": "fallback",
@@ -1981,35 +2069,41 @@
       ]
     },
     "Eve": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "evehome.com",
-      "url": "https://www.google.com/s2/favicons?domain=evehome.com&sz=128",
+      "url": "assets/brands/eve-mark.svg",
       "initials": "E",
       "categories": [
         "sens"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=evehome.com&sz=128",
+      "monochrome": false
     },
     "Ezviz": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "ezviz.com",
-      "url": "https://www.google.com/s2/favicons?domain=ezviz.com&sz=128",
+      "url": "assets/brands/ezviz-mark.svg",
       "initials": "E",
       "categories": [
         "heat",
         "cam",
         "vac",
         "lock"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=ezviz.com&sz=128",
+      "monochrome": false
     },
     "Ezviz cloud": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "ezviz.com",
-      "url": "https://www.google.com/s2/favicons?domain=ezviz.com&sz=128",
+      "url": "assets/brands/ezviz-cloud-mark.svg",
       "initials": "EC",
       "parent_brand": "Ezviz",
       "categories": [
         "cam"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=ezviz.com&sz=128",
+      "monochrome": false
     },
     "Faac": {
       "type": "fallback",
@@ -2020,13 +2114,15 @@
       ]
     },
     "Fakro": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "fakro.com",
-      "url": "https://www.google.com/s2/favicons?domain=fakro.com&sz=128",
+      "url": "assets/brands/fakro-mark.svg",
       "initials": "F",
       "categories": [
         "cover"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=fakro.com&sz=128",
+      "monochrome": false
     },
     "Felicity": {
       "type": "fallback",
@@ -2054,16 +2150,18 @@
       ]
     },
     "Fibaro": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "fibaro.com",
-      "url": "https://www.google.com/s2/favicons?domain=fibaro.com&sz=128",
+      "url": "assets/brands/fibaro-mark.svg",
       "initials": "F",
       "categories": [
         "heat",
         "light",
         "sens",
         "garden"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=fibaro.com&sz=128",
+      "monochrome": false
     },
     "FIMER": {
       "type": "fallback",
@@ -2089,27 +2187,31 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/ford.svg"
     },
     "Foscam": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "foscam.com",
-      "url": "https://www.google.com/s2/favicons?domain=foscam.com&sz=128",
+      "url": "assets/brands/foscam-mark.svg",
       "initials": "F",
       "categories": [
         "cam"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=foscam.com&sz=128",
+      "monochrome": false
     },
     "Fox ESS": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "fox-ess.com",
-      "url": "https://www.google.com/s2/favicons?domain=fox-ess.com&sz=128",
+      "url": "assets/brands/fox-ess-mark.svg",
       "initials": "FE",
       "categories": [
         "inv",
         "bat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=fox-ess.com&sz=128",
+      "monochrome": false
     },
     "Frient": {
       "type": "fallback",
@@ -2127,19 +2229,21 @@
       "categories": [
         "cam"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/frigate.svg"
     },
     "Fronius": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "fronius.com",
-      "url": "https://www.google.com/s2/favicons?domain=fronius.com&sz=128",
+      "url": "assets/brands/fronius-mark.svg",
       "initials": "F",
       "categories": [
         "inv",
         "ev",
         "meter"
-      ]
+      ],
+      "source": "https://brands.home-assistant.io/",
+      "monochrome": false
     },
     "Fuji Electric": {
       "type": "fallback",
@@ -2158,17 +2262,19 @@
         "hp",
         "ac"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/fujitsu.svg"
     },
     "Gaggenau": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "gaggenau.com",
-      "url": "https://www.google.com/s2/favicons?domain=gaggenau.com&sz=128",
+      "url": "assets/brands/gaggenau-mark.svg",
       "initials": "G",
       "categories": [
         "app"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=gaggenau.com&sz=128",
+      "monochrome": false
     },
     "Galaxy": {
       "type": "local_asset",
@@ -2179,7 +2285,7 @@
       "categories": [
         "sec"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/samsung.svg"
     },
     "Galmet": {
@@ -2199,24 +2305,28 @@
       ]
     },
     "Gardena": {
-      "type": "verified_official_domain_favicon",
+      "type": "local_asset",
       "domain": "gardena.com",
-      "url": "https://www.google.com/s2/favicons?domain=gardena.com&sz=128",
+      "url": "assets/brands/gardena-mark.svg",
       "initials": "G",
       "categories": [
         "mow",
         "irrigation",
         "garden"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=gardena.com&sz=128",
+      "monochrome": false
     },
     "Garo": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "garo.se",
-      "url": "https://www.google.com/s2/favicons?domain=garo.se&sz=128",
+      "url": "assets/brands/garo-mark.svg",
       "initials": "G",
       "categories": [
         "ev"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=garo.se&sz=128",
+      "monochrome": false
     },
     "Gerda": {
       "type": "fallback",
@@ -2235,13 +2345,15 @@
       ]
     },
     "Gira": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "gira.com",
-      "url": "https://www.google.com/s2/favicons?domain=gira.com&sz=128",
+      "url": "assets/brands/gira-mark.svg",
       "initials": "G",
       "categories": [
         "light"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=gira.com&sz=128",
+      "monochrome": false
     },
     "Gledopto": {
       "type": "fallback",
@@ -2260,44 +2372,52 @@
       ]
     },
     "GoodWe": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "goodwe.com",
-      "url": "https://www.google.com/s2/favicons?domain=goodwe.com&sz=128",
+      "url": "assets/brands/goodwe-mark.svg",
       "initials": "G",
       "categories": [
         "inv",
         "bat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=goodwe.com&sz=128",
+      "monochrome": false
     },
     "Gorenje": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "gorenje.com",
-      "url": "https://www.google.com/s2/favicons?domain=gorenje.com&sz=128",
+      "url": "assets/brands/gorenje-mark.svg",
       "initials": "G",
       "categories": [
         "dhw",
         "app"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=gorenje.com&sz=128",
+      "monochrome": false
     },
     "Gorenje Smart": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "gorenje.com",
-      "url": "https://www.google.com/s2/favicons?domain=gorenje.com&sz=128",
+      "url": "assets/brands/gorenje-smart-mark.svg",
       "initials": "GS",
       "parent_brand": "Gorenje",
       "categories": [
         "dhw"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=gorenje.com&sz=128",
+      "monochrome": false
     },
     "Govee": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "govee.com",
-      "url": "https://www.google.com/s2/favicons?domain=govee.com&sz=128",
+      "url": "assets/brands/govee-mark.svg",
       "initials": "G",
       "categories": [
         "light",
         "sens"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=govee.com&sz=128",
+      "monochrome": false
     },
     "Grandeg": {
       "type": "fallback",
@@ -2308,14 +2428,16 @@
       ]
     },
     "Gree": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "gree.com",
-      "url": "https://www.google.com/s2/favicons?domain=gree.com&sz=128",
+      "url": "assets/brands/gree-mark.svg",
       "initials": "G",
       "categories": [
         "hp",
         "ac"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=gree.com&sz=128",
+      "monochrome": false
     },
     "Gree Versati": {
       "type": "suggested_domain_favicon",
@@ -2328,13 +2450,15 @@
       ]
     },
     "Grohe": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "grohe.com",
-      "url": "https://www.google.com/s2/favicons?domain=grohe.com&sz=128",
+      "url": "assets/brands/grohe-mark.svg",
       "initials": "G",
       "categories": [
         "water"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=grohe.com&sz=128",
+      "monochrome": false
     },
     "Growatt": {
       "type": "local_asset",
@@ -2380,24 +2504,28 @@
       ]
     },
     "Haier": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "haier.com",
-      "url": "https://www.google.com/s2/favicons?domain=haier.com&sz=128",
+      "url": "assets/brands/haier-mark.svg",
       "initials": "H",
       "categories": [
         "hp",
         "ac",
         "app"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=haier.com&sz=128",
+      "monochrome": false
     },
     "Hayward": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "hayward-pool.com",
-      "url": "https://www.google.com/s2/favicons?domain=hayward-pool.com&sz=128",
+      "url": "assets/brands/hayward-mark.svg",
       "initials": "H",
       "categories": [
         "garden"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=hayward-pool.com&sz=128",
+      "monochrome": false
     },
     "Hanwha": {
       "type": "fallback",
@@ -2488,7 +2616,7 @@
       "categories": [
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/denon.svg"
     },
     "Hermann": {
@@ -2516,24 +2644,28 @@
       ]
     },
     "Hikvision": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "hikvision.com",
-      "url": "https://www.google.com/s2/favicons?domain=hikvision.com&sz=128",
+      "url": "assets/brands/hikvision-mark.svg",
       "initials": "H",
       "categories": [
         "cam",
         "lock"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=hikvision.com&sz=128",
+      "monochrome": false
     },
     "Hikvision AX": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "hikvision.com",
-      "url": "https://www.google.com/s2/favicons?domain=hikvision.com&sz=128",
+      "url": "assets/brands/hikvision-ax-mark.svg",
       "initials": "HA",
       "parent_brand": "Hikvision",
       "categories": [
         "sec"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=hikvision.com&sz=128",
+      "monochrome": false
     },
     "Hilook": {
       "type": "fallback",
@@ -2579,7 +2711,7 @@
         "hp",
         "ac"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/hitachi.svg"
     },
     "Hithium": {
@@ -2600,7 +2732,7 @@
         "ac",
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/hyundai.svg"
     },
     "Hive": {
@@ -2628,15 +2760,17 @@
       ]
     },
     "Honeywell": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "honeywell.com",
-      "url": "https://www.google.com/s2/favicons?domain=honeywell.com&sz=128",
+      "url": "assets/brands/honeywell-mark.svg",
       "initials": "H",
       "categories": [
         "heat",
         "sec",
         "air"
-      ]
+      ],
+      "source": "https://brands.home-assistant.io/",
+      "monochrome": false
     },
     "Hoover": {
       "type": "fallback",
@@ -2681,7 +2815,7 @@
         "ev",
         "meter"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/huawei.svg"
     },
     "Hunter": {
@@ -2703,7 +2837,7 @@
         "mow",
         "irrigation"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/husqvarna.svg"
     },
     "Huum": {
@@ -2723,7 +2857,7 @@
         "sec",
         "lock"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/yale.svg"
     },
     "Yamaha": {
@@ -2801,7 +2935,7 @@
         "cover",
         "sens"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/ikea.svg"
     },
     "Immergas": {
@@ -2821,7 +2955,7 @@
         "cam",
         "vac"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/imou.svg"
     },
     "Indego": {
@@ -2833,7 +2967,7 @@
       "categories": [
         "mow"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/bosch.svg"
     },
     "Indesit": {
@@ -2884,7 +3018,7 @@
       "categories": [
         "vac"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/irobot.svg"
     },
     "Irritrol": {
@@ -2920,13 +3054,15 @@
       ]
     },
     "Jablotron": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "jablotron.com",
-      "url": "https://www.google.com/s2/favicons?domain=jablotron.com&sz=128",
+      "url": "assets/brands/jablotron-mark.svg",
       "initials": "J",
       "categories": [
         "sec"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=jablotron.com&sz=128",
+      "monochrome": false
     },
     "JBL": {
       "type": "local_asset",
@@ -2936,7 +3072,7 @@
       "categories": [
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/jbl.svg"
     },
     "JK BMS": {
@@ -3020,7 +3156,7 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/kia.svg"
     },
     "Kipi": {
@@ -3047,17 +3183,19 @@
       "categories": [
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/kodi.svg"
     },
     "Komfovent": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "komfovent.com",
-      "url": "https://www.google.com/s2/favicons?domain=komfovent.com&sz=128",
+      "url": "assets/brands/komfovent-mark.svg",
       "initials": "K",
       "categories": [
         "rec"
-      ]
+      ],
+      "source": "https://brands.home-assistant.io/",
+      "monochrome": false
     },
     "Kontakt-Simon": {
       "type": "fallback",
@@ -3077,15 +3215,17 @@
       ]
     },
     "Kostal": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "kostal-solar-electric.com",
-      "url": "https://www.google.com/s2/favicons?domain=kostal-solar-electric.com&sz=128",
+      "url": "assets/brands/kostal-mark.svg",
       "initials": "K",
       "categories": [
         "inv",
         "bat",
         "ev"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=kostal-solar-electric.com&sz=128",
+      "monochrome": false
     },
     "Kostrzewa": {
       "type": "fallback",
@@ -3096,13 +3236,15 @@
       ]
     },
     "Kress": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "kress.com",
-      "url": "https://www.google.com/s2/favicons?domain=kress.com&sz=128",
+      "url": "assets/brands/kress-mark.svg",
       "initials": "K",
       "categories": [
         "mow"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=kress.com&sz=128",
+      "monochrome": false
     },
     "Krispol": {
       "type": "fallback",
@@ -3137,14 +3279,16 @@
       ]
     },
     "Landroid": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "worx.com",
-      "url": "https://www.google.com/s2/favicons?domain=worx.com&sz=128",
+      "url": "assets/brands/landroid-mark.svg",
       "initials": "L",
       "parent_brand": "Worx",
       "categories": [
         "mow"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=worx.com&sz=128",
+      "monochrome": false
     },
     "Ledvance": {
       "type": "fallback",
@@ -3163,22 +3307,26 @@
       ]
     },
     "Legrand": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "legrand.com",
-      "url": "https://www.google.com/s2/favicons?domain=legrand.com&sz=128",
+      "url": "assets/brands/legrand-mark.svg",
       "initials": "L",
       "categories": [
         "light"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=legrand.com&sz=128",
+      "monochrome": false
     },
     "Levoit": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "levoit.com",
-      "url": "https://www.google.com/s2/favicons?domain=levoit.com&sz=128",
+      "url": "assets/brands/levoit-mark.svg",
       "initials": "L",
       "categories": [
         "air"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=levoit.com&sz=128",
+      "monochrome": false
     },
     "LG": {
       "type": "local_asset",
@@ -3192,7 +3340,7 @@
         "app",
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/lg.svg"
     },
     "Lidl": {
@@ -3203,7 +3351,7 @@
       "categories": [
         "light"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/lidl.svg"
     },
     "Liebherr": {
@@ -3238,7 +3386,7 @@
       "categories": [
         "light"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/lifx.svg"
     },
     "LinkTap": {
@@ -3274,13 +3422,15 @@
       ]
     },
     "Loxone": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "loxone.com",
-      "url": "https://www.google.com/s2/favicons?domain=loxone.com&sz=128",
+      "url": "assets/brands/loxone-mark.svg",
       "initials": "L",
       "categories": [
         "light"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=loxone.com&sz=128",
+      "monochrome": false
     },
     "Luba": {
       "type": "suggested_domain_favicon",
@@ -3293,13 +3443,15 @@
       ]
     },
     "Lutron": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "lutron.com",
-      "url": "https://www.google.com/s2/favicons?domain=lutron.com&sz=128",
+      "url": "assets/brands/lutron-mark.svg",
       "initials": "L",
       "categories": [
         "light"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=lutron.com&sz=128",
+      "monochrome": false
     },
     "Luxpower": {
       "type": "fallback",
@@ -3318,13 +3470,15 @@
       ]
     },
     "Mammotion": {
-      "type": "verified_official_domain_favicon",
+      "type": "local_asset",
       "domain": "mammotion.com",
-      "url": "https://www.google.com/s2/favicons?domain=mammotion.com&sz=128",
+      "url": "assets/brands/mammotion-mark.svg",
       "initials": "M",
       "categories": [
         "mow"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=mammotion.com&sz=128",
+      "monochrome": false
     },
     "Marantec": {
       "type": "fallback",
@@ -3391,7 +3545,7 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/mg.svg"
     },
     "Midea": {
@@ -3409,22 +3563,26 @@
       "source": "Gamintojo svetainė"
     },
     "Miele": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "miele.com",
-      "url": "https://www.google.com/s2/favicons?domain=miele.com&sz=128",
+      "url": "assets/brands/miele-mark.svg",
       "initials": "M",
       "categories": [
         "app"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=miele.com&sz=128",
+      "monochrome": false
     },
     "Myenergi": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "myenergi.com",
-      "url": "https://www.google.com/s2/favicons?domain=myenergi.com&sz=128",
+      "url": "assets/brands/myenergi-mark.svg",
       "initials": "M",
       "categories": [
         "ev"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=myenergi.com&sz=128",
+      "monochrome": false
     },
     "Milesight": {
       "type": "fallback",
@@ -3442,7 +3600,7 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/mini.svg"
     },
     "Mitsubishi": {
@@ -3454,7 +3612,7 @@
         "hp",
         "ac"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/mitsubishi.svg"
     },
     "Mitsubishi Electric": {
@@ -3466,7 +3624,7 @@
       "categories": [
         "rec"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/mitsubishi.svg"
     },
     "Mitsubishi Heavy": {
@@ -3478,7 +3636,7 @@
       "categories": [
         "ac"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/mitsubishi.svg"
     },
     "Mitsubishi Lossnay": {
@@ -3490,7 +3648,7 @@
       "categories": [
         "rec"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/mitsubishi.svg"
     },
     "Moes": {
@@ -3534,13 +3692,15 @@
       ]
     },
     "Nanoleaf": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "nanoleaf.me",
-      "url": "https://www.google.com/s2/favicons?domain=nanoleaf.me&sz=128",
+      "url": "assets/brands/nanoleaf-mark.svg",
       "initials": "N",
       "categories": [
         "light"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=nanoleaf.me&sz=128",
+      "monochrome": false
     },
     "Narvi": {
       "type": "fallback",
@@ -3559,13 +3719,15 @@
       ]
     },
     "Navimow": {
-      "type": "verified_official_domain_favicon",
+      "type": "local_asset",
       "domain": "navimow.segway.com",
-      "url": "https://www.google.com/s2/favicons?domain=navimow.segway.com&sz=128",
+      "url": "assets/brands/navimow-mark.svg",
       "initials": "N",
       "categories": [
         "mow"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=navimow.segway.com&sz=128",
+      "monochrome": false
     },
     "Neato": {
       "type": "fallback",
@@ -3609,15 +3771,17 @@
       ]
     },
     "Netatmo": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "netatmo.com",
-      "url": "https://www.google.com/s2/favicons?domain=netatmo.com&sz=128",
+      "url": "assets/brands/netatmo-mark.svg",
       "initials": "N",
       "categories": [
         "heat",
         "cam",
         "sens"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=netatmo.com&sz=128",
+      "monochrome": false
     },
     "Netro": {
       "type": "fallback",
@@ -3628,23 +3792,27 @@
       ]
     },
     "Nibe": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "nibe.eu",
-      "url": "https://www.google.com/s2/favicons?domain=nibe.eu&sz=128",
+      "url": "assets/brands/nibe-mark.svg",
       "initials": "N",
       "categories": [
         "hp"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=nibe.eu&sz=128",
+      "monochrome": false
     },
     "Nice": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "niceforyou.com",
-      "url": "https://www.google.com/s2/favicons?domain=niceforyou.com&sz=128",
+      "url": "assets/brands/nice-mark.svg",
       "initials": "N",
       "categories": [
         "sec",
         "cover"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=niceforyou.com&sz=128",
+      "monochrome": false
     },
     "Nilan": {
       "type": "fallback",
@@ -3662,7 +3830,7 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/nissan.svg"
     },
     "Novelan": {
@@ -3682,13 +3850,15 @@
       ]
     },
     "Nuki": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "nuki.io",
-      "url": "https://www.google.com/s2/favicons?domain=nuki.io&sz=128",
+      "url": "assets/brands/nuki-mark.svg",
       "initials": "N",
       "categories": [
         "lock"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=nuki.io&sz=128",
+      "monochrome": false
     },
     "Ochsner": {
       "type": "fallback",
@@ -3738,7 +3908,7 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/opel.svg"
     },
     "OpenEVSE": {
@@ -3750,13 +3920,15 @@
       ]
     },
     "OpenSprinkler": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "opensprinkler.com",
-      "url": "https://www.google.com/s2/favicons?domain=opensprinkler.com&sz=128",
+      "url": "assets/brands/opensprinkler-mark.svg",
       "initials": "O",
       "categories": [
         "irrigation"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=opensprinkler.com&sz=128",
+      "monochrome": false
     },
     "Orbis": {
       "type": "fallback",
@@ -3832,17 +4004,19 @@
         "ac",
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/panasonic.svg"
     },
     "Paradox": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "paradox.com",
-      "url": "https://www.google.com/s2/favicons?domain=paradox.com&sz=128",
+      "url": "assets/brands/paradox-mark.svg",
       "initials": "P",
       "categories": [
         "sec"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=paradox.com&sz=128",
+      "monochrome": false
     },
     "Paul": {
       "type": "fallback",
@@ -3884,13 +4058,13 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/peugeot.svg"
     },
     "Philips": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "philips.com",
-      "url": "https://www.google.com/s2/favicons?domain=philips.com&sz=128",
+      "url": "assets/brands/philips-mark.svg",
       "initials": "P",
       "categories": [
         "light",
@@ -3898,17 +4072,21 @@
         "sens",
         "app",
         "media"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=philips.com&sz=128",
+      "monochrome": false
     },
     "Philips Air": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "philips.com",
-      "url": "https://www.google.com/s2/favicons?domain=philips.com&sz=128",
+      "url": "assets/brands/philips-air-mark.svg",
       "initials": "PA",
       "parent_brand": "Philips",
       "categories": [
         "air"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=philips.com&sz=128",
+      "monochrome": false
     },
     "Philips Hue": {
       "type": "local_asset",
@@ -3918,7 +4096,7 @@
       "categories": [
         "light"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/philipshue.svg"
     },
     "Phoenix Contact": {
@@ -3971,7 +4149,7 @@
       "categories": [
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/plex.svg"
     },
     "Pluggit": {
@@ -4014,7 +4192,7 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/polestar.svg"
     },
     "Porsche": {
@@ -4025,7 +4203,7 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/porsche.svg"
     },
     "Proscenic": {
@@ -4069,13 +4247,15 @@
       ]
     },
     "Rachio": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "rachio.com",
-      "url": "https://www.google.com/s2/favicons?domain=rachio.com&sz=128",
+      "url": "assets/brands/rachio-mark.svg",
       "initials": "R",
       "categories": [
         "irrigation"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=rachio.com&sz=128",
+      "monochrome": false
     },
     "Rademacher": {
       "type": "fallback",
@@ -4086,14 +4266,16 @@
       ]
     },
     "Rain Bird": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "rainbird.com",
-      "url": "https://www.google.com/s2/favicons?domain=rainbird.com&sz=128",
+      "url": "assets/brands/rain-bird-mark.svg",
       "initials": "RB",
       "categories": [
         "irrigation",
         "garden"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=rainbird.com&sz=128",
+      "monochrome": false
     },
     "Recair": {
       "type": "fallback",
@@ -4151,17 +4333,19 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/renault.svg"
     },
     "Reolink": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "reolink.com",
-      "url": "https://www.google.com/s2/favicons?domain=reolink.com&sz=128",
+      "url": "assets/brands/reolink-mark.svg",
       "initials": "R",
       "categories": [
         "cam"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=reolink.com&sz=128",
+      "monochrome": false
     },
     "Ring": {
       "type": "local_asset",
@@ -4173,17 +4357,19 @@
         "cam",
         "lock"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/ring.svg"
     },
     "Risco": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "riscogroup.com",
-      "url": "https://www.google.com/s2/favicons?domain=riscogroup.com&sz=128",
+      "url": "assets/brands/risco-mark.svg",
       "initials": "R",
       "categories": [
         "sec"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=riscogroup.com&sz=128",
+      "monochrome": false
     },
     "Ryterna": {
       "type": "fallback",
@@ -4194,22 +4380,26 @@
       ]
     },
     "Robomow": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "robomow.com",
-      "url": "https://www.google.com/s2/favicons?domain=robomow.com&sz=128",
+      "url": "assets/brands/robomow-mark.svg",
       "initials": "R",
       "categories": [
         "mow"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=robomow.com&sz=128",
+      "monochrome": false
     },
     "Roborock": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "roborock.com",
-      "url": "https://www.google.com/s2/favicons?domain=roborock.com&sz=128",
+      "url": "assets/brands/roborock-mark.svg",
       "initials": "R",
       "categories": [
         "vac"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=roborock.com&sz=128",
+      "monochrome": false
     },
     "Roidmi": {
       "type": "fallback",
@@ -4227,7 +4417,7 @@
       "categories": [
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/roku.svg"
     },
     "Rotenso": {
@@ -4257,13 +4447,15 @@
       ]
     },
     "SAJ": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "saj-electric.com",
-      "url": "https://www.google.com/s2/favicons?domain=saj-electric.com&sz=128",
+      "url": "assets/brands/saj-mark.svg",
       "initials": "S",
       "categories": [
         "inv"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=saj-electric.com&sz=128",
+      "monochrome": false
     },
     "Salda": {
       "type": "fallback",
@@ -4274,13 +4466,15 @@
       ]
     },
     "Salus": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "salus-controls.eu",
-      "url": "https://www.google.com/s2/favicons?domain=salus-controls.eu&sz=128",
+      "url": "assets/brands/salus-mark.svg",
       "initials": "S",
       "categories": [
         "heat"
-      ]
+      ],
+      "source": "https://saluscontrols.com/",
+      "monochrome": false
     },
     "Samsung": {
       "type": "local_asset",
@@ -4294,17 +4488,19 @@
         "app",
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/samsung.svg"
     },
     "Satel": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "satel.eu",
-      "url": "https://www.google.com/s2/favicons?domain=satel.eu&sz=128",
+      "url": "assets/brands/satel-mark.svg",
       "initials": "S",
       "categories": [
         "sec"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=satel.eu&sz=128",
+      "monochrome": false
     },
     "Saunier Duval": {
       "type": "fallback",
@@ -4323,14 +4519,16 @@
       ]
     },
     "Schneider": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "se.com",
-      "url": "https://www.google.com/s2/favicons?domain=se.com&sz=128",
+      "url": "assets/brands/schneider-mark.svg",
       "initials": "S",
       "categories": [
         "ev",
         "light"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=se.com&sz=128",
+      "monochrome": false
     },
     "SEAT": {
       "type": "local_asset",
@@ -4340,17 +4538,19 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/seat.svg"
     },
     "Segway": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "segway.com",
-      "url": "https://www.google.com/s2/favicons?domain=segway.com&sz=128",
+      "url": "assets/brands/segway-mark.svg",
       "initials": "S",
       "categories": [
         "mow"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=segway.com&sz=128",
+      "monochrome": false
     },
     "Selve": {
       "type": "fallback",
@@ -4426,13 +4626,13 @@
         "air",
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/sharp.svg"
     },
     "Shelly": {
       "type": "local_asset",
       "slug": "shelly",
-      "url": "assets/brands/shelly.svg",
+      "url": "assets/brands/shelly-mark.svg",
       "initials": "S",
       "categories": [
         "heat",
@@ -4446,8 +4646,8 @@
         "irrigation",
         "garden"
       ],
-      "monochrome": true,
-      "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/shelly.svg"
+      "monochrome": false,
+      "source": "https://brands.home-assistant.io/"
     },
     "Siemens": {
       "type": "local_asset",
@@ -4459,18 +4659,20 @@
         "ev",
         "app"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/siemens.svg"
     },
     "Sigenergy": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "sigenergy.com",
-      "url": "https://www.google.com/s2/favicons?domain=sigenergy.com&sz=128",
+      "url": "assets/brands/sigenergy-mark.svg",
       "initials": "S",
       "categories": [
         "inv",
         "bat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=sigenergy.com&sz=128",
+      "monochrome": false
     },
     "Simon": {
       "type": "fallback",
@@ -4504,7 +4706,7 @@
       "categories": [
         "cam"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/synology.svg"
     },
     "Systemair": {
@@ -4516,15 +4718,17 @@
       ]
     },
     "SMA": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "sma.de",
-      "url": "https://www.google.com/s2/favicons?domain=sma.de&sz=128",
+      "url": "assets/brands/sma-mark.svg",
       "initials": "S",
       "categories": [
         "inv",
         "bat",
         "meter"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=sma.de&sz=128",
+      "monochrome": false
     },
     "Smappee": {
       "type": "fallback",
@@ -4570,14 +4774,16 @@
       ]
     },
     "SolarEdge": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "solaredge.com",
-      "url": "https://www.google.com/s2/favicons?domain=solaredge.com&sz=128",
+      "url": "assets/brands/solaredge-mark.svg",
       "initials": "S",
       "categories": [
         "inv",
         "bat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=solaredge.com&sz=128",
+      "monochrome": false
     },
     "Solarman": {
       "type": "fallback",
@@ -4588,14 +4794,16 @@
       ]
     },
     "SolaX": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "solaxpower.com",
-      "url": "https://www.google.com/s2/favicons?domain=solaxpower.com&sz=128",
+      "url": "assets/brands/solax-mark.svg",
       "initials": "S",
       "categories": [
         "inv",
         "bat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=solaxpower.com&sz=128",
+      "monochrome": false
     },
     "Solis": {
       "type": "local_asset",
@@ -4612,24 +4820,28 @@
       "source": "https://www.google.com/s2/favicons?domain=solisinverters.com&sz=128"
     },
     "Solplanet": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "solplanet.net",
-      "url": "https://www.google.com/s2/favicons?domain=solplanet.net&sz=128",
+      "url": "assets/brands/solplanet-mark.svg",
       "initials": "S",
       "categories": [
         "inv"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=solplanet.net&sz=128",
+      "monochrome": false
     },
     "Somfy": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "somfy.com",
-      "url": "https://www.google.com/s2/favicons?domain=somfy.com&sz=128",
+      "url": "assets/brands/somfy-mark.svg",
       "initials": "S",
       "categories": [
         "sec",
         "cover",
         "lock"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=somfy.com&sz=128",
+      "monochrome": false
     },
     "Sommer": {
       "type": "fallback",
@@ -4647,7 +4859,7 @@
       "categories": [
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/sony.svg"
     },
     "Sonnen": {
@@ -4661,7 +4873,7 @@
     "Sonoff": {
       "type": "local_asset",
       "domain": "sonoff.tech",
-      "url": "assets/brands/sonoff.webp",
+      "url": "assets/brands/sonoff-mark.svg",
       "initials": "S",
       "categories": [
         "heat",
@@ -4684,7 +4896,7 @@
       "categories": [
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/sonos.svg"
     },
     "Spotify": {
@@ -4695,7 +4907,7 @@
       "categories": [
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/spotify.svg"
     },
     "Sprsun": {
@@ -4725,24 +4937,28 @@
       ]
     },
     "Stihl": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "stihl.com",
-      "url": "https://www.google.com/s2/favicons?domain=stihl.com&sz=128",
+      "url": "assets/brands/stihl-mark.svg",
       "initials": "S",
       "categories": [
         "mow"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=stihl.com&sz=128",
+      "monochrome": false
     },
     "Sungrow": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "sungrowpower.com",
-      "url": "https://www.google.com/s2/favicons?domain=sungrowpower.com&sz=128",
+      "url": "assets/brands/sungrow-mark.svg",
       "initials": "S",
       "categories": [
         "inv",
         "bat",
         "ev"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=sungrowpower.com&sz=128",
+      "monochrome": false
     },
     "SunPower": {
       "type": "fallback",
@@ -4778,14 +4994,16 @@
       ]
     },
     "SwitchBot": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "switch-bot.com",
-      "url": "https://www.google.com/s2/favicons?domain=switch-bot.com&sz=128",
+      "url": "assets/brands/switchbot-mark.svg",
       "initials": "S",
       "categories": [
         "sens",
         "lock"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=switch-bot.com&sz=128",
+      "monochrome": false
     },
     "Škoda": {
       "type": "local_asset",
@@ -4795,20 +5013,20 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/skoda.svg"
     },
     "Tado": {
       "type": "local_asset",
       "slug": "tado",
-      "url": "assets/brands/tado.svg",
+      "url": "assets/brands/tado-mark.svg",
       "initials": "T",
       "parent_brand": "tado°",
       "categories": [
         "heat"
       ],
-      "monochrome": true,
-      "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/tado.svg"
+      "monochrome": false,
+      "source": "https://brands.home-assistant.io/"
     },
     "Tapo": {
       "type": "local_asset",
@@ -4928,7 +5146,7 @@
         "ev",
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/tesla.svg"
     },
     "Texecom": {
@@ -5039,7 +5257,7 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/toyota.svg"
     },
     "Toro": {
@@ -5059,7 +5277,7 @@
         "hp",
         "ac"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/toshiba.svg"
     },
     "Toshiba Seiya": {
@@ -5071,7 +5289,7 @@
       "categories": [
         "ac"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/toshiba.svg"
     },
     "Tosot": {
@@ -5090,7 +5308,7 @@
       "categories": [
         "cam"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/tplink.svg"
     },
     "Tradfri": {
@@ -5102,7 +5320,7 @@
       "categories": [
         "light"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/ikea.svg"
     },
     "Trikdis": {
@@ -5134,9 +5352,9 @@
       ]
     },
     "Tuya": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "tuya.com",
-      "url": "https://www.google.com/s2/favicons?domain=tuya.com&sz=128",
+      "url": "assets/brands/tuya-mark.svg",
       "initials": "T",
       "categories": [
         "heat",
@@ -5147,7 +5365,9 @@
         "water",
         "irrigation",
         "garden"
-      ]
+      ],
+      "source": "https://brands.home-assistant.io/",
+      "monochrome": false
     },
     "Ubiquiti": {
       "type": "local_asset",
@@ -5157,7 +5377,7 @@
       "categories": [
         "cam"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/ubiquiti.svg"
     },
     "UniFi": {
@@ -5169,7 +5389,7 @@
       "categories": [
         "cam"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/ubiquiti.svg"
     },
     "Uniview": {
@@ -5205,23 +5425,27 @@
       ]
     },
     "Vaillant": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "vaillant.com",
-      "url": "https://www.google.com/s2/favicons?domain=vaillant.com&sz=128",
+      "url": "assets/brands/vaillant-mark.svg",
       "initials": "V",
       "categories": [
         "hp"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=vaillant.com&sz=128",
+      "monochrome": false
     },
     "Vaillant ecoTEC": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "vaillant.com",
-      "url": "https://www.google.com/s2/favicons?domain=vaillant.com&sz=128",
+      "url": "assets/brands/vaillant-ecotec-mark.svg",
       "initials": "VE",
       "parent_brand": "Vaillant",
       "categories": [
         "hp"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=vaillant.com&sz=128",
+      "monochrome": false
     },
     "Varta": {
       "type": "fallback",
@@ -5232,13 +5456,15 @@
       ]
     },
     "Velux": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "velux.com",
-      "url": "https://www.google.com/s2/favicons?domain=velux.com&sz=128",
+      "url": "assets/brands/velux-mark.svg",
       "initials": "V",
       "categories": [
         "cover"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=velux.com&sz=128",
+      "monochrome": false
     },
     "Venta": {
       "type": "fallback",
@@ -5273,25 +5499,29 @@
       ]
     },
     "Victron": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "victronenergy.com",
-      "url": "https://www.google.com/s2/favicons?domain=victronenergy.com&sz=128",
+      "url": "assets/brands/victron-mark.svg",
       "initials": "V",
       "categories": [
         "inv",
         "bat",
         "meter"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=victronenergy.com&sz=128",
+      "monochrome": false
     },
     "Viessmann": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "viessmann.com",
-      "url": "https://www.google.com/s2/favicons?domain=viessmann.com&sz=128",
+      "url": "assets/brands/viessmann-mark.svg",
       "initials": "V",
       "categories": [
         "hp",
         "heat"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=viessmann.com&sz=128",
+      "monochrome": false
     },
     "Viomi": {
       "type": "fallback",
@@ -5333,7 +5563,7 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/volkswagen.svg"
     },
     "Voltronic": {
@@ -5352,7 +5582,7 @@
       "categories": [
         "vehicle"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/volvo.svg"
     },
     "Vortice": {
@@ -5372,13 +5602,15 @@
       ]
     },
     "Wallbox": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "wallbox.com",
-      "url": "https://www.google.com/s2/favicons?domain=wallbox.com&sz=128",
+      "url": "assets/brands/wallbox-mark.svg",
       "initials": "W",
       "categories": [
         "ev"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=wallbox.com&sz=128",
+      "monochrome": false
     },
     "Waterkotte": {
       "type": "fallback",
@@ -5448,13 +5680,15 @@
       ]
     },
     "Whirlpool": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "whirlpool.com",
-      "url": "https://www.google.com/s2/favicons?domain=whirlpool.com&sz=128",
+      "url": "assets/brands/whirlpool-mark.svg",
       "initials": "W",
       "categories": [
         "app"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=whirlpool.com&sz=128",
+      "monochrome": false
     },
     "WiiM": {
       "type": "fallback",
@@ -5496,7 +5730,7 @@
       "categories": [
         "cam"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/wyze.svg"
     },
     "Wolf": {
@@ -5508,13 +5742,15 @@
       ]
     },
     "Worx": {
-      "type": "verified_official_domain_favicon",
+      "type": "local_asset",
       "domain": "worx.com",
-      "url": "https://www.google.com/s2/favicons?domain=worx.com&sz=128",
+      "url": "assets/brands/worx-mark.svg",
       "initials": "W",
       "categories": [
         "mow"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=worx.com&sz=128",
+      "monochrome": false
     },
     "Xiaomi": {
       "type": "local_asset",
@@ -5530,7 +5766,7 @@
         "app",
         "media"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/xiaomi.svg"
     },
     "Z-Wave": {
@@ -5551,32 +5787,38 @@
       ]
     },
     "Zappi": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "myenergi.com",
-      "url": "https://www.google.com/s2/favicons?domain=myenergi.com&sz=128",
+      "url": "assets/brands/zappi-mark.svg",
       "initials": "Z",
       "parent_brand": "Myenergi",
       "categories": [
         "ev"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=myenergi.com&sz=128",
+      "monochrome": false
     },
     "Zaptec": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "zaptec.com",
-      "url": "https://www.google.com/s2/favicons?domain=zaptec.com&sz=128",
+      "url": "assets/brands/zaptec-mark.svg",
       "initials": "Z",
       "categories": [
         "ev"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=zaptec.com&sz=128",
+      "monochrome": false
     },
     "Zehnder": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "zehnder-systems.com",
-      "url": "https://www.google.com/s2/favicons?domain=zehnder-systems.com&sz=128",
+      "url": "assets/brands/zehnder-mark.svg",
       "initials": "Z",
       "categories": [
         "rec"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=zehnder-systems.com&sz=128",
+      "monochrome": false
     },
     "Zemismart": {
       "type": "fallback",
@@ -5614,17 +5856,19 @@
         "light",
         "water"
       ],
-      "monochrome": true,
+      "monochrome": false,
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/zigbee.svg"
     },
     "Zodiac": {
-      "type": "suggested_domain_favicon",
+      "type": "local_asset",
       "domain": "zodiac-poolcare.com",
-      "url": "https://www.google.com/s2/favicons?domain=zodiac-poolcare.com&sz=128",
+      "url": "assets/brands/zodiac-mark.svg",
       "initials": "Z",
       "categories": [
         "garden"
-      ]
+      ],
+      "source": "https://www.google.com/s2/favicons?domain=zodiac-poolcare.com&sz=128",
+      "monochrome": false
     },
     "Zooz": {
       "type": "fallback",

@@ -275,7 +275,7 @@ function renderItems(){
       <div class="item-top">
         <div class="ico">${deviceSketch(it.sub||"",c?c.id:"sensor")}</div>
         <div class="item-main">
-          <div class="item-name">${it.brand?brandLogo(it.brand)+' · ':''}${c?esc(itName(it)):'Neatpažinta kategorija'}</div>${c&&it.sub?`<div class="item-sub">${c.name}</div>`:''}
+          <div class="item-name">${it.brand?brandLogo(it.brand,c?.ic)+' · ':''}${c?esc(itName(it)):'Neatpažinta kategorija'}</div>${c&&it.sub?`<div class="item-sub">${c.name}</div>`:''}
           <div class="item-sub">Įvesta: „${esc(it.raw)}“</div>
         </div>
         <button class="rm" data-act="rm" aria-label="Pašalinti">${ic('x')}</button>
@@ -396,11 +396,11 @@ const LT_MAIN_BRANDS={"hp":["Daikin","Panasonic","Midea","Mitsubishi","Samsung",
 const LT_POPULAR_CATEGORIES={"climate":["hp","ac","rec","heat","air"],"energy":["inv","bat","meter"],"security":["sec","cam","lock","water"],"light":["light","sens","cover"],"home":["vac","app","media"],"transport":["vehicle","ev"],"garden":["irrigation","mow","garden"]};
 /* v4.15: visi gamintojų logotipai iš data/brand-logo-map.json, su atsarginiu simboliu. */
 const BRAND_ICON_SOURCES=Object.create(null);
-function brandLogo(name){
+function brandLogo(name, deviceIcon){
   if(!name)return '';
   const safeName=String(name).trim();
   if(!safeName)return '';
-  return '<span class="brandmark"><span class="pn-brand-art" data-brand="'+esc(safeName)+'" aria-hidden="true"><span class="brand-fallback">'+ic('cpu')+'</span></span><span class="brand-name">'+esc(safeName)+'</span></span>';
+  return '<span class="brandmark"><span class="pn-brand-art" data-brand="'+esc(safeName)+'" aria-hidden="true"><span class="brand-fallback">'+(deviceIcon?ic(deviceIcon):'')+'</span></span><span class="brand-name">'+esc(safeName)+'</span></span>';
 }
 function safeBrandIconUrl(info){
   if(info?.type==='local_asset'&&/^assets\/brands\/[a-z0-9._-]+\.(?:svg|png|webp)$/.test(info.url))return info.url;
@@ -421,7 +421,6 @@ function applyBrandIcons(root=document){
     const fallback=art.querySelector('.brand-fallback');
     if(!fallback)return;
     const img=document.createElement('img');
-    img.classList.toggle('pn-brand-monochrome',icon.monochrome);
     img.style.visibility='hidden';img.decoding='async';img.referrerPolicy='no-referrer';img.alt='';
     img.addEventListener('load',()=>{if(img.isConnected&&img.naturalWidth>0){fallback.hidden=true;img.style.visibility='';art.classList.add('has-logo')}});
     img.addEventListener('error',()=>{img.remove();fallback.hidden=false;art.classList.remove('has-logo')});
@@ -430,13 +429,13 @@ function applyBrandIcons(root=document){
   });
 }
 function loadBrandIconMap(){
-  return fetch('data/brand-logo-map.json?v=4.30')
+  return fetch('data/brand-logo-map.json?v=4.31')
     .then(response=>{if(!response.ok)throw Error('HTTP '+response.status);return response.json()})
     .then(data=>{
       if(!data||!data.brands||typeof data.brands!=='object')throw Error('Netinkamas logotipų formatas');
       for(const [name,info] of Object.entries(data.brands)){
         const src=safeBrandIconUrl(info);
-        if(src)BRAND_ICON_SOURCES[name]={src,monochrome:info.monochrome===true};
+        if(src)BRAND_ICON_SOURCES[name]={src};
       }
       applyBrandIcons(document);
     })
@@ -448,7 +447,7 @@ function loadBrandIconMap(){
 const DEVICE_GROUPS=[{"id":"climate","name":"Šildymas, vėdinimas ir klimatas","emoji":"🌡️","desc":"Šildymas, vėdinimas, kondicionavimas ir oro kokybė","cats":["hp","heat","dhw","ac","rec","air","sauna"]},{"id":"energy","name":"Saulės energija ir elektra","emoji":"☀️","desc":"Inverteriai, baterijos ir elektros apskaita","cats":["inv","bat","meter"]},{"id":"security","name":"Apsauga ir saugumas","emoji":"🛡️","desc":"Signalizacijos, kameros, spynos ir nuotėkiai","cats":["sec","cam","lock","water"]},{"id":"light","name":"Apšvietimas ir valdymas","emoji":"💡","desc":"Apšvietimas, užuolaidos, vartai ir jutikliai","cats":["light","cover","sens"]},{"id":"transport","name":"Automobiliai ir įkrovimas","emoji":"🚗","desc":"Automobilių duomenys ir elektromobilių įkrovimas","cats":["vehicle","ev"]},{"id":"garden","name":"Sodas ir laistymas","emoji":"🌱","desc":"Laistymas, šiltnamiai, baseinai ir vejapjovės","cats":["irrigation","garden","mow"]},{"id":"home","name":"Buitis ir laisvalaikis","emoji":"🏠","desc":"Buitiniai prietaisai, robotai, TV ir garsas","cats":["app","vac","media"]}];
 let openDeviceGroup=null,deviceCategoryQuery='',expandedOtherBrands=new Set(),expandedOtherCategories=new Set();
 function brandChoices(c,names,compact){
- return names.map(b=>`<button type="button" class="brand-choice ${compact?'brand-choice-alt':''}" data-b="${esc(b)}">${brandLogo(b)}</button>`).join('');
+ return names.map(b=>`<button type="button" class="brand-choice ${compact?'brand-choice-alt':''}" data-b="${esc(b)}">${brandLogo(b,c.ic)}</button>`).join('');
 }
 
 /* v3.8: custom inline device illustrations, no external image dependencies */
@@ -593,7 +592,7 @@ function renderBM(){
   const c=CATS.find(x=>x.id===BM.cat),it={cat:BM.cat,brand:BM.brand,model:BM.model};
   const cm=CMP[compatOf(it)],lo=LOCT[localOf(it)],ml=modelsOf(it),mn=ml&&BM.model>=0?ml[BM.model]:null;
   $('#bmBox').innerHTML=`<button class="mdl-x" data-bm="x" aria-label="Uždaryti">${ic('x')}</button>
-   <div class="bm-h"><div class="bm-ico">${deviceSketch(BM.sub||"",c.id)}</div><div><small>${esc(BM.sub||c.name)}</small><h3>${brandLogo(BM.brand)}</h3></div></div>
+   <div class="bm-h"><div class="bm-ico">${deviceSketch(BM.sub||"",c.id)}</div><div><small>${esc(BM.sub||c.name)}</small><h3>${brandLogo(BM.brand,c.ic)}</h3></div></div>
    ${c.sub&&c.sub.length?`<label class="bm-l" style="margin-top:4px">Prietaisas</label><select class="field" data-bm="sub">${c.sub.map(x=>`<option ${BM.sub===x?'selected':''}>${esc(x)}</option>`).join('')}</select>`:''}
    <div class="bm-st"><span class="badge ${cm[0]}">${cm[1]}</span><span class="small">${cm[2].charAt(0).toUpperCase()+cm[2].slice(1)}</span></div>
    <div class="bm-st"><span class="lc ${lo[0]}">${lo[0]==='lc-l'?ic('home'):lo[0]==='lc-c'?ic('cloud'):ic('grid')}${lo[1]}</span><span class="small">${lo[2]}</span></div>
