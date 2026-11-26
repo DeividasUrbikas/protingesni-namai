@@ -81,6 +81,15 @@ const cg=$('#contactGrid');const mq=matchMedia('(max-width:860px)');const lay=()
 
 /* ===================== MARŠRUTIZAVIMAS ===================== */
 const PAGES=['pradzia','privalumai','kaip-veikia','paslaugos','skaiciuotuvas','platforma','apie','kontaktai','dizainas'];
+const sectionLinks = new Map([
+  ['lokalumas', ['privalumai', 'lokalumas']],
+  ['palyginimas', ['privalumai', 'palyginimas']],
+  ['valdymo-skydelis', ['kaip-veikia', 'pn-ha-demo-embed']],
+  ['v14-showcase', ['kaip-veikia', 'v14-showcase']],
+  ['skydeliai', ['paslaugos', 'demo']],
+  ['demo', ['paslaugos', 'demo']],
+  ['iranga', ['skaiciuotuvas', 'pn-buy-section']]
+]);
 let serviceToolsLoading = false;
 let serviceToolsReady = false;
 function loadServiceTools() {
@@ -112,8 +121,7 @@ function loadServiceTools() {
 }
 function route(){
  const h=location.hash.slice(1);
- const alias={'lokalumas':'privalumai','v14-showcase':'kaip-veikia','skydeliai':'paslaugos','demo':'paslaugos','iranga':'skaiciuotuvas'};
- const p=alias[h]||(PAGES.includes(h)?h:'pradzia');
+ const [p, target] = sectionLinks.get(h) || [PAGES.includes(h) ? h : 'pradzia'];
  document.querySelectorAll('.page').forEach(el=>el.classList.toggle('on',el.id==='p-'+p));
  document.querySelectorAll('.links a,.pn-journey-nav a').forEach(el=>{const active=el.getAttribute('href')==='#'+p;el.classList.toggle('on',active);if(active)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current')});
  if(typeof pvOpen!=='undefined'&&pvOpen&&p!=='skaiciuotuvas')closePreview();
@@ -122,16 +130,19 @@ function route(){
  $('#service-tools-status').hidden = !needsTools;
  if (needsTools) loadServiceTools();
  if (p === 'kaip-veikia') {
-   const frame = document.querySelector('.pn-device-iframe');
-   if (!frame.hasAttribute('src')) frame.src = frame.dataset.src;
+   document.querySelectorAll('#p-kaip-veikia iframe[data-src]:not([src])').forEach(frame => {
+     frame.src = frame.dataset.src;
+   });
  }
  if(p==='platforma')showPlatform();
- if(h==='iranga'){setTimeout(()=>document.getElementById('pn-buy-section')?.scrollIntoView({behavior:'smooth',block:'start'}),80)}
  if(h==='v14-showcase'){const detail=document.getElementById('pn-film-expand');if(detail)detail.open=true;}
- if(h==='lokalumas'||h==='v14-showcase'||h==='skydeliai'||h==='demo'||h==='iranga'){
-  const target=h==='skydeliai'||h==='demo'?'demo':h;
-  if(h!=='iranga')setTimeout(()=>document.getElementById(target)?.scrollIntoView({behavior:'smooth',block:'start'}),70);
- }else window.scrollTo(0,0);
+ if (target) {
+   setTimeout(() => {
+     if (location.hash.slice(1) !== h) return;
+     const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+     document.getElementById(target)?.scrollIntoView({behavior, block: 'start'});
+   }, 80);
+ } else window.scrollTo(0, 0);
 }
 addEventListener('hashchange',route);
 document.querySelectorAll('.links a,.pn-journey-nav a').forEach(link=>link.addEventListener('click',()=>{if(location.hash===link.getAttribute('href'))route()}));
@@ -157,6 +168,14 @@ $('#yr').textContent=new Date().getFullYear();
 fillIcons();
 document.querySelectorAll('.tile .k[data-ic]').forEach((el,i)=>el.insertAdjacentText('beforeend',['Saulė','Baterija','Namai','Elektromobilis'][i]));
 route();
+
+// Pressing the selected scenario again replays its short illustration.
+document.querySelector('.home-choices').addEventListener('click', event => {
+  if (!event.target.matches('input:checked')) return;
+  for (const motion of document.querySelector('.home-room').getAnimations({subtree: true})) {
+    if (motion.animationName?.startsWith('home-')) motion.currentTime = 0;
+  }
+});
 
 ;
 
@@ -416,7 +435,7 @@ document.addEventListener('DOMContentLoaded',function(){
  function revealActive(){
    const page=document.querySelector('.page.on');
    if(revealObserver&&page){
-     const els=page.querySelectorAll('.pn-simple-card,.v17-services>a,.pn-inlife-grid>.card,.pn-local .card,#services>.card,#p-apie .card,#p-kontaktai .card');
+     const els=page.querySelectorAll('.pn-simple-card,.pn-inlife-grid>.card,.pn-local .card,#services>.card,#p-apie .card,#p-kontaktai .card');
      els.forEach((el,i)=>{
        if(el.classList.contains('pn-reveal'))return;
        el.classList.add('pn-reveal');
@@ -433,7 +452,7 @@ document.addEventListener('DOMContentLoaded',function(){
  // A small tactile reaction on buttons; does not intercept their native actions.
  if(!reduced&&!saveData){
    document.addEventListener('pointerdown',event=>{
-     const el=event.target.closest&&event.target.closest('.btn,.pn-journey-nav a,.pn-home-scenarios button');
+     const el=event.target.closest&&event.target.closest('.btn,.pn-journey-nav a');
      if(!el||event.button!==0)return;
      const rect=el.getBoundingClientRect();
      if(!rect.width||!rect.height)return;
@@ -447,126 +466,7 @@ document.addEventListener('DOMContentLoaded',function(){
      circle.addEventListener('animationend',()=>circle.remove(),{once:true});
    },{passive:true});
  }
- const preview=document.querySelector('.v17-preview[data-pn-scene]');
- const group=document.querySelector('.pn-home-scenarios');
- if(!preview||!group)return;
- const switches=Array.from(group.querySelectorAll('button[data-pn-scene]'));
- const autoplay=$('pn-demo-play');
- const metrics=[
-   {el:$('v17-pv'),unit:'kW',digits:1},
-   {el:$('v17-soc'),unit:'%',digits:0},
-   {el:$('v17-load'),unit:'kW',digits:1}
- ];
- const scenarios={
-   day:{values:[6.8,82,1.9],fill:[70,82,25],insight:'Saulės energija pirmiausia naudojama namuose.'},
-   evening:{values:[0.7,74,2.4],fill:[8,74,36],insight:'Saulei leidžiantis, baterija padeda padengti namų poreikį.'},
-   night:{values:[0,63,1.3],fill:[0,63,20],insight:'Naktį namai gali naudoti baterijoje sukauptą energiją.'}
- };
- const format=(num,digits)=>num.toLocaleString('lt-LT',{minimumFractionDigits:digits,maximumFractionDigits:digits});
- let current='day',values=scenarios.day.values.slice(),frame=0,autoTimer=0;
- function writeNumbers(list){
-   metrics.forEach((metric,i)=>{
-     if(!metric.el)return;
-     const first=metric.el.firstChild;
-     if(first&&first.nodeType===3)first.nodeValue=format(list[i],metric.digits)+' ';
-   });
- }
- function changeScene(id){
-   if(!scenarios[id])return;
-   const next=scenarios[id];
-   preview.dataset.pnScene=id;
-   switches.forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.pnScene===id)));
-   const insight=$('v17-insight-text');
-   if(insight)insight.textContent=next.insight;
-   metrics.forEach((m,i)=>{const bar=m.el?.parentElement?.querySelector('.v17-meter');if(bar)bar.style.setProperty('--fill',next.fill[i]+'%')});
-   cancelAnimationFrame(frame);
-   if(reduced||saveData){values=next.values.slice();writeNumbers(values)}
-   else{
-     const start=values.slice(),end=next.values.slice(),started=performance.now(),duration=560;
-     const tick=now=>{
-       const t=Math.min(1,(now-started)/duration);
-       const ease=1-Math.pow(1-t,3);
-       values=start.map((v,i)=>v+(end[i]-v)*ease);
-       writeNumbers(values);
-       if(t<1)frame=requestAnimationFrame(tick);
-     };
-     frame=requestAnimationFrame(tick);
-   }
-   current=id;
- }
- switches.forEach(btn=>btn.addEventListener('click',()=>changeScene(btn.dataset.pnScene)));
- function stopAuto(){
-   clearInterval(autoTimer);autoTimer=0;
-   if(autoplay){autoplay.setAttribute('aria-pressed','false');autoplay.textContent='▶ Automatiškai'}
- }
- function startAuto(){
-   if(reduced||saveData||document.hidden)return;
-   stopAuto();
-   autoTimer=setInterval(()=>{
-     if(document.hidden||!document.querySelector('#p-pradzia.on')){stopAuto();return}
-     const keys=Object.keys(scenarios),next=keys[(keys.indexOf(current)+1)%keys.length];
-     changeScene(next);
-   },5000);
-   autoplay.setAttribute('aria-pressed','true');
-   autoplay.textContent='Ⅱ Sustabdyti';
- }
- if(autoplay)autoplay.addEventListener('click',()=>autoTimer?stopAuto():startAuto());
- document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAuto()});
- addEventListener('hashchange',()=>{if(location.hash&&location.hash!=='#pradzia')stopAuto()});
- changeScene('day');
 })();
-
-;
-
-(function(){
- document.querySelectorAll('.pn-news-home-card img').forEach(function(img){
-  let attempt=0,orig=img.getAttribute('src');
-  function fallback(){
-   const m=orig.match(/^(.*\/thumb\/[^/]+\/[^/]+\/)\d+px-([^/]+)$/);
-   if(m && attempt===0){attempt=1;img.src=m[1]+'500px-'+m[2];return}
-   if(m && attempt===1){attempt=2;img.src=m[1]+'330px-'+m[2];return}
-   img.dataset.imgFailed='true';img.removeEventListener('error',fallback);
-  }
-  img.addEventListener('error',fallback);
-  if(img.complete && img.naturalWidth===0)fallback();
- });
-})();
-
-;
-
-/* PN_COMPARE_MOTION_V2: izoliuota demonstracijos logika */
-(function(){
-  "use strict";
-  var section=document.querySelector('#p-pradzia .pn-compare-showcase');
-  if(!section)return;
-  var demo=section.querySelector('.pn-cmp-internet-demo');
-  var toggle=section.querySelector('.pn-cmp-internet-toggle');
-  if(demo && toggle){
-    var label=toggle.querySelector('.pn-cmp-toggle-label');
-    var cloud=demo.querySelector('[data-net-cloud]');
-    var local=demo.querySelector('[data-net-local]');
-    var offline=false;
-    function render(){
-      demo.dataset.offline=offline?'1':'0';
-      toggle.setAttribute('aria-pressed',String(offline));
-      label.textContent=offline?'Įjungti internetą':'Išjungti internetą';
-      cloud.textContent=offline?'Debesijos funkcijos be interneto nepasiekiamos':'Interneto paslaugos pasiekiamos';
-      local.textContent=offline?'Vietinis suderinamų įrenginių valdymas veikia toliau':'Vietinis suderinamų įrenginių valdymas veikia';
-    }
-    toggle.addEventListener('click',function(){offline=!offline;render()});
-    render();
-  }
-  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    var targets=section.querySelectorAll('.pn-compare-head,.pn-compare-visual,.pn-cmp-internet-demo,.pn-cmp-energy,.pn-compare-table-wrap');
-    targets.forEach(function(el){el.classList.add('pn-cmp-reveal')});
-    var obs=new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('pn-cmp-visible');obs.unobserve(entry.target)}});
-    },{rootMargin:'0px 0px -25px 0px',threshold:.08});
-    targets.forEach(function(el){obs.observe(el)});
-  }
-})();
-
-;
 
 /* PN_HA_DEVICE_PREVIEW_V3 — nesukuria nauju skydeliu, keicia tik iframe isore */
 (function(){
