@@ -8,16 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Quicksand:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="site.css?v=4.31">
+<link rel="stylesheet" href="site.css?v=4.32">
 <!-- GitHub Pages redeploy trigger 2026-11-20; no UI changes. -->
-<script defer src="site.js?v=4.31"></script>
+<script defer src="site.js?v=4.32"></script>
 </head>
 <body>
 <div id="pn-scroll-progress" aria-hidden="true"></div>
 
 <header>
   <div class="wrap nav">
-    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/wordmark.webp" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.31</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
+    <a href="#pradzia" class="logo" aria-label="ProtingesniNamai.lt – pradžia"><img class="logo-img pn-logo-wordmark" src="assets/wordmark.webp" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span class="site-version" title="Svetainės versija">v4.32</span><button type="button" id="v14-theme-toggle" class="v14-theme" aria-pressed="false" title="Perjungti šviesią arba tamsią temą">☾ Tamsi tema</button>
     <nav class="links pn-full-menu" id="links" aria-label="Visi svetainės skyriai">
 <div class="pn-full-menu-title"><span>MENIU</span><strong>Kur norėtumėte pradėti?</strong></div>
 <div class="pn-menu-group"><div class="pn-menu-heading">SUSIPAŽINKITE</div>
@@ -40,7 +40,7 @@
 </div>
 </nav>
     <a href="#skaiciuotuvas" class="btn btn-p btn-sm btn-cta">Apskaičiuoti kainą</a>
-    <button type="button" class="menu-btn" id="menuBtn" aria-label="Atidaryti meniu" aria-controls="links" aria-expanded="false"><svg class="i" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <button type="button" class="menu-btn" id="menuBtn" aria-label="Atidaryti meniu" aria-controls="links" aria-expanded="false"><svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="home-menu-label">Meniu</span></button>
   </div>
 </header>
 
@@ -54,211 +54,58 @@
 
 <div id="service-tools-status" role="status" hidden></div>
 <!-- ============ PRADŽIA ============ -->
-<section class="page" id="p-pradzia">
+<section class="page" id="p-pradzia" aria-labelledby="home-title">
 <script>if (!location.hash || location.hash === '#pradzia') document.currentScript.parentElement.classList.add('on');</script>
-
-<div class="v17-hero">
- <div class="v17-hero-copy">
-  <span class="v17-kicker"><span class="v17-dot"></span> SAUGUMAS · VIETINIS VALDYMAS · TAUPYMAS</span>
-  <h1>Jūsų namai.<br><span class="grad-tx">Jūsų kontrolė.</span></h1>
-  <p>Vienas valdymas visiems namams. Sujungiame skirtingų gamintojų įrenginius, teikiame pirmenybę vietiniam ryšiui ir pasirūpiname automatizacijomis. Tinkamai parinkta įranga gali veikti net be interneto.</p>
-  <div class="v17-actions"><a href="#skaiciuotuvas" class="btn btn-p">Apskaičiuoti kainą <span aria-hidden="true">↗</span></a><a href="#privalumai" class="btn btn-g">Kodėl verta?</a></div>
-  <div class="v17-trust"><span>✓ Galima riboti interneto prieigą</span><span>✓ Mažiau gamintojų programėlių</span><span>✓ Išmanesnis energijos naudojimas</span></div>
- </div>
-
-</div>
-
-
-<section class="pn-benefits-2026" aria-labelledby="pn-benefits-title">
-  <div class="pn-bstats" aria-label="Home Assistant galimybės ir mūsų katalogas">
-    <div class="pn-bstat">
-      <strong>1 500<span>+</span></strong>
-      <span>Home Assistant integracijų</span>
-      <small>Skirtingi įrenginiai ir paslaugos vienoje platformoje</small>
-    </div>
-    <div class="pn-bstat">
-      <strong>543</strong>
-      <span>gamintojai mūsų kataloge</span>
-      <small>Suderinamumą tikriname pagal konkretų modelį</small>
-    </div>
-    <div class="pn-bstat">
-      <strong>1</strong>
-      <span>namų valdymo vieta</span>
-      <small>Šildymas, energija, apsauga ir daugiau</small>
-    </div>
-  </div>
-
-  <div class="pn-safety-showcase">
-    <div class="pn-safety-copy">
-      <span class="pn-b-eyebrow"><span class="pn-b-dot"></span> SVARBIAUSIA – SAUGUMAS IR PRIVATUMAS</span>
-      <h2 id="pn-benefits-title">Jūsų namai. <span class="grad-tx">Be nereikalingos priklausomybės nuo interneto.</span></h2>
-      <p>Įprastose sistemose komanda dažnai keliauja per gamintojo serverį. Su <strong>Home Assistant</strong> įrenginiai, palaikantys vietinį ryšį, gali būti valdomi tiesiog namų tinkle – be kelionės į debesiją.</p>
-      <ul class="pn-safety-checks">
-        <li><span aria-hidden="true">✓</span><span><strong>Interneto prieigą galima apriboti.</strong> Suderinamus įrenginius galima izoliuoti nuo išorinių serverių.</span></li>
-        <li><span aria-hidden="true">✓</span><span><strong>Vietinis valdymas veikia ir dingus internetui.</strong> Jei lieka elektra ir veikia namų tinklas.</span></li>
-        <li><span aria-hidden="true">✓</span><span><strong>Daugiau duomenų lieka namuose.</strong> Galite pasirinkti, ką ir su kokiomis paslaugomis dalintis.</span></li>
-      </ul>
-      <a class="pn-safety-link" href="#privalumai">Plačiau apie saugumą ir vietinį veikimą <span aria-hidden="true">→</span></a>
-    </div>
-    <div class="pn-safety-diagram" role="img" aria-label="Vietinio valdymo principas: įrenginiai jungiasi per namų tinklą prie Home Assistant. Išorinį interneto ryšį galima apriboti.">
-      <div class="pn-sdiag-top"><span class="pn-sdiag-led"></span> NAMŲ TINKLAS <strong>VEIKIA VIETOJE</strong></div>
-      <div class="pn-sdiag-devices">
-        <span>💡 Apšvietimas</span><span>🌡️ Šildymas</span><span>📷 Kameros</span>
-      </div>
-      <div class="pn-sdiag-connect" aria-hidden="true"><span></span><i>↕</i><span></span></div>
-      <div class="pn-sdiag-hub"><span class="pn-sdiag-hub-icon" aria-hidden="true">⌂</span><div><strong>Home Assistant</strong><small>Valdymas jūsų namuose</small></div><b class="pn-sdiag-ok">✓</b></div>
-      <div class="pn-sdiag-internet"><span aria-hidden="true">⊘</span><div><strong>Internetas neprivalomas vietiniam valdymui</strong><small>Internetą naudojančioms funkcijoms jis vis dar reikalingas</small></div></div>
-      <div class="pn-sdiag-foot">Pavyzdinė vietinio ryšio schema</div>
-    </div>
-  </div>
-
-
-<!-- PN_COMPARE_LOCAL_V1 -->
-<section class="pn-compare-showcase" id="palyginimas" aria-labelledby="pn-compare-title">
-  <div class="pn-compare-head">
-    <span class="pn-compare-eyebrow">KASDIENIS PATOGUMAS IR SAUGUMAS</span>
-    <h2 id="pn-compare-title">Daug programėlių ar <em>viena sistema?</em></h2>
-    <p>Šviesos, šildymas, kameros, saulės elektrinė... Kuo daugiau įrenginių, tuo daugiau atskirų valdymo vietų. Parodome, kaip gali būti paprasčiau.</p>
-  </div>
-  <div class="pn-compare-visual">
-    <article class="pn-compare-panel pn-compare-old">
-      <span class="pn-compare-tag">ĮPRASTAS VARIANTAS</span>
-      <h3>Visur po programėlę</h3>
-      <p>Atskiri gamintojai, valdymo ekranai ir paskyros</p>
-      <div class="pn-compare-apps" aria-label="Šešių atskirų įrenginių programėlių pavyzdys">
-        <div class="pn-compare-app"><span aria-hidden="true">💡</span>Šviesos<small>Programėlė</small></div>
-        <div class="pn-compare-app"><span aria-hidden="true">🌡️</span>Šildymas<small>Programėlė</small></div>
-        <div class="pn-compare-app"><span aria-hidden="true">📷</span>Kameros<small>Programėlė</small></div>
-        <div class="pn-compare-app"><span aria-hidden="true">🛡️</span>Apsauga<small>Programėlė</small></div>
-        <div class="pn-compare-app"><span aria-hidden="true">☀️</span>Saulė<small>Programėlė</small></div>
-        <div class="pn-compare-app"><span aria-hidden="true">🔌</span>Įkrovimas<small>Programėlė</small></div>
-      </div>
-      <div class="pn-cmp-cloud-route" aria-label="Atskiri įrenginiai gali priklausyti nuo debesijos"><span>Įrenginiai</span><i aria-hidden="true"></i><b aria-hidden="true">☁️</b><span>Gamintojo serveris</span></div>
-      <div class="pn-compare-foot"><span aria-hidden="true">↗</span> Daug skirtingų prisijungimų ir valdymo vietų</div>
-    </article>
-    <span class="pn-compare-vs" aria-hidden="true">VS</span>
-    <article class="pn-compare-panel pn-compare-new">
-      <span class="pn-compare-tag">VIENA BENDRA SISTEMA</span>
-      <h3>Viskas vienoje vietoje</h3>
-      <p>Jums pritaikytas „Home Assistant“ valdymas</p>
-      <div class="pn-compare-dashboard" aria-label="Vieno namų valdymo ekrano pavyzdys">
-        <div class="pn-compare-dash-top"><strong>⌂ Mano namai</strong><span>● Vietinis ryšys</span></div>
-        <div class="pn-compare-dash-grid">
-          <span><b aria-hidden="true">💡</b>Šviesos</span>
-          <span><b aria-hidden="true">🌡️</b>Šildymas</span>
-          <span><b aria-hidden="true">📷</b>Kameros</span>
-          <span><b aria-hidden="true">🛡️</b>Apsauga</span>
-          <span><b aria-hidden="true">☀️</b>Saulė</span>
-          <span><b aria-hidden="true">🔌</b>Įkrovimas</span>
+  <div class="home-landing">
+    <div class="home-layout">
+      <div class="home-intro">
+        <p class="home-service">Išmaniųjų namų įrengimas</p>
+        <h1 id="home-title">Jūsų namai <span>viename ekrane</span></h1>
+        <p class="home-summary">Įdiegiame „Home Assistant“ ir sujungiame skirtingų gamintojų šildymo, apšvietimo, apsaugos bei saulės elektrinės įrangą.</p>
+        <div class="home-actions">
+          <a class="btn btn-p" href="#skaiciuotuvas">Skaičiuoti kainą</a>
+          <a class="btn btn-g" href="mailto:info@protingesninamai.lt">Parašyti laišką</a>
         </div>
+        <p class="home-price">Sistemos paruošimas nuo <strong>149 €</strong> · įranga atskirai</p>
+        <nav class="home-links" aria-label="Paslaugos ir demonstracija">
+          <a href="#paslaugos">Visos paslaugos</a>
+          <a href="#valdymo-skydelis">Valdymo demonstracija</a>
+        </nav>
       </div>
-      <a class="pn-ha-real-demo-link" href="https://demo.home-assistant.io/#/lovelace/home" target="_blank" rel="noopener noreferrer" aria-label="Išbandyti oficialią Home Assistant demonstraciją (atsidaro naujame lange)">
-        <span class="pn-ha-real-demo-mark" aria-hidden="true">⌂</span>
-        <span class="pn-ha-real-demo-text"><strong>Išbandykite tikrą „Home Assistant“</strong><small>Atidaryti oficialią interaktyvią demonstraciją</small></span>
-        <span class="pn-ha-real-demo-arrow" aria-hidden="true">↗</span>
-      </a>
-      <div class="pn-cmp-local-route" aria-label="Suderinami įrenginiai jungiami vietiniame tinkle"><span>Įrenginiai</span><i aria-hidden="true"></i><b aria-hidden="true">⌂</b><span>Vietinis tinklas</span></div>
-      <div class="pn-compare-foot"><span aria-hidden="true">✓</span> Vienas ekranas, bendros automatizacijos, daugiau kontrolės</div>
-    </article>
-  </div>
 
-<!-- PN_COMPARE_MOTION_V2 -->
-<section class="pn-cmp-internet-demo" aria-labelledby="pn-cmp-demo-title" data-offline="0">
- <div class="pn-cmp-demo-heading">
-  <div>
-   <span class="pn-cmp-demo-kicker">IŠBANDYKITE PATYS · INTERAKTYVI DEMONSTRACIJA</span>
-   <h3 id="pn-cmp-demo-title">O jeigu namuose dingtų internetas?</h3>
-   <p>Paspauskite mygtuką ir pamatykite, kuo skiriasi du valdymo būdai.</p>
-  </div>
-  <button type="button" class="pn-cmp-internet-toggle" aria-pressed="false" aria-controls="pn-cmp-demo-states">
-   <span class="pn-cmp-switch-track" aria-hidden="true"><span class="pn-cmp-switch-thumb"></span></span>
-   <span class="pn-cmp-toggle-label">Išjungti internetą</span>
-  </button>
- </div>
- <div class="pn-cmp-network-grid" id="pn-cmp-demo-states">
-  <div class="pn-cmp-net-card">
-   <div class="pn-cmp-net-label"><span>Debesijos valdymas</span><b aria-hidden="true">☁️</b></div>
-   <div class="pn-cmp-net-flow" aria-hidden="true"><span>📱</span><i></i><span>☁️</span><i></i><span>💡</span></div>
-   <div class="pn-cmp-net-status" data-net-cloud role="status">Interneto paslaugos pasiekiamos</div>
-  </div>
-  <div class="pn-cmp-net-card">
-   <div class="pn-cmp-net-label"><span>Vietinis „Home Assistant“</span><b aria-hidden="true">⌂</b></div>
-   <div class="pn-cmp-net-flow" aria-hidden="true"><span>📱</span><i></i><span>🏠</span><i></i><span>💡</span></div>
-   <div class="pn-cmp-net-status" data-net-local role="status">Vietinis suderinamų įrenginių valdymas veikia</div>
-  </div>
- </div>
- <p class="pn-cmp-demo-note">Tai iliustracinė simuliacija, o ne tikras interneto jungiklis. Vietiniam valdymui reikia veikiančio namų tinklo, elektros ir lokaliai veikiančių įrenginių bei integracijų.</p>
-</section>
-<div class="pn-cmp-energy" aria-label="Kaip saulės elektrinė, Home Assistant ir automobilio įkrovimas gali veikti kartu">
- <div class="pn-cmp-energy-head"><div><h3>Viena sistema. Kelių įrenginių bendras darbas.</h3><p>Pavyzdys: saulės energija panaudojama protingiau.</p></div><span>PAŽANGIOS AUTOMATIZACIJOS</span></div>
- <div class="pn-cmp-energy-track">
-   <div class="pn-cmp-energy-node"><b aria-hidden="true">☀️</b><span>Saulės elektrinė<small>Atsiranda perteklius</small></span></div>
-   <i class="pn-cmp-energy-link" aria-hidden="true"></i>
-   <div class="pn-cmp-energy-node pn-cmp-energy-hub"><b aria-hidden="true">⌂</b><span>Home Assistant<small>Priima sprendimą</small></span></div>
-   <i class="pn-cmp-energy-link" aria-hidden="true"></i>
-   <div class="pn-cmp-energy-node"><b aria-hidden="true">🚗</b><span>Elektromobilis<small>Įkrovimas prisitaiko</small></span></div>
- </div>
- <p class="pn-cmp-energy-caption">Pavyzdinė automatizacija – reikalingas suderinamas inverteris, įkroviklis ir teisingai sukonfigūruota sistema.</p>
-</div>
-<!-- /PN_COMPARE_MOTION_V2 -->
+      <section class="home-demo" aria-labelledby="home-demo-title">
+        <h2 id="home-demo-title">Išbandykite automatiką</h2>
+        <div class="home-room" aria-hidden="true">
+          <img class="home-room-photo" src="assets/svetaine.webp" alt="" width="840" height="560" decoding="async">
+          <div class="home-lamplight"></div>
+          <div class="home-cool-air"><i></i><i></i><i></i></div>
+          <img class="home-robot" src="kambarys/robotas.webp" alt="" width="300" height="146" decoding="async">
+        </div>
+        <fieldset class="home-choices">
+          <legend class="home-sr-only">Pasirinkite, kas vyksta namuose</legend>
+          <label><input type="radio" name="home-scene" value="dusk" aria-describedby="home-dusk-result" checked><span>Sutemo</span></label>
+          <label><input type="radio" name="home-scene" value="warm" aria-describedby="home-warm-result"><span>Prišilo</span></label>
+          <label><input type="radio" name="home-scene" value="away" aria-describedby="home-away-result"><span>Išvykau</span></label>
+        </fieldset>
+        <div class="home-results" role="status" aria-atomic="true">
+          <p id="home-dusk-result">Saulei nusileidus, įsižiebia svetainės šviestuvas.</p>
+          <p id="home-warm-result">Temperatūrai pakilus virš 25 °C, įsijungia vėsinimas.</p>
+          <p id="home-away-result">Išėjus paskutiniam žmogui, robotas pradeda plauti grindis.</p>
+        </div>
+      </section>
+    </div>
 
-  <div class="pn-compare-table-wrap">
-    <table class="pn-compare-table">
-      <thead><tr><th scope="col">Kuo skiriasi?</th><th scope="col">Atskiri, debesija priklausomi įrenginiai</th><th scope="col">„Home Assistant“ su vietiniu valdymu</th></tr></thead>
-      <tbody><tr><th scope="row"><span class="pn-compare-row-icon" aria-hidden="true">📱</span>Programėlės</th><td data-label="Atskiri įrenginiai">Dažnai reikia kelių skirtingų programėlių</td><td data-label="Vietinė sistema"><span class="pn-compare-tick" aria-hidden="true">✓</span>Viena bendra valdymo vieta</td></tr>
-<tr><th scope="row"><span class="pn-compare-row-icon" aria-hidden="true">🌐</span>Dingęs internetas</th><td data-label="Atskiri įrenginiai">Debesijos funkcijos gali nustoti veikti</td><td data-label="Vietinė sistema"><span class="pn-compare-tick" aria-hidden="true">✓</span>Vietinės funkcijos gali veikti toliau</td></tr>
-<tr><th scope="row"><span class="pn-compare-row-icon" aria-hidden="true">🔐</span>Paskyros ir prieigos</th><td data-label="Atskiri įrenginiai">Kelios atskiros paskyros ir slaptažodžiai</td><td data-label="Vietinė sistema"><span class="pn-compare-tick" aria-hidden="true">✓</span>Viena pagrindinė namų valdymo sąsaja</td></tr>
-<tr><th scope="row"><span class="pn-compare-row-icon" aria-hidden="true">🛡️</span>Privatumas</th><td data-label="Atskiri įrenginiai">Duomenys gali keliauti per skirtingus serverius</td><td data-label="Vietinė sistema"><span class="pn-compare-tick" aria-hidden="true">✓</span>Galima daugiau duomenų laikyti savo namuose</td></tr>
-<tr><th scope="row"><span class="pn-compare-row-icon" aria-hidden="true">🔗</span>Gamintojų suderinimas</th><td data-label="Atskiri įrenginiai">Įrenginiai dažnai veikia atskirose ekosistemose</td><td data-label="Vietinė sistema"><span class="pn-compare-tick" aria-hidden="true">✓</span>Skirtingi suderinami įrenginiai veikia kartu</td></tr>
-<tr><th scope="row"><span class="pn-compare-row-icon" aria-hidden="true">⚡</span>Automatizacijos</th><td data-label="Atskiri įrenginiai">Kiekviena sistema dažnai turi savo taisykles</td><td data-label="Vietinė sistema"><span class="pn-compare-tick" aria-hidden="true">✓</span>Vienas scenarijus gali valdyti kelias sistemas</td></tr>
-<tr><th scope="row"><span class="pn-compare-row-icon" aria-hidden="true">☀️</span>Energijos taupymas</th><td data-label="Atskiri įrenginiai">Šildymas ir elektrinė nebūtinai susikalba</td><td data-label="Vietinė sistema"><span class="pn-compare-tick" aria-hidden="true">✓</span>Galima derinti šildymą, saulę ir bateriją</td></tr></tbody>
-    </table>
+    <aside class="home-local" aria-label="Vietinis valdymas">
+      <span class="home-local-icon" data-ic="home" aria-hidden="true"></span>
+      <div>
+        <strong>O jei dingtų internetas?</strong>
+        <p>Vietinės automatizacijos veikia, jei namuose yra elektra ir veikia namų tinklas.</p>
+      </div>
+      <a href="#lokalumas">Apie vietinį valdymą</a>
+    </aside>
   </div>
-  <div class="pn-compare-ending">
-    <div><strong>Ne daugiau programėlių. Daugiau galimybių.</strong><span>Patikrinsime, kaip galima sujungti jūsų turimus įrenginius.</span></div>
-    <a class="pn-compare-cta" href="#skaiciuotuvas">Įvertinti mano namus <span aria-hidden="true">→</span></a>
-  </div>
-  <p class="pn-compare-disclaimer">Palyginimas iliustracinis. Interneto poreikis, saugumo lygis ir integravimo galimybės priklauso nuo įrenginių modelių ir sistemos konfigūracijos. Vietinis valdymas savaime nepanaikina visų kibernetinio saugumo rizikų.</p>
-</section>
-<!-- /PN_COMPARE_LOCAL_V1 -->
-
-  <div class="pn-bhead">
-    <span class="eyebrow">KODĖL VERTA?</span>
-    <h2>Ne tik valdyti. <span class="grad-tx">Gyventi patogiau.</span></h2>
-    <p>Paprastais žodžiais – ką iš šios sistemos gauna jūsų šeima.</p>
-  </div>
-  <div class="pn-bgrid">
-    <article class="pn-bcard"><span class="pn-bicon" aria-hidden="true">🛡️</span><h3>Privatumas ir saugumas</h3><p>Galite riboti įrenginių prieigą prie interneto ir patys spręsti, kur saugomi namų duomenys.</p></article>
-    <article class="pn-bcard"><span class="pn-bicon" aria-hidden="true">🔗</span><h3>Skirtingi gamintojai kartu</h3><p>Vienoje sistemoje galima sujungti skirtingų prekės ženklų šildymą, saulės elektrinę, jutiklius, apsaugą ir daugiau.</p></article>
-    <article class="pn-bcard"><span class="pn-bicon" aria-hidden="true">⚡</span><h3>Mažesnės energijos sąnaudos</h3><p>Automatizacijos gali išnaudoti saulės perteklių, palankesnius tarifus ir išmaniau valdyti šildymą bei įkrovimą.</p></article>
-    <article class="pn-bcard"><span class="pn-bicon" aria-hidden="true">🏠</span><h3>Namai dirba už jus</h3><p>Šviesa, temperatūra, vėdinimas ir apsauga prisitaiko prie paros laiko, buvimo namuose ar jūsų įpročių.</p></article>
-    <article class="pn-bcard"><span class="pn-bicon" aria-hidden="true">📱</span><h3>Vienas patogus ekranas</h3><p>Mažiau programėlių telefone. Svarbiausi namų įrenginiai, rodmenys ir pranešimai – vienoje vietoje.</p></article>
-    <article class="pn-bcard"><span class="pn-bicon" aria-hidden="true">🌱</span><h3>Laisvė plėsti sistemą</h3><p>Pradėkite nuo kelių įrenginių. Ateityje pridėkite naujus, neapsiribodami vienu gamintoju.</p></article>
-  </div>
-  <p class="pn-bclarity"><strong>Svarbu žinoti:</strong> 543 – tai mūsų prietaisų kataloge esantys gamintojų pavadinimai, o ne garantuotai veikiančių modelių skaičius. „Home Assistant“ turi daugiau kaip 1 500 oficialių integracijų. Ar konkretus įrenginys veiks be interneto, priklauso nuo jo modelio ir integracijos. Debesijos funkcijoms, atnaujinimams ar nuotolinei prieigai interneto gali reikėti. <a href="https://www.home-assistant.io/integrations/" target="_blank" rel="noopener noreferrer">Integracijų katalogas ↗</a> <a href="https://www.home-assistant.io/faq/works-without-internet/" target="_blank" rel="noopener noreferrer">Veikimas be interneto ↗</a></p>
 </section>
 
-<div class="pn-home-services-heading"><h2>Ką galime sujungti?</h2><p>Pradedame nuo to, ką jau turite.</p></div>
-
-<div class="v17-services" aria-label="Mūsų sprendimai">
- <a href="#paslaugos"><span>☀️</span><strong>Saulės elektrinės</strong><small>Prognozė ir optimizavimas</small></a>
- <a href="#paslaugos"><span>🔋</span><strong>Baterijos</strong><small>Rezervas ir krovimas</small></a>
- <a href="#paslaugos"><span>🌡️</span><strong>Šildymas</strong><small>Komfortas ir taupymas</small></a>
- <a href="#paslaugos"><span>🚗</span><strong>Elektromobiliai</strong><small>Išmanus įkrovimas</small></a>
- <a href="#paslaugos"><span>🛡️</span><strong>Apsauga</strong><small>Pranešimai ir scenarijai</small></a>
- <a href="#paslaugos"><span>📱</span><strong>Valdymo skydai</strong><small>Viskas vienoje vietoje</small></a>
-</div>
-<div class="v17-bottom-cta"><div><strong>Norite sužinoti kainą?</strong><span>Pasirinkite turimus įrenginius – matysite preliminarią sąmatą.</span></div><a href="#skaiciuotuvas" class="btn btn-p">Skaičiuoti kainą ↗</a></div>
-<section class="pn-news-home" aria-labelledby="pn-news-home-title">
-<div class="pn-news-home-head"><div><span class="eyebrow">ŽINIOS IR PATARIMAI</span><h2 id="pn-news-home-title">Aktualu išmaniems namams</h2><p>Patikrintos IT saugumo, Home Assistant ir energetikos naujienos lietuviškai.</p></div><a class="pn-news-home-all" href="naujienos/">Visos naujienos ↗</a></div>
-<div class="pn-news-home-grid">
-<a class="pn-news-home-card" href="naujienos/#synology-saugumas"><img loading="lazy" decoding="async" width="320" height="230" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Synology_DS213%2B_-_z_dyskami.jpg/960px-Synology_DS213%2B_-_z_dyskami.jpg" alt="Tikras Synology NAS įrenginys"><span class="pn-news-copy"><span class="pn-news-home-type">🛡️ SAUGUMAS · 2026-11-18</span><strong>„Synology“ NAS spraga aktyviai išnaudojama</strong><span class="pn-news-desc">CISA įspėjimas ir saugumo atnaujinimo rekomendacijos.</span><b>Skaityti →</b></span></a>
-<a class="pn-news-home-card" href="naujienos/#litgrid-168mw-2026"><img loading="lazy" decoding="async" width="320" height="230" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Tesvolt_battery_energy_storage_system_Rheineck.jpg/960px-Tesvolt_battery_energy_storage_system_Rheineck.jpg" alt="Iliustracinė tikro baterijų parko nuotrauka"><span class="pn-news-copy"><span class="pn-news-home-type">🔋 LIETUVA · 2026-11-13</span><strong>Lietuvoje prijungti dar 168 MW kaupiklių</strong><span class="pn-news-desc">„Litgrid“ paskelbė naujausius baterijų parkų duomenis.</span><b>Skaityti →</b></span></a>
-<a class="pn-news-home-card" href="naujienos/#home-assistant-2026-11"><img loading="lazy" decoding="async" width="320" height="230" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Home_Assistant_Dashboard.png/960px-Home_Assistant_Dashboard.png" alt="Tikras Home Assistant valdymo skydelis"><span class="pn-news-copy"><span class="pn-news-home-type">🏠 HOME ASSISTANT · 2026-11-04</span><strong>„Home Assistant 2026.11“ naujovės</strong><span class="pn-news-desc">„Marketplace“, kameros ir automatikos diagnostika.</span><b>Skaityti →</b></span></a>
-<a class="pn-news-home-card" href="naujienos/#prancuzijos-prekybos-centru-saldytuvu-ataka-2026"><img loading="lazy" decoding="async" width="320" height="230" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/FrozenFoodSupermarket.jpg/960px-FrozenFoodSupermarket.jpg" alt="Tikra prekybos centro šaldytuvų eilės nuotrauka, iliustracinė"><span class="pn-news-copy"><span class="pn-news-home-type">🛡️ KIBERNETINĖ ATAKA · 2026-10-12</span><strong>Prancūzijoje nulaužtos 700 prekybos vietų šaldymo sistemos</strong><span class="pn-news-desc">Įsilaužėliai nuotoliniu būdu pakeitė šaldymo įrangos temperatūros nustatymus.</span><b>Skaityti →</b></span></a>
-</div></section>
-
-</section>
 <section class="page pn-journey-page" id="p-privalumai">
 <div class="pn-section-heading"><span class="eyebrow">02 · KODĖL VERTA</span><h1>Kodėl paprastesni namai – protingesni?</h1><p>Svarbiausia ne telefonas su daugiau mygtukų, o namai, kurie patys pasirūpina kasdieniais dalykais.</p></div>
 <section class="pn-local" id="lokalumas" aria-label="Kodėl vietiniai išmanieji namai">
@@ -268,7 +115,7 @@
 <article class="pn-local-card"><span class="pn-local-icon">🛡️</span><h3>Privatumas pagal nutylėjimą</h3><p>Vietinius įrenginius galima atskirti nuo interneto, riboti jų išorinį ryšį ir duomenis laikyti savo Home Assistant sistemoje.</p><strong>Daugiau kontrolės</strong></article>
 <article class="pn-local-card"><span class="pn-local-icon">⚡</span><h3>Reali pridėtinė vertė</h3><p>Saulės elektrinė, baterija, šildymas ir elektromobilis veikia kartu: naudoja perteklių, prisitaiko prie poreikio ir padeda mažinti sąnaudas.</p><strong>Ne vien programėlė</strong></article>
 </div>
-<div class="pn-local-compare"><div><span class="pn-local-label">Įprasta debesų sistema</span><strong>Įrenginys → internetas → gamintojo serveris → programėlė</strong><small>Veikimas gali priklausyti nuo ryšio, paskyros ir paslaugos teikėjo.</small></div><div class="pn-local-arrow">→</div><div><span class="pn-local-label">Mūsų prioritetas</span><strong>Įrenginys → namų tinklas → Home Assistant</strong><small>Vietinis valdymas ir automatizacijos, kai tai leidžia konkretus įrenginys.</small></div></div>
+<div class="pn-local-compare" id="palyginimas"><div><span class="pn-local-label">Įprasta debesų sistema</span><strong>Įrenginys → internetas → gamintojo serveris → programėlė</strong><small>Veikimas gali priklausyti nuo ryšio, paskyros ir paslaugos teikėjo.</small></div><div class="pn-local-arrow">→</div><div><span class="pn-local-label">Mūsų prioritetas</span><strong>Įrenginys → namų tinklas → Home Assistant</strong><small>Vietinis valdymas ir automatizacijos, kai tai leidžia konkretus įrenginys.</small></div></div>
 <div class="pn-local-note">🔎 <strong>Prieš diegdami patikriname suderinamumą.</strong> Kai kuriems įrenginiams reikia debesijos autentifikavimo, nuotolinių paslaugų arba interneto atnaujinimams. Interneto prieigą ribojame tik įvertinę, kas veiks be jos.</div>
 <div class="pn-local-cta"><span>Norite sužinoti, kuriuos jūsų įrenginius galima valdyti lokaliai?</span><a href="#skaiciuotuvas" class="btn btn-p">Įvertinti sistemą ↗</a></div>
 </section>
@@ -283,7 +130,7 @@
 <div class="pn-section-heading"><span class="eyebrow">03 · KAIP VEIKIA</span><h1>Įrenginiai tariasi tarpusavyje.</h1><p>Saulė, šildymas, baterija ir automobilis matomi vienoje vietoje. Sistema gali priimti sprendimus pagal realias sąlygas.</p></div>
 
 
-<iframe id="pn-room-demo" title="Svetainė prie ežero – interaktyvus kambarys" loading="lazy" src="kambarys/index.html" style="display:block;width:100%;height:680px;border:0;margin:24px 0"></iframe>
+<iframe id="pn-room-demo" title="Svetainė prie ežero – interaktyvus kambarys" loading="lazy" data-src="kambarys/index.html" style="display:block;width:100%;height:680px;border:0;margin:24px 0"></iframe>
 <script src="kambarys/embed.js" defer></script>
 <!-- PN_HA_DEVICE_PREVIEW_V3 — official demo in phone/tablet/wall-display device shells -->
 <section class="pn-device-showcase" id="pn-ha-demo-embed" aria-label="Oficialus Home Assistant demo skirtinguose ekranuose">
@@ -682,12 +529,6 @@
   <div class="wrap foot">
     <div class="footer-brand"><a class="footer-logo" href="#pradzia" aria-label="ProtingesniNamai.lt – į pradžią"><img class="logo-img pn-logo-wordmark" src="assets/wordmark.webp" width="914" height="108" alt="ProtingesniNamai.lt" decoding="async"></a><span>© <span id="yr"></span> · Išmanieji namai ir energijos valdymas</span></div>
     <nav><a href="#paslaugos">Paslaugos</a><a href="#skaiciuotuvas">Kainos</a><a href="naujienos/">Naujienos</a><a href="#platforma">Platforma</a><a href="#kontaktai">Kontaktai</a></nav>
-  </div>
-</footer>
-
-
-
-
 <div class="pn-float-tools" id="pn-float-tools">
 <button type="button" class="pn-float-trigger" id="pn-design-toggle" aria-controls="pn-design-drawer" aria-expanded="false" aria-label="Atidaryti greitą dizaino valdiklį"><span aria-hidden="true">🎨</span><span>Dizainas</span></button>
 <aside class="pn-design-drawer" id="pn-design-drawer" hidden aria-label="Greitas dizaino valdiklis">
@@ -696,16 +537,7 @@
 <details class="pn-design-extra"><summary>⚙ Papildomi nustatymai</summary><div class="pn-design-mini-controls"><label>Šrifto dydis <span id="pn-mini-font-size-out">100 %</span><input id="pn-mini-font-size" type="range" min="85" max="125" step="5" value="100" aria-label="Šrifto dydis"></label><label>Apvalinimas <span id="pn-mini-radius-out">24 px</span><input id="pn-mini-radius" type="range" min="8" max="44" step="2" value="24"></label><label>Efektų galia <span id="pn-mini-intensity-out">48 %</span><input id="pn-mini-intensity" type="range" min="0" max="100" step="5" value="48"></label></div></details>
 <div class="pn-design-drawer-foot"><a href="#dizainas" id="pn-design-full">Visi pasirinkimai ↗</a><button type="button" id="pn-design-reset">Atstatyti</button></div>
 </aside></div>
-
-
-
-
-
-
-
-
-
-
-
+  </div>
+</footer>
 </body>
 </html>
