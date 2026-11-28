@@ -175,7 +175,7 @@ route();
 // Pressing the selected scenario again replays its short illustration.
 document.querySelector('.home-choices').addEventListener('click', event => {
   if (!event.target.matches('input:checked')) return;
-  for (const motion of document.querySelector('.home-room').getAnimations({subtree: true})) {
+  for (const motion of event.currentTarget.closest('.home-demo').getAnimations({subtree: true})) {
     if (motion.animationName?.startsWith('home-')) motion.currentTime = 0;
   }
 });
