@@ -2302,17 +2302,6 @@ body.v14-dark .home-landing {
 }
 .home-choices input:checked + span { color: #142d47; background: #e6f2ff; }
 .home-choices input:focus-visible + span { outline: 2px solid #90c9ff; outline-offset: 1px; }
-.home-results {
-  display: grid;
-  margin: .7rem 1.05rem .85rem;
-  color: var(--demo-ink);
-  font-size: 1em;
-  line-height: 1.4;
-}
-.home-results p { grid-area: 1 / 1; visibility: hidden; }
-.home-how { max-width: 54ch; margin: -.3rem 0 1rem; color: var(--tx2); line-height: 1.5; }
-.home-how strong { color: var(--tx); }
-.home-scene-note { display: block; margin-top: .36rem; color: #d4e2ef; font-weight: 400; }
 .home-window-model { display: grid; justify-items: center; gap: .45rem; padding: .8rem; margin: 0 0 .7rem; background: var(--home-surface); border-radius: .6rem; }
 .home-window-frame { width: 5.25rem; height: 2.65rem; border: 3px solid var(--home-accent); background: #c9e7f2; perspective: 12rem; }
 .home-window-frame i { display: block; width: 100%; height: 100%; border: 2px solid #46718a; background: linear-gradient(90deg, #eaf6fc 48%, #7194aa 48% 52%, #d6ebf5 52%); transform-origin: left; }
@@ -2324,9 +2313,6 @@ body.v14-dark .home-landing {
   .home-radiator { transition: color .5s .18s; }
 }
 
-.home-demo:has([value="dusk"]:checked) #home-dusk-result,
-.home-demo:has([value="warm"]:checked) #home-warm-result,
-.home-demo:has([value="away"]:checked) #home-away-result { visibility: visible; }
 @media (prefers-reduced-motion: no-preference) {
   .home-room-photo { transition: filter .85s; }
   .home-demo:has([value="dusk"]:checked) .home-lamplight { animation: home-lamp .95s ease-out both; }
@@ -2601,4 +2587,67 @@ body:has(#p-pradzia.on) footer { color: var(--tx); }
   .home-dashboard > * { padding: .35rem; }
   .home-actions { gap: .45rem; }
   .home-actions .btn { padding-inline: .7rem; }
+}
+
+/* Interactive room and its cause-and-effect captions */
+.room-studio {
+  display: grid;
+  grid-template-columns: minmax(0, .84fr) minmax(0, 1.16fr);
+  grid-template-areas: "intro room" "choices room" "story story";
+  align-items: center;
+  gap: 1.35rem clamp(1rem, 3vw, 3rem);
+  padding: clamp(1.2rem, 3.8vw, 3.6rem);
+  border-radius: var(--pn-custom-radius, 24px) var(--pn-custom-radius, 24px) 0 0;
+  background: radial-gradient(ellipse at 10% -30%, #254e71, transparent 68%), #101f30;
+  color: #f5faff;
+  --signal: #ffd494;
+}
+.room-studio:has([value="warm"]:checked) { --signal: #9fddff; }
+.room-studio:has([value="away"]:checked) { --signal: #95e9cf; }
+.room-studio .home-intro { grid-area: intro; align-self: end; }
+.room-studio .home-service { margin-bottom: .75rem; color: #add9f0; }
+.room-studio .home-intro h1 { color: #fff; line-height: .99; }
+.room-studio .home-intro h1 span { color: #afdcf5; }
+.room-studio .home-summary { color: #d5e2ee; margin: .95rem 0 0; }
+.room-studio .home-choices { grid-area: choices; align-self: start; margin: 0; gap: .35rem; }
+.room-studio legend { margin-bottom: .48rem; font-weight: 650; color: white; }
+.room-studio .home-choices span { display: flex; align-items: center; justify-content: center; gap: .32rem; border-radius: .8rem; font-size: 1em; }
+.room-studio .home-choices i { display: inline-flex; }
+.room-studio .home-choices .i { width: 1.05em; height: 1.05em; }
+.room-studio .home-choices input:checked + span { background: var(--signal); color: #101f30; border-color: var(--signal); }
+.room-studio .home-room { grid-area: room; width: 100%; border-radius: 1rem; box-shadow: 0 12px 35px #07132155; }
+.room-studio .home-room-pin { color: #152536; background: var(--signal); }
+.room-studio .home-room-pin::after { background: var(--signal); }
+.room-response { grid-area: story; border-top: 1px solid #789bb04f; padding-top: 1.15rem; min-width: 0; }
+.scene-story { display: none; }
+.room-studio:has([value="dusk"]:checked) #home-dusk-result,
+.room-studio:has([value="warm"]:checked) #home-warm-result,
+.room-studio:has([value="away"]:checked) #home-away-result { display: grid; gap: .8rem; }
+.scene-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); list-style: none; gap: .65rem; margin: 0; padding: 0; }
+.scene-steps li { position: relative; display: grid; align-content: start; gap: .1rem; padding-top: 1rem; }
+.scene-steps li::before { content: ""; position: absolute; inset: .26rem calc(-.65rem + 4px) auto .3rem; height: 2px; background: var(--signal); transform-origin: left; }
+.scene-steps li:last-child::before { display: none; }
+.scene-steps li::after { content: ""; position: absolute; top: 0; left: 0; width: .65rem; height: .65rem; background: var(--signal); border-radius: 50%; }
+.scene-steps small { color: #b9cfe0; font-size: .875rem; }
+.scene-steps strong { color: #fff; font-size: 1.05em; line-height: 1.25; }
+.scene-story p { color: #cfdfed; max-width: 85ch; line-height: 1.5; }
+.home-quote { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .65rem 1rem; padding: .9rem clamp(1rem, 3.8vw, 3.6rem); background: color-mix(in srgb, var(--home-accent) 8%, var(--home-surface)); }
+.home-quote small { display: block; color: var(--tx2); }
+.home-quote a { min-height: 44px; }
+@media (prefers-reduced-motion: no-preference) {
+  .scene-steps li::before { animation: home-signal-line .4s ease-out both; }
+  .scene-steps li:nth-child(2)::before { animation-delay: .4s; }
+  .scene-steps li::after { animation: home-signal-point .35s ease-out both; }
+  .scene-steps li:nth-child(2)::after { animation-delay: .4s; }
+  .scene-steps li:nth-child(3)::after { animation-delay: .8s; }
+  .room-studio .home-lamplight, .room-studio .home-cool-air i, .room-studio .home-robot { animation-delay: .65s; }
+}
+@keyframes home-signal-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes home-signal-point { from { opacity: .3; transform: scale(.5); } 65% { box-shadow: 0 0 0 .25rem #ffffff25; } to { opacity: 1; transform: scale(1); } }
+@media (max-width: 760px) {
+  .room-studio { grid-template-columns: minmax(0,1fr); grid-template-areas: "intro" "choices" "room" "story"; gap: .9rem; padding: 1.1rem; }
+  .room-studio .home-summary { margin-top: .65rem; }
+  .room-response { padding-top: .3rem; border: 0; }
+  .room-studio .home-intro h1 span { display: inline; }
+  .scene-steps strong { font-size: .98em; overflow-wrap: anywhere; }
 }
