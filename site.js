@@ -82,6 +82,7 @@ const cg=$('#contactGrid');const mq=matchMedia('(max-width:860px)');const lay=()
 /* ===================== MARŠRUTIZAVIMAS ===================== */
 const PAGES=['pradzia','privalumai','kaip-veikia','paslaugos','skaiciuotuvas','platforma','apie','kontaktai','dizainas'];
 const sectionLinks = new Map([
+  ['isbandyti-kambari', ['pradzia', 'isbandyti-kambari']],
   ['lokalumas', ['privalumai', 'lokalumas']],
   ['palyginimas', ['privalumai', 'palyginimas']],
   ['valdymo-skydelis', ['kaip-veikia', 'pn-ha-demo-embed']],
@@ -140,12 +141,14 @@ function route(){
    setTimeout(() => {
      if (location.hash.slice(1) !== h) return;
      const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
-     document.getElementById(target)?.scrollIntoView({behavior, block: 'start'});
+     const section = document.getElementById(target);
+     if (h === 'isbandyti-kambari') section?.querySelector('input:checked')?.focus({preventScroll: true});
+     section?.scrollIntoView({behavior, block: 'start'});
    }, 80);
  } else window.scrollTo(0, 0);
 }
 addEventListener('hashchange',route);
-document.querySelectorAll('.links a,.pn-journey-nav a').forEach(link=>link.addEventListener('click',()=>{if(location.hash===link.getAttribute('href'))route()}));
+document.querySelectorAll('.links a,.pn-journey-nav a,.home-actions a').forEach(link=>link.addEventListener('click',()=>{if(location.hash===link.getAttribute('href'))route()}));
 $('#menuBtn').onclick=()=>{
  const nav=$('#links'),open=nav.classList.toggle('open'),btn=$('#menuBtn');
  btn.setAttribute('aria-expanded',String(open));
@@ -175,6 +178,20 @@ document.querySelector('.home-choices').addEventListener('click', event => {
   for (const motion of document.querySelector('.home-room').getAnimations({subtree: true})) {
     if (motion.animationName?.startsWith('home-')) motion.currentTime = 0;
   }
+});
+
+document.getElementById('home-send-reading').addEventListener('click', async () => {
+  const result = document.getElementById('home-stored-reading');
+  const signal = document.querySelector('.home-signal i');
+  if (signal.animate && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (signal.getAnimations().length) return;
+    result.value = 'Siunčiama…';
+    const pulse = signal.animate([{left: '0%', opacity: 1}, {left: '100%', opacity: 1}], {
+      duration: 700, easing: 'ease-in-out'
+    });
+    await pulse.finished.catch(() => {});
+  }
+  result.value = document.getElementById('home-sensor-reading').textContent + ' · išsaugota';
 });
 
 ;
