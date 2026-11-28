@@ -2310,6 +2310,20 @@ body.v14-dark .home-landing {
   line-height: 1.4;
 }
 .home-results p { grid-area: 1 / 1; visibility: hidden; }
+.home-how { max-width: 54ch; margin: -.3rem 0 1rem; color: var(--tx2); line-height: 1.5; }
+.home-how strong { color: var(--tx); }
+.home-scene-note { display: block; margin-top: .36rem; color: #d4e2ef; font-weight: 400; }
+.home-window-model { display: grid; justify-items: center; gap: .45rem; padding: .8rem; margin: 0 0 .7rem; background: var(--home-surface); border-radius: .6rem; }
+.home-window-frame { width: 5.25rem; height: 2.65rem; border: 3px solid var(--home-accent); background: #c9e7f2; perspective: 12rem; }
+.home-window-frame i { display: block; width: 100%; height: 100%; border: 2px solid #46718a; background: linear-gradient(90deg, #eaf6fc 48%, #7194aa 48% 52%, #d6ebf5 52%); transform-origin: left; }
+.home-radiator { width: 4.5rem; height: 1.2rem; border-radius: .23rem; background: repeating-linear-gradient(90deg, currentColor 0 .32rem, transparent .32rem .48rem); border-block: 2px solid currentColor; color: #b66727; }
+.home-window:has(input:checked) .home-window-frame i { transform: rotateY(-57deg); }
+.home-window:has(input:checked) .home-radiator { color: #758695; }
+@media (prefers-reduced-motion: no-preference) {
+  .home-window-frame i { transition: transform .65s ease-in-out; }
+  .home-radiator { transition: color .5s .18s; }
+}
+
 .home-demo:has([value="dusk"]:checked) #home-dusk-result,
 .home-demo:has([value="warm"]:checked) #home-warm-result,
 .home-demo:has([value="away"]:checked) #home-away-result { visibility: visible; }
